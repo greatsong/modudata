@@ -41,8 +41,8 @@ pop  = read_csv_flex(f"{BASE}/population_2026_05.csv", thousands=",")  # 인구(
 | `seoul.csv` | 3·8장 | utf-8 (원본 cp949) | 1.2 MB | 서울 100년치 일별 기온 · **매일 자동 갱신** |
 | `population_2026_05.csv` | 4·8·11장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 (책 예제 기준 스냅샷) |
 | `population_latest.csv` | 4·8·11장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 · **매월 1일 자동 갱신** (강의용, 항상 최신 월) |
-| `subway_pay.csv` | 5장 | **cp949** | 5.5 MB | 지하철 유·무임 승하차(월별) |
-| `subway_time.csv` | 5장 | **cp949** | 29 MB | 지하철 시간대별 승하차(월별) |
+| `subway_pay.csv` | 5장 | utf-8 (원본 cp949) | 5.5 MB | 지하철 유·무임 승하차(월별) |
+| `subway_time.csv` | 5장 | utf-8 (원본 cp949) | 29 MB | 지하철 시간대별 승하차(월별) |
 | `hangjeongdong.geojson` | 4·5장 | utf-8 | 33 MB | 전국 행정동 경계 |
 | `dong_centroids.csv` | 11장 | utf-8 | 230 KB | 행정동 중심점 좌표 |
 | `seoul_area_xy.csv` | 6·10장 | utf-8 | 1.6 KB | 서울 주요 명소 23곳 좌표 |
@@ -78,7 +78,7 @@ pop  = read_csv_flex(f"{BASE}/population_2026_05.csv", thousands=",")  # 인구(
 
 ### `subway_pay.csv` / `subway_time.csv` — 지하철 승하차
 - **출처**: 서울 **열린데이터광장** ([data.seoul.go.kr](https://data.seoul.go.kr)) · 검색 '지하철' → **유·무임 승하차** / **시간대별 승하차** → CSV
-- **직접 받으면**: 데이터셋 한글명 CSV · **cp949** · 교재는 `subway_pay.csv` / `subway_time.csv`로
+- **직접 받으면**: 데이터셋 한글명 CSV · **원본 cp949**(저장소 복사본은 utf-8) · 교재는 `subway_pay.csv` / `subway_time.csv`로
 - **주의**: 월별(2015.1~2026.5) · **서울 1~9호선만** 필터(그 외 노선은 집계 방식이 달라 섞으면 안 됨) · '같은 이름 다른 호선'(시청·종로3가) · `subway_time`은 시간대가 열로 넓게 → `melt`로 긴 형태 변환
 
 ### `hangjeongdong.geojson` — 전국 행정동 경계
