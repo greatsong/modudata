@@ -38,8 +38,9 @@ pop  = read_csv_flex(f"{BASE}/population_2026_05.csv", thousands=",")  # 인구(
 
 | 파일 | 쓰는 곳 | 인코딩(현재) | 크기 | 무엇 |
 |---|---|---|---|---|
-| `seoul.csv` | 3·8장 | utf-8 (원본 cp949) | 1.2 MB | 서울 100년치 일별 기온 |
-| `population_2026_05.csv` | 4·8·11장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 |
+| `seoul.csv` | 3·8장 | utf-8 (원본 cp949) | 1.2 MB | 서울 100년치 일별 기온 · **매일 자동 갱신** |
+| `population_2026_05.csv` | 4·8·11장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 (책 예제 기준 스냅샷) |
+| `population_latest.csv` | 4·8·11장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 · **매월 1일 자동 갱신** (강의용, 항상 최신 월) |
 | `subway_pay.csv` | 5장 | **cp949** | 5.5 MB | 지하철 유·무임 승하차(월별) |
 | `subway_time.csv` | 5장 | **cp949** | 29 MB | 지하철 시간대별 승하차(월별) |
 | `hangjeongdong.geojson` | 4·5장 | utf-8 | 33 MB | 전국 행정동 경계 |
@@ -126,6 +127,8 @@ pop  = read_csv_flex(f"{BASE}/population_2026_05.csv", thousands=",")  # 인구(
 
 - **`kobis.csv`** — 매일 '어제' 박스오피스 TOP10 반영(새 영화 추가 + 최종관객 갱신) · 시크릿 `KOBIS_KEY` · 스크립트 `scripts/update_kobis.py`
 - **`seoul_congestion_log.csv`** — 매시간 서울 혼잡도 append · 시크릿 `SEOUL_KEY` · 스크립트 `scripts/collect_seoul.py`
+- **`seoul.csv`** — 매일 아침(KST 07시) 빠진 날짜를 어제까지 백필 · 시크릿 `KMA_KEY`(기상청 API허브) · 스크립트 `scripts/update_seoul_temp.py`
+- **`population_latest.csv`** — 매월 1일 자정(KST) 지난달 데이터로 교체, 실패 시 2일 재시도 · 시크릿 불필요 · 스크립트 `scripts/update_population.py` (월별 스냅샷은 `data/archive/`)
 
 시크릿 추가: 저장소 **Settings → Secrets and variables → Actions → New repository secret**.
 

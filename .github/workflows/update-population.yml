@@ -1,0 +1,53 @@
+# population_latest.csv 매월 자동 갱신 — 한국시간 매월 1일 자정 실행, 실패 시 2일 자정 재시도
+# 시크릿 불필요 (행안부 공개 다운로드) · 스크립트가 멱등이라 재시도가 중복 커밋을 만들지 않음
+name: update-population
+
+on:
+  schedule:
+    # 크론은 UTC 기준. KST 1일 00:00 = UTC '말일' 15:00 인데 크론엔 '말일'이 없어서
+    # 28~31일에 걸어두고 아래 gate 단계에서 '내일이 1일'인 날만 통과시킴
+    - cron: '0 15 28-31 * *'    # → KST 매월 1일 00:00 (말일 판별 후 실행)
+    - cron: '0 15 1 * *'        # → KST 매월 2일 00:00 (1일 실패 대비 재시도)
+  workflow_dispatch:             # 수동 실행 버튼 (테스트·복구용)
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 실행일 판별 (KST 1일·2일 자정만 통과, 수동 실행은 항상 통과)
+        id: gate
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] \
+             || [ "$(date -u -d '+1 day' +%d)" = "01" ] \
+             || [ "$(date -u +%d)" = "01" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "오늘은 말일이 아님 → 건너뜀"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
+        with:
+          python-version: '3.12'
+
+      - if: steps.gate.outputs.run == 'true'
+        run: pip install requests
+
+      - name: 인구 데이터 다운로드·검증·저장
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/update_population.py
+
+      - name: 변경분 있으면 커밋
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/population_latest.csv data/archive/
+          git diff --cached --quiet || { git commit -m "🤖 population_latest.csv 월간 자동 갱신"; git push; }
