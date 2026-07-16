@@ -45,6 +45,7 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 | `subway_pay.csv` | 5장 | utf-8 (원본 cp949) | 5.5 MB | 지하철 유·무임 승하차(월별) |
 | `subway_time.csv` | 5장 | utf-8 (원본 cp949) | 29 MB | 지하철 시간대별 승하차(월별) |
 | `hangjeongdong.geojson` | 4·5장 | utf-8 | 33 MB | 전국 행정동 경계 |
+| `boundaries/*.geojson` | 4·11장 | utf-8 | 0.3~2 MB | **지도용 경량 경계** — 시도(17)·시군구(255)·서울동(427)·경기동(602) |
 | `dong_centroids.csv` | 11장 | utf-8 | 230 KB | 행정동 중심점 좌표 |
 | `seoul_area_xy.csv` | 6·10장 | utf-8 | 1.6 KB | 서울 주요 명소 23곳 좌표 |
 | `kobis.csv` | 8장 | utf-8 | 30 KB | 영화 박스오피스 · **매일 자동 갱신** |
@@ -67,6 +68,7 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 | `subway_pay.csv`, `subway_time.csv` | **서울교통공사** 제공, **서울특별시** 배포 | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
 | `hangjeongdong.geojson` | **vuski/admdongkor** (행정동 경계, **통계청** 통계지리정보 기반) | [github.com/vuski/admdongkor](https://github.com/vuski/admdongkor) |
 | `dong_centroids.csv` | *파생* — 위 `hangjeongdong.geojson`(vuski/admdongkor)에서 각 동 중심점 계산 | (파생물) |
+| `boundaries/*.geojson` (시도·시군구·서울동·경기동) | *파생* — `hangjeongdong.geojson`(**vuski/admdongkor**, **CC BY 4.0**)을 dissolve·필터 | [github.com/vuski/admdongkor](https://github.com/vuski/admdongkor) |
 | `seoul_area_xy.csv` | *파생* — **서울특별시** 실시간 도시데이터(citydata) 주요 명소 좌표 | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
 | `kobis.csv` | **영화진흥위원회(KOFIC)** — 영화관입장권 통합전산망 일별 박스오피스 | KOBIS Open API [kobis.or.kr](https://www.kobis.or.kr/kobisopenapi) |
 | `seoul_congestion_log.csv` | **서울특별시** — 실시간 도시데이터(citydata_ppltn) | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
@@ -113,6 +115,20 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 ### `hangjeongdong.geojson` — 전국 행정동 경계
 - **출처**: 예제 저장소 제공 · 원본은 GitHub **`vuski/admdongkor`**(전국 행정동 경계)
 - **주의**: 단계구분도용 · 인구표와 짝지을 땐 `properties`의 **행정구역 코드**로 매칭(이름 X)
+
+### `boundaries/` — 지도용 경량 경계 (choropleth 지도)
+위 `hangjeongdong.geojson`(33MB)에서 파생한 **가벼운 벡터 경계**입니다. Plotly `px.choropleth`(타일 없는 벡터, 마우스 호버로 지역·값 표시)에 바로 쓰고, `.svg`로도 뽑을 수 있어요. 모두 **행안부 코드**라 인구 데이터와 무손실 결합됩니다.
+
+| 파일 | 단위 | 개수 | 결합 키(`featureidkey`) |
+|---|---|---|---|
+| `boundaries/sido_kr.geojson` (0.6MB) | 시도 | 17 | `properties.코드`(2자리) ↔ 인구 `코드` 앞2자리 |
+| `boundaries/sigungu_kr.geojson` (2.0MB) | 시군구 | 255 | `properties.코드`(5자리) ↔ 인구 `코드` 앞5자리(=행정동의 `sgg`) |
+| `boundaries/seoul_dong.geojson` (0.3MB) | 서울 행정동 | 427 | `properties.코드`(10자리) ↔ 인구 `코드` |
+| `boundaries/gyeonggi_dong.geojson` (1.1MB) | 경기 행정동 | 602 | `properties.코드`(10자리) ↔ 인구 `코드` |
+
+- 시도·시군구는 행정동을 코드로 **dissolve**(shapely)해 내부 경계를 지운 것. 서울·경기 동은 예시 서브셋.
+- **다른 지역 읍·면·동**은 `hangjeongdong.geojson`을 `properties.sidonm`(시도)·`sggnm`(시군구)으로 필터하면 어디든 만들 수 있습니다.
+- **바로 쓰기**: `px.choropleth(df, geojson=geo, locations="코드", featureidkey="properties.코드", color="고령비율").update_geos(fitbounds="locations", visible=False)`
 
 ### `dong_centroids.csv` — 행정동 중심점 좌표
 - **출처**: *파생물* · 원 출처는 `hangjeongdong.geojson`(**vuski/admdongkor**, 통계청 기반) — 각 동 경계의 중심점을 계산
