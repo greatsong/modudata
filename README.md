@@ -148,7 +148,7 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 
 - **`kobis.csv`** — 매일 '어제' 박스오피스 TOP10 반영(새 영화 추가 + 최종관객 갱신) · 시크릿 `KOBIS_KEY` · 스크립트 `scripts/update_kobis.py`
 - **`seoul_congestion_log.csv`** — 매시간 서울 혼잡도 append · 시크릿 `SEOUL_KEY` · 스크립트 `scripts/collect_seoul.py`
-- **`seoul.csv`** — 매일 아침(KST 07시) 빠진 날짜를 어제까지 백필 · 시크릿 `KMA_KEY`(기상청 API허브) · 스크립트 `scripts/update_seoul_temp.py`
+- **`seoul.csv`** — 매일 아침(KST 07시) 빠진 날짜를 어제까지 백필 · 시크릿 `DATA_GO_KR_KEY`(공공데이터포털 ASOS 일자료 — apihub는 해외 IP 차단이라 GitHub에서 못 씀) · 스크립트 `scripts/update_seoul_temp.py`
 - **`population_latest.csv`** — 매월 1일 자정(KST) 지난달 데이터로 교체, 실패 시 2일 재시도 · 시크릿 불필요 · 스크립트 `scripts/update_population.py` (월별 스냅샷은 `data/archive/`)
 - **`subway_pay.csv` / `subway_time.csv`** — 매월 5일(재시도 9일) 새벽 공개된 달을 append · 시크릿 `SEOUL_KEY` · 스크립트 `scripts/update_subway.py`
 - `seoul.csv` 갱신 시 파생 파일(`seoul_daily.csv`·`seoul_yearly.csv`)도 자동 재생성됩니다.

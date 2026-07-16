@@ -1,5 +1,6 @@
 # seoul.csv 매일 자동 갱신 — 마지막 날짜 다음 날부터 '어제'까지 백필
-# 시크릿 필요: KMA_KEY (기상청 API허브 apihub.kma.go.kr 발급)
+# 시크릿 필요: DATA_GO_KR_KEY (공공데이터포털 data.go.kr ASOS 일자료 활용신청)
+# (KMA_KEY는 apihub 키 — 해외 IP 차단으로 GitHub 러너에서는 안 되고 로컬 실행용)
 name: update-seoul
 
 on:
@@ -24,7 +25,8 @@ jobs:
 
       - name: 기온 데이터 수집·append
         env:
-          KMA_KEY: ${{ secrets.KMA_KEY }}
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}   # 공공데이터포털 (GitHub용 — apihub는 해외 IP 차단)
+          KMA_KEY: ${{ secrets.KMA_KEY }}                  # 기상청 API허브 (로컬 실행용)
         run: python scripts/update_seoul_temp.py
 
       - name: 변경분 있으면 커밋
