@@ -34,4 +34,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/seoul.csv data/seoul_daily.csv data/seoul_yearly.csv
-          git diff --cached --quiet || { git commit -m "🤖 seoul.csv 기온 자동 갱신"; git push; }
+          if ! git diff --cached --quiet; then
+            git commit -m "🤖 seoul.csv 기온 자동 갱신"
+            for i in 1 2 3; do git push && break; sleep $i; git pull --rebase origin main; done
+          fi

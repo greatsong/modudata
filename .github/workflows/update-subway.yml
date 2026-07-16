@@ -33,4 +33,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/subway_pay.csv data/subway_time.csv
-          git diff --cached --quiet || { git commit -m "🤖 지하철 월별 승하차 자동 갱신"; git push; }
+          if ! git diff --cached --quiet; then
+            git commit -m "🤖 지하철 월별 승하차 자동 갱신"
+            for i in 1 2 3; do git push && break; sleep $i; git pull --rebase origin main; done
+          fi
