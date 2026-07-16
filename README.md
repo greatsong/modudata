@@ -41,6 +41,7 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 | `seoul.csv` | 3·8장 | utf-8 (원본 cp949) | 1.2 MB | 서울 100년치 일별 기온 · **매일 자동 갱신** |
 | `population_2026_05.csv` | 11장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 (2026년 5월 스냅샷 — 11장 결과 재현용) |
 | `population_latest.csv` | 4·8장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 · **매월 1일 자동 갱신** (강의용, 항상 최신 월) |
+| `population_yearly.csv.gz` | 11장 | utf-8 (gzip) | 14 MB | **연도별(매년6월) 읍·면·동 인구 시계열** · 1세 단위 × 계/남/여 · **매년 자동 갱신** |
 | `subway_pay.csv` | 5장 | utf-8 (원본 cp949) | 5.5 MB | 지하철 유·무임 승하차(월별) |
 | `subway_time.csv` | 5장 | utf-8 (원본 cp949) | 29 MB | 지하철 시간대별 승하차(월별) |
 | `hangjeongdong.geojson` | 4·5장 | utf-8 | 33 MB | 전국 행정동 경계 |
@@ -62,7 +63,7 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 | 데이터 | 원 출처 (제공 기관) | 원천 포털 / 링크 |
 |---|---|---|
 | `seoul.csv` (+ 집계본 `seoul_daily/monthly/yearly`) | **기상청** — 종관기상관측(ASOS) 일자료 | 기상자료개방포털 [data.kma.go.kr](https://data.kma.go.kr) |
-| `population_2026_05.csv`, `population_latest.csv` | **행정안전부** — 주민등록 인구통계(연령별 인구현황) | [jumin.mois.go.kr](https://jumin.mois.go.kr) |
+| `population_2026_05.csv`, `population_latest.csv`, `population_yearly.csv.gz` | **행정안전부** — 주민등록 인구통계(연령별 인구현황) | [jumin.mois.go.kr](https://jumin.mois.go.kr) |
 | `subway_pay.csv`, `subway_time.csv` | **서울교통공사** 제공, **서울특별시** 배포 | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
 | `hangjeongdong.geojson` | **vuski/admdongkor** (행정동 경계, **통계청** 통계지리정보 기반) | [github.com/vuski/admdongkor](https://github.com/vuski/admdongkor) |
 | `dong_centroids.csv` | *파생* — 위 `hangjeongdong.geojson`(vuski/admdongkor)에서 각 동 중심점 계산 | (파생물) |
@@ -96,6 +97,13 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
   - **긴 열 이름**(`2026년05월_계_0세` → `0세`) 정리
   - 다른 표와 합칠 땐 **이름 아닌 행정구역 코드**(괄호 속 숫자, 예 `1168060000`)로
   - 원본 (3,918행, 310열) → 정리 후 읍·면·동 약 3,558곳
+
+### `population_yearly.csv.gz` — 연도별 읍·면·동 인구 시계열 (🔄 매년 자동 갱신)
+- **출처**: 행정안전부 **주민등록 인구통계** ([jumin.mois.go.kr](https://jumin.mois.go.kr)) · [연령별 인구현황]을 **매년 6월** 기준으로 수집(2015~) · 키 불필요한 **공개 CSV 다운로드**를 재현(공식 API 아님 — 사이트 개편 시 깨질 수 있음)
+- **열**: `연도, 시도, 시군구, 동, 코드` + **`계_0세`…`계_100세 이상` · `남_0세`… · `여_0세`…** (계/남/여 × 1세, 총 308열) · 약 42,000행(연도당 ~3,500 읍·면·동)
+- **바로 쓰기**: gzip이라 `pd.read_csv(url)`이 알아서 해제 — `df = pd.read_csv(f"{BASE}/population_yearly.csv.gz")`
+- **할 수 있는 것**: 남녀 인구 피라미드의 연도별 변화 · 지역 성비(예: 산업단지 남초, 대학가 여초) · 고령화 추세 · 11장 '닮은 동네'를 연도별로
+- **주의**: `계 = 남 + 여` · 총인구는 연령 열 합(`df[[c for c in df.columns if c.startswith("계_")]].sum(axis=1)`) · 행정동은 신설·통폐합되므로 `코드` 기준, 연속성 없는 동은 시계열이 끊길 수 있음(정상)
 
 ### `subway_pay.csv` / `subway_time.csv` — 지하철 승하차
 - **출처**: 서울 **열린데이터광장** ([data.seoul.go.kr](https://data.seoul.go.kr)) · 검색 '지하철' → **유·무임 승하차** / **시간대별 승하차** → CSV
@@ -150,6 +158,7 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 - **`seoul_congestion_log.csv`** — 매시간 서울 혼잡도 append · 시크릿 `SEOUL_KEY` · 스크립트 `scripts/collect_seoul.py`
 - **`seoul.csv`** — 매일 아침(KST 07시) 빠진 날짜를 어제까지 백필 · 시크릿 `DATA_GO_KR_KEY`(공공데이터포털 ASOS 일자료 — apihub는 해외 IP 차단이라 GitHub에서 못 씀) · 스크립트 `scripts/update_seoul_temp.py`
 - **`population_latest.csv`** — 매월 1일 자정(KST) 지난달 데이터로 교체, 실패 시 2일 재시도 · 시크릿 불필요 · 스크립트 `scripts/update_population.py` (월별 스냅샷은 `data/archive/`)
+- **`population_yearly.csv.gz`** — 매년 7월 그해 6월 데이터를 append(연도별 시계열) · **시크릿 불필요**(공개 다운로드) · 스크립트 `scripts/update_population_yearly.py`
 - **`subway_pay.csv` / `subway_time.csv`** — 매월 5일(재시도 9일) 새벽 공개된 달을 append · 시크릿 `SEOUL_KEY` · 스크립트 `scripts/update_subway.py`
 - `seoul.csv` 갱신 시 파생 파일(`seoul_daily.csv`·`seoul_yearly.csv`)도 자동 재생성됩니다.
 
