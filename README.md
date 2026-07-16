@@ -55,6 +55,27 @@ pop  = read_csv_flex(f"{BASE}/population_2026_05.csv", thousands=",")  # 인구(
 
 ---
 
+## 📜 원 출처 (반드시 확인)
+
+이 저장소의 데이터는 아래 **공식 원 출처**에서 받아 실습용으로 정리·재배포한 것입니다. 파생 파일(직접 만든 것)은 어떤 원천에서 나왔는지도 함께 밝힙니다.
+
+| 데이터 | 원 출처 (제공 기관) | 원천 포털 / 링크 |
+|---|---|---|
+| `seoul.csv` (+ 집계본 `seoul_daily/monthly/yearly`) | **기상청** — 종관기상관측(ASOS) 일자료 | 기상자료개방포털 [data.kma.go.kr](https://data.kma.go.kr) |
+| `population_2026_05.csv`, `population_latest.csv` | **행정안전부** — 주민등록 인구통계(연령별 인구현황) | [jumin.mois.go.kr](https://jumin.mois.go.kr) |
+| `subway_pay.csv`, `subway_time.csv` | **서울교통공사** 제공, **서울특별시** 배포 | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
+| `hangjeongdong.geojson` | **vuski/admdongkor** (행정동 경계, **통계청** 통계지리정보 기반) | [github.com/vuski/admdongkor](https://github.com/vuski/admdongkor) |
+| `dong_centroids.csv` | *파생* — 위 `hangjeongdong.geojson`(vuski/admdongkor)에서 각 동 중심점 계산 | (파생물) |
+| `seoul_area_xy.csv` | *파생* — **서울특별시** 실시간 도시데이터(citydata) 주요 명소 좌표 | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
+| `kobis.csv` | **영화진흥위원회(KOFIC)** — 영화관입장권 통합전산망 일별 박스오피스 | KOBIS Open API [kobis.or.kr](https://www.kobis.or.kr/kobisopenapi) |
+| `seoul_congestion_log.csv` | **서울특별시** — 실시간 도시데이터(citydata_ppltn) | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
+
+**API로 받는 데이터의 원 출처**: 야후 파이낸스(yfinance)·**Google**(YouTube Data API, Gemini)·**영화진흥위원회**(KOBIS)·**서울특별시**(실시간 도시데이터)·**행정안전부**(공공데이터포털 data.go.kr, 제공기관은 데이터별 상이)·**카카오**(로컬 API)·**GBIF**·**NASA**·**USGS**. 발급·엔드포인트는 아래 [API 데이터](#-api-데이터--키-획득-방법) 표 참고.
+
+> 대부분 **공공누리(출처표시)** 계열의 공개 데이터입니다. 정확한 이용조건·라이선스는 각 포털의 표기를 확인하세요. `seoul_daily/monthly/yearly`·`mnist_small.npz`·`stars_검증데이터.csv` 등은 교재 본문에 쓰이지 않는 **보조·실험용**입니다.
+
+---
+
 ## 📄 파일 데이터 — 출처 · 수집 경로 · 주의사항
 
 교재는 실습 편의를 위해 **원본을 짧은 파일명으로 바꿔** 이 저장소에 올려 두었습니다. "직접 받는 법"과 "교재에서 쓰는 이름"을 함께 적었어요.
@@ -86,11 +107,11 @@ pop  = read_csv_flex(f"{BASE}/population_2026_05.csv", thousands=",")  # 인구(
 - **주의**: 단계구분도용 · 인구표와 짝지을 땐 `properties`의 **행정구역 코드**로 매칭(이름 X)
 
 ### `dong_centroids.csv` — 행정동 중심점 좌표
-- **출처**: 예제 저장소 제공 · 행정동 경계에서 각 동의 중심점을 계산
+- **출처**: *파생물* · 원 출처는 `hangjeongdong.geojson`(**vuski/admdongkor**, 통계청 기반) — 각 동 경계의 중심점을 계산
 - **열**: `행정구역코드, 행정구역, 위도, 경도` · **주의**: 인구표와 **코드로 병합**(이름으로 하면 절반만 매칭) · 3,558곳 대응
 
 ### `seoul_area_xy.csv` — 서울 주요 명소 23곳 좌표
-- **출처**: 예제 저장소 제공 · 서울 실시간 도시데이터 주요 명소 좌표 정리
+- **출처**: *파생물* · 원 출처는 **서울특별시** 실시간 도시데이터(citydata, 서울 열린데이터광장)의 주요 명소 좌표를 정리
 - **열**: `코드(POI…), 지역명, 위도, 경도` (+ 예시 스냅샷 열) · 서울 혼잡도 API 응답과 지역명/코드로 merge
 
 ### `kobis.csv` — 영화 박스오피스 (🔄 매일 자동 갱신)
