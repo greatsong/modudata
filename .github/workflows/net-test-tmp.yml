@@ -1,0 +1,12 @@
+name: net-test-tmp
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 한국 공공 API 접속성 테스트
+        run: |
+          echo "--- apis.data.go.kr (공공데이터포털) ---"
+          curl -s -m 15 -o /dev/null -w "%{http_code}\n" "https://apis.data.go.kr/1360000/AsosDalyInfoService/getWthrDataList?serviceKey=test&numOfRows=1" || echo "TIMEOUT"
+          echo "--- apihub.kma.go.kr (기상청 API허브) ---"
+          curl -s -m 15 -o /dev/null -w "%{http_code}\n" "https://apihub.kma.go.kr/" || echo "TIMEOUT"
