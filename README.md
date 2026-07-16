@@ -27,7 +27,7 @@ def read_csv_flex(url, **kw):
     return pd.read_csv(url, encoding="utf-8", encoding_errors="replace", **kw)
 
 temp = read_csv_flex(f"{BASE}/seoul.csv")                              # 기온
-pop  = read_csv_flex(f"{BASE}/population_2026_05.csv", thousands=",")  # 인구(천단위 쉼표)
+pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(천단위 쉼표, 매월 자동 갱신)
 ```
 
 > 💡 급하면 `pd.read_csv(url)` → 에러 나면 `encoding="cp949"` 한 줄만 붙여도 됩니다.
@@ -39,8 +39,8 @@ pop  = read_csv_flex(f"{BASE}/population_2026_05.csv", thousands=",")  # 인구(
 | 파일 | 쓰는 곳 | 인코딩(현재) | 크기 | 무엇 |
 |---|---|---|---|---|
 | `seoul.csv` | 3·8장 | utf-8 (원본 cp949) | 1.2 MB | 서울 100년치 일별 기온 · **매일 자동 갱신** |
-| `population_2026_05.csv` | 4·8·11장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 (책 예제 기준 스냅샷) |
-| `population_latest.csv` | 4·8·11장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 · **매월 1일 자동 갱신** (강의용, 항상 최신 월) |
+| `population_2026_05.csv` | 11장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 (2026년 5월 스냅샷 — 11장 결과 재현용) |
+| `population_latest.csv` | 4·8장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 · **매월 1일 자동 갱신** (강의용, 항상 최신 월) |
 | `subway_pay.csv` | 5장 | utf-8 (원본 cp949) | 5.5 MB | 지하철 유·무임 승하차(월별) |
 | `subway_time.csv` | 5장 | utf-8 (원본 cp949) | 29 MB | 지하철 시간대별 승하차(월별) |
 | `hangjeongdong.geojson` | 4·5장 | utf-8 | 33 MB | 전국 행정동 경계 |
