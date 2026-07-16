@@ -1,0 +1,35 @@
+# seoul_congestion_log.csv 매시간 자동 수집 — 서울 주요 23곳 실시간 혼잡도 append
+# 시크릿 필요: SEOUL_KEY (서울열린데이터광장 data.seoul.go.kr 발급 — 지하철 갱신과 같은 키)
+name: collect-congestion
+
+on:
+  schedule:
+    - cron: '5 * * * *'         # 매시간 5분 (정각 직후 혼잡도 스냅샷)
+  workflow_dispatch:             # 수동 실행 버튼 (테스트·복구용)
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install requests pandas
+
+      - name: 혼잡도 수집·append
+        env:
+          SEOUL_KEY: ${{ secrets.SEOUL_KEY }}
+        run: python scripts/collect_seoul.py
+
+      - name: 변경분 있으면 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seoul_congestion_log.csv
+          git diff --cached --quiet || { git commit -m "🤖 서울 혼잡도 수집 $(TZ=Asia/Seoul date +%Y-%m-%d_%H:%M)"; git push; }

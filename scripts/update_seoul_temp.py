@@ -64,3 +64,23 @@ if rows:
             f.write("\n")
         f.write("\n".join(rows) + "\n")
 print(f"{start}~{end} 구간 · {len(rows)}일 추가 · 마지막 {rows[-1].split(',')[0] if rows else last}")
+
+# 6) 파생 파일 재생성 — seoul_daily(지점 컬럼 제외) · seoul_yearly(완결연도 연평균)
+import csv
+
+by_year = {}
+with open(CSV, encoding="utf-8-sig") as f, \
+     open("data/seoul_daily.csv", "w", encoding="utf-8", newline="") as fd:
+    w = csv.writer(fd)
+    w.writerow(["날짜", "평균기온", "최저기온", "최고기온"])
+    for r in csv.DictReader(f):
+        w.writerow([r["날짜"], r["평균기온"], r["최저기온"], r["최고기온"]])
+        if r["평균기온"]:
+            by_year.setdefault(r["날짜"][:4], []).append(float(r["평균기온"]))
+with open("data/seoul_yearly.csv", "w", encoding="utf-8", newline="") as fy:
+    w = csv.writer(fy)
+    w.writerow(["연도", "평균기온"])
+    for y in sorted(by_year):
+        if len(by_year[y]) >= 300 and y != str(end.year):   # 관측 부족(1907·1950·1953)·진행 중인 해 제외
+            w.writerow([y, round(sum(by_year[y]) / len(by_year[y]), 1)])
+print("파생 재생성 완료: seoul_daily.csv · seoul_yearly.csv")

@@ -144,12 +144,14 @@ pop  = read_csv_flex(f"{BASE}/population_2026_05.csv", thousands=",")  # 인구(
 
 ## 🔄 자동 갱신 (GitHub Actions)
 
-두 데이터는 매번 직접 안 모아도 되게 **자동으로 최신화**됩니다. (워크플로 파일은 `workflow` 권한 문제로 저장소 웹/설정에서 추가해야 하며, 각 시크릿이 있어야 동작합니다.)
+아래 데이터는 매번 직접 안 모아도 되게 **자동으로 최신화**됩니다. (워크플로 파일은 `.github/workflows/`에 포함 — 각 시크릿을 등록해야 동작합니다.)
 
 - **`kobis.csv`** — 매일 '어제' 박스오피스 TOP10 반영(새 영화 추가 + 최종관객 갱신) · 시크릿 `KOBIS_KEY` · 스크립트 `scripts/update_kobis.py`
 - **`seoul_congestion_log.csv`** — 매시간 서울 혼잡도 append · 시크릿 `SEOUL_KEY` · 스크립트 `scripts/collect_seoul.py`
 - **`seoul.csv`** — 매일 아침(KST 07시) 빠진 날짜를 어제까지 백필 · 시크릿 `KMA_KEY`(기상청 API허브) · 스크립트 `scripts/update_seoul_temp.py`
 - **`population_latest.csv`** — 매월 1일 자정(KST) 지난달 데이터로 교체, 실패 시 2일 재시도 · 시크릿 불필요 · 스크립트 `scripts/update_population.py` (월별 스냅샷은 `data/archive/`)
+- **`subway_pay.csv` / `subway_time.csv`** — 매월 5일(재시도 9일) 새벽 공개된 달을 append · 시크릿 `SEOUL_KEY` · 스크립트 `scripts/update_subway.py`
+- `seoul.csv` 갱신 시 파생 파일(`seoul_daily.csv`·`seoul_yearly.csv`)도 자동 재생성됩니다.
 
 시크릿 추가: 저장소 **Settings → Secrets and variables → Actions → New repository secret**.
 

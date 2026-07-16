@@ -1,0 +1,35 @@
+# kobis.csv 매일 자동 갱신 — 어제 박스오피스 TOP10 반영 (새 영화 추가 + 최종관객 갱신)
+# 시크릿 필요: KOBIS_KEY (영화진흥위원회 kobis.or.kr/kobisopenapi 발급)
+name: update-kobis
+
+on:
+  schedule:
+    - cron: '30 22 * * *'       # UTC 22:30 = 한국시간 아침 07:30
+  workflow_dispatch:             # 수동 실행 버튼 (테스트·복구용)
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install requests pandas
+
+      - name: 박스오피스 반영
+        env:
+          KOBIS_KEY: ${{ secrets.KOBIS_KEY }}
+        run: python scripts/update_kobis.py
+
+      - name: 변경분 있으면 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/kobis.csv
+          git diff --cached --quiet || { git commit -m "🤖 kobis.csv 박스오피스 자동 갱신"; git push; }
