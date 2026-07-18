@@ -1,0 +1,37 @@
+city,latitude,abs_latitude,irradiance_kwh_m2_day
+Singapore,1.35,1.35,4.592
+Nairobi,-1.29,1.29,5.82
+Jakarta,-6.2,6.2,4.832
+Bangkok,13.75,13.75,5.232
+Manila,14.6,14.6,4.635
+Mumbai,19.1,19.1,5.294
+Mexico City,19.4,19.4,5.509
+Riyadh,24.7,24.7,6.206
+Cairo,30.0,30.0,5.713
+New Delhi,28.6,28.6,4.89
+Tokyo,35.7,35.7,3.887
+Los Angeles,34.0,34.0,5.646
+Seoul,37.5,37.5,3.812
+Madrid,40.4,40.4,4.703
+Beijing,39.9,39.9,3.953
+New York,40.7,40.7,4.012
+Rome,41.9,41.9,4.531
+London,51.5,51.5,2.94
+Berlin,52.5,52.5,2.832
+Moscow,55.75,55.75,2.86
+Stockholm,59.3,59.3,2.794
+Reykjavik,64.1,64.1,2.26
+Lima,-12.0,12.0,5.351
+Sao Paulo,-23.5,23.5,4.529
+Johannesburg,-26.2,26.2,5.582
+Buenos Aires,-34.6,34.6,4.791
+Cape Town,-33.9,33.9,5.561
+Sydney,-33.9,33.9,4.649
+Perth,-31.95,31.95,5.537
+Aswan,24.1,24.1,6.531
+Manaus,-3.1,3.1,4.673
+Dubai,25.2,25.2,5.675
+Helsinki,60.2,60.2,2.571
+Anchorage,61.2,61.2,2.541
+Quito,-0.18,0.18,4.006
+Reykjavik2,64.1,64.1,2.26
