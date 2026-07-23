@@ -35,7 +35,7 @@ DATA = {
     "searchYearEnd": str(target.year),   "searchMonthEnd": f"{target.month:02d}",
     "sltOrderType": "1", "sltOrderValue": "ASC",
     "sltArgTypes": "1", "sltArgTypeA": "0", "sltArgTypeB": "100",
-    "sum": "sum", "sltUndefType": "", "category": "month", "state": "3",
+    "sum": "sum", "gender": "gender", "sltUndefType": "", "category": "month", "state": "3",
 }
 s = requests.Session()                                      # 세션 쿠키 필요 → 페이지 먼저 방문
 s.get("https://jumin.mois.go.kr/ageStatMonth.do",
