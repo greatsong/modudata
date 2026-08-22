@@ -6,6 +6,8 @@ name: update-seoul
 on:
   schedule:
     - cron: '0 22 * * *'        # UTC 22:00 = 한국시간 아침 07:00
+    - cron: '0 3 * * *'         # UTC 03:00 = 한국시간 낮 12:00 (아침 실패 시 자동 재시도)
+    - cron: '0 10 * * *'        # UTC 10:00 = 한국시간 저녁 19:00 (2차 재시도)
   workflow_dispatch:             # 수동 실행 버튼 (테스트·복구용)
 
 permissions:
@@ -23,11 +25,18 @@ jobs:
 
       - run: pip install requests
 
-      - name: 기온 데이터 수집·append
+      - name: 기온 데이터 수집·append (타임아웃 시 5분 간격 3회 재시도)
         env:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}   # 공공데이터포털 (GitHub용 — apihub는 해외 IP 차단)
           KMA_KEY: ${{ secrets.KMA_KEY }}                  # 기상청 API허브 (로컬 실행용)
-        run: python scripts/update_seoul_temp.py
+        run: |
+          for i in 1 2 3; do
+            python scripts/update_seoul_temp.py && exit 0
+            echo "시도 $i 실패 — 300초 뒤 재시도"
+            sleep 300
+          done
+          echo "3회 모두 실패 — 다음 스케줄(12시·19시)이 자동 백필"
+          exit 1
 
       - name: 변경분 있으면 커밋
         run: |
