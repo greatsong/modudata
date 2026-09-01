@@ -1,0 +1,37 @@
+# danggok_meals_live.csv 매일 자동 갱신 — 당곡고 급식을 하루씩 이어 붙인다
+#   · 하루씩 물으면 응답이 한두 건이라 나이스 인증키가 필요 없다
+#   · 수업용 스냅샷 data/danggok_meals.csv는 건드리지 않는다
+name: update-meals
+
+on:
+  schedule:
+    - cron: '10 23 * * *'       # UTC 23:10 = 한국시간 아침 08:10
+  workflow_dispatch:             # 수동 실행 버튼
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install requests
+
+      - name: 급식 이어 붙이기
+        run: python scripts/update_meals.py
+
+      - name: 변경분 있으면 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/danggok_meals_live.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "🤖 danggok_meals_live.csv 급식 자동 갱신"
+            for i in 1 2 3; do git push && break; sleep $i; git pull --rebase origin main; done
+          fi
