@@ -1,0 +1,40 @@
+# kobis_genres.csv 채우기 — 영화코드별 장르·국가 표를 하루 한 번씩 이어서 수집
+#   · 일 호출 한도가 있어 한 번에 2,400편까지만 채우고 다음 날 이어 간다
+#   · 다 채워지면 아무것도 하지 않는다 (커밋 없음)
+# 시크릿 필요: KOBIS_KEY
+name: update-genres
+
+on:
+  schedule:
+    - cron: '0 2 * * *'         # UTC 02:00 = 한국시간 오전 11:00 (박스오피스 갱신과 겹치지 않게)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install requests
+
+      - name: 장르 표 이어 채우기
+        env:
+          KOBIS_KEY: ${{ secrets.KOBIS_KEY }}
+        run: python scripts/build_kobis_genres.py
+
+      - name: 변경분 있으면 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/kobis_genres.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "🤖 kobis_genres.csv 장르 표 이어 채우기"
+            for i in 1 2 3; do git push && break; sleep $i; git pull --rebase origin main; done
+          fi
