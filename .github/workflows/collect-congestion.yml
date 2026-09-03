@@ -1,4 +1,4 @@
-# seoul_congestion_log.csv 매시간 자동 수집 — 서울 주요 23곳 실시간 혼잡도 append
+# seoul_congestion_log.csv 매시간 자동 수집 — 서울 121곳 실시간 혼잡도 append (일반 오픈API는 호출 횟수 제한 없음)
 # 시크릿 필요: SEOUL_KEY (서울열린데이터광장 data.seoul.go.kr 발급 — 지하철 갱신과 같은 키)
 name: collect-congestion
 
