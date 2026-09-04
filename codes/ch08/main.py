@@ -61,7 +61,7 @@ with tab1:
 # ── 탭 ② 트리 세 형제: 흥행 예측 (7장 kobis.csv) ─────────────
 @st.cache_data
 def load_box():
-    box = pd.read_csv(RAW + "kobis.csv")
+    box = pd.read_csv(RAW + "kobis_ml.csv")      # 날마다 갱신되는 kobis.csv가 아니라, 학습용으로 떠 둔 표
     box["개봉일"] = pd.to_datetime(box["개봉일"], errors="coerce")
     two_months_ago = pd.Timestamp.today() - pd.Timedelta(days=60)
     box = box[(box["개봉일"] <= two_months_ago) & (box["스크린수"] >= 50)].dropna(subset=["최종관객"])  # 두 달 규칙 + 사전 상영 제외
@@ -104,20 +104,32 @@ def load_pop():
     X2 = StandardScaler().fit_transform(비율)                        # ② 같은 저울로
     km = KMeans(n_clusters=5, n_init=10, random_state=42).fit(X2)    # k=5는 사람이 정한다, 번호는 고정
     pop["무리"] = km.labels_; pop["이름"] = pop[이름칸].str.split("(").str[0].str.strip()
+    prof = 비율.groupby(pop["무리"]).mean()                           # 무리마다 나이 분포의 평균
+    import re
+    나이 = [int(re.search(r"_(\d+)세", c).group(1)) if re.search(r"_(\d+)세", c) else 100 for c in 연령]
+    유형 = {}
+    for g in prof.index:                                             # 번호 대신 부를 이름을 붙인다
+        노년 = prof.loc[g, [c for c, n in zip(연령, 나이) if n >= 60]].sum() * 100
+        청년 = prof.loc[g, [c for c, n in zip(연령, 나이) if 20 <= n <= 39]].sum() * 100
+        아이 = prof.loc[g, [c for c, n in zip(연령, 나이) if n <= 19]].sum() * 100
+        유형[g] = ("어르신 동네" if 노년 >= 60 else "장년·고령 동네" if 노년 >= 40
+                 else "청년 동네" if 청년 >= 33 else "아이 키우는 동네" if 아이 >= 20 else "중년 동네")
+    pop["유형"] = pop["무리"].map(유형)
     return pop, 비율, 연령
 pop, 비율, 연령 = load_pop()
 with tab3:
-    st.write(pop["무리"].value_counts().sort_index())
+    st.write(pop["유형"].value_counts())
     prof = 비율.groupby(pop["무리"]).mean()
+    이름표 = pop.drop_duplicates("무리").set_index("무리")["유형"]
     fig = go.Figure()
     for c in prof.index:
-        fig.add_scatter(x=list(range(len(연령))), y=prof.loc[c].values * 100, mode="lines", name=f"무리 {c}")
+        fig.add_scatter(x=list(range(len(연령))), y=prof.loc[c].values * 100, mode="lines", name=이름표[c])
     fig.update_layout(xaxis_title="나이", yaxis_title="비율(%)"); st.plotly_chart(fig)
     young = 비율.iloc[:, 20:40].sum(axis=1) * 100; old = 비율.iloc[:, 60:].sum(axis=1) * 100
-    st.plotly_chart(px.scatter(x=young, y=old, color=pop["무리"].astype(str), hover_name=pop["이름"],
-                               labels={"x": "20~30대 비율(%)", "y": "60세 이상 비율(%)", "color": "무리"}))
+    st.plotly_chart(px.scatter(x=young, y=old, color=pop["유형"], hover_name=pop["이름"],
+                               labels={"x": "20~30대 비율(%)", "y": "60세 이상 비율(%)", "color": "유형"}))
     name = st.text_input("동네 이름", "대치1동")
     hit = pop[pop["이름"].str.contains(name)]
     if len(hit):
-        c = int(hit.iloc[0]["무리"])
-        st.write(f"{hit.iloc[0]['이름']}은(는) 무리 {c}입니다. 같은 무리:", ", ".join(pop[pop["무리"] == c]["이름"].head(5)))
+        유 = hit.iloc[0]["유형"]
+        st.write(f"{hit.iloc[0]['이름']}은(는) '{유}'입니다. 같은 유형:", ", ".join(pop[pop["유형"] == 유]["이름"].head(5)))

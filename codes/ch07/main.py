@@ -1,4 +1,4 @@
-# 7장 전체 코드 - 살아 있는 데이터 병아리반(영화·서울) (2026-09-04)
+# 7장 전체 코드 - 살아 있는 데이터 병아리반(영화·서울) (2026-09-04, 점검 반영)
 # 실행 조건: 스트림릿 클라우드 [Settings] → [Secrets]에 KOBIS_KEY, SEOUL_KEY 등록
 import time
 from datetime import date, timedelta
@@ -30,12 +30,18 @@ def collect_weekly(years=10):
         box = res.json()["boxOfficeResult"]
         for m in box["weeklyBoxOfficeList"]:
             rows.append({"주시작일": box["showRange"][:8], "순위": int(m["rank"]),
+                         "영화코드": m["movieCd"],      # 이름이 같은 다른 영화를 구분하는 열
                          "영화명": m["movieNm"], "개봉일": m["openDt"],
                          "주간관객": int(m["audiCnt"]), "누적관객": int(m["audiAcc"])})
         day -= timedelta(days=7)
         time.sleep(0.3)                        # 서버에 부담을 주지 않게 잠깐 쉬기
         bar.progress((i + 1) / total, text=f"{i + 1}/{total}주")
-    return pd.DataFrame(rows)
+    df = pd.DataFrame(rows)
+    df["주시작일"] = pd.to_datetime(df["주시작일"])           # 예제 표와 같은 날짜형으로
+    df["개봉일"] = pd.to_datetime(df["개봉일"], errors="coerce")
+    st.download_button("주간 표 CSV로 내려받기", df.to_csv(index=False).encode("utf-8-sig"),
+                       "kobis_weekly.csv", "text/csv")
+    return df
 
 @st.cache_data
 def load_weekly_csv():
@@ -84,16 +90,27 @@ with tab2:
                  labels={"영화명": "", "누적관객": "누적 관객"})
     st.plotly_chart(fig)
     st.caption("누적관객은 주간 박스오피스 기록으로 계산한 근삿값입니다")
-    yearly_top = pd.read_csv("https://raw.githubusercontent.com/greatsong/modudata/main/data/kobis_yearly_top10.csv")
-    yearly_top["천만"] = yearly_top["그해관객"] >= 10_000_000
-    anim = px.bar(yearly_top.sort_values(["연도", "순위"], ascending=[True, False]), x="그해관객", y="영화명",
-                  orientation="h", color="천만", animation_frame="연도", range_x=[0, 18_500_000], labels={"영화명": ""})
-    anim.update_yaxes(categoryorder="total ascending")             # 연도마다 막대 순서를 다시 정렬
-    st.plotly_chart(anim)                                           # 슬라이더와 재생 버튼이 저절로 붙는다
+    # 역대 누적 관객 Top 10 레이스: 달마다 그때까지의 누적을 다시 세어 순위를 매긴다
+    race = w.sort_values("주시작일").copy()
+    race["연월"] = race["주시작일"].dt.to_period("M").astype(str)
+    frames = []
+    for ym in sorted(race["연월"].unique()):
+        upto = race[race["연월"] <= ym].groupby(["영화코드", "영화명"])["누적관객"].max().reset_index()
+        top = upto.sort_values("누적관객", ascending=False).head(10).reset_index(drop=True)
+        top["순위"] = top.index + 1
+        top["연월"] = ym
+        frames.append(top)
+    race10 = pd.concat(frames)
+    fig = px.bar(race10, x="누적관객", y=-race10["순위"], orientation="h", text="영화명",
+                 animation_frame="연월", range_x=[0, 18_500_000], range_y=[-10.5, -0.5],
+                 labels={"누적관객": "누적 관객", "y": ""})
+    fig.update_yaxes(showticklabels=False)                          # 자리(순위)로만 오르내린다
+    fig.update_traces(textposition="inside", insidetextanchor="start")
+    st.plotly_chart(fig)                                            # 재생 버튼과 슬라이더가 저절로 붙는다
 
 # 탭 ③ 롱런 Top 10 + 역주행 표
 with tab3:
-    weeks = w.groupby("영화명").agg(주수=("주시작일", "size"), 개봉일=("개봉일", "first")).reset_index()
+    weeks = w.groupby(["영화코드", "영화명"]).agg(주수=("주시작일", "size"), 개봉일=("개봉일", "first")).reset_index()
     longrun = weeks.sort_values("주수", ascending=False).head(10)
     longrun["표시"] = longrun["영화명"] + " (" + longrun["개봉일"].dt.year.astype(str) + ")"
     st.plotly_chart(px.bar(longrun.iloc[::-1], y="표시", x="주수", orientation="h",
@@ -147,11 +164,12 @@ with tab4:
     st.subheader("장르별 역대 1위")
     st.dataframe(fg.sort_values("누적관객", ascending=False).drop_duplicates("대표장르")[["대표장르", "영화명", "누적관객"]].head(12))
 
-# 탭 ⑤ 스크린과 관객 산점도 (7장 학습 재료 kobis.csv)
+# 탭 ⑤ 스크린과 관객 산점도 (8장 학습 재료 kobis.csv)
 with tab5:
     k = pd.read_csv("https://raw.githubusercontent.com/greatsong/modudata/main/data/kobis.csv")
     k = k[k["스크린수"] >= 50]                                       # 스크린 50개 미만은 사전 상영
     k = k.merge(pd.read_csv(GENRE_CSV).drop_duplicates("영화명")[["영화명", "대표장르"]], on="영화명", how="left")
+    k["대표장르"] = k["대표장르"].fillna("기타")             # kobis.csv에는 장르가 없어 이름으로 붙인다
     st.plotly_chart(px.scatter(k, x="스크린수", y="최종관객", color="대표장르", hover_name="영화명", hover_data=["개봉일", "관객수"]))
 
 # ── 서울 실시간 혼잡도 지도 ────────────────────────────
@@ -168,9 +186,11 @@ def load_congestion(codes):
     for cd in codes:                           # 한 번에 한 곳씩 (단순 반복은 AI에게)
         r = requests.get(f"{BASE}/{KEY}/json/citydata_ppltn/1/5/{cd}")
         p = r.json()["SeoulRtd.citydata_ppltn"][0]
+        age = {f"{k}대": float(p[f"PPLTN_RATE_{k}"]) for k in [0, 10, 20, 30, 40, 50, 60, 70]}
         rows.append({"코드": cd, "지역명": p["AREA_NM"], "혼잡도": p["AREA_CONGEST_LVL"],
-                     "인구min": p["AREA_PPLTN_MIN"], "인구max": p["AREA_PPLTN_MAX"],
-                     "비거주율": p["NON_RESNT_PPLTN_RATE"]})
+                     "인구min": int(p["AREA_PPLTN_MIN"]), "인구max": int(p["AREA_PPLTN_MAX"]),
+                     "비거주율": float(p["NON_RESNT_PPLTN_RATE"]),
+                     "청년비율": age["20대"] + age["30대"], **age})
         time.sleep(0.1)
     return pd.DataFrame(rows)
 
@@ -183,19 +203,38 @@ def congestion_map(df):
                           category_orders={"혼잡도": order}, color_discrete_sequence=["green", "gold", "orange", "red"],
                           hover_name="지역명", zoom=10, map_style="carto-positron")
 
-now = load_congestion(tuple(coords["코드"])).merge(coords[["코드", "위도", "경도"]], on="코드")
+now = load_congestion(tuple(coords["코드"])).merge(coords[["코드", "위도", "경도", "분류"]], on="코드")
 st.subheader(f"지금 서울 {len(now)}곳")
 st.plotly_chart(congestion_map(now))
 
-# 실제 기록으로 보는 낮과 밤 (23곳, 9장에서 매시간 쌓는 표)
+# 누가 채우나: 청년 비율 지도 + 연령대 구성 + 비거주 버블
+st.subheader("누가 채우고 있나")
+st.plotly_chart(px.scatter_map(now, lat="위도", lon="경도", color="청년비율", size="인구max", size_max=26,
+                               color_continuous_scale="Turbo", hover_name="지역명",
+                               hover_data=["혼잡도", "비거주율"], zoom=10, map_style="carto-positron"))
+AGES = [f"{k}대" for k in [0, 10, 20, 30, 40, 50, 60, 70]]
+now["60대이상"] = now["60대"] + now["70대"]
+pick12 = pd.concat([now.nlargest(6, "청년비율"), now.nlargest(6, "60대이상")])
+long = pick12.melt(id_vars="지역명", value_vars=AGES, var_name="연령대", value_name="비율(%)")
+st.plotly_chart(px.bar(long, x="지역명", y="비율(%)", color="연령대", barmode="stack",
+                       category_orders={"연령대": AGES}))
+st.plotly_chart(px.scatter(now, x="비거주율", y="청년비율", size="인구max", color="분류", size_max=40,
+                           hover_name="지역명", hover_data=["혼잡도"],
+                           labels={"비거주율": "비거주 인구 비율(%)", "청년비율": "20~30대 비율(%)"}))
+
+# 실제 기록으로 보는 낮과 밤 (23곳, 10장에서 매시간 쌓는 표)
 log = pd.read_csv("https://raw.githubusercontent.com/greatsong/modudata/main/data/seoul_congestion_log.csv")
 log["시각"] = pd.to_datetime(log["시각"]); log["시"] = log["시각"].dt.hour; log["일"] = log["시각"].dt.date
 day = pd.Timestamp("2026-08-20").date()
 c1, c2, c3 = st.columns(3)
 for col, hour, label in [(c1, 14, "낮 2시"), (c2, 19, "저녁 7시"), (c3, 22, "밤 10시")]:
     snap = log[(log["일"] == day) & (log["시"] == hour)].drop_duplicates("지역명")
-    col.caption(f"8월 20일 수요일 {label}")
-    col.plotly_chart(congestion_map(snap), use_container_width=True)
+    col.caption(f"8월 20일 목요일 {label}")
+    col.plotly_chart(congestion_map(snap), width="stretch")
+
+hour = st.slider("시각을 골라 하루를 넘겨 보세요", 0, 23, 14)          # 0시부터 23시까지
+pick_snap = log[(log["일"] == day) & (log["시"] == hour)].drop_duplicates("지역명")
+st.plotly_chart(congestion_map(pick_snap), key="slider_map")          # 앞의 지도와 구분되게 이름표를 붙인다
 
 level = {"여유": 0, "보통": 1, "약간 붐빔": 2, "붐빔": 3}
 period = log[(log["일"] >= pd.Timestamp("2026-08-15").date()) & (log["일"] <= pd.Timestamp("2026-08-26").date())]
