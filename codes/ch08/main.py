@@ -10,7 +10,7 @@ from sklearn.preprocessing import PolynomialFeatures, StandardScaler
 from sklearn.pipeline import make_pipeline
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.cluster import KMeans
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, cross_val_score, KFold
 from sklearn.metrics import r2_score, mean_absolute_error
 
 RAW = "https://raw.githubusercontent.com/greatsong/modudata/main/data/"
@@ -59,27 +59,38 @@ with tab1:
                            x="연도", y="일수", color="종류", barmode="group"))
 
 # ── 탭 ② 트리 세 형제: 흥행 예측 (7장 kobis.csv) ─────────────
+TABLES = {"9월 2일 표": "kobis_ml.csv", "9월 4일 표": "kobis_ml2.csv"}   # 하루 사이 한 편이 늘어난 두 표
+
 @st.cache_data
-def load_box():
-    box = pd.read_csv(RAW + "kobis_ml.csv")      # 날마다 갱신되는 kobis.csv가 아니라, 학습용으로 떠 둔 표
+def load_box(fname):
+    box = pd.read_csv(RAW + fname)               # 날마다 갱신되는 kobis.csv가 아니라, 그날의 표를 떠 둔 것
     box["개봉일"] = pd.to_datetime(box["개봉일"], errors="coerce")
-    two_months_ago = pd.Timestamp.today() - pd.Timedelta(days=60)
+    two_months_ago = pd.Timestamp("2026-09-04") - pd.Timedelta(days=60)
     box = box[(box["개봉일"] <= two_months_ago) & (box["스크린수"] >= 50)].dropna(subset=["최종관객"])  # 두 달 규칙 + 사전 상영 제외
     box["열기"] = box["관객수"] / box["상영횟수"]                                                       # 개봉 당일 관객 ÷ 상영 횟수
     return box
-box = load_box()
+
 with tab2:
+    골른표 = st.radio("학습에 쓸 표", list(TABLES), horizontal=True)
+    채점 = st.radio("채점 방법", ["한 번 나눠 채점", "다섯 번 나눠 채점"], horizontal=True)
+    box = load_box(TABLES[골른표])
     st.write("학습에 쓸 영화 수:", len(box))
     feat = ["스크린수", "상영횟수", "순위"]
     yb = np.log1p(box["최종관객"])                                                        # 관객 수는 로그로
-    Xtr, Xte, ytr, yte = train_test_split(box[feat], yb, test_size=0.2, random_state=42)  # 결과가 매번 같게
-    for 이름, m in {"선형회귀": LinearRegression(), "랜덤포레스트": RandomForestRegressor(random_state=42),
-                   "부스팅": GradientBoostingRegressor(random_state=42)}.items():
-        m.fit(Xtr, ytr); st.write(이름, "R²", round(r2_score(yte, m.predict(Xte)), 2))
+    모델들 = {"선형회귀": LinearRegression(), "랜덤포레스트": RandomForestRegressor(random_state=42),
+             "부스팅": GradientBoostingRegressor(random_state=42)}
+    def 점수(m, X):
+        if 채점 == "한 번 나눠 채점":
+            Xtr, Xte, ytr, yte = train_test_split(X, yb, test_size=0.2, random_state=42)   # 100편으로 한 번만 채점
+            return r2_score(yte, m.fit(Xtr, ytr).predict(Xte))
+        return cross_val_score(m, X, yb, cv=KFold(5, shuffle=True, random_state=42)).mean()  # 다섯 번 나눠 평균
+    for 이름, m in 모델들.items():
+        st.write(이름, "R²", round(점수(m, box[feat]), 2))
     feat2 = feat + ["열기"]
+    st.write("열기를 더한 랜덤포레스트 R²", round(점수(RandomForestRegressor(random_state=42), box[feat2]), 2))
+    # 아래 산점도와 중요도는 '한 번 나눈 그 100편'을 그린다
     Xtr, Xte, ytr, yte = train_test_split(box[feat2], yb, test_size=0.2, random_state=42)
     rf = RandomForestRegressor(random_state=42).fit(Xtr, ytr)
-    st.write("열기를 더한 랜덤포레스트 R²", round(r2_score(yte, rf.predict(Xte)), 2))
     test = box.loc[Xte.index].assign(예측=np.expm1(rf.predict(Xte)).astype(int))
     st.plotly_chart(px.scatter(test, x="예측", y="최종관객", hover_name="영화명", hover_data=["개봉일", "스크린수"],
                                log_x=True, log_y=True))
