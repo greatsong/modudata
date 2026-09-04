@@ -67,7 +67,7 @@ ate = ate[ate["메뉴"] == winner]
 if not ate.empty:
     last = pd.to_datetime(ate["날짜"]).max()
     days = (pd.Timestamp(today) - last).days
-    if days <= 7:
+    if 1 <= days <= 7:          # 오늘 저장한 기록은 빼고 어제부터 이레까지
         st.warning(f"그 메뉴, {days}일 전에도 드셨는데 괜찮으시겠어요?")
 
 if st.button("오늘 이거 먹었다"):
