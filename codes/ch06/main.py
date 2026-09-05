@@ -128,11 +128,12 @@ with tab1:
 
             # 최근 영상 50편
             recent = get_recent_videos(item["contentDetails"]["relatedPlaylists"]["uploads"])
-            like_rate = recent["좋아요"].sum() / recent["조회수"].sum() * 100
-            c4, c5, c6 = st.columns(3)                   # 아래 줄 카드 세 장
+            shorts = recent[recent["형식"] == "쇼츠(3분 이하)"]
+            best = recent.sort_values("조회수").iloc[-1]
+            c4, c5, c6 = st.columns(3)                   # 아래 줄 카드 세 장 (API가 준 값을 그대로 보여 준다)
             c4.metric("최근 50편 총 좋아요", f"{recent['좋아요'].sum():,}")
-            c5.metric("최근 50편 평균 조회수", f"{int(recent['조회수'].mean()):,}")
-            c6.metric("좋아요율(좋아요÷조회수)", f"{like_rate:.2f}%")
+            c5.metric("최근 50편 중 쇼츠(3분 이하)", f"{len(shorts)}편")
+            c6.metric("최근 50편 최고 조회수", f"{best['조회수']:,}")
 
             recent["순서"] = range(1, len(recent) + 1)
             fig = px.bar(recent, x="순서", y="조회수", color="형식", custom_data=["제목", "공개일", "좋아요"],
@@ -140,7 +141,6 @@ with tab1:
                          labels={"순서": "최근 50편(오래된 순 → 최신)", "조회수": "조회수(회)"})
             fig.update_traces(hovertemplate="<b>%{customdata[0]}</b><br>공개 %{customdata[1]}<br>조회수 %{y:,}회 · 좋아요 %{customdata[2]:,}<extra></extra>")
             st.plotly_chart(fig, width="stretch")
-            best = recent.sort_values("조회수").iloc[-1]
             st.write(f"최근 50편 중 최고 인기: **{best['제목']}** ({best['조회수']:,}회, {best['공개일']} 공개)")
 
             fig2 = px.scatter(recent, x="조회수", y="좋아요", color="형식", custom_data=["제목", "공개일"],
