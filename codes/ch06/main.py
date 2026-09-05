@@ -186,6 +186,9 @@ with tab3:
         fig4 = px.bar(top_words.iloc[::-1], y="단어", x="횟수", orientation="h", text="횟수", labels={"단어": ""})
         fig4.update_traces(marker_color="#EB6834", textposition="outside", cliponaxis=False)
         st.plotly_chart(fig4, width="stretch")
-        wc = WordCloud(font_path="fonts/NanumGothic.ttf", width=1200, height=600,   # 한글 폰트 파일은 저장소에 함께 올린다
-                       background_color="white").generate_from_frequencies(dict(freq.most_common(150)))
+        wc = WordCloud(font_path="fonts/NanumGothic.ttf", width=1600, height=900,   # 한글 폰트 파일은 저장소에 함께 올린다
+                       background_color="white", max_words=400, relative_scaling=0.35,   # 단어를 많이, 큰 단어는 덜 크게
+                       min_font_size=7, margin=2, random_state=42,                           # 작은 글자로 빈틈을 채운다
+                       prefer_horizontal=1.0 if korean else 0.92)                       # 한글은 세로로 놓으면 읽기 어렵다
+        wc.generate_from_frequencies(dict(freq.most_common(400)))
         st.image(wc.to_array(), width="stretch")
