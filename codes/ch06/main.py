@@ -8,6 +8,8 @@ from datetime import date
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 from googleapiclient.discovery import build
 from kiwipiepy import Kiwi                     # 자바가 필요 없는 한글 형태소 분석기
 from wordcloud import WordCloud
@@ -49,6 +51,7 @@ def get_recent_videos(uploads):
     df = pd.DataFrame([{"제목": v["snippet"]["title"], "공개일": v["snippet"]["publishedAt"][:10],
                         "조회수": int(v["statistics"].get("viewCount", 0)),
                         "좋아요": int(v["statistics"].get("likeCount", 0)),
+                        "댓글": int(v["statistics"].get("commentCount", 0)),
                         "길이(초)": seconds(v["contentDetails"]["duration"])} for v in vs])
     df["형식"] = (df["길이(초)"] <= 180).map({True: "쇼츠(3분 이하)", False: "긴 영상"})
     return df.sort_values("공개일").reset_index(drop=True)
@@ -128,12 +131,7 @@ with tab1:
 
             # 최근 영상 50편
             recent = get_recent_videos(item["contentDetails"]["relatedPlaylists"]["uploads"])
-            shorts = recent[recent["형식"] == "쇼츠(3분 이하)"]
             best = recent.sort_values("조회수").iloc[-1]
-            c4, c5, c6 = st.columns(3)                   # 아래 줄 카드 세 장 (API가 준 값을 그대로 보여 준다)
-            c4.metric("최근 50편 총 좋아요", f"{recent['좋아요'].sum():,}")
-            c5.metric("최근 50편 중 쇼츠(3분 이하)", f"{len(shorts)}편")
-            c6.metric("최근 50편 최고 조회수", f"{best['조회수']:,}")
 
             recent["순서"] = range(1, len(recent) + 1)
             fig = px.bar(recent, x="순서", y="조회수", color="형식", custom_data=["제목", "공개일", "좋아요"],
@@ -143,10 +141,24 @@ with tab1:
             st.plotly_chart(fig, width="stretch")
             st.write(f"최근 50편 중 최고 인기: **{best['제목']}** ({best['조회수']:,}회, {best['공개일']} 공개)")
 
-            fig2 = px.scatter(recent, x="조회수", y="좋아요", color="형식", custom_data=["제목", "공개일"],
-                              color_discrete_map={"쇼츠(3분 이하)": "#BBD3F2", "긴 영상": "#2A78D6"},
-                              labels={"조회수": "조회수(회)", "좋아요": "좋아요(개)"})
-            fig2.update_traces(marker_size=11, hovertemplate="<b>%{customdata[0]}</b><br>공개 %{customdata[1]}<br>조회수 %{x:,} · 좋아요 %{y:,}<extra></extra>")
+            # 조회수와 좋아요·댓글의 관계 - 두 패널 버블 차트. 원의 면적은 영상 길이, 값은 모두 API가 준 그대로
+            fig2 = make_subplots(rows=1, cols=2, horizontal_spacing=0.12)
+            sizeref = 2.0 * recent["길이(초)"].max() / (40.0 ** 2)
+            for col, y in [(1, "좋아요"), (2, "댓글")]:
+                for form, color in [("쇼츠(3분 이하)", "#BBD3F2"), ("긴 영상", "#2A78D6")]:
+                    g = recent[recent["형식"] == form]
+                    fig2.add_trace(go.Scatter(
+                        x=g["조회수"], y=g[y], mode="markers", name=form, legendgroup=form, showlegend=(col == 1),
+                        marker=dict(size=g["길이(초)"], sizemode="area", sizeref=sizeref, sizemin=6,
+                                    color=color, opacity=0.75, line=dict(width=1, color="#6A8FC7")),
+                        customdata=g[["제목", "공개일", "길이(초)", "조회수", "좋아요", "댓글"]].values,
+                        hovertemplate="<b>%{customdata[0]}</b><br>공개 %{customdata[1]} · %{customdata[2]}초<br>"
+                                      "조회수 %{customdata[3]:,} · 좋아요 %{customdata[4]:,} · 댓글 %{customdata[5]:,}<extra></extra>"),
+                        row=1, col=col)
+            fig2.update_xaxes(type="log", title_text="조회수(회, 로그 눈금)")   # 값 차이가 커서 눈금 한 칸이 열 배
+            fig2.update_yaxes(type="log", title_text="좋아요(개)", row=1, col=1)
+            fig2.update_yaxes(type="log", title_text="댓글(개)", row=1, col=2)
+            fig2.update_layout(height=460, margin=dict(l=10, r=10, t=20, b=10), legend=dict(orientation="h", y=-0.28))
             st.plotly_chart(fig2, width="stretch")
 
 with tab2:
