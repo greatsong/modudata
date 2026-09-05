@@ -1,4 +1,4 @@
-# 7장 전체 코드 - 살아 있는 데이터 병아리반(영화·서울) (2026-09-04, 점검 반영)
+# 7장 전체 코드 - 살아 있는 데이터 병아리반(영화·서울) (2026-09-05, 표 다듬기)
 # 실행 조건: 스트림릿 클라우드 [Settings] → [Secrets]에 KOBIS_KEY, SEOUL_KEY 등록
 import time
 from datetime import date, timedelta
@@ -62,9 +62,11 @@ for col in ["rank", "audiCnt", "audiAcc", "scrnCnt", "showCnt"]:
 df["구분"] = df["openDt"].str[:4].astype(int).apply(
     lambda y: f"{date.today().year}년 개봉" if y >= date.today().year else "그 전에 개봉(재개봉)")
 with tab1:
+    NUM = st.column_config.NumberColumn(format="localized")      # 98409 → 98,409
     st.dataframe(df[["rank", "movieNm", "openDt", "audiCnt", "audiAcc"]]
                  .rename(columns={"rank": "순위", "movieNm": "영화명", "openDt": "개봉일",
-                                  "audiCnt": "관객수", "audiAcc": "누적관객"}))
+                                  "audiCnt": "관객수", "audiAcc": "누적관객"}),
+                 hide_index=True, column_config={"관객수": NUM, "누적관객": NUM})
     fig = px.bar(df.sort_values("rank", ascending=False), y="movieNm", x="audiCnt",
                  orientation="h", color="구분", labels={"movieNm": "", "audiCnt": "관객 수"})
     st.plotly_chart(fig)
@@ -85,8 +87,8 @@ with tab2:
     c1.metric("역대 1위", top10.iloc[0]["영화명"])
     c2.metric("관객 수", f"{top10.iloc[0]['누적관객']:,}")
     c3.metric("1,000만 영화", f"{(final['누적관객'] >= 10_000_000).sum()}편")
-    top10["천만"] = top10["누적관객"] >= 10_000_000
-    fig = px.bar(top10.iloc[::-1], y="영화명", x="누적관객", orientation="h", color="천만",
+    top10["구분"] = top10["누적관객"].ge(10_000_000).map({True: "1,000만 이상", False: "1,000만 미만"})
+    fig = px.bar(top10.iloc[::-1], y="영화명", x="누적관객", orientation="h", color="구분",
                  labels={"영화명": "", "누적관객": "누적 관객"})
     st.plotly_chart(fig)
     st.caption("누적관객은 주간 박스오피스 기록으로 계산한 근삿값입니다")
@@ -126,12 +128,14 @@ with tab3:
     rv["배율"] = (rv["최고주"] / rv["개봉주"]).round(1)
     rv = rv[(rv["정점주차"] >= 4) & (rv["최고주"] >= 100_000) & (rv["개봉주"] >= 30_000)]
     st.subheader("역대급 역주행 Top 10 - 개봉 주보다 뒤 주에 관객이 늘어난 영화")
-    st.dataframe(rv.sort_values("배율", ascending=False).head(10))
+    st.dataframe(rv.sort_values("배율", ascending=False).head(10), hide_index=True,
+                 column_config={c: NUM for c in ["개봉주", "최고주", "최종관객"]})
     ones = w[w["순위"] == 1].sort_values("주시작일")
     ones["run"] = (ones["영화명"] != ones["영화명"].shift()).cumsum()     # 영화가 바뀔 때마다 새 구간
     runs = ones.groupby(["run", "영화명"]).agg(연속주=("주시작일", "size"), 시작=("주시작일", "min")).reset_index()
     st.subheader("역대 최장 연속 1위 Top 5")
-    st.dataframe(runs.sort_values("연속주", ascending=False).head(5)[["영화명", "연속주", "시작"]])
+    st.dataframe(runs.sort_values("연속주", ascending=False).head(5)[["영화명", "연속주", "시작"]],
+                 hide_index=True, column_config={"시작": st.column_config.DateColumn(format="YYYY-MM-DD")})
 
 
 # 탭 ④ 연도별 관객 + 장르 비중
@@ -162,7 +166,8 @@ with tab4:
     top6 = fn[fn["장르"] != "기타 장르"].sort_values("누적관객", ascending=False).groupby("장르").head(6)
     st.plotly_chart(px.treemap(top6, path=["장르", "영화명"], values="누적관객"))     # 장르 상자 안의 영화 칸
     st.subheader("장르별 역대 1위")
-    st.dataframe(fg.sort_values("누적관객", ascending=False).drop_duplicates("대표장르")[["대표장르", "영화명", "누적관객"]].head(12))
+    st.dataframe(fg.sort_values("누적관객", ascending=False).drop_duplicates("대표장르")[["대표장르", "영화명", "누적관객"]].head(12),
+                 hide_index=True, column_config={"누적관객": NUM})
 
 # 탭 ⑤ 스크린과 관객 산점도 (8장 학습 재료 kobis.csv)
 with tab5:
