@@ -91,6 +91,14 @@ EN_STOP = set("the a an and or but if of to in on at for with from by as is are 
               "these those i you he she we they me him her us them my your his our their what which who how when "
               "where why not no so than too very can could would should will just do does did have has had about "
               "into over after before up down out off more most some any all both each other only own same".split())
+WC_COLORS = ["#264653", "#2A9D8F", "#457B9D", "#E76F51", "#D4A017", "#6D597A", "#B56576"]   # 워드클라우드 일곱 색
+
+
+def wc_color(word, font_size, position, orientation, random_state=None, **kw):
+    """단어마다 일곱 색 가운데 하나를 고른다. random_state가 고정되어 같은 단어는 늘 같은 색이다."""
+    return random_state.choice(WC_COLORS)
+
+
 KO_STOP = set("진짜 너무 정말 그냥 이거 이건 그거 근데 이제 우리 사람 생각 영상 댓글 사람들".split())   # 결과를 보며 추가
 
 
@@ -188,7 +196,7 @@ with tab3:
         st.plotly_chart(fig4, width="stretch")
         wc = WordCloud(font_path="fonts/NanumGothic.ttf", width=1600, height=900,   # 한글 폰트 파일은 저장소에 함께 올린다
                        background_color="white", max_words=400, relative_scaling=0.35,   # 단어를 많이, 큰 단어는 덜 크게
-                       min_font_size=7, margin=2, random_state=42,                           # 작은 글자로 빈틈을 채운다
-                       prefer_horizontal=1.0 if korean else 0.92)                       # 한글은 세로로 놓으면 읽기 어렵다
+                       min_font_size=7, margin=2, prefer_horizontal=0.9,                # 작은 글자로 빈틈을 채운다
+                       random_state=42, color_func=wc_color)                           # 배치와 색이 매번 같게
         wc.generate_from_frequencies(dict(freq.most_common(400)))
         st.image(wc.to_array(), width="stretch")
