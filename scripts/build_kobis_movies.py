@@ -1,6 +1,7 @@
 # kobis_daily.csv(일별 TOP10 축적)에서 영화 단위 표 kobis_movies.csv를 다시 만든다.
 #   · 한 줄 = 영화 한 편. 당곡고 데이터과학 7차시(다중 회귀)의 실습 자료.
 #   · genre·nation은 KOBIS 영화 상세 API에서 받아 오고, 이미 아는 영화는 기존 파일 값을 재사용한다(호출 절약).
+#   · 재개봉·재상영(첫 등장이 개봉 60일 뒤)은 제외한다 — 개봉 초기 성적을 다루는 표이기 때문
 #   · 나머지 열은 모두 일별 표에서 계산한다 — 새 자료가 하루 쌓이면 이 표도 하루만큼 바뀐다.
 # 컬럼: movieCd,movieNm,openDt,genre,nation,first_scrn,first_show,first_date,peak,first_week_audi,total_audi,days_in_top10
 import csv
@@ -55,7 +56,7 @@ by_movie = {}
 for r in rows:
     by_movie.setdefault(r["영화코드"], []).append(r)
 
-out, fetched = [], 0
+out, fetched, skipped = [], 0, 0
 for code, recs in by_movie.items():
     recs.sort(key=lambda r: r["날짜"])
     first = recs[0]
@@ -67,6 +68,14 @@ for code, recs in by_movie.items():
         fetched += 1
         time.sleep(0.2)                            # API 예의
     base = open_dt or first["날짜"]
+    # 재개봉·재상영 제외 — 첫 등장이 개봉일보다 두 달 넘게 늦으면 '개봉 초기 성적'이라 부를 수 없다
+    try:
+        gap = (datetime.strptime(first["날짜"], "%Y%m%d") - datetime.strptime(base, "%Y%m%d")).days
+    except ValueError:
+        gap = 0
+    if gap > 60:
+        skipped += 1
+        continue
     try:
         peak = 1 if datetime.strptime(base, "%Y%m%d").month in PEAK_MONTHS else 0
     except ValueError:
@@ -96,4 +105,4 @@ with open(OUT, "w", encoding="utf-8-sig", newline="") as f:
     w = csv.DictWriter(f, fieldnames=COLS)
     w.writeheader()
     w.writerows(out)
-print(f"kobis_movies.csv 다시 생성 · 영화 {len(out)}편 · 상세 조회 {fetched}편")
+print(f"kobis_movies.csv 다시 생성 · 영화 {len(out)}편 · 상세 조회 {fetched}편 · 재개봉 제외 {skipped}편")
