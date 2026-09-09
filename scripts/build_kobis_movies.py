@@ -82,6 +82,14 @@ for code, recs in by_movie.items():
     if gap > 60:
         skipped += 1
         continue
+    # 재상영·재개봉 두 번째 거름망 — 첫 기록의 누적 관객이 그날 관객보다 훨씬 크면 이미 상영 이력이 있는 영화다.
+    # (개봉일이 재개봉일로 기록되어 위 검사를 통과하는 경우를 잡는다)
+    try:
+        if int(first["누적관객"]) > int(first["일관객"]) * 3:
+            skipped += 1
+            continue
+    except (ValueError, KeyError):
+        pass
     try:
         peak = 1 if datetime.strptime(base, "%Y%m%d").month in PEAK_MONTHS else 0
     except ValueError:
