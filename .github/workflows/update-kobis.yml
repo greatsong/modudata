@@ -26,19 +26,20 @@ jobs:
       - run: pip install requests pandas
 
       - name: 박스오피스 반영
+        continue-on-error: true          # 러너 DNS 오류가 아래 단계를 막지 않게 한다
         env:
           KOBIS_KEY: ${{ secrets.KOBIS_KEY }}
-        run: python scripts/update_kobis.py
+        run: for i in 1 2 3; do python scripts/update_kobis.py && break; echo "재시도 $i"; sleep 20; done
 
       - name: 일별 축적표 이어 붙이기
         env:
           KOBIS_KEY: ${{ secrets.KOBIS_KEY }}
-        run: python scripts/append_kobis_daily.py
+        run: for i in 1 2 3; do python scripts/append_kobis_daily.py && break; echo "재시도 $i"; sleep 20; done
 
       - name: 영화별 표 다시 만들기
         env:
           KOBIS_KEY: ${{ secrets.KOBIS_KEY }}
-        run: python scripts/build_kobis_movies.py
+        run: for i in 1 2 3; do python scripts/build_kobis_movies.py && break; echo "재시도 $i"; sleep 20; done
 
       - name: 변경분 있으면 커밋
         run: |
