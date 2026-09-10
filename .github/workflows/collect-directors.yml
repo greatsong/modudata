@@ -1,0 +1,31 @@
+# 감독 이력 수집 — 한 번에 1,200편씩. 다 채울 때까지 여러 번 실행한다.
+name: collect-directors
+on:
+  workflow_dispatch:
+    inputs:
+      max:
+        description: 한 번에 받을 편수
+        default: '1200'
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install requests
+      - env:
+          KOBIS_KEY: ${{ secrets.KOBIS_KEY }}
+          MAX_FETCH: ${{ inputs.max }}
+        run: for i in 1 2 3; do python scripts/build_director_history.py && break; echo "재시도 $i"; sleep 20; done
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/kobis_directors.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "🤖 감독 이력 수집"
+            for i in 1 2 3; do git push && break; sleep $i; git pull --rebase origin main; done
+          fi
