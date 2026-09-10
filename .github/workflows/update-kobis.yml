@@ -41,11 +41,16 @@ jobs:
           KOBIS_KEY: ${{ secrets.KOBIS_KEY }}
         run: for i in 1 2 3; do python scripts/build_kobis_movies.py && break; echo "재시도 $i"; sleep 20; done
 
+      - name: 감독·배우 표 만들기
+        env:
+          KOBIS_KEY: ${{ secrets.KOBIS_KEY }}
+        run: for i in 1 2 3; do python scripts/build_kobis_people.py && break; echo "재시도 $i"; sleep 20; done
+
       - name: 변경분 있으면 커밋
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/kobis.csv data/kobis_daily.csv data/kobis_movies.csv
+          git add data/kobis.csv data/kobis_daily.csv data/kobis_movies.csv data/kobis_people.csv
           if ! git diff --cached --quiet; then
             git commit -m "🤖 kobis 박스오피스 자동 갱신 (영화 단위 + 일별 축적)"
             for i in 1 2 3; do git push && break; sleep $i; git pull --rebase origin main; done
