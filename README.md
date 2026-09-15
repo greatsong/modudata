@@ -183,3 +183,10 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 ---
 
 *원본은 모두 공개 개방 데이터입니다(기상청·행정안전부·서울 열린데이터광장·영화진흥위원회 등). 실습·학습용으로 정리해 재배포합니다.*
+
+## stroke.csv — 뇌졸중 예측 데이터 (교육 목적 전용)
+
+- 출처: Kaggle "Stroke Prediction Dataset" (fedesoriano). 캐글 표기: Data files © Original Authors, "(Confidential Source) - Use only for educational purposes". 원출처는 비공개이며 재배포 허가가 명시되어 있지 않다. 고등학교 『데이터 과학』 수업(당곡고 2026)에서 교육 목적으로만 사용한다.
+- 5,110행 · 12열(id, gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status, stroke). 뇌졸중(stroke=1) 249건(4.87%).
+- 원본과 다른 점 하나: bmi 열의 문자열 "N/A" 201건을 빈 칸으로 바꿨다. 그 밖의 값은 원본과 같다(원본 SHA-256 644d473b… 316,971바이트, 2026-09-15 확인).
+- 실제 환자를 식별할 수 있는 정보는 없다.
