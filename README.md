@@ -190,3 +190,13 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 - 5,110행 · 12열(id, gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status, stroke). 뇌졸중(stroke=1) 249건(4.87%).
 - 원본과 다른 점 하나: bmi 열의 문자열 "N/A" 201건을 빈 칸으로 바꿨다. 그 밖의 값은 원본과 같다(원본 SHA-256 644d473b… 316,971바이트, 2026-09-15 확인).
 - 실제 환자를 식별할 수 있는 정보는 없다.
+
+
+## eafc25_players.csv — EA SPORTS FC 25 선수 능력치 (필드플레이어 상위 800명)
+
+- 연도: EA SPORTS FC 25, **2024-25 시즌** 데이터. 손흥민이 토트넘, 음바페가 레알 마드리드, 홀란드가 맨체스터 시티, 김민재가 바이에른 뮌헨으로 적혀 있어 시즌이 확인된다(마르무시가 맨체스터 시티, 크바라츠헬리아가 파리 생제르맹이라 겨울 이적까지 반영된 갱신본이다).
+- 출처: GitHub `mzafram2001/ea-fc`의 `data/dataset_ea_fc_25.csv`(MIT 라이선스, 로그인 없이 raw URL로 내려받을 수 있다). 그 저장소는 공개 소스에서 모은 정리본이며, 원본 각 행의 `player_url` 열이 sofifa.com을 가리킨다. **게임사가 공식 배포한 데이터가 아니다.** 같은 성격의 캐글 데이터셋(mexwell "⚽️ EA FC25 Player Database" 등)도 있으나 라이선스 문구를 로그인 없이 확인할 수 없어 사용하지 않았다.
+- 정리 방식: 원본 18,507명에서 ① 포지션에 GK가 들어간 골키퍼를 빼고 ② 종합 능력치 내림차순(동점은 이름 오름차순)으로 상위 800명을 골랐다. 열 이름은 기존 `eafc_players.csv`와 같게 맞췄다(`alias`→`name`, `club_name`→`club`, `physical`→`physic`). 값 자체는 고치지 않았다.
+- 800행 · 14열(name, long_name, positions, club, overall, pace, shooting, passing, dribbling, defending, physic, value_eur, age, height_cm). 인코딩 utf-8. 종합 능력치 91~77.
+- 주의: `positions`는 "RM,RW"처럼 쉼표로 이어 붙였다. `value_eur`는 유로 단위이고 0인 선수가 9명(계약이 없는 선수), `club`이 빈 칸인 선수가 8명 있다. 모두 종합 능력치 상위 120명 밖이다.
+- 쓰는 곳: 고등학교 『데이터 과학』 9차시 군집(당곡고 2026).
