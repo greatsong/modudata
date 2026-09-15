@@ -200,3 +200,10 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 - 800행 · 14열(name, long_name, positions, club, overall, pace, shooting, passing, dribbling, defending, physic, value_eur, age, height_cm). 인코딩 utf-8. 종합 능력치 91~77.
 - 주의: `positions`는 "RM,RW"처럼 쉼표로 이어 붙였다. `value_eur`는 유로 단위이고 0인 선수가 9명(계약이 없는 선수), `club`이 빈 칸인 선수가 8명 있다. 모두 종합 능력치 상위 120명 밖이다.
 - 쓰는 곳: 고등학교 『데이터 과학』 9차시 군집(당곡고 2026).
+
+## eafc25_top100.csv — 위와 같은 데이터의 상위 100명 · 선수 이름 한글 표기 추가
+
+- `eafc25_players.csv`에서 종합 능력치 상위 100명(동점은 이름 오름차순)만 뽑고, 맨 앞에 `name_ko` 열을 더한 파일이다. 값은 원본 그대로이며 골키퍼는 원본 단계에서 이미 빠져 있다.
+- 한글 표기는 국내 언론에서 쓰는 이름을 손으로 맞춘 것이다(살라·홀란드·손흥민 …). 구단 이름(`club`)은 영문 그대로 둔다.
+- 100행 · 14열(name_ko, name, positions, club, overall, pace, shooting, passing, dribbling, defending, physic, value_eur, age, height_cm). 인코딩 utf-8. 종합 능력치 91~84.
+- 쓰는 곳: 고등학교 『데이터 과학』 9차시 실험실(당곡고 2026) — 학생이 만드는 군집 앱이 화면에 한글 이름을 보여 주기 위한 파일.
