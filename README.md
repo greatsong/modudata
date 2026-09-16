@@ -50,6 +50,7 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 | `seoul_area_xy.csv` | 6·10장 | utf-8 | 1.6 KB | 서울 주요 명소 23곳 좌표 |
 | `kobis.csv` | 8장 | utf-8 | 30 KB | 영화 박스오피스 · **매일 자동 갱신** |
 | `seoul_congestion_log.csv` | 10장 | utf-8 | 260 KB | 서울 실시간 혼잡도 로그 · **매시간 자동 수집** |
+| `danggok_meals_184.csv` | 수업용 | utf-8 | 25 KB | 당곡고 중식 184일 저장본 (2025-09-01~2026-09-30) · 갱신하지 않는 고정본 |
 
 보조·검증용: `seoul_daily/monthly/yearly.csv`(기온 집계본) · `mnist_small.npz`(손글씨) · `stars_검증데이터.csv` · `kobis_영화흥행_검증데이터.csv` · `seoul_yearly_real_검증데이터.csv`
 
@@ -72,6 +73,7 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 | `seoul_area_xy.csv` | *파생* — **서울특별시** 실시간 도시데이터(citydata) 주요 명소 좌표 | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
 | `kobis.csv` | **영화진흥위원회(KOFIC)** — 영화관입장권 통합전산망 일별 박스오피스 | KOBIS Open API [kobis.or.kr](https://www.kobis.or.kr/kobisopenapi) |
 | `seoul_congestion_log.csv` | **서울특별시** — 실시간 도시데이터(citydata_ppltn) | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
+| `danggok_meals_184.csv` | **교육부·서울특별시교육청** — 나이스 급식식단정보(mealServiceDietInfo), 당곡고등학교 중식 | 나이스 교육정보 개방 포털 [open.neis.go.kr](https://open.neis.go.kr) |
 
 **API로 받는 데이터의 원 출처**: 야후 파이낸스(yfinance)·**Google**(YouTube Data API, Gemini)·**영화진흥위원회**(KOBIS)·**서울특별시**(실시간 도시데이터)·**행정안전부**(공공데이터포털 data.go.kr, 제공기관은 데이터별 상이)·**카카오**(로컬 API)·**GBIF**·**NASA**·**USGS**. 발급·엔드포인트는 아래 [API 데이터](#-api-데이터--키-획득-방법) 표 참고.
 
