@@ -18,9 +18,9 @@ function doGet(e) {
 
 // 앱이 투표를 보내면 시트에 한 줄을 쓴다.
 // 받는 형태 세 가지를 모두 허용한다.
-//   ① JSON 본문 {"data": {"member": "민지", "menu": "김치찌개", "type": "먹고싶다"}}
-//   ② JSON 본문 {"member": "민지", "menu": "김치찌개", "type": "먹고싶다"}
-//   ③ 폼 방식(member=민지&menu=김치찌개&type=먹고싶다)
+//   ① JSON 본문 {"data": {"member": "민지", "menu": "제육볶음", "type": "먹고싶다"}}
+//   ② JSON 본문 {"member": "민지", "menu": "제육볶음", "type": "먹고싶다"}
+//   ③ 폼 방식(member=민지&menu=제육볶음&type=먹고싶다)
 // 시각은 앱이 아니라 이 프로그램이 한국 시간으로 적는다.
 function doPost(e) {
   try {
