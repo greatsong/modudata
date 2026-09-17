@@ -14,7 +14,7 @@ create table public.votes (
 
   -- 약속하지 않은 메뉴는 받지 않는다.
   constraint votes_menu_allowed check (
-    menu in ('김치찌개', '된장찌개', '돈까스', '비빔밥', '냉면', '샐러드')
+    menu in ('제육볶음', '스시', '수제버거', '파스타', '타코', '샐러드')
   ),
 
   -- 구분은 두 가지뿐이다.
