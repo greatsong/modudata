@@ -6,7 +6,7 @@ create table public.votes (
   id         bigint generated always as identity primary key,  -- 데이터베이스가 붙이는 고유 번호
   name       text        not null,                             -- 투표한 별명. 식사 기록은 '전체'
   menu       text        not null,                             -- 앞에서 정한 여섯 메뉴 중 하나
-  kind       text        not null,                             -- '먹고싶다' 또는 '먹었다'
+  kind       text        not null,                             -- '희망메뉴' 또는 '식사완료'
   created_at timestamptz not null default now(),               -- 데이터베이스가 적는 저장 시각
 
   -- 빈 별명은 받지 않는다(공백만 넣은 것도 빈 별명으로 본다).
@@ -18,11 +18,11 @@ create table public.votes (
   ),
 
   -- 구분은 두 가지뿐이다.
-  constraint votes_kind_allowed check (kind in ('먹고싶다', '먹었다'))
+  constraint votes_kind_allowed check (kind in ('희망메뉴', '식사완료'))
 );
 
 -- 식사 기록은 '한국 날짜와 메뉴가 같으면 한 번만 저장'한다.
--- 개인의 투표('먹고싶다')는 마음을 바꿀 수 있으므로 이 규칙에서 뺀다(부분 유일 인덱스).
+-- 개인의 투표('희망메뉴')는 마음을 바꿀 수 있으므로 이 규칙에서 뺀다(부분 유일 인덱스).
 --
 -- 주의: created_at::date, date(created_at), to_char(created_at, 'YYYY-MM-DD')처럼
 --       저장 시각에서 날짜를 바로 뽑으면 "functions in index expression must be marked
@@ -32,7 +32,7 @@ create table public.votes (
 --       값이 접속 설정과 무관하게 고정되어 인덱스에 쓸 수 있습니다.
 create unique index votes_meal_once_per_day
   on public.votes (((created_at at time zone 'Asia/Seoul')::date), menu)
-  where kind = '먹었다';
+  where kind = '식사완료';
 
 -- 접근 권한: 로그인하지 않은 요청(anon)에 읽기와 추가만 허용한다.
 -- 수정과 삭제는 정책을 만들지 않았으므로 자동으로 막힌다.
