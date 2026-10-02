@@ -48,11 +48,11 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 | `boundaries/*.geojson` | 4·11장 | utf-8 | 0.3~2 MB | **지도용 경량 경계** — 시도(17)·시군구(255)·서울동(427)·경기동(602) |
 | `dong_centroids.csv` | 11장 | utf-8 | 230 KB | 행정동 중심점 좌표 |
 | `seoul_area_xy.csv` | 6·10장 | utf-8 | 1.6 KB | 서울 주요 명소 23곳 좌표 |
-| `kobis.csv` | 8장 | utf-8 | 30 KB | 영화 박스오피스 · **매일 자동 갱신** |
+| `boxoffice_monthly/*.csv` | 8장 | utf-8 (BOM) | 0.8 MB | 월별 박스오피스 상위 100편 28개(2024-01~2026-04) · 원본 그대로, 갱신하지 않는 고정본 |
 | `seoul_congestion_log.csv` | 10장 | utf-8 | 260 KB | 서울 실시간 혼잡도 로그 · **매시간 자동 수집** |
 | `danggok_meals_184.csv` | 수업용 | utf-8 | 25 KB | 당곡고 중식 184일 저장본 (2025-09-01~2026-09-30) · 갱신하지 않는 고정본 |
 
-보조·검증용: `seoul_daily/monthly/yearly.csv`(기온 집계본) · `mnist_small.npz`(손글씨) · `stars_검증데이터.csv` · `kobis_영화흥행_검증데이터.csv` · `seoul_yearly_real_검증데이터.csv`
+보조·검증용: `seoul_daily/monthly/yearly.csv`(기온 집계본) · `mnist_small.npz`(손글씨) · `stars_검증데이터.csv` · `seoul_yearly_real_검증데이터.csv`
 
 > 인코딩 표기는 "현재 저장소 복사본" 기준입니다. **원본을 직접 받으면 cp949인 경우가 많고, 갱신·재저장 과정에서 바뀔 수 있습니다.** 그래서 위 `read_csv_flex`처럼 읽는 걸 권장합니다.
 
@@ -71,7 +71,7 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 | `dong_centroids.csv` | *파생* — 위 `hangjeongdong.geojson`(vuski/admdongkor)에서 각 동 중심점 계산 | (파생물) |
 | `boundaries/*.geojson` (시도·시군구·서울동·경기동) | *파생* — `hangjeongdong.geojson`(**vuski/admdongkor**, **CC BY 4.0**)을 dissolve·필터 | [github.com/vuski/admdongkor](https://github.com/vuski/admdongkor) |
 | `seoul_area_xy.csv` | *파생* — **서울특별시** 실시간 도시데이터(citydata) 주요 명소 좌표 | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
-| `kobis.csv` | **영화진흥위원회(KOFIC)** — 영화관입장권 통합전산망 일별 박스오피스 | KOBIS Open API [kobis.or.kr](https://www.kobis.or.kr/kobisopenapi) |
+| `boxoffice_monthly/*.csv` | **영화진흥위원회(KOFIC)** — 영화관입장권 통합전산망, **한국문화정보원** 문화빅데이터플랫폼 제공 "KOBIS 박스오피스 영화정보" | [bigdata-culture.kr](https://www.bigdata-culture.kr) |
 | `seoul_congestion_log.csv` | **서울특별시** — 실시간 도시데이터(citydata_ppltn) | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
 | `danggok_meals_184.csv` | **교육부·서울특별시교육청** — 나이스 급식식단정보(mealServiceDietInfo), 당곡고등학교 중식 | 나이스 교육정보 개방 포털 [open.neis.go.kr](https://open.neis.go.kr) |
 
@@ -140,9 +140,11 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 - **출처**: *파생물* · 원 출처는 **서울특별시** 실시간 도시데이터(citydata, 서울 열린데이터광장)의 주요 명소 좌표를 정리
 - **열**: `코드(POI…), 지역명, 위도, 경도` (+ 예시 스냅샷 열) · 서울 혼잡도 API 응답과 지역명/코드로 merge
 
-### `kobis.csv` — 영화 박스오피스 (🔄 매일 자동 갱신)
-- **출처**: KOBIS 일별 박스오피스 API로 축적(아래 '자동 갱신')
-- **열**: `영화명, 개봉일, 스크린수, 상영횟수, 순위, 관객수, 최종관객` · **주의**: 최종관객은 수십 배 편차 → `log1p` 변환 권장 · '열기'(관객수 ÷ 상영횟수) 특성 만들기
+### `boxoffice_monthly/` — 월별 박스오피스 상위 100편 (8장)
+- **출처**: 영화진흥위원회 영화관입장권 통합전산망(KOBIS) · 문화빅데이터플랫폼([bigdata-culture.kr](https://www.bigdata-culture.kr)) "KOBIS 박스오피스 영화정보" 월별 CSV · 영화진흥위원회 답변(2026-10-02): 플랫폼 CSV 활용 제한 없음
+- **파일**: `KC_KOBIS_BOX_OFFIC_MOVIE_INFO_YYYYMM.csv` 28개(202401~202604) · 내려받은 **원본 그대로**(이름·내용 수정 없음) · 주소 `https://raw.githubusercontent.com/greatsong/modudata/main/data/boxoffice_monthly/KC_KOBIS_BOX_OFFIC_MOVIE_INFO_202401.csv`에서 끝 여섯 자리만 바꾼다
+- **열**: 영문 약어 18개(`MOVIE_NM`, `OPN_DE`, `VIEWNG_NMPR_CO`, `SEOUL_VIEWNG_NMPR_CO` 등) · 값은 누적이 아니라 **그달 관객 수**
+- **주의**: 관객 수·매출액 표기가 파일마다 다름(소수점·쉼표 혼재) → 쉼표·공백 제거 후 숫자 변환 · 2024-01~03은 내용 없는 행 80행씩 포함(200행) · **2025-11 파일은 한국 영화만 들어 있음**(관객 합계가 이웃 달의 10분의 1) — 8장에서 이 문제를 찾아 처리한다 · 박스오피스는 계속 갱신되는 자료라 지금 조회한 값과 다를 수 있다
 
 ### `seoul_congestion_log.csv` — 서울 실시간 혼잡도 로그 (🔄 매시간 자동 수집)
 - **출처**: 서울 실시간 도시데이터 API를 GitHub Actions가 매시간 append(아래 '자동 갱신')
@@ -172,7 +174,6 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 
 아래 데이터는 매번 직접 안 모아도 되게 **자동으로 최신화**됩니다. (워크플로 파일은 `.github/workflows/`에 포함 — 각 시크릿을 등록해야 동작합니다.)
 
-- **`kobis.csv`** — 매일 '어제' 박스오피스 TOP10 반영(새 영화 추가 + 최종관객 갱신) · 시크릿 `KOBIS_KEY` · 스크립트 `scripts/update_kobis.py`
 - **`seoul_congestion_log.csv`** — 매시간 서울 혼잡도 append · 시크릿 `SEOUL_KEY` · 스크립트 `scripts/collect_seoul.py`
 - **`seoul.csv`** — 매일 아침(KST 07시) 빠진 날짜를 어제까지 백필 · 시크릿 `DATA_GO_KR_KEY`(공공데이터포털 ASOS 일자료 — apihub는 해외 IP 차단이라 GitHub에서 못 씀) · 스크립트 `scripts/update_seoul_temp.py`
 - **`population_latest.csv`** — 매월 1일 자정(KST) 지난달 데이터로 교체, 실패 시 2일 재시도 · 시크릿 불필요 · 스크립트 `scripts/update_population.py` (월별 스냅샷은 `data/archive/`)
