@@ -35,8 +35,9 @@ with open(out, "a", newline="", encoding="utf-8") as f:
                 n += 1
                 break
             except Exception as e:
-                if attempt == 1:
-                    failed.append(r["코드"]); print("skip", r["코드"], e)
+                if attempt == 1:   # 오류 문장에는 키가 든 주소가 들어갈 수 있어 종류·상태 코드만 출력
+                    status = getattr(getattr(e, "response", None), "status_code", "")
+                    failed.append(r["코드"]); print("skip", r["코드"], type(e).__name__, status)
                 else:
                     time.sleep(1)
         time.sleep(0.2)                       # 서버에 부담을 주지 않게 잠깐 쉬기

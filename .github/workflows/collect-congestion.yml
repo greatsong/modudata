@@ -35,9 +35,16 @@ jobs:
       - name: 임시 기록 가져오기
         run: |
           mkdir -p pending
-          if git fetch --depth=1 origin "$PBRANCH" 2>/dev/null; then
+          # 브랜치가 없을 때(exit 2)만 빈 상태로 시작한다. 조회·가져오기가 실패하면 덮어쓰지 않도록 멈춘다
+          set +e; git ls-remote --exit-code origin "refs/heads/$PBRANCH" > /dev/null; rc=$?; set -e
+          if [ $rc -eq 0 ]; then
+            git fetch --depth=1 origin "$PBRANCH"
             git show FETCH_HEAD:seoul_congestion_pending.csv > "$PENDING"
             echo "임시 기록 $(($(wc -l < "$PENDING") - 1))줄"
+          elif [ $rc -eq 2 ]; then
+            echo "임시 기록 브랜치 없음: 새로 시작"
+          else
+            echo "임시 기록 브랜치를 확인하지 못했습니다(rc=$rc)"; exit 1
           fi
 
       - name: 혼잡도 수집(임시 기록에 쌓기)
