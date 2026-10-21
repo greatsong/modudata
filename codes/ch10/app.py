@@ -13,6 +13,7 @@
     시각까지 같으면 id가 큰 기록이다.
   - 한 번에 돌려받는 행 수(1000행)를 넘으면 이어서 읽는다.
   - 식사 기록이 중복 규칙(23505)에 걸리면 '이미 기록한 식사입니다'라고 안내하고, 다른 오류는 이유를 보여 준다.
+  - 투표와 식사 기록을 저장한 뒤에 결과 영역을 그려서, 저장이 성공하면 바로 다시 읽은 결과가 보인다.
 화면은 흰 바탕에 포인트 색 하나만 쓰는 카드형이고, 지난 7일의 식사는 달력 모양으로 보여 준다.
 """
 from datetime import datetime, timedelta, timezone
@@ -256,7 +257,7 @@ def results():
         meal_card(days, {} if ate.empty else ate["menu"].value_counts().to_dict())
 
 
-results()
+results_box = st.container()   # 결과 영역의 자리. 식사 기록 저장까지 처리한 뒤 맨 아래에서 채운다
 
 st.write("")
 with st.container(border=True):
@@ -287,3 +288,6 @@ with st.container(border=True):
             st.caption(f"{ate_menu}을(를) 최근에 먹은 날: {past['날짜'].max():%Y-%m-%d}")
     except Exception:  # noqa: BLE001
         st.caption("최근 식사 기록을 읽지 못했습니다.")
+
+with results_box:   # 저장을 모두 처리한 뒤에 결과를 읽으므로 방금 저장한 기록도 바로 보인다
+    results()

@@ -1,7 +1,8 @@
 # 7장 2절 역주행 영화 - 주간 박스오피스 API로 뒤늦게 관객이 늘어난 영화 찾기
-# 응답은 화면에서만 사용하고 파일로 저장하지 않습니다.
+# 응답은 화면에서만 사용하고 파일로 저장하거나 내려받게 하지 않습니다.
+# 그래서 표는 내려받기 메뉴가 있는 st.dataframe 대신 정적 표(st.table)로 보여 줍니다.
 import time
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 
 import streamlit as st
 import requests
@@ -13,6 +14,7 @@ SLEEP_SEC = 0.2      # 요청 사이에 두는 간격
 TIMEOUT = 15         # 한 요청을 기다리는 최대 시간(초)
 MAX_TRY = 3          # 한 요청당 최대 시도 횟수
 SEC_PER_CALL = 1.0   # 예상 소요 시간을 계산할 때 사용하는 한 요청당 평균 시간(초)
+KST = timezone(timedelta(hours=9))   # 서버 시계가 UTC여도 한국 시간으로 계산합니다
 
 st.set_page_config(page_title="역주행영화", layout="wide")
 st.title("뒤늦게 관객이 늘어난 영화 찾기")
@@ -25,6 +27,11 @@ def read_key():
         return str(st.secrets.get("KOBIS_KEY", "")).strip()
     except Exception:          # 비밀 정보 파일이 아예 없을 때
         return ""
+
+
+def show_table(table, formats):
+    """내려받기 메뉴가 없는 정적 표(st.table)로 보여 줍니다. 첫 열을 행 이름으로 사용합니다."""
+    st.table(table.set_index(table.columns[0]).style.format(formats, na_rep=""))
 
 
 KEY = read_key()
@@ -45,7 +52,7 @@ def monday_of(d):
 
 def last_complete_monday(today=None):
     """집계가 끝난 가장 최근 주(지난주)의 월요일입니다."""
-    today = today or date.today()
+    today = today or datetime.now(KST).date()
     return monday_of(today) - timedelta(days=7)
 
 
@@ -59,7 +66,7 @@ def collect_weekly(years, end_monday_iso, _key):
     """
     end_monday = date.fromisoformat(end_monday_iso)
     weeks = years * 52
-    rows, ok, fail, failed_weeks = [], 0, 0, []
+    rows, ok, fail, failed_weeks, tries = [], 0, 0, [], 0
     session = requests.Session()
     bar = st.progress(0.0, text="주간 박스오피스를 불러오는 중입니다.")
     started = time.time()
@@ -68,6 +75,7 @@ def collect_weekly(years, end_monday_iso, _key):
         target = day.strftime("%Y%m%d")
         got = None
         for _ in range(MAX_TRY):
+            tries += 1                    # 다시 시도한 요청까지 센 실제 요청 횟수
             try:
                 res = session.get(
                     WEEKLY_URL,
@@ -100,7 +108,7 @@ def collect_weekly(years, end_monday_iso, _key):
         bar.progress((i + 1) / weeks, text=f"{i + 1}/{weeks}주 ({time.time() - started:.0f}초 지남)")
     bar.empty()
     df = pd.DataFrame(rows, columns=["주시작일", "순위", "영화코드", "영화명", "개봉일", "주간관객", "누적관객"])
-    return df, {"요청": weeks, "성공": ok, "실패": fail, "실패한주": failed_weeks}
+    return df, {"요청": weeks, "성공": ok, "실패": fail, "실패한주": failed_weeks, "시도": tries}
 
 
 def tidy(df):
@@ -186,7 +194,7 @@ if st.button("불러오기", type="primary"):
     st.session_state["raw"] = raw
     st.session_state["stat"] = stat
     st.session_state["seconds"] = time.time() - started
-    st.session_state["at"] = time.strftime("%Y-%m-%d %H:%M")
+    st.session_state["at"] = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
 
 if "raw" not in st.session_state:
     st.info("기간을 정하고 [불러오기]를 누르십시오.")
@@ -198,6 +206,12 @@ st.write(
     f"불러오는 데 {st.session_state['seconds']:.0f}초 걸렸으며, "
     f"{st.session_state['at']}에 불러온 데이터입니다."
 )
+retries = stat.get("시도", stat["요청"]) - stat["요청"]
+if retries > 0:
+    st.caption(f"불러오지 못해 다시 보낸 요청 {retries}회를 포함하면 실제로 보낸 요청은 {stat['시도']}회입니다.")
+if stat["성공"] == 0:
+    st.error("한 주도 불러오지 못했습니다. 인증키와 인터넷 연결을 확인한 뒤 다시 불러오십시오.")
+    st.stop()
 if stat["실패"]:
     st.warning("불러오지 못한 주는 빈 값으로 두었습니다. 관객 수 0으로 바꾸지 않았습니다.")
 
@@ -221,12 +235,10 @@ st.caption(
     f"제외한 영화는 {', '.join(f'{k} {v}편' for k, v in dropped.items())}입니다."
 )
 top = table.head(10)
-NUM = st.column_config.NumberColumn(format="localized")
-st.dataframe(
+COMMA = "{:,.0f}"   # 천 단위 쉼표
+show_table(
     top[["영화명", "개봉일", "초반 관객 수", "정점 주차", "정점 관객 수", "증가 배율"]],
-    hide_index=True, use_container_width=True,
-    column_config={"개봉일": st.column_config.DateColumn(format="YYYY-MM-DD"),
-                   "초반 관객 수": NUM, "정점 관객 수": NUM},
+    {"개봉일": "{:%Y-%m-%d}", "초반 관객 수": COMMA, "정점 관객 수": COMMA, "증가 배율": "{:.2f}"},
 )
 
 fig = px.bar(

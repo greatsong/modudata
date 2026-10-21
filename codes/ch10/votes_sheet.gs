@@ -41,12 +41,21 @@ function doPost(e) {
     if (!member || !menu || !type) {
       return json_({ ok: false, error: "member, menu, type이 모두 필요합니다" });
     }
-    const now = Utilities.formatDate(new Date(), "Asia/Seoul", "yyyy-MM-dd HH:mm:ss");
-    const sh = sheet_();
-    sh.appendRow([now, member, menu, type]);
-    // 시각 칸을 문자로 고정한다. 시트가 날짜로 바꾸면 앱이 읽을 때 형식이 달라진다.
-    const last = sh.getLastRow();
-    sh.getRange(last, 1).setNumberFormat("@").setValue(now);
+    // 여러 사람이 동시에 보내도 한 줄씩 차례대로 쓰도록 잠근다.
+    // 잠그지 않으면 다른 요청이 사이에 줄을 더해 엉뚱한 줄의 시각을 고칠 수 있다.
+    const lock = LockService.getScriptLock();
+    lock.waitLock(10000);   // 최대 10초 기다린다. 그래도 차례가 오지 않으면 오류로 알린다
+    try {
+      const now = Utilities.formatDate(new Date(), "Asia/Seoul", "yyyy-MM-dd HH:mm:ss");
+      const sh = sheet_();
+      sh.appendRow([now, member, menu, type]);
+      // 시각 칸을 문자로 고정한다. 시트가 날짜로 바꾸면 앱이 읽을 때 형식이 달라진다.
+      const last = sh.getLastRow();
+      sh.getRange(last, 1).setNumberFormat("@").setValue(now);
+      SpreadsheetApp.flush();   // 잠금을 풀기 전에 시트에 반영한다
+    } finally {
+      lock.releaseLock();
+    }
     return json_({ ok: true });
   } catch (err) {
     return json_({ ok: false, error: String(err) });

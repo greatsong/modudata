@@ -1,7 +1,8 @@
 # 7장 2절 주간 박스오피스 - 기준 날짜부터 7일씩 거슬러 올라가며 52주를 한 표로 합칩니다.
 # 응답은 화면에서만 사용하고 파일로 내려받거나 올리지 않습니다.
+# 그래서 표는 내려받기 메뉴가 있는 st.dataframe 대신 정적 표(st.table)로 보여 줍니다.
 import time
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 
 import streamlit as st
 import requests
@@ -13,6 +14,7 @@ WEEKS = 52           # 모을 주 수
 SLEEP_SEC = 0.2      # 요청 사이에 두는 간격
 TIMEOUT = 15         # 한 요청을 기다리는 최대 시간(초)
 MAX_TRY = 3          # 한 요청당 최대 시도 횟수
+KST = timezone(timedelta(hours=9))   # 서버 시계가 UTC여도 한국 시간으로 계산합니다
 
 st.set_page_config(page_title="주간박스오피스", layout="wide")
 st.title("최근 52주의 주간 박스오피스")
@@ -25,6 +27,15 @@ def read_key():
         return str(st.secrets.get("KOBIS_KEY", "")).strip()
     except Exception:          # 비밀 정보 파일이 아예 없을 때
         return ""
+
+
+def show_table(table, formats):
+    """내려받기 메뉴가 없는 정적 표(st.table)로 보여 줍니다. 첫 열을 행 이름으로 사용합니다."""
+    view = table.copy()
+    first = view.columns[0]
+    if pd.api.types.is_datetime64_any_dtype(view[first]):
+        view[first] = view[first].dt.strftime("%Y-%m-%d")
+    st.table(view.set_index(first).style.format(formats, na_rep=""))
 
 
 KEY = read_key()
@@ -51,7 +62,7 @@ def collect_weekly(end_monday_iso, _key):
     캐시는 10분 동안만 유지되고 파일로 저장하지 않습니다.
     """
     end_monday = date.fromisoformat(end_monday_iso)
-    rows, ok, fail, failed_weeks, seen = [], 0, 0, [], set()
+    rows, ok, fail, failed_weeks, seen, tries = [], 0, 0, [], set(), 0
     session = requests.Session()
     bar = st.progress(0.0, text="주간 박스오피스를 불러오는 중입니다.")
     started = time.time()
@@ -60,6 +71,7 @@ def collect_weekly(end_monday_iso, _key):
         target = day.strftime("%Y%m%d")
         got = None
         for _ in range(MAX_TRY):
+            tries += 1                    # 다시 시도한 요청까지 센 실제 요청 횟수
             try:
                 res = session.get(
                     WEEKLY_URL,
@@ -94,7 +106,7 @@ def collect_weekly(end_monday_iso, _key):
         bar.progress((i + 1) / WEEKS, text=f"{i + 1}/{WEEKS}주 ({time.time() - started:.0f}초 지남)")
     bar.empty()
     df = pd.DataFrame(rows, columns=["집계기간", "순위", "영화코드", "영화명", "개봉일", "주간관객", "누적관객"])
-    return df, {"요청": WEEKS, "성공": ok, "실패": fail, "실패한주": failed_weeks}
+    return df, {"요청": WEEKS, "성공": ok, "실패": fail, "실패한주": failed_weeks, "시도": tries}
 
 
 def tidy(df):
@@ -112,7 +124,7 @@ def tidy(df):
 
 
 # ---------------------------------------------------------------- 화면
-base = st.date_input("기준 날짜", value=date.today() - timedelta(days=7),   # 기본값은 지난주
+base = st.date_input("기준 날짜", value=datetime.now(KST).date() - timedelta(days=7),   # 기본값은 지난주
                      help="이 날짜가 속한 주부터 7일씩 거슬러 올라가며 52주를 모읍니다.")
 end_monday = monday_of(base)
 start_monday = end_monday - timedelta(days=7 * (WEEKS - 1))
@@ -131,7 +143,7 @@ if st.button("불러오기", type="primary"):
     st.session_state["weekly_raw"] = raw
     st.session_state["weekly_stat"] = stat
     st.session_state["weekly_seconds"] = time.time() - started
-    st.session_state["weekly_at"] = time.strftime("%Y-%m-%d %H:%M")
+    st.session_state["weekly_at"] = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
 
 if "weekly_raw" not in st.session_state:
     st.info("기준 날짜를 정하고 [불러오기]를 누르십시오.")
@@ -143,12 +155,18 @@ st.write(
     f"불러오는 데 {st.session_state['weekly_seconds']:.0f}초 걸렸으며, "
     f"{st.session_state['weekly_at']}에 불러온 데이터입니다."
 )
+retries = stat.get("시도", stat["요청"]) - stat["요청"]
+if retries > 0:
+    st.caption(f"불러오지 못해 다시 보낸 요청 {retries}회를 포함하면 실제로 보낸 요청은 {stat['시도']}회입니다.")
 if stat["실패"]:
     st.warning("불러오지 못한 주는 빈 값으로 두었습니다. 관객 수 0으로 바꾸지 않았습니다.")
 
 data, bad = tidy(raw)
 dup = int(data.duplicated(subset=["영화코드", "집계기간"]).sum())
 weeks_got = data["집계기간"].dropna()
+if weeks_got.empty:
+    st.error("불러온 주간 박스오피스가 없어 분석할 수 없습니다. 인증키, 기준 날짜, 인터넷 연결을 확인한 뒤 다시 불러오십시오.")
+    st.stop()
 st.write(
     f"실제로 불러온 집계 기간은 {weeks_got.min():%Y-%m-%d}부터 {weeks_got.max():%Y-%m-%d}까지 "
     f"서로 다른 {weeks_got.nunique()}주이고, 영화 {data['영화코드'].nunique()}편, 전체 {len(data)}행입니다. "
@@ -157,16 +175,12 @@ st.write(
     + f"이고, 영화 코드와 집계 기간이 같은 중복은 {dup}건입니다."
 )
 
-NUM = st.column_config.NumberColumn(format="localized")
-st.dataframe(
-    data[["집계기간", "순위", "영화코드", "영화명", "개봉일", "주간관객", "누적관객"]],
-    hide_index=True, use_container_width=True, height=420,
-    column_config={
-        "집계기간": st.column_config.DateColumn(format="YYYY-MM-DD"),
-        "개봉일": st.column_config.DateColumn(format="YYYY-MM-DD"),
-        "주간관객": NUM, "누적관객": NUM,
-    },
-)
+COMMA, DAY = "{:,.0f}", "{:%Y-%m-%d}"   # 천 단위 쉼표, 연-월-일
+with st.container(height=420):          # 행이 많으므로 이 높이 안에서 스크롤합니다
+    show_table(
+        data[["집계기간", "순위", "영화코드", "영화명", "개봉일", "주간관객", "누적관객"]],
+        {"순위": COMMA, "개봉일": DAY, "주간관객": COMMA, "누적관객": COMMA},
+    )
 
 
 # ---------------------------------------------------------------- 첫 번째 기준: 누적 관객 수
@@ -191,11 +205,9 @@ acc = (latest.join(appear, on="영화코드")
        .rename(columns={"집계기간": "가장 최근 집계 기간", "누적관객": "누적 관객 수"}))
 top_acc = acc.sort_values("누적 관객 수", ascending=False).head(10)
 
-DATE = st.column_config.DateColumn(format="YYYY-MM-DD")
-st.dataframe(
+show_table(
     top_acc[["영화명", "개봉일", "가장 최근 집계 기간", "누적 관객 수", "등장 주 수"]],
-    hide_index=True, use_container_width=True,
-    column_config={"개봉일": DATE, "가장 최근 집계 기간": DATE, "누적 관객 수": NUM},
+    {"개봉일": DAY, "가장 최근 집계 기간": DAY, "누적 관객 수": COMMA},
 )
 fig_acc = px.bar(top_acc.sort_values("누적 관객 수"), x="누적 관객 수", y="영화명", orientation="h",
                  hover_data=["개봉일", "가장 최근 집계 기간", "등장 주 수"],
@@ -217,11 +229,11 @@ total = ones.groupby("영화코드").size().rename("전체 1위 횟수")
 info = ones.groupby("영화코드").agg(영화명=("영화명", "first"), 개봉일=("개봉일", "first"))
 rank1 = info.join(total).join(best).reset_index()
 top_run = rank1.sort_values(["가장 긴 연속 1위 기간", "전체 1위 횟수"], ascending=False).head(10)
+if top_run.empty:
+    st.warning("불러온 기록에 순위 1위가 없어 연속 1위 기간과 두 기준 비교를 계산하지 않았습니다.")
+    st.stop()
 
-st.dataframe(
-    top_run[["영화명", "개봉일", "전체 1위 횟수", "가장 긴 연속 1위 기간"]],
-    hide_index=True, use_container_width=True, column_config={"개봉일": DATE},
-)
+show_table(top_run[["영화명", "개봉일", "전체 1위 횟수", "가장 긴 연속 1위 기간"]], {"개봉일": DAY})
 fig_run = px.bar(top_run.sort_values(["가장 긴 연속 1위 기간", "전체 1위 횟수"]),
                  x="가장 긴 연속 1위 기간", y="영화명", orientation="h",
                  hover_data=["개봉일", "전체 1위 횟수"],

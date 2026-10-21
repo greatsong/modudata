@@ -1,7 +1,8 @@
 # 7장 1절 일별 박스오피스 - 순위표·당일 관객 수 그래프와 1위 영화 집중도 도넛
 # KOBIS 오픈API 응답은 실행 중에만 사용합니다. 파일로 저장하거나 내려받게 하지 않습니다.
+# 그래서 표는 내려받기 메뉴가 있는 st.dataframe 대신 정적 표(st.table)로 보여 줍니다.
 # 실행 조건: 스트림릿 클라우드 [Settings] - [Secrets]에 KOBIS_KEY 등록
-from datetime import date, timedelta
+from datetime import datetime, timedelta, timezone
 
 import streamlit as st
 import requests
@@ -10,6 +11,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 DAILY_URL = "https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
+KST = timezone(timedelta(hours=9))   # 서버 시계가 UTC여도 한국 날짜로 계산합니다
 
 st.set_page_config(page_title="박스오피스", layout="wide")
 st.title("일별 박스오피스")
@@ -23,6 +25,11 @@ def read_key():
         return ""
 
 
+def show_table(table, formats):
+    """내려받기 메뉴가 없는 정적 표(st.table)로 보여 줍니다. 첫 열을 행 이름으로 사용합니다."""
+    st.table(table.set_index(table.columns[0]).style.format(formats, na_rep=""))
+
+
 KEY = read_key()
 if not KEY:
     st.error(
@@ -32,7 +39,7 @@ if not KEY:
     )
     st.stop()
 
-pick = st.date_input("날짜", value=date.today() - timedelta(days=1))   # 기본값은 어제
+pick = st.date_input("날짜", value=datetime.now(KST).date() - timedelta(days=1))   # 기본값은 한국 시간 기준 어제
 
 
 @st.cache_data(ttl=600, show_spinner=False)
@@ -67,11 +74,10 @@ st.write(
     "숫자로 바꾸지 못한 값은 " + ", ".join(f"{k} {v}개" for k, v in bad.items()) + "입니다."
 )
 
-NUM = st.column_config.NumberColumn(format="localized")
-st.dataframe(
+COMMA = "{:,.0f}"   # 천 단위 쉼표
+show_table(
     df[["순위", "영화명", "개봉일", "당일 관객 수", "누적 관객 수", "스크린 수", "상영 횟수"]],
-    hide_index=True, use_container_width=True,
-    column_config={"당일 관객 수": NUM, "누적 관객 수": NUM, "스크린 수": NUM, "상영 횟수": NUM},
+    {"당일 관객 수": COMMA, "누적 관객 수": COMMA, "스크린 수": COMMA, "상영 횟수": COMMA},
 )
 
 st.subheader("당일 관객 수 기준 그래프")

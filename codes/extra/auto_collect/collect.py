@@ -1,6 +1,6 @@
 # 자동 수집기(책 밖 예제) - 서울 121곳의 실시간 혼잡도를 매시간 한 줄씩 csv에 덧붙인다
 # 깃허브 액션이 실행한다. 키는 코드가 아니라 깃허브 시크릿(환경변수)에서 읽는다.
-import os, csv, time
+import os, sys, csv, time
 from datetime import datetime, timezone, timedelta
 
 import requests
@@ -23,11 +23,16 @@ with open(out, "a", newline="", encoding="utf-8") as f:  # "a" = 덧붙이기. �
     for _, r in places.iterrows():
         try:
             url = f"{BASE}/{KEY}/json/citydata_ppltn/1/5/{r['코드']}"
-            d = requests.get(url, timeout=20).json()["SeoulRtd.citydata_ppltn"][0]
+            res = requests.get(url, timeout=20)
+            res.raise_for_status()                 # 응답 코드가 오류면 이 장소는 건너뛴다
+            d = res.json()["SeoulRtd.citydata_ppltn"][0]
             w.writerow([now, r["코드"], d["AREA_NM"], d["AREA_CONGEST_LVL"],
                         d.get("AREA_PPLTN_MIN"), d.get("AREA_PPLTN_MAX"), r["위도"], r["경도"]])
             n += 1
         except Exception as e:
-            print("건너뜀", r["코드"], e)       # 한 곳이 실패해도 멈추지 않고 다음 곳으로
+            # 한 곳이 실패해도 멈추지 않고 다음 곳으로. 오류 문장에는 키가 든 주소가 섞일 수 있어 종류만 적는다
+            print("건너뜀", r["코드"], type(e).__name__)
         time.sleep(0.2)                        # 서버에 부담을 주지 않게 잠깐 쉬기
 print(now, "수집", n, "곳")
+if n == 0:   # 한 곳도 받지 못했다면 키나 서비스 상태가 문제이므로 실패로 끝내 알린다(커밋 단계도 건너뛴다)
+    sys.exit("한 곳도 수집하지 못했습니다. 키와 서비스 상태를 확인하세요.")

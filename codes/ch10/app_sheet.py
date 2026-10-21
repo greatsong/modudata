@@ -5,6 +5,7 @@
 # - 읽기: GET 요청으로 머리글(시각, 팀원, 메뉴, 구분)을 포함한 시트 목록을 받는다. 시각은 연결 프로그램이 한국 시간으로 적는다
 # - 오늘의 투표: 한국 날짜 기준 오늘의 '희망메뉴'에서 같은 닉네임의 마지막 한 표만 센다(시각이 같으면 시트에서 뒤의 행)
 # - 결과 영역만 10초마다 다시 읽는다. 지난 7일의 식사는 오늘을 빼고, 같은 날짜와 메뉴는 한 번으로 센다
+# - 투표와 식사 기록을 저장한 뒤에 결과 영역을 그려서, 저장이 성공하면 바로 다시 읽은 결과가 보인다
 from datetime import datetime, timedelta, timezone
 
 import pandas as pd
@@ -140,7 +141,7 @@ def result_area():
     st.caption(f"마지막으로 읽은 시각: {read_at} (한국 시간)")
 
 
-result_area()
+results_box = st.container()   # 결과 영역의 자리. 식사 기록 저장까지 처리한 뒤 맨 아래에서 채운다
 
 st.divider()
 st.subheader("오늘 먹은 메뉴 기록")
@@ -175,3 +176,6 @@ try:
         st.caption(f"{ate_menu}을(를) 최근에 먹은 기록이 없습니다.")
 except Exception:  # noqa: BLE001
     pass
+
+with results_box:   # 저장을 모두 처리한 뒤에 결과를 읽으므로 방금 저장한 기록도 바로 보인다
+    result_area()

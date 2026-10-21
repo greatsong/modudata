@@ -246,10 +246,15 @@ st.dataframe(train.nlargest(10, "최종관객")[SHOW], hide_index=True, use_cont
 
 # ── 프롬프트 '첫 달 관객과 최종 관객의 관계 보기' ────────────────────
 st.header("4. 어떤 값이 예측에 도움이 될까")
-train["구분색"] = np.where(train["영화명"].isin(train.nlargest(5, "최종관객")["영화명"]),
-                           train["영화명"], "그 밖")
+# 최종 관객이 300만 명을 넘는 영화 가운데 최종 관객 ÷ 첫 달 관객이 가장 큰 다섯 편만 색을 구분한다
+big = train[train["최종관객"] > 3_000_000]
+pick5 = (big["최종관객"] / big["첫달관객"]).nlargest(5).index
+train["구분색"] = "그 밖"
+train.loc[pick5, "구분색"] = train.loc[pick5, "영화명"]
 fig = px.scatter(train, x="첫달관객", y="최종관객", color="구분색",
                  log_x=True, log_y=True,
+                 category_orders={"구분색": ["그 밖"] + train.loc[pick5, "영화명"].tolist()},
+                 color_discrete_map={"그 밖": "#BDBDBD"},
                  hover_data=["영화명", "개봉일", "첫달일수"],
                  labels={"첫달관객": "첫 달 관객(명)", "최종관객": "최종 관객(명)",
                          "구분색": ""})
