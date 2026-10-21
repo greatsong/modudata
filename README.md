@@ -68,7 +68,7 @@ pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(
 | `codes/ch07` | 7장 | 박스오피스 앱: `main.py`(일별) · `pages/00_주간박스오피스.py` · `pages/01_역주행영화.py` | `KOBIS_KEY` |
 | `codes/ch08` | 8장 | 서울 실시간 혼잡도 앱: `main.py`(121곳 지도·청년 비율) · `pages/00_서울시각별.py`(혼잡도 기록으로 시각별) | `SEOUL_KEY` |
 | `codes/ch09` | 9장 | 머신러닝 앱: `main.py`(서울 기온 예측) · `pages/00_첫달관객예측.py`(월별 박스오피스 회귀·군집) · `pages/01_닮은동네.py`(동네 군집) | 없음 |
-| `codes/ch10` | 10장 | 점심 투표 앱 '모두의 점심': `app_basic.py` · `app_sheet.py` · `app.py`(수파베이스 최종판), `votes_sheet.gs` · `votes_setup.sql` | `SHEET_URL` 또는 `SUPABASE_URL`·`SUPABASE_PUBLISHABLE_KEY` |
+| `codes/ch10` | 10장 | 점심 투표 앱 '모두의 점심': `app_basic.py` · `app_sheet.py` · `main.py`(수파베이스 최종판), `votes_sheet.gs` · `votes_setup.sql` | `SHEET_URL` 또는 `SUPABASE_URL`·`SUPABASE_PUBLISHABLE_KEY` |
 | `codes/extra/auto_collect` | 책 밖 자료 | 서울 혼잡도 자동 수집 예제 | `SEOUL_KEY`(깃허브 시크릿) |
 
 ---
