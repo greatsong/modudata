@@ -19,7 +19,7 @@ import streamlit as st
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import PolynomialFeatures
+from sklearn.preprocessing import PolynomialFeatures, StandardScaler
 
 st.set_page_config(page_title="서울 기온 예측", layout="wide")
 
@@ -211,17 +211,13 @@ train = kept[kept["연도"] <= 2004]
 test = kept[kept["연도"] >= 2005]
 
 # "연도는 학습용 데이터만 이용해 계산하기 편한 값으로 바꾼 뒤" →
-# 학습 구간의 첫 연도를 0으로 놓는 이동(shift). 평가용에도 같은 기준을 적용한다.
-base_year = int(train["연도"].min())
-
-
-def shift(years):
-    return np.asarray(years, dtype=float) - base_year
-
-
-Xtr = shift(train["연도"]).reshape(-1, 1)
+# 연도(1908, 2004 …)를 그대로 9제곱·20제곱하면 숫자가 너무 커져 계산 오차가 커진다.
+# 그래서 StandardScaler로 학습용 연도의 평균을 0, 표준편차를 1로 바꾼 뒤 다항 특성을 만든다.
+# 파이프라인 안의 StandardScaler는 학습용 연도로만 기준(평균·표준편차)을 정하고,
+# 평가용 연도와 2050년에도 같은 기준을 그대로 적용한다.
+Xtr = train[["연도"]].values
 ytr = train["연평균기온"].values
-Xte = shift(test["연도"]).reshape(-1, 1)
+Xte = test[["연도"]].values
 yte = test["연평균기온"].values
 
 DEGREES = [1, 2, 3, 9, 20]
@@ -230,16 +226,18 @@ curves = {}
 grid = np.arange(int(kept["연도"].min()), 2051)
 
 for d in DEGREES:
-    model = make_pipeline(PolynomialFeatures(d), LinearRegression()).fit(Xtr, ytr)
+    model = make_pipeline(
+        StandardScaler(), PolynomialFeatures(d), LinearRegression()
+    ).fit(Xtr, ytr)
     rows.append(
         {
             "차수": f"{d}차",
             "학습 R²": round(float(r2_score(ytr, model.predict(Xtr))), 4),
             "평가 R²": round(float(r2_score(yte, model.predict(Xte))), 4),
-            "2050년 예측": round(float(model.predict(shift([2050]).reshape(-1, 1))[0]), 2),
+            "2050년 예측": round(float(model.predict([[2050]])[0]), 2),
         }
     )
-    curves[d] = model.predict(shift(grid).reshape(-1, 1))
+    curves[d] = model.predict(grid.reshape(-1, 1))
 
 st.dataframe(pd.DataFrame(rows), hide_index=True)
 
