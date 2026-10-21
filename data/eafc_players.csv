@@ -1,0 +1,801 @@
+﻿name,long_name,positions,club,overall,pace,shooting,passing,dribbling,defending,physic,value_eur,age,height_cm
+L. Messi,Lionel Andrés Messi Cuccittini,"RW, ST, CF",Paris Saint-Germain,93,85.0,92.0,91.0,95.0,34.0,65.0,78000000.0,34,170
+R. Lewandowski,Robert Lewandowski,ST,FC Bayern München,92,78.0,92.0,79.0,86.0,44.0,82.0,119500000.0,32,185
+Cristiano Ronaldo,Cristiano Ronaldo dos Santos Aveiro,"ST, LW",Manchester United,91,87.0,94.0,80.0,88.0,34.0,75.0,45000000.0,36,187
+Neymar Jr,Neymar da Silva Santos Júnior,"LW, CAM",Paris Saint-Germain,91,91.0,83.0,86.0,94.0,37.0,63.0,129000000.0,29,175
+K. De Bruyne,Kevin De Bruyne,"CM, CAM",Manchester City,91,76.0,86.0,93.0,88.0,64.0,78.0,125500000.0,30,181
+K. Mbappé,Kylian Mbappé Lottin,"ST, LW",Paris Saint-Germain,91,97.0,88.0,80.0,92.0,36.0,77.0,194000000.0,22,182
+H. Kane,Harry Kane,ST,Tottenham Hotspur,90,70.0,91.0,83.0,83.0,47.0,83.0,129500000.0,27,188
+N. Kanté,N'Golo Kanté,"CDM, CM",Chelsea,90,78.0,66.0,75.0,82.0,87.0,83.0,100000000.0,30,168
+V. van Dijk,Virgil van Dijk,CB,Liverpool,89,78.0,60.0,71.0,72.0,91.0,84.0,86000000.0,29,193
+M. Salah,Mohamed Salah Ghaly,RW,Liverpool,89,90.0,87.0,81.0,90.0,45.0,75.0,101000000.0,29,175
+S. Mané,Sadio Mané,LW,Liverpool,89,91.0,83.0,80.0,89.0,44.0,77.0,101000000.0,29,175
+J. Kimmich,Joshua Walter Kimmich,"CDM, RB",FC Bayern München,89,70.0,73.0,86.0,84.0,83.0,79.0,108000000.0,26,177
+Casemiro,Carlos Henrique Venancio Casimiro,CDM,Real Madrid CF,89,65.0,73.0,76.0,73.0,86.0,90.0,88000000.0,29,185
+K. Benzema,Karim Benzema,"CF, ST",Real Madrid CF,89,76.0,86.0,81.0,87.0,39.0,77.0,66000000.0,33,185
+H. Son,손흥민 孙兴慜,"LM, CF, LW",Tottenham Hotspur,89,88.0,87.0,82.0,86.0,43.0,69.0,104000000.0,28,183
+R. Lukaku,Romelu Lukaku Menama,ST,Chelsea,88,84.0,87.0,74.0,78.0,39.0,83.0,93500000.0,28,191
+E. Haaland,Erling Braut Haaland,ST,Borussia Dortmund,88,89.0,91.0,65.0,80.0,45.0,88.0,137500000.0,20,194
+R. Sterling,Raheem Sterling,"LW, RW",Manchester City,88,91.0,82.0,79.0,87.0,45.0,66.0,107500000.0,26,170
+Bruno Fernandes,Bruno Miguel Borges Fernandes,CAM,Manchester United,88,75.0,86.0,89.0,84.0,70.0,77.0,107500000.0,26,179
+T. Kroos,Toni Kroos,CM,Real Madrid CF,88,53.0,81.0,91.0,81.0,71.0,68.0,75000000.0,31,183
+L. Suárez,Luis Alberto Suárez Díaz,ST,Atlético de Madrid,88,72.0,90.0,82.0,84.0,47.0,83.0,44500000.0,34,182
+Sergio Ramos,Sergio Ramos García,CB,Paris Saint-Germain,88,70.0,70.0,76.0,74.0,88.0,84.0,24000000.0,35,184
+Marquinhos,Marcos Aoás Corrêa,"CB, CDM",Paris Saint-Germain,87,81.0,53.0,75.0,74.0,89.0,81.0,90500000.0,27,183
+Rúben Dias,Rúben dos Santos Gato Alves Dias,CB,Manchester City,87,61.0,38.0,65.0,68.0,88.0,88.0,102500000.0,24,187
+J. Sancho,Jadon Sancho,"RM, CF, LM",Manchester United,87,81.0,76.0,82.0,91.0,36.0,65.0,116500000.0,21,180
+F. de Jong,Frenkie de Jong,"CM, CDM, CB",FC Barcelona,87,81.0,69.0,85.0,88.0,77.0,78.0,119500000.0,24,180
+A. Robertson,Andrew Robertson,LB,Liverpool,87,84.0,61.0,81.0,81.0,82.0,76.0,83500000.0,27,178
+P. Dybala,Paulo Bruno Exequiel Dybala,"CF, CAM",Juventus,87,84.0,86.0,86.0,90.0,40.0,60.0,93000000.0,27,177
+L. Goretzka,Leon Christoph Goretzka,"CM, CDM",FC Bayern München,87,81.0,82.0,82.0,84.0,81.0,86.0,93000000.0,26,189
+T. Alexander-Arnold,Trent Alexander-Arnold,RB,Liverpool,87,79.0,68.0,88.0,80.0,80.0,72.0,114000000.0,22,180
+M. Verratti,Marco Verratti,"CM, CAM",Paris Saint-Germain,87,64.0,61.0,87.0,91.0,79.0,67.0,79500000.0,28,165
+C. Immobile,Ciro Immobile,ST,Lazio,87,86.0,87.0,67.0,81.0,39.0,77.0,67500000.0,31,185
+T. Müller,Thomas Müller,"CAM, RM, RW",FC Bayern München,87,67.0,84.0,83.0,80.0,56.0,71.0,66000000.0,31,185
+S. Agüero,Sergio Leonel Agüero del Castillo,ST,FC Barcelona,87,71.0,89.0,75.0,87.0,33.0,69.0,51000000.0,33,173
+Á. Di María,Ángel Fabián Di María Hernández,"RW, LW",Paris Saint-Germain,87,83.0,81.0,86.0,87.0,48.0,69.0,49500000.0,33,180
+L. Modrić,Luka Modrić,CM,Real Madrid CF,87,73.0,76.0,89.0,88.0,72.0,66.0,32000000.0,35,172
+P. Pogba,Paul Pogba,"CM, LM",Manchester United,87,71.0,81.0,86.0,86.0,65.0,83.0,79500000.0,28,191
+Gerard Moreno,Gerard Moreno Balagueró,"ST, RM, RW",Villarreal CF,86,79.0,86.0,77.0,84.0,46.0,73.0,68000000.0,29,180
+M. Škriniar,Milan Škriniar,CB,Inter,86,80.0,41.0,53.0,69.0,87.0,84.0,74000000.0,26,188
+Rodri,Rodrigo Hernández Cascante,CDM,Manchester City,86,61.0,70.0,77.0,78.0,82.0,82.0,81000000.0,25,191
+Marcos Llorente,Marcos Llorente Moreno,"CM, RM, ST",Atlético de Madrid,86,88.0,80.0,81.0,82.0,78.0,82.0,88000000.0,26,184
+Bernardo Silva,Bernardo Mota Veiga de Carvalho e Silva,"CAM, CM, RW",Manchester City,86,80.0,76.0,83.0,91.0,54.0,67.0,80000000.0,26,173
+K. Coman,Kingsley Junior Coman,"LM, RM, LW",FC Bayern München,86,93.0,76.0,79.0,88.0,30.0,60.0,81000000.0,25,180
+A. Laporte,Aymeric Laporte,CB,Manchester City,86,63.0,50.0,72.0,69.0,86.0,80.0,77000000.0,27,191
+João Cancelo,João Pedro Cavaco Cancelo,"RB, LB",Manchester City,86,85.0,71.0,83.0,84.0,80.0,72.0,71500000.0,27,182
+J. Vardy,Jamie Vardy,ST,Leicester City,86,85.0,84.0,70.0,80.0,52.0,73.0,33000000.0,34,179
+Fabinho,Fábio Henrique Tavares,"CDM, CB",Liverpool,86,67.0,69.0,78.0,78.0,85.0,83.0,73500000.0,27,188
+R. Mahrez,Riyad Mahrez,"RW, RM",Manchester City,86,81.0,79.0,81.0,90.0,38.0,60.0,65500000.0,30,179
+K. Koulibaly,Kalidou Koulibaly,CB,Napoli,86,81.0,28.0,51.0,65.0,87.0,85.0,55500000.0,30,187
+L. Insigne,Lorenzo Insigne,"LW, CF",Napoli,86,87.0,78.0,85.0,90.0,36.0,45.0,65500000.0,30,163
+Parejo,Daniel Parejo Muñoz,CM,Villarreal CF,86,50.0,83.0,90.0,81.0,71.0,69.0,53500000.0,32,182
+Sergio Busquets,Sergio Busquets i Burgos,"CDM, CM",FC Barcelona,86,42.0,62.0,79.0,80.0,82.0,75.0,45000000.0,32,189
+Thiago,Thiago Alcântara do Nascimento,"CM, CDM",Liverpool,86,63.0,72.0,86.0,90.0,70.0,66.0,65000000.0,30,174
+Jordi Alba,Jordi Alba Ramos,"LB, LM",FC Barcelona,86,86.0,69.0,81.0,83.0,77.0,71.0,47000000.0,32,170
+M. Hummels,Mats Hummels,CB,Borussia Dortmund,86,56.0,59.0,77.0,73.0,89.0,77.0,44000000.0,32,191
+G. Chiellini,Giorgio Chiellini,CB,Juventus,86,68.0,46.0,60.0,59.0,89.0,85.0,12000000.0,36,187
+R. Varane,Raphaël Varane,CB,Manchester United,86,82.0,49.0,64.0,65.0,87.0,82.0,68500000.0,28,191
+W. Ndidi,Onyinye Wilfred Ndidi,"CDM, CM",Leicester City,85,67.0,62.0,69.0,74.0,87.0,83.0,66500000.0,24,183
+M. Depay,Memphis Depay,"CF, LW, CAM",FC Barcelona,85,82.0,83.0,82.0,84.0,30.0,79.0,63000000.0,27,176
+Carvajal,Daniel Carvajal Ramos,RB,Real Madrid CF,85,80.0,54.0,78.0,80.0,81.0,80.0,47500000.0,29,173
+Jorginho,Luiz Frello Filho Jorge,"CM, CDM",Chelsea,85,55.0,67.0,86.0,81.0,73.0,73.0,52500000.0,29,180
+S. Milinković-Savić,Sergej Milinković-Savić,"CM, CDM, CAM",Lazio,85,68.0,79.0,80.0,81.0,79.0,86.0,66000000.0,26,191
+M. de Ligt,Matthijs de Ligt,CB,Juventus,85,73.0,59.0,60.0,69.0,84.0,87.0,75000000.0,21,189
+Oyarzabal,Mikel Oyarzabal Ugarte,"LW, RW",Real Sociedad,85,82.0,82.0,81.0,84.0,41.0,63.0,77500000.0,24,181
+L. Martínez,Lautaro Javier Martínez,ST,Inter,85,84.0,81.0,72.0,85.0,48.0,84.0,78000000.0,23,174
+M. Rashford,Marcus Rashford,"LM, ST",Manchester United,85,90.0,84.0,79.0,84.0,43.0,77.0,77500000.0,23,186
+A. Hakimi,Achraf Hakimi Mouh,"RB, RWB",Paris Saint-Germain,85,95.0,71.0,78.0,83.0,76.0,78.0,69500000.0,22,181
+S. de Vrij,Stefan de Vrij,CB,Inter,85,72.0,41.0,64.0,70.0,87.0,79.0,45000000.0,29,189
+Roberto Firmino,Roberto Firmino Barbosa de Oliveira,CF,Liverpool,85,77.0,78.0,79.0,89.0,59.0,78.0,54000000.0,29,181
+S. Gnabry,Serge David Gnabry,"RM, LM, RW",FC Bayern München,85,83.0,84.0,79.0,86.0,43.0,69.0,64500000.0,25,176
+A. Griezmann,Antoine Griezmann,"ST, LW, RW",Atlético de Madrid,85,80.0,84.0,84.0,87.0,52.0,72.0,53000000.0,30,176
+L. Bonucci,Leonardo Bonucci,CB,Juventus,85,64.0,58.0,69.0,72.0,86.0,80.0,17500000.0,34,190
+Koke,Jorge Resurrección Merodio,"CM, CDM",Atlético de Madrid,85,70.0,75.0,85.0,81.0,79.0,80.0,52500000.0,29,176
+Thiago Silva,Thiago Emiliano da Silva,CB,Chelsea,85,53.0,54.0,72.0,72.0,86.0,78.0,9500000.0,36,183
+E. Cavani,Edinson Roberto Cavani Gómez,ST,Manchester United,85,66.0,86.0,70.0,76.0,51.0,79.0,26000000.0,34,185
+E. Hazard,Eden Hazard,LW,Real Madrid CF,85,84.0,80.0,82.0,88.0,35.0,63.0,52000000.0,30,175
+David Silva,David Josué Jiménez Silva,"CAM, CM",Real Sociedad,85,63.0,74.0,87.0,87.0,52.0,53.0,22000000.0,35,173
+İ. Gündoğan,İlkay Gündoğan,"CM, CDM",Manchester City,85,65.0,80.0,85.0,86.0,73.0,72.0,51500000.0,30,180
+M. Reus,Marco Reus,"CAM, CF",Borussia Dortmund,85,73.0,84.0,84.0,85.0,47.0,63.0,43000000.0,32,180
+A. Gómez,Alejandro Darío Gómez,"CAM, CF, CM",Sevilla FC,85,87.0,78.0,84.0,87.0,39.0,55.0,33500000.0,33,167
+K. Walker,Kyle Walker,RB,Manchester City,85,92.0,63.0,76.0,78.0,80.0,82.0,39000000.0,31,183
+P. Aubameyang,Pierre-Emerick Emiliano François Aubameyang,"ST, LW, LM",Arsenal,85,89.0,85.0,75.0,80.0,35.0,69.0,43500000.0,32,187
+J. Giménez,José María Giménez de Vargas,CB,Atlético de Madrid,84,69.0,45.0,57.0,59.0,86.0,80.0,52000000.0,26,185
+Y. Carrasco,Yannick Ferreira Carrasco,"LM, ST",Atlético de Madrid,84,88.0,81.0,78.0,85.0,45.0,67.0,45000000.0,27,185
+F. Kostić,Filip Kostić,"LM, LWB",Eintracht Frankfurt,84,88.0,77.0,82.0,83.0,68.0,80.0,42500000.0,28,184
+H. Ziyech,Hakim Ziyech,"RW, CAM",Chelsea,84,78.0,76.0,87.0,83.0,50.0,65.0,42500000.0,28,181
+R. Guerreiro,Raphaël Adelino José Guerreiro,"LB, LM",Borussia Dortmund,84,75.0,77.0,85.0,88.0,76.0,58.0,40500000.0,27,170
+Ricardo Pereira,Ricardo Domingos Barbosa Pereira,"RB, RM",Leicester City,84,83.0,67.0,78.0,82.0,80.0,75.0,40500000.0,27,175
+M. Brozović,Marcelo Brozović,"CDM, CM",Inter,84,69.0,74.0,80.0,79.0,79.0,78.0,37000000.0,28,181
+Y. Tielemans,Youri Tielemans,"CM, CDM",Leicester City,84,63.0,79.0,86.0,80.0,71.0,72.0,57000000.0,24,176
+F. Kessié,Franck Yannick Kessié,"CDM, CM",AC Milan,84,78.0,74.0,74.0,80.0,82.0,87.0,49500000.0,24,183
+N. Fekir,Nabil Fekir,"CAM, RM, ST",Real Betis Balompié,84,83.0,83.0,82.0,87.0,38.0,79.0,45000000.0,27,173
+L. Sané,Leroy Aziz Sané,"RM, LM",FC Bayern München,84,90.0,81.0,79.0,85.0,38.0,68.0,56000000.0,25,183
+N. Barella,Nicolò Barella,CM,Inter,84,78.0,71.0,79.0,86.0,75.0,78.0,63500000.0,24,172
+M. Acuña,Marcos Javier Acuña,"LB, LM",Sevilla FC,84,76.0,74.0,82.0,87.0,79.0,82.0,37000000.0,29,172
+André Silva,André Miguel Valente da Silva,ST,RB Leipzig,84,74.0,84.0,69.0,83.0,45.0,77.0,51000000.0,25,185
+M. Ginter,Matthias Ginter,CB,Borussia Mönchengladbach,84,62.0,58.0,72.0,66.0,86.0,79.0,42500000.0,27,191
+T. Hernández,Theo Bernard François Hernández,LB,AC Milan,84,93.0,71.0,76.0,81.0,77.0,82.0,62500000.0,23,184
+K. Havertz,Kai Lukas Havertz,"CAM, CF, CM",Chelsea,84,82.0,78.0,79.0,84.0,45.0,66.0,94500000.0,22,188
+P. Foden,Philip Foden,"CAM, LW, CM",Manchester City,84,84.0,78.0,80.0,87.0,56.0,57.0,94500000.0,21,171
+Felipe,Felipe Augusto de Almeida Monteiro,CB,Atlético de Madrid,84,61.0,41.0,58.0,62.0,85.0,84.0,27500000.0,32,190
+T. Werner,Timo Werner,"ST, LW",Chelsea,84,91.0,81.0,70.0,82.0,35.0,70.0,56500000.0,25,180
+J. Grealish,Jack Grealish,"LW, LM, CAM",Manchester City,84,80.0,76.0,83.0,88.0,46.0,64.0,50500000.0,25,180
+Iago Aspas,Iago Aspas Juncal,"ST, RW",RC Celta de Vigo,84,82.0,85.0,79.0,86.0,35.0,63.0,27000000.0,33,176
+L. Shaw,Luke Shaw,LB,Manchester United,84,79.0,54.0,79.0,80.0,81.0,80.0,48500000.0,25,181
+Z. Ibrahimović,Zlatan Ibrahimović,ST,AC Milan,84,65.0,87.0,78.0,79.0,34.0,77.0,14500000.0,39,195
+Jesús Navas,Jesús Navas González,"RB, RM",Sevilla FC,84,87.0,69.0,81.0,83.0,79.0,58.0,13000000.0,35,172
+Piqué,Gerard Piqué Bernabéu,CB,FC Barcelona,84,58.0,61.0,71.0,68.0,85.0,78.0,13500000.0,34,194
+G. Wijnaldum,Georginio Wijnaldum,"CM, CDM",Paris Saint-Germain,84,77.0,75.0,80.0,86.0,79.0,79.0,40500000.0,30,175
+J. Henderson,Jordan Henderson,"CDM, CM",Liverpool,84,66.0,74.0,83.0,79.0,78.0,81.0,29500000.0,31,182
+Fernando,Fernando Francisco Reges,"CDM, CM",Sevilla FC,84,66.0,62.0,75.0,74.0,83.0,82.0,21000000.0,33,183
+K. Trippier,Kieran Trippier,"RB, RWB, RM",Atlético de Madrid,84,73.0,63.0,82.0,77.0,80.0,72.0,36500000.0,30,173
+D. Mertens,Dries Mertens,"CF, ST, CAM",Napoli,84,85.0,82.0,80.0,88.0,34.0,50.0,20500000.0,34,169
+D. Alaba,David Olatukunbo Alaba,"CB, LB",Real Madrid CF,84,77.0,70.0,81.0,80.0,83.0,76.0,35500000.0,29,180
+D. Tadić,Dušan Tadić,"LW, CF, CAM",Ajax,84,69.0,81.0,85.0,85.0,43.0,76.0,33500000.0,32,181
+W. Ben Yedder,Wissam Ben Yedder,ST,AS Monaco,84,82.0,84.0,77.0,87.0,39.0,70.0,41500000.0,30,170
+L. Digne,Lucas Digne,LB,Everton,84,79.0,69.0,80.0,80.0,80.0,76.0,40500000.0,27,178
+J. Iličić,Josip Iličić,"CF, ST",Atalanta,84,75.0,86.0,84.0,86.0,40.0,67.0,27000000.0,33,190
+H. Maguire,Harry Maguire,CB,Manchester United,84,50.0,55.0,69.0,70.0,85.0,87.0,42500000.0,28,194
+S. Savić,Stefan Savić,CB,Atlético de Madrid,84,64.0,35.0,57.0,58.0,87.0,76.0,34500000.0,30,187
+Luis Alberto,Luis Alberto Romero Alconchel,"CAM, CM, CF",Lazio,84,60.0,76.0,86.0,84.0,57.0,59.0,42500000.0,28,183
+M. Sabitzer,Marcel Sabitzer,"CM, CDM, CAM",FC Bayern München,84,78.0,84.0,81.0,80.0,67.0,78.0,48000000.0,27,178
+A. Kramarić,Andrej Kramarić,"ST, CAM",TSG Hoffenheim,83,71.0,86.0,76.0,86.0,30.0,71.0,35500000.0,30,177
+W. Weghorst,Wout Weghorst,ST,VfL Wolfsburg,83,63.0,83.0,59.0,70.0,52.0,86.0,37000000.0,28,197
+Marco Asensio,Marco Asensio Willemsen,"RW, LW",Real Madrid CF,83,82.0,80.0,81.0,83.0,43.0,62.0,48000000.0,25,182
+L. Hernández,Lucas François Bernard Hernández Pi,"LB, CB",FC Bayern München,83,77.0,54.0,68.0,71.0,84.0,79.0,44500000.0,25,184
+Angeliño,José Ángel Esmoris Tasende,"LWB, LM",RB Leipzig,83,78.0,71.0,82.0,84.0,76.0,70.0,46000000.0,24,175
+T. Lemar,Thomas Lemar,"LM, CM, RM",Atlético de Madrid,83,82.0,76.0,82.0,86.0,59.0,63.0,48000000.0,25,171
+D. Zapata,Duván Esteban Zapata Banguera,ST,Atalanta,83,80.0,81.0,61.0,78.0,35.0,84.0,35500000.0,30,189
+Á. Correa,Ángel Martín Correa,"ST, RM",Atlético de Madrid,83,85.0,83.0,78.0,87.0,49.0,74.0,48000000.0,26,171
+P. Højbjerg,Pierre-Emile Kordt Højbjerg,"CDM, CM",Tottenham Hotspur,83,60.0,71.0,76.0,76.0,81.0,82.0,43500000.0,25,185
+Gayà,José Luís Gayà Peña,"LB, LWB, LM",Valencia CF,83,83.0,61.0,77.0,80.0,79.0,73.0,43500000.0,26,172
+Merino,Mikel Merino Zazón,CM,Real Sociedad,83,74.0,78.0,81.0,82.0,82.0,81.0,50000000.0,25,189
+R. Gosens,Robin Everardus Gosens,"LWB, LB, LM",Atalanta,83,82.0,75.0,74.0,79.0,77.0,81.0,36000000.0,26,183
+F. Valverde,Federico Santiago Valverde Dipetta,CM,Real Madrid CF,83,86.0,74.0,78.0,79.0,77.0,80.0,58000000.0,22,182
+P. Kimpembe,Presnel Kimpembe,CB,Paris Saint-Germain,83,81.0,42.0,68.0,70.0,83.0,86.0,45500000.0,25,189
+F. Mendy,Ferland Mendy,LB,Real Madrid CF,83,92.0,64.0,76.0,79.0,78.0,84.0,43500000.0,26,180
+A. Wan-Bissaka,Aaron Wan-Bissaka,RB,Manchester United,83,85.0,52.0,69.0,79.0,81.0,75.0,48500000.0,23,183
+Ronaldo Cabrais,Ronaldo Jailson Cabrais Petri,"CAM, RM",Grêmio,83,88.0,77.0,83.0,84.0,35.0,72.0,35500000.0,29,177
+Arthur,Arthur Henrique Ramos de Oliveira Melo,CM,Juventus,83,69.0,67.0,83.0,88.0,72.0,70.0,47000000.0,24,171
+Gabriel Jesus,Gabriel Fernando de Jesus,ST,Manchester City,83,84.0,81.0,72.0,86.0,39.0,73.0,52500000.0,24,175
+O. Dembélé,Ousmane Dembélé,RW,FC Barcelona,83,93.0,77.0,77.0,86.0,36.0,56.0,55000000.0,24,178
+M. Mount,Mason Mount,"CAM, CM, RW",Chelsea,83,74.0,79.0,84.0,83.0,55.0,65.0,58500000.0,22,178
+F. Chiesa,Federico Chiesa,"RW, LW, RM",Juventus,83,91.0,81.0,74.0,85.0,48.0,73.0,80500000.0,23,175
+J. Koundé,Jules Koundé,CB,Sevilla FC,83,81.0,45.0,64.0,72.0,84.0,78.0,53000000.0,22,181
+João Félix,João Félix Sequeira,"CF, ST",Atlético de Madrid,83,82.0,79.0,76.0,86.0,40.0,68.0,82000000.0,21,181
+M. Kovačić,Mateo Kovačić,"CM, CDM",Chelsea,83,70.0,69.0,83.0,88.0,69.0,70.0,41500000.0,27,176
+T. Partey,Thomas Partey,"CM, CDM",Arsenal,83,69.0,71.0,82.0,81.0,80.0,84.0,36500000.0,28,185
+J. Stones,John Stones,CB,Manchester City,83,70.0,51.0,71.0,74.0,84.0,78.0,41000000.0,27,188
+L. Ocampos,Lucas Ariel Ocampos,"LW, RW",Sevilla FC,83,81.0,84.0,78.0,83.0,63.0,84.0,39500000.0,26,188
+K. Manolas,Konstantinos Manolas,CB,Napoli,83,81.0,25.0,44.0,62.0,85.0,81.0,30000000.0,30,189
+A. Rüdiger,Antonio Rüdiger,CB,Chelsea,83,75.0,43.0,68.0,64.0,84.0,84.0,34500000.0,28,190
+C. Vela,Carlos Alberto Vela Garrido,"RW, LW, CAM",Los Angeles FC,83,80.0,82.0,78.0,84.0,31.0,67.0,29000000.0,32,177
+A. Witsel,Axel Witsel,"CDM, CM",Borussia Dortmund,83,61.0,72.0,81.0,79.0,82.0,79.0,24000000.0,32,186
+S. Kjær,Simon Thorup Kjær,CB,AC Milan,83,67.0,55.0,64.0,59.0,85.0,78.0,23500000.0,32,190
+E. Džeko,Edin Džeko,ST,Inter,83,66.0,83.0,72.0,78.0,45.0,76.0,15500000.0,35,193
+T. Alderweireld,Toby Alderweireld,CB,,83,58.0,55.0,70.0,67.0,86.0,77.0,,32,186
+Azpilicueta,César Azpilicueta Tanco,"CB, RWB",Chelsea,83,66.0,55.0,76.0,72.0,84.0,76.0,25000000.0,31,178
+Paulinho,José Paulo Bezzera Maciel Júnior,"CM, CAM, CDM",Al Ahli,83,72.0,81.0,77.0,81.0,80.0,85.0,28500000.0,32,183
+Muniain,Iker Muniain Goñi,"CAM, RM, LM",Athletic Club de Bilbao,83,81.0,76.0,82.0,87.0,51.0,61.0,36500000.0,28,170
+Canales,Sergio Canales Madrazo,"CM, CDM, LM",Real Betis Balompié,83,83.0,80.0,85.0,82.0,67.0,71.0,34500000.0,30,176
+Alex Sandro,Alex Sandro Lobo Silva,"LB, LM",Juventus,83,81.0,65.0,77.0,79.0,78.0,79.0,31500000.0,30,180
+J. Boateng,Jérôme Boateng,CB,Olympique Lyonnais,83,72.0,50.0,73.0,67.0,84.0,79.0,23500000.0,32,190
+H. Mkhitaryan,Henrikh Mkhitaryan,"CF, RM, RW",Roma,83,85.0,80.0,79.0,83.0,56.0,74.0,29500000.0,32,177
+Morata,Álvaro Borja Morata Martín,ST,Juventus,83,82.0,80.0,72.0,81.0,31.0,77.0,37000000.0,28,190
+J. Cuadrado,Juan Guillermo Cuadrado Bello,"RB, RM",Juventus,83,90.0,75.0,77.0,87.0,76.0,72.0,19000000.0,33,179
+Fernandinho,Fernando Luiz Rosa,"CDM, CB",Manchester City,83,59.0,72.0,75.0,78.0,84.0,75.0,7000000.0,36,179
+L. Spinazzola,Leonardo Spinazzola,"LWB, LB, LM",Roma,83,92.0,64.0,73.0,80.0,78.0,71.0,33000000.0,28,186
+R. Jiménez,Raúl Alonso Jiménez Rodríguez,ST,Wolverhampton Wanderers,83,72.0,82.0,76.0,81.0,47.0,82.0,35500000.0,30,188
+M. Icardi,Mauro Emanuel Icardi Rivero,ST,Paris Saint-Germain,83,69.0,83.0,65.0,77.0,36.0,69.0,37000000.0,28,181
+K. Volland,Kevin Volland,"ST, CF",AS Monaco,83,73.0,85.0,79.0,80.0,42.0,86.0,37000000.0,28,179
+Allan,Allan Marques Loureiro,"CDM, CM",Everton,83,72.0,71.0,77.0,82.0,80.0,79.0,30500000.0,30,175
+F. Acerbi,Francesco Acerbi,CB,Lazio,83,63.0,50.0,62.0,64.0,86.0,83.0,17500000.0,33,192
+S. Coates,Sebastián Coates Nión,CB,Sporting CP,83,68.0,49.0,55.0,63.0,84.0,87.0,30000000.0,30,196
+J. Matip,Joël Andre Job Matip,CB,Liverpool,83,58.0,46.0,68.0,68.0,85.0,78.0,30500000.0,29,194
+D. Upamecano,Dayotchanculle Oswald Upamecano,CB,FC Bayern München,82,81.0,43.0,62.0,68.0,81.0,81.0,64000000.0,22,186
+Palhinha,João Maria Lobo Alves Palhinha Gonçalves,"CDM, CM",Sporting CP,82,60.0,65.0,70.0,72.0,85.0,88.0,41000000.0,25,190
+C. Pulisic,Christian Mate Pulisic,"LW, RW, LM",Chelsea,82,89.0,70.0,73.0,86.0,37.0,59.0,49000000.0,22,177
+Fabián,Fabián Ruiz Peña,CM,Napoli,82,63.0,78.0,79.0,82.0,74.0,71.0,42000000.0,25,189
+J. Gomez,Joe Gomez,CB,Liverpool,82,81.0,30.0,66.0,69.0,83.0,78.0,43500000.0,24,188
+Diogo Jota,Diogo José Teixeira da Silva,"LW, ST",Liverpool,82,84.0,81.0,73.0,85.0,57.0,77.0,46000000.0,24,178
+Rúben Neves,Rúben Diogo da Silva Neves,CM,Wolverhampton Wanderers,82,59.0,75.0,85.0,77.0,74.0,73.0,46000000.0,24,180
+Diego Carlos,Diego Carlos Santos Silva,CB,Sevilla FC,82,76.0,47.0,63.0,68.0,81.0,83.0,30500000.0,28,185
+M. Locatelli,Manuel Locatelli,"CDM, CM",Juventus,82,61.0,72.0,79.0,77.0,79.0,79.0,42000000.0,23,185
+J. Maddison,James Maddison,"CAM, CM",Leicester City,82,75.0,78.0,84.0,84.0,54.0,60.0,41500000.0,24,175
+C. Lenglet,Clément Nicolas Laurent Lenglet,CB,FC Barcelona,82,72.0,45.0,67.0,66.0,83.0,79.0,37500000.0,26,186
+A. Rebić,Ante Rebić,"LM, ST",AC Milan,82,86.0,83.0,75.0,81.0,48.0,80.0,32500000.0,27,185
+Rafa,Rafael Alexandre Fernandes Ferreira da Silva,"RM, LM",SL Benfica,82,94.0,73.0,74.0,86.0,50.0,52.0,30500000.0,28,170
+R. De Paul,Rodrigo Javier De Paul,"CM, CF",Atlético de Madrid,82,78.0,76.0,80.0,82.0,71.0,79.0,35000000.0,27,180
+L. Bailey,Leon Bailey Butler,"RM, RW, LW",Aston Villa,82,93.0,78.0,74.0,84.0,33.0,64.0,41500000.0,23,178
+Mario Hermoso,Mario Hermoso Canseco,"CB, LB",Atlético de Madrid,82,75.0,49.0,72.0,71.0,83.0,80.0,35500000.0,26,185
+T. Souček,Tomáš Souček,"CDM, CM",West Ham United,82,64.0,72.0,74.0,74.0,82.0,85.0,36000000.0,26,192
+B. Chilwell,Ben Chilwell,"LWB, LB",Chelsea,82,76.0,53.0,77.0,78.0,78.0,75.0,40500000.0,24,178
+Josué Chiamulera,Josué Durval Chiamulera Vaz,CB,Grêmio,82,78.0,43.0,56.0,64.0,85.0,79.0,25500000.0,29,185
+Dani Olmo,Daniel Olmo Carvajal,"CAM, CF",RB Leipzig,82,67.0,76.0,81.0,86.0,50.0,60.0,46000000.0,23,179
+Pau Torres,Pau Francisco Torres,CB,Villarreal CF,82,71.0,38.0,67.0,70.0,84.0,80.0,56500000.0,24,191
+Ferran Torres,Ferran Torres García,"RW, ST",Manchester City,82,82.0,79.0,78.0,82.0,35.0,66.0,68500000.0,21,184
+Éder Militão,Éder Gabriel Militão,CB,Real Madrid CF,82,83.0,50.0,69.0,71.0,83.0,82.0,56500000.0,23,186
+Alex Telles,Alex Nicolao Telles,LB,Manchester United,82,83.0,73.0,82.0,78.0,77.0,73.0,27500000.0,28,181
+T. Ndombele,Tanguy Ndombèlé Alvaro,"CAM, CM, CDM",Tottenham Hotspur,82,71.0,72.0,81.0,88.0,69.0,72.0,46000000.0,24,179
+Y. En-Nesyri,Youssef En-Nesyri,"ST, LW",Sevilla FC,82,78.0,83.0,58.0,78.0,35.0,76.0,44000000.0,24,188
+F. Neuhaus,Florian Christian Neuhaus,CM,Borussia Mönchengladbach,82,64.0,72.0,79.0,82.0,66.0,67.0,46000000.0,24,185
+A. Davies,Alphonso Boyle Davies,"LB, LM",FC Bayern München,82,96.0,67.0,71.0,82.0,75.0,75.0,57000000.0,20,183
+D. Rice,Declan Rice,"CDM, CM",West Ham United,82,66.0,53.0,71.0,74.0,81.0,79.0,43000000.0,22,185
+A. Isak,Alexander Isak,ST,Real Sociedad,82,84.0,82.0,68.0,79.0,29.0,69.0,45000000.0,21,192
+Raphinha,Raphael Dias Belloli,"RM, RW",Leeds United,82,91.0,76.0,76.0,84.0,49.0,72.0,46000000.0,24,176
+D. Dumfries,Denzel Justus Morris Dumfries,RB,Inter,82,80.0,61.0,66.0,72.0,78.0,89.0,35000000.0,25,188
+C. Romero,Cristian Gabriel Romero,CB,Tottenham Hotspur,82,76.0,46.0,52.0,61.0,83.0,84.0,41500000.0,23,185
+Richarlison,Richarlison de Andrade,"ST, LW, LM",Everton,82,83.0,78.0,73.0,83.0,53.0,80.0,46500000.0,24,181
+Anderson Talisca,Anderson Souza Conceição,"CF, ST, CAM",Al Nassr,82,80.0,83.0,81.0,83.0,52.0,75.0,35500000.0,27,190
+M. Ødegaard,Martin Ødegaard,"CAM, CM",Arsenal,82,77.0,74.0,83.0,84.0,58.0,62.0,49000000.0,22,178
+N. Süle,Niklas Süle,"CB, RB",FC Bayern München,82,65.0,42.0,59.0,51.0,83.0,81.0,40500000.0,25,195
+Mário Fernandes,Mário Figueira Fernandes,RB,PFC CSKA Moscow,82,82.0,61.0,74.0,78.0,79.0,79.0,26500000.0,30,187
+A. Lacazette,Alexandre Lacazette,ST,Arsenal,82,75.0,82.0,74.0,82.0,44.0,72.0,30000000.0,30,175
+J. Corona,Jesús Manuel Corona Ruíz,"RM, RB, RW",FC Porto,82,83.0,67.0,79.0,85.0,74.0,60.0,30500000.0,28,173
+M. Götze,Mario Götze,"CAM, CM",PSV,82,68.0,75.0,83.0,84.0,55.0,69.0,30000000.0,29,177
+D. Blind,Daley Blind,"CB, CDM, LB",Ajax,82,45.0,64.0,82.0,79.0,83.0,72.0,21000000.0,31,180
+C. Eriksen,Christian Dannemann Eriksen,"CM, CAM",Inter,82,62.0,78.0,88.0,81.0,53.0,52.0,29500000.0,29,181
+Coutinho,Philippe Coutinho Correia,"CAM, LW, CM",FC Barcelona,82,69.0,79.0,80.0,88.0,52.0,59.0,30000000.0,29,172
+Oscar,Oscar dos Santos Emboaba Júnior,"CAM, CM, LW",Shanghai Port FC,82,78.0,79.0,82.0,82.0,59.0,67.0,30000000.0,29,179
+Yuri Berchiche,Yuri Berchiche Izeta,LB,Athletic Club de Bilbao,82,83.0,68.0,76.0,76.0,79.0,82.0,22000000.0,31,181
+M. Pjanić,Miralem Pjanić,CM,Beşiktaş JK,82,65.0,68.0,83.0,81.0,75.0,67.0,25000000.0,31,178
+É. Banega,Éver Maximiliano David Banega,"CDM, CM",Al Shabab,82,62.0,75.0,84.0,82.0,76.0,71.0,15000000.0,33,174
+G. Bale,Gareth Frank Bale,"RM, RW",Real Madrid CF,82,82.0,84.0,82.0,80.0,55.0,70.0,25000000.0,31,185
+I. Rakitić,Ivan Rakitić,CM,Sevilla FC,82,57.0,79.0,85.0,78.0,75.0,69.0,18500000.0,33,184
+Raúl Albiol,Raúl Albiol Tortajada,CB,Villarreal CF,82,40.0,41.0,62.0,63.0,86.0,73.0,8000000.0,35,190
+Pepe,Kléper Laveran de Lima Ferreira,CB,FC Porto,82,80.0,51.0,60.0,61.0,82.0,87.0,5500000.0,38,188
+N. Tagliafico,Nicolás Alejandro Tagliafico,LB,Ajax,82,80.0,55.0,73.0,76.0,81.0,81.0,27500000.0,28,172
+I. Gueye,Idrissa Gana Gueye,"CDM, CM",Paris Saint-Germain,82,69.0,62.0,71.0,78.0,83.0,77.0,21500000.0,31,174
+L. Stindl,Lars Edi Stindl,"CAM, ST",Borussia Mönchengladbach,82,61.0,84.0,81.0,81.0,60.0,73.0,24000000.0,32,181
+Isco,Francisco Román Alarcón Suárez,"CAM, CM, LW",Real Madrid CF,82,66.0,75.0,80.0,88.0,59.0,59.0,30000000.0,29,176
+Portu,Cristian Portugués Manzanera,"RW, RM, LW",Real Sociedad,82,90.0,78.0,77.0,79.0,59.0,79.0,30000000.0,29,167
+D. Berardi,Domenico Berardi,"RW, RM",U.S. Sassuolo Calcio,82,79.0,80.0,81.0,85.0,36.0,69.0,33500000.0,26,183
+W. Zaha,Wilfried Zaha,"CF, LM, ST",Crystal Palace,82,89.0,77.0,73.0,87.0,34.0,75.0,31000000.0,28,180
+A. Romagnoli,Alessio Romagnoli,CB,AC Milan,82,68.0,40.0,56.0,68.0,85.0,78.0,31500000.0,26,185
+Grimaldo,Alejandro Grimaldo García,"LB, LM, LWB",SL Benfica,82,87.0,65.0,81.0,83.0,74.0,71.0,37000000.0,25,171
+M. de Roon,Marten Elco de Roon,"CDM, CM",Atalanta,82,66.0,68.0,71.0,73.0,82.0,83.0,25500000.0,30,185
+E. Can,Emre Can,"CM, CB, CDM",Borussia Dortmund,82,78.0,78.0,78.0,80.0,84.0,87.0,35000000.0,27,186
+H. Çalhanoğlu,Hakan Çalhanoğlu,"CAM, LM",Inter,82,67.0,78.0,84.0,85.0,59.0,57.0,35000000.0,27,178
+Saúl,Saúl Ñíguez Esclápez,"CM, LM",Chelsea,82,71.0,78.0,78.0,79.0,78.0,79.0,39500000.0,26,184
+T. Hazard,Thorgan Hazard,"LM, CF",Borussia Dortmund,82,80.0,76.0,80.0,85.0,52.0,66.0,30500000.0,28,175
+Suso,Jesús Joaquín Fernández Sáez de la Torre,RW,Sevilla FC,82,76.0,76.0,82.0,85.0,32.0,55.0,32500000.0,27,176
+J. Veretout,Jordan Veretout,"CDM, CM",Roma,82,77.0,75.0,77.0,79.0,77.0,81.0,29500000.0,28,177
+Gabriel Paulista,Gabriel Armando de Abreu,CB,Valencia CF,82,67.0,49.0,71.0,65.0,84.0,83.0,25000000.0,30,185
+Juan Bernat,Juan Bernat Velasco,LB,Paris Saint-Germain,82,82.0,65.0,78.0,82.0,76.0,68.0,27500000.0,28,170
+Campaña,José Ángel Gómez Campaña,"CM, LM, RM",Levante Unión Deportiva,82,68.0,74.0,83.0,82.0,71.0,72.0,30500000.0,28,179
+L. Muriel,Luis Fernando Muriel Fruto,ST,Atalanta,82,89.0,83.0,74.0,86.0,27.0,67.0,30000000.0,30,179
+G. Lo Celso,Giovani Lo Celso,"CM, CAM",Tottenham Hotspur,81,75.0,76.0,82.0,83.0,69.0,73.0,35500000.0,25,177
+Gonçalo Guedes,Gonçalo Manuel Ganchinho Guedes,"LM, ST, CF",Valencia CF,81,86.0,79.0,76.0,82.0,36.0,68.0,39000000.0,24,179
+D. Calvert-Lewin,Dominic Calvert-Lewin,ST,Everton,81,83.0,77.0,64.0,77.0,39.0,82.0,37500000.0,24,187
+H. Lozano,Hirving Rodrigo Lozano Bahena,"RW, LW",Napoli,81,93.0,76.0,72.0,82.0,41.0,62.0,31000000.0,25,175
+K. Phillips,Kalvin Phillips,"CDM, CM, CB",Leeds United,81,67.0,65.0,76.0,75.0,78.0,82.0,32500000.0,25,178
+N. Pépé,Nicolas Pépé,"RM, RW",Arsenal,81,88.0,79.0,75.0,83.0,36.0,65.0,30500000.0,26,183
+K. Laimer,Konrad Laimer,"CDM, CM, RB",RB Leipzig,81,81.0,68.0,77.0,78.0,80.0,77.0,33500000.0,24,180
+N. Mukiele,Nordi Mukiele Mulere,"RWB, CB, RM",RB Leipzig,81,80.0,49.0,69.0,73.0,82.0,80.0,34500000.0,23,187
+H. Hateboer,Hans Hateboer,"RWB, RB, RM",Atalanta,81,84.0,64.0,72.0,77.0,77.0,79.0,25000000.0,27,185
+D. van de Beek,Donny van de Beek,"CM, CAM, CDM",Manchester United,81,68.0,78.0,76.0,79.0,72.0,77.0,38500000.0,24,184
+A. Martial,Anthony Martial,"ST, LM",Manchester United,81,87.0,80.0,73.0,85.0,35.0,68.0,34500000.0,25,184
+D. Djené,Djené Dakonam Ortega,CB,Getafe CF,81,69.0,37.0,62.0,62.0,83.0,79.0,24000000.0,29,178
+Morales,José Luis Morales Nogales,"ST, LM",Levante Unión Deportiva,81,86.0,82.0,75.0,85.0,52.0,68.0,16500000.0,33,180
+M. Politano,Matteo Politano,"RM, RW",Napoli,81,83.0,77.0,78.0,84.0,42.0,55.0,27500000.0,27,171
+Iñaki Williams,Iñaki Williams Arthuer,"ST, RW",Athletic Club de Bilbao,81,94.0,78.0,72.0,78.0,37.0,81.0,30000000.0,27,186
+J. Correa,Carlos Joaquín Correa,"CF, ST, CAM",Inter,81,84.0,75.0,77.0,85.0,39.0,69.0,31000000.0,26,189
+J. Brandt,Julian Brandt,"CAM, CM, CF",Borussia Dortmund,81,73.0,75.0,80.0,84.0,48.0,66.0,36000000.0,25,185
+D. Machís,Darwin Daniel Machís Marcano,"LM, RM, ST",Granada CF,81,88.0,80.0,75.0,83.0,38.0,70.0,26000000.0,28,174
+Otávio,Otávio Edmilson da Silva Monteiro,"LM, RM, CM",FC Porto,81,78.0,69.0,79.0,85.0,63.0,68.0,30500000.0,26,172
+L. Pellegrini,Lorenzo Pellegrini,"CAM, CM, CDM",Roma,81,78.0,74.0,81.0,80.0,72.0,77.0,38000000.0,25,186
+Yeray,Yeray Álvarez López,CB,Athletic Club de Bilbao,81,68.0,49.0,62.0,64.0,82.0,77.0,28000000.0,26,182
+Reguilón,Sergio Reguilón Rodríguez,LB,Tottenham Hotspur,81,86.0,58.0,75.0,78.0,78.0,70.0,32500000.0,24,178
+Juiano Mestres,Juan Everton Mestres de Mesquita,"CB, CDM",Clube Atlético Mineiro,81,71.0,61.0,57.0,63.0,82.0,80.0,25000000.0,25,181
+Adryan Zonta,Adryan Juliano Zonta Torres,"LWB, LB",RB Bragantino,81,93.0,66.0,75.0,76.0,72.0,77.0,22500000.0,29,172
+A. Rabiot,Adrien Rabiot,"CM, CDM",Juventus,81,76.0,74.0,76.0,80.0,76.0,79.0,30000000.0,26,192
+Pedri,Pedro González López,CM,FC Barcelona,81,78.0,65.0,79.0,84.0,66.0,63.0,54000000.0,18,174
+D. Kulusevski,Dejan Kulusevski,"RW, CF",Juventus,81,84.0,74.0,77.0,84.0,56.0,76.0,58000000.0,21,186
+E. Tapsoba,Edmond Fayçal Tapsoba,CB,Bayer 04 Leverkusen,81,75.0,52.0,65.0,69.0,82.0,79.0,48500000.0,22,194
+M. Diaby,Moussa Diaby,"LW, RW",Bayer 04 Leverkusen,81,94.0,67.0,73.0,85.0,41.0,53.0,52500000.0,21,170
+Pedro Gonçalves,Pedro António Pereira Gonçalves,"RW, CM",Sporting CP,81,76.0,81.0,79.0,84.0,56.0,65.0,51500000.0,23,173
+Cucurella,Marc Cucurella Saseta,"LM, LB",Brighton & Hove Albion,81,79.0,67.0,78.0,80.0,73.0,74.0,41500000.0,22,172
+R. James,Reece James,"RWB, RB",Chelsea,81,80.0,58.0,77.0,77.0,76.0,80.0,37000000.0,21,178
+M. Lazzari,Manuel Lazzari,RWB,Lazio,81,92.0,62.0,76.0,82.0,70.0,65.0,25000000.0,27,174
+H. Aouar,Houssem Aouar,"CM, CAM",Olympique Lyonnais,81,75.0,75.0,81.0,85.0,66.0,71.0,38500000.0,23,175
+H. Barnes,Harvey Lewis Barnes,"LM, LW",Leicester City,81,86.0,77.0,76.0,81.0,45.0,63.0,35000000.0,23,180
+Carlos Soler,Carlos Soler Barragán,"CM, RM, LM",Valencia CF,81,78.0,77.0,82.0,79.0,71.0,71.0,51500000.0,24,180
+Lucas Paquetá,Lucas Tolentino Coelho de Lima,"CM, CAM",Olympique Lyonnais,81,74.0,75.0,79.0,83.0,69.0,78.0,38500000.0,23,180
+C. Nkunku,Christopher Nkunku,"CAM, CM, CF",RB Leipzig,81,79.0,74.0,81.0,85.0,69.0,65.0,39000000.0,23,179
+R. Malinovskyi,Ruslan Malinovskyi,"CF, CM",Atalanta,81,74.0,80.0,83.0,81.0,64.0,79.0,26500000.0,28,181
+Oswaldinato,Marvin Oswaldo Rangel Azevedo,ST,Flamengo,81,76.0,81.0,67.0,77.0,20.0,78.0,25500000.0,29,184
+Welington Dano,Welington Kauê Dano Nascimento,"LB, LM",Clube Atlético Mineiro,81,79.0,54.0,76.0,79.0,75.0,74.0,27500000.0,21,178
+Louri Beretta,Lourival Adnan Beretta Barbosa,"ST, CF",RB Bragantino,81,78.0,84.0,62.0,72.0,33.0,71.0,25500000.0,29,188
+Rosberto Dourado,Rosberto J. Dourado Santos,"CDM, CM, CAM",Sport Club Corinthians Paulista,81,77.0,57.0,74.0,77.0,82.0,68.0,27000000.0,21,175
+P. Zieliński,Piotr Sebastian Zieliński,"CM, CAM",Napoli,81,81.0,75.0,81.0,85.0,70.0,61.0,29500000.0,27,180
+Renan Lodi,Renan Augusto Lodi dos Santos,LB,Atlético de Madrid,81,84.0,67.0,76.0,81.0,77.0,75.0,36500000.0,23,173
+Fred,Frederico Rodrigues de Paula Santos,"CDM, CM",Manchester United,81,77.0,66.0,77.0,81.0,75.0,71.0,22500000.0,28,169
+I. Perišić,Ivan Perišić,"LM, LW, LWB",Inter,81,81.0,79.0,76.0,79.0,64.0,74.0,20500000.0,32,186
+D. Ings,Daniel William John Ings,ST,Aston Villa,81,79.0,84.0,70.0,80.0,45.0,70.0,26500000.0,28,178
+K. Kampl,Kevin Kampl,"CM, CDM",RB Leipzig,81,70.0,67.0,81.0,85.0,63.0,62.0,24500000.0,30,178
+A. Delort,Andy Delort,ST,OGC Nice,81,84.0,82.0,73.0,75.0,37.0,85.0,25500000.0,29,181
+T. Delaney,Thomas Joseph Delaney,"CDM, CM",Sevilla FC,81,75.0,71.0,74.0,74.0,83.0,82.0,22000000.0,29,182
+N. Otamendi,Nicolás Hernán Gonzalo Otamendi,CB,SL Benfica,81,63.0,57.0,62.0,59.0,83.0,81.0,12500000.0,33,183
+B. André,Benjamin André,"CDM, CM",LOSC Lille,81,67.0,64.0,74.0,75.0,80.0,85.0,21500000.0,30,180
+Marlos,Marlos Romero Bonfim,"CAM, RM",Shakhtar Donetsk,81,79.0,76.0,78.0,86.0,47.0,68.0,16000000.0,33,174
+M. Arnautović,Marko Arnautović,ST,Bologna,81,79.0,81.0,79.0,78.0,44.0,82.0,21000000.0,32,192
+M. Kruse,Max Bennet Kruse,"CF, CAM",1. FC Union Berlin,81,64.0,81.0,81.0,82.0,40.0,66.0,16500000.0,33,180
+Lucas Leiva,Lucas Pezzini Leiva,CDM,Lazio,81,56.0,65.0,73.0,76.0,82.0,69.0,9000000.0,34,179
+Jonathan Viera,Jonathan Viera Ramos,CAM,Unión Deportiva Las Palmas,81,82.0,75.0,79.0,82.0,63.0,69.0,21500000.0,31,171
+J. Vertonghen,Jan Vertonghen,CB,SL Benfica,81,76.0,62.0,72.0,67.0,83.0,78.0,8500000.0,34,189
+José Fonte,José Miguel da Rocha Fonte,CB,LOSC Lille,81,32.0,46.0,62.0,63.0,83.0,77.0,4600000.0,37,191
+G. Higuaín,Gonzalo Gerardo Higuaín,ST,Inter Miami CF,81,58.0,84.0,71.0,78.0,29.0,71.0,16500000.0,33,186
+H. Herrera,Héctor Miguel Herrera López,CM,Atlético de Madrid,81,70.0,75.0,76.0,76.0,78.0,84.0,21000000.0,31,185
+A. Gignac,André-Pierre Christian Gignac,"ST, CF",Tigres U.A.N.L.,81,68.0,83.0,73.0,75.0,41.0,84.0,11000000.0,35,189
+Nani,Luís Carlos Almeida da Cunha,"LW, LM",Orlando City Soccer Club,81,70.0,77.0,81.0,85.0,37.0,68.0,12000000.0,34,177
+Joaquín,Joaquín Sánchez Rodríguez,"RM, LM",Real Betis Balompié,81,68.0,80.0,84.0,81.0,44.0,55.0,8500000.0,39,179
+B. Yılmaz,Burak Yılmaz,ST,LOSC Lille,81,79.0,83.0,69.0,73.0,34.0,79.0,11000000.0,35,188
+Lucas Vázquez,Lucas Vázquez Iglesias,"RW, RB, RM",Real Madrid CF,81,82.0,73.0,79.0,80.0,69.0,69.0,25000000.0,30,173
+Pizzi,Luís Miguel Afonso Fernandes,"CM, RM",SL Benfica,81,75.0,77.0,81.0,82.0,64.0,66.0,21000000.0,31,177
+A. Vidal,Arturo Erasmo Vidal Pardo,CM,Inter,81,65.0,79.0,79.0,79.0,82.0,82.0,12000000.0,34,180
+J. Rodríguez,James David Rodríguez Rubio,"RW, CAM, CM",Everton,81,53.0,86.0,86.0,86.0,50.0,60.0,25500000.0,29,180
+Iñigo Martínez,Íñigo Martínez Berridi,CB,Athletic Club de Bilbao,81,71.0,56.0,66.0,64.0,81.0,79.0,21000000.0,30,182
+Danilo,Danilo Luiz da Silva,"RB, LB, CB",Juventus,81,73.0,67.0,73.0,74.0,82.0,79.0,22500000.0,29,184
+A. Belotti,Andrea Belotti,ST,Torino F.C.,81,76.0,81.0,59.0,78.0,38.0,83.0,30000000.0,27,181
+E. Forsberg,Emil Peter Forsberg,"CAM, CF",RB Leipzig,81,70.0,73.0,82.0,83.0,35.0,62.0,25500000.0,29,177
+A. Januzaj,Adnan Januzaj,"RW, RM",Real Sociedad,81,79.0,75.0,80.0,83.0,30.0,58.0,28000000.0,26,186
+L. Paredes,Leandro Daniel Paredes,"CDM, CM",Paris Saint-Germain,81,66.0,71.0,83.0,79.0,76.0,79.0,28000000.0,27,180
+M. Arnold,Maximilian Arnold,"CDM, CM",VfL Wolfsburg,81,65.0,81.0,79.0,78.0,76.0,74.0,26500000.0,27,184
+J. Ward-Prowse,James Ward-Prowse,CM,Southampton,81,59.0,74.0,86.0,78.0,67.0,73.0,33500000.0,26,173
+A. Milik,Arkadiusz Krystian Milik,ST,Olympique de Marseille,81,64.0,84.0,67.0,76.0,39.0,71.0,30000000.0,27,186
+W. Orban,Vilmos Tamás Orban,CB,RB Leipzig,81,49.0,36.0,52.0,55.0,84.0,80.0,24500000.0,28,186
+E. Višća,Edin Višća,"RM, RW",İstanbul Başakşehir FK,81,87.0,78.0,78.0,82.0,47.0,64.0,21500000.0,31,172
+K. Zouma,Kurt Happy Zouma,CB,West Ham United,81,65.0,51.0,63.0,57.0,81.0,85.0,30000000.0,26,190
+Danilo Pereira,Danilo Luís Hélio Pereira,"CDM, CM",Paris Saint-Germain,81,64.0,63.0,71.0,73.0,80.0,86.0,22000000.0,29,188
+S. Berghuis,Steven Berghuis,RW,Ajax,81,80.0,81.0,82.0,82.0,36.0,66.0,25500000.0,29,182
+Paco Alcácer,Francisco Alcácer García,ST,Villarreal CF,81,77.0,84.0,69.0,81.0,35.0,61.0,28000000.0,27,175
+Nacho Fernández,José Ignacio Fernández Iglesias,"CB, RB, LB",Real Madrid CF,81,78.0,37.0,66.0,69.0,81.0,80.0,17500000.0,31,180
+Sergi Roberto,Sergio Roberto Carnicer,"RB, CM, RM",FC Barcelona,81,76.0,63.0,80.0,77.0,76.0,73.0,22500000.0,29,178
+Lucas Moura,Lucas Rodrigues Moura da Silva,"RM, CF",Tottenham Hotspur,81,90.0,79.0,70.0,86.0,43.0,68.0,26000000.0,28,174
+J. Tarkowski,James Tarkowski,CB,Burnley,81,57.0,45.0,67.0,65.0,82.0,81.0,24500000.0,28,188
+A. Florenzi,Alessandro Florenzi,"RB, RWB",AC Milan,81,76.0,77.0,79.0,80.0,76.0,62.0,22000000.0,30,173
+L. Torreira,Lucas Torreira Di Pascua,"CDM, CM",Fiorentina,80,74.0,67.0,74.0,79.0,79.0,75.0,26500000.0,25,166
+M. Akanji,Manuel Obafemi Akanji,CB,Borussia Dortmund,80,81.0,48.0,67.0,74.0,81.0,77.0,25000000.0,25,187
+Nélson Semedo,Nélson Cabral Semedo,"RWB, RB",Wolverhampton Wanderers,80,82.0,57.0,68.0,81.0,75.0,75.0,22000000.0,27,177
+O. Zinchenko,Oleksandr Zinchenko,"LB, CDM",Manchester City,80,73.0,65.0,80.0,80.0,77.0,69.0,29500000.0,24,175
+I. Bennacer,Ismaël Bennacer,"CM, CDM",AC Milan,80,73.0,67.0,80.0,84.0,73.0,73.0,30000000.0,23,175
+K. Tierney,Kieran Tierney,"LB, CB, LWB",Arsenal,80,84.0,60.0,75.0,77.0,75.0,79.0,31000000.0,24,178
+S. Bergwijn,Steven Charles Bergwijn,"LM, LW, RM",Tottenham Hotspur,80,85.0,78.0,75.0,82.0,39.0,69.0,30000000.0,23,178
+Álex Berenguer,Alejandro Berenguer Remiro,"RM, LM",Athletic Club de Bilbao,80,82.0,76.0,76.0,81.0,63.0,65.0,25000000.0,25,175
+J. Bamba,Jonathan Bamba,LM,LOSC Lille,80,89.0,75.0,74.0,81.0,39.0,69.0,28000000.0,25,175
+Joan Jordán,Joan Jordán Moreno,"CM, CDM",Sevilla FC,80,63.0,75.0,81.0,77.0,67.0,76.0,24500000.0,26,183
+Borja Iglesias,Borja Iglesias Quintas,ST,Real Betis Balompié,80,65.0,80.0,64.0,74.0,35.0,80.0,21500000.0,28,187
+A. Christensen,Andreas Bødtker Christensen,CB,Chelsea,80,65.0,31.0,65.0,68.0,83.0,72.0,28000000.0,25,187
+J. Rodríguez,Jonathan Javier Rodríguez Portillo,"ST, LW",Cruz Azul,80,88.0,80.0,67.0,81.0,38.0,76.0,23000000.0,27,177
+Everton,Éverton Sousa Soares,"LM, CAM",SL Benfica,80,86.0,75.0,73.0,85.0,32.0,62.0,28000000.0,25,174
+L. Klostermann,Lukas Manuel Klostermann,"CB, RB, RWB",RB Leipzig,80,85.0,51.0,64.0,71.0,82.0,77.0,26500000.0,25,187
+V. Lindelöf,Victor Jörgen Nilsson Lindelöf,CB,Manchester United,80,63.0,51.0,73.0,72.0,81.0,78.0,23000000.0,26,187
+N. Keïta,Naby Keïta,CM,Liverpool,80,70.0,73.0,75.0,85.0,65.0,66.0,27500000.0,26,172
+J. Denayer,Jason Denayer,CB,Olympique Lyonnais,80,83.0,43.0,67.0,71.0,81.0,81.0,24500000.0,26,184
+Embarba,Adrián Embarba Blázquez,"RM, LM, ST",RCD Espanyol de Barcelona,80,83.0,77.0,78.0,79.0,55.0,72.0,20500000.0,29,173
+C. Tolisso,Corentin Tolisso,"CM, CDM",FC Bayern München,80,66.0,77.0,77.0,78.0,76.0,78.0,24500000.0,26,181
+G. Di Lorenzo,Giovanni Di Lorenzo,RB,Napoli,80,84.0,66.0,73.0,76.0,76.0,79.0,20500000.0,27,183
+Capa,Ander Capa Rodríguez,RB,Athletic Club de Bilbao,80,82.0,64.0,76.0,77.0,74.0,88.0,18500000.0,29,175
+G. Mancini,Gianluca Mancini,"CB, CDM",Roma,80,61.0,45.0,50.0,59.0,80.0,84.0,26500000.0,25,190
+D. Zakaria,Denis Lemi Zakaria Lako Lado,"CDM, CB",Borussia Mönchengladbach,80,83.0,64.0,72.0,75.0,80.0,84.0,30500000.0,24,191
+V. Coufal,Vladimír Coufal,"RB, RWB",West Ham United,80,77.0,56.0,73.0,75.0,78.0,81.0,19000000.0,28,175
+S. Sensi,Stefano Sensi,"CM, CDM",Inter,80,67.0,60.0,83.0,83.0,67.0,59.0,27500000.0,25,168
+A. Bastoni,Alessandro Bastoni,CB,Inter,80,65.0,33.0,65.0,69.0,82.0,80.0,44500000.0,22,190
+B. Saka,Bukayo Saka,"RM, LM, LB",Arsenal,80,84.0,68.0,76.0,82.0,65.0,64.0,45500000.0,19,178
+P. Max,Philipp Martin Max,LB,PSV,80,82.0,67.0,79.0,75.0,73.0,75.0,22000000.0,27,177
+V. Tsygankov,Viktor Tsygankov,RM,Dynamo Kyiv,80,85.0,73.0,78.0,80.0,45.0,57.0,33500000.0,23,178
+Pedro Porro,Pedro Antonio Porro Sauceda,"RWB, RM",Sporting CP,80,80.0,67.0,73.0,79.0,75.0,75.0,40500000.0,21,176
+N. Vlašić,Nikola Vlašić,CAM,West Ham United,80,83.0,77.0,78.0,82.0,48.0,71.0,33500000.0,23,178
+L. Díaz,Luis Fernando Díaz Marulanda,LM,FC Porto,80,92.0,77.0,70.0,82.0,32.0,71.0,33500000.0,24,180
+Unai Núñez,Unai Núñez Gestoso,CB,Athletic Club de Bilbao,80,72.0,22.0,49.0,50.0,81.0,76.0,27000000.0,24,186
+R. Baku,Ridle Bote Baku,"RM, RB, CM",VfL Wolfsburg,80,84.0,73.0,73.0,81.0,70.0,78.0,32000000.0,23,176
+M. Gómez,Maximiliano Gómez González,ST,Valencia CF,80,66.0,81.0,68.0,73.0,32.0,82.0,32000000.0,24,186
+Vinícius Jr.,Vinícius José Paixão de Oliveira Júnior,LW,Real Madrid CF,80,95.0,70.0,71.0,87.0,29.0,66.0,46500000.0,20,176
+S. McTominay,Scott McTominay,"CDM, CM",Manchester United,80,66.0,75.0,75.0,75.0,78.0,84.0,27500000.0,24,193
+Gerson,Gerson Santos da Silva,CM,Olympique de Marseille,80,74.0,64.0,79.0,80.0,78.0,77.0,30000000.0,24,184
+B. Kamara,Boubacar Bernard Kamara,"CDM, CB",Olympique de Marseille,80,74.0,50.0,72.0,73.0,79.0,78.0,31000000.0,21,184
+N. Mazraoui,Noussair Mazraoui,RB,Ajax,80,82.0,61.0,74.0,81.0,75.0,71.0,29500000.0,23,183
+X. Schlager,Xaver Schlager,"CDM, CM",VfL Wolfsburg,80,69.0,70.0,73.0,77.0,73.0,81.0,27500000.0,23,174
+V. Osimhen,Victor James Osimhen,ST,Napoli,80,88.0,80.0,63.0,75.0,39.0,81.0,43000000.0,22,185
+Ç. Söyüncü,Çağlar Söyüncü,CB,Leicester City,80,76.0,46.0,60.0,67.0,80.0,80.0,25000000.0,25,185
+D. Malen,Donyell Malen,ST,Borussia Dortmund,80,90.0,79.0,72.0,83.0,30.0,74.0,33000000.0,22,179
+Renato Sanches,Renato Júnior Luz Sanches,"CM, RM",LOSC Lille,80,84.0,74.0,77.0,84.0,72.0,84.0,33000000.0,23,176
+Tony Abranjes,Tony Josimar Abranjes Meneses,CB,Internacional,80,67.0,39.0,55.0,58.0,81.0,85.0,10000000.0,33,179
+Laure Santeiro,Laureano Thomas Santeiro Marre,"CAM, LM, LW",Fluminense,80,80.0,72.0,77.0,82.0,26.0,45.0,25000000.0,21,171
+Maikel Catarino,Maikel Renan Catarino Fagundes,"RB, RM",Sport Club Corinthians Paulista,80,76.0,51.0,70.0,77.0,77.0,70.0,21000000.0,25,177
+João Mário,João Mário Naval da Costa Eduardo,"CM, CAM",SL Benfica,80,69.0,69.0,80.0,83.0,66.0,68.0,21000000.0,28,179
+S. Lainer,Stefan Lainer,RB,Borussia Mönchengladbach,80,78.0,63.0,70.0,75.0,74.0,80.0,19000000.0,28,175
+D. Alli,Bamidele Alli,"CAM, CM",Tottenham Hotspur,80,68.0,78.0,78.0,82.0,65.0,75.0,26500000.0,25,188
+Pablo Sarabia,Pablo Sarabia García,"RW, CAM",Sporting CP,80,72.0,76.0,81.0,82.0,57.0,59.0,20500000.0,29,174
+Sérgio Oliveira,Sérgio Miguel Relvas de Oliveira,CM,FC Porto,80,58.0,79.0,82.0,77.0,72.0,70.0,20500000.0,29,181
+G. Krychowiak,Grzegorz Krychowiak,"CDM, CM",,80,68.0,76.0,72.0,72.0,75.0,81.0,,31,187
+N. Lodeiro,Marcelo Nicolás Lodeiro Benítez,CAM,Seattle Sounders FC,80,74.0,73.0,83.0,81.0,49.0,74.0,16500000.0,32,170
+E. Pérez,Enzo Nicolás Pérez,"CDM, CM",River Plate,80,68.0,66.0,77.0,77.0,77.0,78.0,6000000.0,35,178
+R. Pereyra,Roberto Maximiliano Pereyra,"CM, LM, CF",Udinese Calcio,80,76.0,74.0,79.0,81.0,68.0,73.0,20000000.0,30,182
+E. Salvio,Eduardo Antonio Salvio,"RM, RW",Boca Juniors,80,86.0,76.0,73.0,84.0,57.0,68.0,20500000.0,30,173
+F. Coquelin,Francis Coquelin,"CM, CDM, RM",Villarreal CF,80,68.0,67.0,76.0,80.0,78.0,79.0,20000000.0,30,176
+Rafael Tolói,Rafael Tolói,CB,Atalanta,80,66.0,47.0,58.0,64.0,82.0,80.0,17500000.0,30,185
+A. Ramsey,Aaron Ramsey,"CM, CAM, LM",Juventus,80,66.0,70.0,81.0,83.0,66.0,66.0,20000000.0,30,183
+José Callejón,José María Callejón Bueno,"RM, RW",Fiorentina,80,77.0,76.0,76.0,81.0,48.0,59.0,10000000.0,34,178
+A. Sánchez,Alexis Alejandro Sánchez Sánchez,"CF, ST",Inter,80,78.0,76.0,78.0,83.0,43.0,68.0,17000000.0,32,168
+A. Ogbonna,Angelo Obinze Ogbonna,CB,West Ham United,80,56.0,40.0,60.0,62.0,82.0,76.0,10000000.0,33,191
+D. Godín,Diego Roberto Godín Leal,CB,Cagliari,80,57.0,48.0,63.0,61.0,80.0,78.0,5500000.0,35,187
+Nacho Monreal,Ignacio Monreal Eraso,LB,Real Sociedad,80,65.0,61.0,74.0,74.0,80.0,68.0,6500000.0,35,180
+M. Benatia,Medhi Amine El Mouttaqi Benatia,CB,Fatih Karagümrük S.K.,80,63.0,45.0,52.0,63.0,81.0,82.0,7000000.0,34,189
+D. Payet,Dimitri Payet,"LW, CAM",Olympique de Marseille,80,69.0,77.0,83.0,82.0,38.0,67.0,10000000.0,34,175
+Marcelo,Marcelo Vieira da Silva Júnior,LB,Real Madrid CF,80,73.0,72.0,80.0,87.0,75.0,71.0,11000000.0,33,174
+D. Wass,Daniel Wass,"RB, RM, CM",Valencia CF,80,74.0,77.0,80.0,77.0,76.0,76.0,14500000.0,32,181
+M. Hamšík,Marek Hamšík,"CM, CDM, CAM",Trabzonspor,80,68.0,77.0,81.0,80.0,70.0,71.0,13000000.0,33,183
+Raúl García,Raúl García Escudero,"ST, CAM",Athletic Club de Bilbao,80,41.0,82.0,81.0,78.0,65.0,83.0,10500000.0,34,184
+J. Evans,Jonathan Grant Evans,CB,Leicester City,80,52.0,32.0,61.0,60.0,83.0,77.0,10000000.0,33,188
+Jonny,Jonathan Castro Otto,"LWB, RWB",Wolverhampton Wanderers,80,75.0,53.0,71.0,76.0,79.0,69.0,22000000.0,27,170
+João Moutinho,João Filipe Iria Santos Moutinho,CM,Wolverhampton Wanderers,80,50.0,72.0,84.0,80.0,70.0,66.0,9500000.0,34,170
+Bartra,Marc Bartra Aregall,"CB, CDM",Real Betis Balompié,80,71.0,61.0,72.0,73.0,80.0,74.0,17500000.0,30,184
+R. Nainggolan,Radja Nainggolan,"CAM, CM, CF",Royal Antwerp FC,80,71.0,84.0,78.0,74.0,73.0,80.0,13000000.0,33,176
+C. Bakambu,Cédric Bakambu,ST,Beijing Guoan FC,80,90.0,80.0,71.0,76.0,36.0,77.0,20500000.0,30,182
+E. Zahavi,Eran Zahavi,ST,PSV,80,77.0,82.0,74.0,79.0,39.0,73.0,13500000.0,33,182
+Q. Promes,Quincy Anton Promes,"CAM, LW",Spartak Moskva,80,88.0,78.0,78.0,81.0,46.0,69.0,20500000.0,29,174
+G. Laborde,Gaëtan Laborde,"ST, RM",Stade Rennais FC,80,77.0,78.0,76.0,78.0,40.0,82.0,24500000.0,27,181
+C. Aránguiz,Charles Mariano Aránguiz Sandoval,"CDM, CM",Bayer 04 Leverkusen,80,65.0,71.0,80.0,77.0,76.0,72.0,14000000.0,32,171
+J. Martínez,Josef Alexander Martínez Mencia,ST,Atlanta United,80,87.0,80.0,61.0,79.0,25.0,67.0,21500000.0,28,170
+Roger,Roger Martí Salvador,ST,Levante Unión Deportiva,80,77.0,82.0,63.0,77.0,41.0,74.0,20500000.0,30,179
+M. Keane,Michael Keane,CB,Everton,80,55.0,49.0,65.0,65.0,82.0,80.0,20000000.0,28,191
+Z. Feddal,Zouhair Feddal Agharbi,CB,Sporting CP,80,61.0,50.0,63.0,60.0,82.0,77.0,14500000.0,31,192
+T. Savanier,Téji Tedy Savanier,"CM, CAM",Montpellier Hérault SC,80,67.0,74.0,83.0,82.0,69.0,69.0,20500000.0,29,172
+S. Umtiti,Samuel Yves Umtiti,CB,FC Barcelona,80,65.0,62.0,68.0,67.0,80.0,78.0,19500000.0,27,182
+F. Thauvin,Florian Tristan Mariano Thauvin,"RW, RM",Tigres U.A.N.L.,80,79.0,79.0,79.0,80.0,41.0,68.0,21000000.0,28,179
+S. Haller,Sébastien Haller,ST,Ajax,80,66.0,79.0,62.0,74.0,51.0,81.0,24500000.0,27,190
+K. Fortounis,Konstantinos Fortounis,"CAM, LW, RW",Olympiacos CFP,80,75.0,77.0,79.0,82.0,43.0,69.0,21000000.0,28,183
+J. Draxler,Julian Draxler,"CAM, LW, CM",Paris Saint-Germain,80,74.0,76.0,80.0,82.0,58.0,66.0,24500000.0,27,187
+A. Mandi,Aïssa Mandi,CB,Villarreal CF,80,66.0,46.0,74.0,70.0,81.0,74.0,19500000.0,29,184
+João Pedro,João Pedro Geraldino dos Santos Galvão,"CF, ST, CAM",Cagliari,80,72.0,78.0,77.0,81.0,41.0,74.0,21000000.0,29,184
+Rafinha,Rafael Alcântara do Nascimento,"CM, CAM",Paris Saint-Germain,80,71.0,75.0,80.0,84.0,69.0,68.0,21000000.0,28,174
+M. Hinteregger,Martin Hinteregger,CB,Eintracht Frankfurt,80,70.0,70.0,67.0,61.0,81.0,81.0,18000000.0,28,184
+R. Freuler,Remo Marco Freuler,CM,Atalanta,80,69.0,71.0,77.0,78.0,75.0,73.0,20500000.0,29,180
+D. Demme,Diego Demme,"CDM, CM",Napoli,80,57.0,42.0,75.0,77.0,76.0,76.0,18000000.0,29,172
+Š. Vrsaljko,Šime Vrsaljko,"RB, RM",Atlético de Madrid,80,79.0,55.0,73.0,74.0,78.0,77.0,18500000.0,29,181
+Pozuelo,Alejandro Pozuelo Melero,"CAM, ST",Toronto FC,80,65.0,75.0,80.0,83.0,52.0,66.0,20500000.0,29,170
+Ismaily,Ismaily Gonçalves dos Santos,LB,Shakhtar Donetsk,80,82.0,64.0,74.0,81.0,75.0,75.0,15500000.0,31,177
+A. Marušić,Adam Marušić,"RWB, LWB, CB",Lazio,79,86.0,66.0,67.0,74.0,75.0,79.0,16000000.0,28,185
+A. Golovin,Aleksandr Golovin,"CM, CAM, CF",AS Monaco,79,81.0,72.0,79.0,83.0,67.0,69.0,24500000.0,25,180
+R. Bensebaini,Ramy Bensebaini,"LB, CB",Borussia Mönchengladbach,79,73.0,59.0,72.0,75.0,77.0,80.0,21000000.0,26,186
+Z. Çelik,Mehmet Zeki Çelik,RB,LOSC Lille,79,79.0,58.0,71.0,72.0,75.0,79.0,22000000.0,24,180
+E. Bailly,Eric Bertrand Bailly,CB,Manchester United,79,73.0,42.0,58.0,67.0,79.0,77.0,17500000.0,27,186
+R. Aguilar,Ruben Aguilar,RB,AS Monaco,79,79.0,53.0,72.0,76.0,74.0,77.0,16000000.0,28,172
+Pablo Fornals,Pablo Fornals Malla,"LM, RM, CAM",West Ham United,79,68.0,74.0,79.0,79.0,69.0,68.0,23000000.0,25,178
+E. Buendía,Emiliano Buendía,RM,Aston Villa,79,73.0,73.0,80.0,81.0,64.0,67.0,26500000.0,24,172
+Aritz Elustondo,Aritz Elustondo Irribaria,"CB, RB",Real Sociedad,79,66.0,33.0,61.0,60.0,79.0,77.0,18500000.0,27,180
+K. Dolberg,Kasper Dolberg Rasmussen,ST,OGC Nice,79,73.0,81.0,69.0,77.0,30.0,68.0,25500000.0,23,187
+B. Pavard,Benjamin Pavard,"RB, CB",FC Bayern München,79,69.0,53.0,72.0,71.0,78.0,76.0,21500000.0,25,186
+M. Thuram,Marcus Lilian Thuram-Ulien,"LM, ST",Borussia Mönchengladbach,79,82.0,78.0,70.0,79.0,48.0,77.0,27500000.0,23,192
+T. Castagne,Timothy Castagne,"RB, RM",Leicester City,79,78.0,57.0,71.0,76.0,75.0,70.0,21500000.0,25,180
+E. Ávila,Luis Ezequiel Ávila,"ST, RM",CA Osasuna,79,81.0,81.0,65.0,78.0,44.0,83.0,20500000.0,27,172
+Mata,Jaime Mata Arnaiz,ST,Getafe CF,79,68.0,80.0,61.0,76.0,31.0,76.0,14000000.0,32,185
+A. Saint-Maximin,Allan Saint-Maximin,"LM, ST",Newcastle United,79,91.0,69.0,70.0,87.0,25.0,61.0,26500000.0,24,173
+J. Weigl,Julian Weigl,"CM, CDM",SL Benfica,79,59.0,60.0,75.0,77.0,80.0,75.0,23000000.0,25,186
+Paulinho,João Paulo Dias Fernandes,ST,Sporting CP,79,67.0,78.0,64.0,75.0,44.0,81.0,18000000.0,28,188
+F. Bernardeschi,Federico Bernardeschi,"CAM, LM, RM",Juventus,79,79.0,71.0,80.0,83.0,61.0,65.0,18500000.0,27,185
+Adnan Vidual,Adnan Claudiano Vidual Machado,RB,Internacional,79,83.0,52.0,70.0,71.0,76.0,71.0,15500000.0,29,175
+Ricardo Horta,Ricardo Jorge da Luz Horta,"CF, LW",SC Braga,79,78.0,78.0,75.0,80.0,42.0,69.0,21000000.0,26,173
+M. Uribe,Andrés Mateus Uribe Villa,"CM, CDM",FC Porto,79,75.0,74.0,75.0,76.0,75.0,81.0,17000000.0,30,182
+A. Izzo,Armando Izzo,CB,Torino F.C.,79,70.0,33.0,48.0,65.0,82.0,78.0,16000000.0,29,183
+D. Zappacosta,Davide Zappacosta,"RWB, RM, LM",Atalanta,79,76.0,66.0,73.0,74.0,75.0,71.0,15500000.0,29,182
+M. Dahoud,Mahmoud Dahoud,"CM, CDM",Borussia Dortmund,79,70.0,69.0,76.0,83.0,67.0,70.0,23000000.0,25,178
+N. Elvedi,Nico Elvedi,CB,Borussia Mönchengladbach,79,74.0,39.0,63.0,68.0,80.0,77.0,22500000.0,24,189
+H. Traoré,Hamari Traoré,RB,Stade Rennais FC,79,85.0,54.0,72.0,76.0,73.0,77.0,15500000.0,29,175
+T. Bakayoko,Tiemoué Bakayoko,"CDM, CM",AC Milan,79,64.0,48.0,68.0,74.0,77.0,84.0,19500000.0,26,189
+Munir,Munir El Haddadi Mohamed,"LW, RW, ST",Sevilla FC,79,79.0,78.0,75.0,82.0,35.0,66.0,21000000.0,25,175
+Y. Mina,Yerry Fernando Mina González,CB,Everton,79,45.0,54.0,60.0,60.0,80.0,81.0,19000000.0,26,195
+R. Tapia,Renato Fabrizio Tapia Cortijo,"CDM, CM",RC Celta de Vigo,79,69.0,69.0,72.0,73.0,79.0,82.0,22000000.0,25,185
+D. Sánchez,Davinson Sánchez Mina,CB,Tottenham Hotspur,79,75.0,45.0,55.0,65.0,80.0,80.0,19500000.0,25,187
+Ronaldo Esler,Ronaldo Diego Esler Domingues,"LB, LM",Fortaleza,79,89.0,58.0,70.0,77.0,74.0,59.0,19000000.0,21,168
+A. Tchouaméni,Aurélien Tchouaméni,"CM, CDM",AS Monaco,79,72.0,69.0,75.0,77.0,77.0,82.0,28000000.0,21,187
+Everton Andrão,Everton Jorge Andrade Zanon,"CDM, CM",Fluminense,79,67.0,62.0,74.0,75.0,78.0,76.0,17000000.0,25,177
+Rodrygo,Rodrygo Silva de Goes,RW,Real Madrid CF,79,87.0,76.0,71.0,83.0,32.0,56.0,38500000.0,20,174
+L. Martínez,Lisandro Martínez,"CB, LB, CDM",Ajax,79,71.0,58.0,73.0,76.0,79.0,80.0,25000000.0,23,178
+N. Maksimović,Nemanja Maksimović,"CDM, CM",Getafe CF,79,56.0,68.0,75.0,71.0,77.0,78.0,23000000.0,26,189
+Matheus Cunha,Matheus Santos Carneiro Da Cunha,"CAM, LM, ST",Atlético de Madrid,79,85.0,78.0,74.0,84.0,31.0,69.0,35500000.0,22,183
+T. Koopmeiners,Teun Koopmeiners,"CDM, CM, CB",Atalanta,79,65.0,72.0,79.0,72.0,76.0,77.0,24500000.0,23,183
+M. Taremi,Mehdi Taremi,"ST, CF",FC Porto,79,76.0,79.0,70.0,80.0,38.0,71.0,18000000.0,28,187
+C. Gakpo,Cody Mathès Gakpo,"LM, ST",PSV,79,85.0,78.0,74.0,79.0,41.0,72.0,28000000.0,22,189
+M. Lacroix,Maxence Lacroix,CB,VfL Wolfsburg,79,88.0,33.0,56.0,65.0,80.0,77.0,33000000.0,21,190
+E. Bardhi,Enis Bardhi,"LM, CM",Levante Unión Deportiva,79,75.0,81.0,78.0,82.0,63.0,56.0,21000000.0,25,172
+Emerson,Emerson Aparecido Leite de Souza Junior,RB,Tottenham Hotspur,79,84.0,62.0,71.0,74.0,74.0,77.0,25000000.0,22,181
+Bruno Guimarães,Bruno Guimarães Rodriguez Moura,"CDM, CM",Olympique Lyonnais,79,68.0,63.0,78.0,78.0,73.0,75.0,24500000.0,23,182
+S. Botman,Sven Botman,CB,LOSC Lille,79,60.0,36.0,59.0,61.0,80.0,84.0,25500000.0,21,193
+J. Bellingham,Jude Victor William Bellingham,"CM, LM",Borussia Dortmund,79,75.0,69.0,73.0,80.0,75.0,77.0,37000000.0,18,186
+Antony,Antony Matheus dos Santos,RW,Ajax,79,91.0,72.0,72.0,84.0,37.0,65.0,39500000.0,21,174
+V. Grifo,Vincenzo Grifo,"LM, CF",Sport-Club Freiburg,79,70.0,74.0,79.0,81.0,41.0,62.0,17500000.0,28,180
+P. Estupiñán,Pervis Josué Estupiñán Tenorio,"LB, LWB",Villarreal CF,79,82.0,34.0,68.0,72.0,75.0,75.0,26000000.0,23,175
+David Neres,David Neres Campos,"RW, LW",Ajax,79,85.0,72.0,73.0,85.0,37.0,64.0,25000000.0,24,176
+Melvin Parrela,Melvin Luan Parrela Porfírio,CDM,RB Bragantino,79,71.0,70.0,70.0,72.0,80.0,83.0,18500000.0,21,188
+Zubeldia,Igor Zubeldía Elorza,"CB, CM, CDM",Real Sociedad,79,68.0,67.0,75.0,73.0,79.0,81.0,24000000.0,24,181
+Luimo Boas Santos,Luan Vágner Boas Macedo,ST,Santos,79,83.0,79.0,65.0,81.0,28.0,64.0,21000000.0,21,176
+L. Jović,Luka Jović,ST,Real Madrid CF,79,75.0,80.0,68.0,78.0,29.0,74.0,27000000.0,23,182
+Gabriel,Gabriel dos Santos Magalhães,CB,Arsenal,79,68.0,36.0,60.0,58.0,80.0,80.0,24000000.0,23,190
+M. Arambarri,Mauro Wilney Arambarri Rosa,"CDM, CM",Getafe CF,79,47.0,60.0,72.0,72.0,77.0,76.0,23500000.0,25,175
+D. Kamada,鎌田 大地,"CAM, CF",Eintracht Frankfurt,79,75.0,68.0,79.0,83.0,41.0,59.0,24000000.0,24,184
+F. Tomori,Fikayo Tomori,CB,AC Milan,79,82.0,37.0,57.0,65.0,80.0,79.0,25000000.0,23,185
+Odriozola,Álvaro Odriozola Arzalluz,RB,Fiorentina,79,84.0,55.0,71.0,75.0,74.0,65.0,21500000.0,25,176
+M. Kean,Moise Bioty Kean,ST,Juventus,79,85.0,77.0,56.0,78.0,40.0,75.0,39500000.0,21,182
+P. Schick,Patrik Schick,ST,Bayer 04 Leverkusen,79,70.0,79.0,70.0,80.0,35.0,68.0,23500000.0,25,191
+J. Ikoné,Nanitamo Jonathan Ikoné,"RM, ST",LOSC Lille,79,89.0,70.0,74.0,83.0,35.0,60.0,25000000.0,23,175
+Lucas Veríssimo,Lucas Veríssimo da Silva,CB,SL Benfica,79,81.0,39.0,57.0,59.0,80.0,79.0,23000000.0,25,188
+Y. Bissouma,Yves Bissouma,"CDM, CM",Brighton & Hove Albion,79,70.0,68.0,75.0,78.0,77.0,75.0,24500000.0,24,182
+M. Senesi,Marcos Nicolás Senesi Barón,CB,Feyenoord,79,61.0,39.0,63.0,71.0,81.0,78.0,25000000.0,24,183
+O. Wijndal,Owen Wijndal,LB,AZ Alkmaar,79,84.0,53.0,74.0,78.0,74.0,74.0,25000000.0,21,176
+P. Onuachu,Paul Ebere Onuachu,ST,KRC Genk,79,71.0,77.0,62.0,70.0,45.0,84.0,20500000.0,27,201
+E. Dier,Eric Dier,"CB, CDM",Tottenham Hotspur,79,53.0,64.0,69.0,64.0,79.0,83.0,17500000.0,27,190
+K. Demirbay,Kerem Demirbay,"CM, CDM",Bayer 04 Leverkusen,79,58.0,76.0,79.0,82.0,65.0,70.0,18500000.0,27,183
+C. Wood,Christopher Grant Wood,ST,Burnley,79,64.0,79.0,60.0,70.0,40.0,81.0,17500000.0,29,191
+Illarramendi,Asier Illarramendi Andonegi,"CDM, CM",Real Sociedad,79,47.0,71.0,77.0,78.0,77.0,69.0,12500000.0,31,179
+M. Antonio,Michail Antonio,"ST, RM",West Ham United,79,83.0,76.0,73.0,78.0,55.0,83.0,15000000.0,31,178
+S. El Shaarawy,Stephan El Shaarawy,"LW, LM",Roma,79,87.0,75.0,74.0,79.0,46.0,63.0,17500000.0,28,178
+N. Matić,Nemanja Matić,CDM,Manchester United,79,36.0,67.0,75.0,73.0,80.0,73.0,11500000.0,32,194
+Ander Herrera,Ander Herrera Agüera,"CM, CDM",Paris Saint-Germain,79,65.0,70.0,77.0,79.0,78.0,75.0,14500000.0,31,182
+Gao Late,高拉特,"ST, RW, CAM",Guangzhou FC,79,83.0,78.0,77.0,79.0,41.0,72.0,17000000.0,30,185
+Ai Kesen,艾克森,ST,Guangzhou FC,79,84.0,80.0,73.0,79.0,48.0,79.0,15000000.0,31,180
+B. Mee,Ben Mee,CB,Burnley,79,62.0,42.0,58.0,63.0,81.0,78.0,12000000.0,31,180
+Marcos Alonso,Marcos Alonso Mendoza,"LWB, LB",Chelsea,79,58.0,74.0,78.0,77.0,75.0,77.0,15000000.0,30,188
+Mario Gaspar,Mario Gaspar Pérez Martínez,RB,Villarreal CF,79,74.0,69.0,71.0,72.0,78.0,76.0,15000000.0,30,180
+L. Rodríguez,Luis Miguel Rodríguez,"ST, CF",Gimnasia y Esgrima La Plata,79,68.0,82.0,76.0,83.0,43.0,70.0,6000000.0,36,168
+N. Gudelj,Nemanja Gudelj,"CDM, CM, CB",Sevilla FC,79,60.0,70.0,79.0,70.0,75.0,83.0,15000000.0,29,187
+X. Shaqiri,Xherdan Shaqiri,"RW, RM",Olympique Lyonnais,79,75.0,76.0,80.0,81.0,46.0,67.0,17000000.0,29,169
+Y. El Arabi,Youssef El Arabi,ST,Olympiacos CFP,79,71.0,83.0,69.0,79.0,37.0,70.0,8500000.0,34,182
+L. de Jong,Luuk de Jong,ST,FC Barcelona,79,50.0,78.0,71.0,70.0,46.0,75.0,17000000.0,30,188
+A. Cresswell,Aaron Cresswell,"LB, CB",West Ham United,79,70.0,60.0,75.0,76.0,77.0,68.0,12500000.0,31,175
+Germán,Germán Sánchez Barahona,CB,Granada CF,79,49.0,40.0,59.0,56.0,81.0,79.0,5500000.0,34,187
+B. Matuidi,Blaise Matuidi,"CDM, CM",Inter Miami CF,79,73.0,65.0,72.0,76.0,77.0,79.0,6000000.0,34,180
+Rubén Peña,Rubén Peña Jiménez,"RB, RM, LB",Villarreal CF,79,80.0,70.0,72.0,78.0,75.0,68.0,15500000.0,29,170
+Iniesta,Andrés Iniesta Luján,"CM, CAM",Vissel Kobe,79,51.0,69.0,84.0,84.0,59.0,57.0,5500000.0,37,171
+J. Milner,James Philip Milner,"CM, LB, RB",Liverpool,79,56.0,70.0,81.0,77.0,77.0,75.0,7000000.0,35,175
+F. Ribéry,Franck Bilal Ribéry,"CF, LW",US Salernitana 1919,79,69.0,73.0,81.0,85.0,30.0,53.0,6000000.0,38,170
+B. Gomis,Bafétimbi Fredius Gomis,ST,Al Hilal,79,60.0,81.0,68.0,72.0,36.0,74.0,7500000.0,35,186
+M. Dembélé,Mousa Sidi Yaya Dembélé,"CM, CAM, CDM",Guangzhou City,79,70.0,68.0,76.0,85.0,73.0,77.0,11000000.0,33,185
+A. Candreva,Antonio Candreva,"RM, RWB",U.C. Sampdoria,79,72.0,78.0,79.0,80.0,61.0,62.0,8000000.0,34,180
+Iborra,Vicente Iborra de la Fuente,"CDM, CM",Villarreal CF,79,33.0,70.0,75.0,70.0,77.0,79.0,8500000.0,33,190
+M. Özil,Mesut Özil,"CAM, RW",Fenerbahçe SK,79,62.0,68.0,85.0,79.0,24.0,48.0,14000000.0,32,180
+O. Giroud,Olivier Giroud,ST,AC Milan,79,39.0,80.0,70.0,71.0,42.0,77.0,8500000.0,34,193
+G. Sigurðsson,Gylfi Þór Sigurðsson,"CAM, CM",Everton,79,54.0,78.0,82.0,78.0,59.0,66.0,14500000.0,31,186
+Montoro,Ángel Montoro Sánchez,"CDM, CM, CAM",Granada CF,79,45.0,64.0,75.0,72.0,75.0,70.0,8500000.0,33,181
+Rafael Carioca,Rafael de Souza Pereira,"CDM, CM",Tigres U.A.N.L.,79,70.0,66.0,77.0,75.0,73.0,75.0,11500000.0,32,181
+M. Suárez,Matías Ezequiel Suárez,"ST, LW",River Plate,79,79.0,77.0,77.0,83.0,44.0,75.0,11000000.0,33,183
+C. Wilson,Callum Wilson,ST,Newcastle United,79,80.0,78.0,66.0,78.0,41.0,77.0,17500000.0,29,180
+Y. M'Vila,Yann Gérard M'Vila,"CDM, CM, CB",Olympiacos CFP,79,65.0,64.0,74.0,74.0,75.0,78.0,12500000.0,31,182
+Rodrigo,Rodrigo Moreno Machado,"CAM, ST, CM",Leeds United,79,86.0,78.0,75.0,79.0,45.0,71.0,17000000.0,30,182
+B. Djimsiti,Berat Djimsiti,CB,Atalanta,79,68.0,39.0,59.0,50.0,82.0,79.0,17500000.0,28,190
+B. Davies,Benjamin Thomas Davies,"LB, CB",Tottenham Hotspur,79,69.0,58.0,75.0,75.0,78.0,73.0,16000000.0,28,182
+T. Stepanenko,Taras Stepanenko,CDM,Shakhtar Donetsk,79,65.0,63.0,71.0,69.0,79.0,79.0,12500000.0,31,181
+A. Plea,Alassane Alexandre Pléa,"ST, LW",Borussia Mönchengladbach,79,71.0,82.0,77.0,79.0,39.0,74.0,18000000.0,28,181
+Manu Trigueros,Manuel Trigueros Muñoz,"CM, RM, LM",Villarreal CF,79,56.0,71.0,78.0,78.0,70.0,67.0,17000000.0,29,178
+J. Lingard,Jesse Lingard,CAM,Manchester United,79,76.0,79.0,75.0,80.0,58.0,68.0,17500000.0,28,175
+A. Doucouré,Abdoulaye Doucouré,"CM, CDM",Everton,79,70.0,76.0,72.0,76.0,77.0,81.0,17500000.0,28,184
+De Tomás,Raúl De Tomás Gómez,ST,RCD Espanyol de Barcelona,79,75.0,82.0,68.0,81.0,35.0,68.0,23000000.0,26,180
+R. Ruidíaz,Raúl Mario Ruidíaz Misitich,ST,Seattle Sounders FC,79,84.0,80.0,66.0,78.0,32.0,67.0,17000000.0,30,169
+J. Hofmann,Jonas Hofmann,"CM, RM, LM",Borussia Mönchengladbach,79,75.0,72.0,80.0,79.0,57.0,66.0,17500000.0,28,176
+J. Quintero,Juan Fernando Quintero Paniagua,CAM,Shenzhen FC,79,73.0,76.0,81.0,83.0,39.0,51.0,17500000.0,28,169
+K. Mbabu,Melingo Kevin Mbabu,RB,VfL Wolfsburg,79,88.0,51.0,69.0,73.0,74.0,80.0,21000000.0,26,184
+C. Mbemba,Chancel Mbemba Mangulu,CB,FC Porto,79,72.0,53.0,56.0,65.0,80.0,78.0,20500000.0,26,182
+A. Oxlade-Chamberlain,Alex Oxlade-Chamberlain,CM,Liverpool,79,81.0,74.0,77.0,82.0,67.0,74.0,18500000.0,27,175
+Rubén García,Rubén García Santos,"LM, ST, RM",CA Osasuna,79,80.0,76.0,79.0,79.0,45.0,58.0,18500000.0,27,171
+B. Mendy,Benjamin Mendy,LB,Manchester City,79,74.0,54.0,76.0,76.0,75.0,76.0,19000000.0,26,185
+C. Günter,Christian Günter,"LB, LM, LWB",Sport-Club Freiburg,79,83.0,55.0,70.0,70.0,74.0,81.0,16000000.0,28,184
+S. Arias,Santiago Arias Naranjo,RB,Granada CF,79,77.0,53.0,70.0,76.0,77.0,74.0,15500000.0,29,178
+Sergi Darder,Sergi Darder Moll,"CM, CDM",RCD Espanyol de Barcelona,79,66.0,75.0,78.0,79.0,71.0,71.0,20000000.0,27,180
+Lucas Pérez,Lucas Pérez Martínez,ST,Elche CF,79,79.0,82.0,75.0,77.0,32.0,69.0,14000000.0,32,180
+C. Kramer,Christoph Kramer,CDM,Borussia Mönchengladbach,79,44.0,50.0,70.0,73.0,78.0,75.0,14500000.0,30,191
+G. Xhaka,Granit Xhaka,"CDM, CM",Arsenal,79,50.0,64.0,79.0,69.0,69.0,80.0,15500000.0,28,185
+Cristian Tello,Cristian Tello Herrera,"LM, RM",Real Betis Balompié,79,89.0,75.0,74.0,80.0,48.0,62.0,17000000.0,29,178
+C. Coady,Conor Coady,CB,Wolverhampton Wanderers,79,47.0,58.0,75.0,67.0,79.0,75.0,17500000.0,28,186
+Deulofeu,Gerard Deulofeu Lázaro,"LM, CF",Udinese Calcio,79,88.0,73.0,73.0,83.0,30.0,64.0,18500000.0,27,177
+G. Kondogbia,Geoffrey Edwin Kondogbia,"CM, CDM",Atlético de Madrid,79,68.0,74.0,75.0,77.0,78.0,89.0,17500000.0,28,188
+W. Boly,Willy-Arnaud Zobo Boly,CB,Wolverhampton Wanderers,79,62.0,36.0,64.0,65.0,79.0,83.0,14500000.0,30,195
+K. Bellarabi,Karim Bellarabi,"RW, RM",Bayer 04 Leverkusen,79,85.0,76.0,71.0,81.0,34.0,72.0,14500000.0,31,184
+Álvaro,Álvaro González Soberón,CB,Olympique de Marseille,79,64.0,33.0,59.0,58.0,80.0,82.0,12000000.0,31,182
+A. Carrillo,André Martín Carrillo Díaz,RM,Al Hilal,79,87.0,75.0,73.0,82.0,38.0,70.0,17000000.0,30,182
+D. Klaassen,Davy Klaassen,"CAM, CM",Ajax,79,71.0,80.0,73.0,76.0,72.0,78.0,17500000.0,28,179
+D. D'Ambrosio,Danilo D'Ambrosio,"CB, RB",Inter,79,70.0,56.0,67.0,71.0,80.0,79.0,11500000.0,32,180
+David García,David García Zubiría,CB,CA Osasuna,78,53.0,37.0,64.0,64.0,78.0,75.0,16000000.0,27,185
+R. Bentancur,Rodrigo Bentancur Colmán,CM,Juventus,78,73.0,62.0,79.0,80.0,75.0,76.0,21000000.0,24,187
+G. Rodríguez,Guido Rodríguez,"CDM, CM",Real Betis Balompié,78,54.0,56.0,66.0,66.0,80.0,77.0,15000000.0,26,185
+A. Diallo,Abdou Diallo,"CB, LB",Paris Saint-Germain,78,74.0,39.0,71.0,76.0,78.0,77.0,17500000.0,25,187
+K. Iheanacho,Kelechi Promise Iheanacho,"ST, CF",Leicester City,78,74.0,80.0,70.0,77.0,38.0,71.0,20500000.0,24,185
+D. Ćaleta-Car,Duje Ćaleta-Car,CB,Olympique de Marseille,78,59.0,39.0,60.0,62.0,79.0,82.0,19000000.0,24,192
+Daniel Podence,Daniel Castelo Podence,"LW, RW, CAM",Wolverhampton Wanderers,78,90.0,65.0,71.0,85.0,33.0,50.0,18500000.0,25,165
+A. Fulgini,Angelo Fulgini,"CAM, CM, RM",Angers SCO,78,74.0,70.0,74.0,81.0,68.0,73.0,20000000.0,24,183
+Gelson Martins,Gelson Dany Batalha Martins,"RM, LM, RW",AS Monaco,78,93.0,71.0,70.0,83.0,51.0,61.0,16500000.0,26,173
+M. Cash,Matty Cash,RB,Aston Villa,78,81.0,63.0,68.0,73.0,72.0,66.0,20000000.0,23,179
+Wellington Sabrão,Wellingt. Edson Sabrão Rolim,"RB, LB",Flamengo,78,92.0,56.0,68.0,73.0,72.0,69.0,7500000.0,33,169
+E. Konsa,Ezri Konsa Ngoyo,"CB, RB",Aston Villa,78,77.0,39.0,62.0,71.0,79.0,75.0,20000000.0,23,183
+Nuno Santos,Nuno Miguel Gomes dos Santos,"LW, RW",Sporting CP,78,81.0,75.0,75.0,80.0,43.0,67.0,16500000.0,26,176
+F. Grillitsch,Florian Grillitsch,"CM, CDM, CB",TSG Hoffenheim,78,69.0,60.0,77.0,78.0,72.0,66.0,18500000.0,25,187
+D. Calabria,Davide Calabria,RB,AC Milan,78,77.0,50.0,67.0,73.0,76.0,72.0,18000000.0,24,177
+Gerson Armão,Gérson Adriano Gutierres Serra,"LB, LWB, LM",Internacional,78,79.0,67.0,71.0,71.0,74.0,78.0,15000000.0,21,186
+Antônio Chiamuloira,A. Benjamin Chiamuloira Paes,"CB, LB",Internacional,78,68.0,48.0,60.0,54.0,79.0,75.0,14500000.0,21,182
+Vincente Dourado,Vincente Filho Dourado Hermes,CB,Flamengo,78,58.0,29.0,63.0,58.0,77.0,84.0,13500000.0,25,190
+Everticinho,Everton Jorge Simão Resende,"RB, RM, CM",RB Bragantino,78,78.0,71.0,71.0,76.0,74.0,74.0,15000000.0,21,176
+C. Pavón,Cristian David Pavón,"LW, RW, LM",Boca Juniors,78,90.0,76.0,74.0,79.0,49.0,73.0,18500000.0,25,174
+Albertinho Dutra,Alberto Marcelo Dutra Cirino,"LW, LM",São Paulo,78,81.0,72.0,81.0,80.0,23.0,50.0,14000000.0,29,175
+J. Bowen,Jarrod Bowen,"RM, ST",West Ham United,78,76.0,74.0,73.0,79.0,44.0,65.0,21000000.0,24,175
+Álex Moreno,Alexandre Moreno Lopera,"LB, LWB, LM",Real Betis Balompié,78,88.0,60.0,71.0,77.0,71.0,64.0,12500000.0,28,179
+K. Toko Ekambi,Karl Brillant Toko Ekambi,"LW, ST",Olympique Lyonnais,78,85.0,78.0,71.0,77.0,25.0,70.0,14000000.0,28,185
+M. Pašalić,Mario Pašalić,"CM, CAM",Atalanta,78,64.0,75.0,75.0,77.0,67.0,76.0,18000000.0,26,188
+Arturo Inálcio,Arturo Adolfo Inálcio Dutra,"CM, CAM",Flamengo,78,83.0,72.0,75.0,78.0,52.0,48.0,16500000.0,21,170
+C. Izquierdoz,Carlos Roberto Izquierdoz,CB,Boca Juniors,78,51.0,52.0,54.0,54.0,79.0,84.0,9000000.0,32,185
+L. Alario,Lucas Nicolás Alario,ST,Bayer 04 Leverkusen,78,63.0,78.0,58.0,74.0,30.0,75.0,14500000.0,28,184
+Ayoze Pérez,Ayoze Pérez Gutiérrez,"RW, RM",Leicester City,78,77.0,73.0,72.0,80.0,58.0,67.0,15000000.0,27,178
+Dani García,Daniel García Carrillo,CM,Athletic Club de Bilbao,78,41.0,69.0,71.0,74.0,78.0,83.0,11500000.0,31,180
+S. Fofana,Seko Fofana,CM,Racing Club de Lens,78,76.0,71.0,72.0,78.0,72.0,79.0,17500000.0,26,185
+L. Dubois,Léo Dubois,RB,Olympique Lyonnais,78,72.0,59.0,75.0,73.0,76.0,74.0,15000000.0,26,178
+Sequeira,Nuno Miguel Ribeiro Cruz Jerónimo Sequeira,"LB, CB",SC Braga,78,70.0,59.0,69.0,72.0,77.0,79.0,12000000.0,30,184
+S. Gigot,Samuel Gigot,CB,Spartak Moskva,78,67.0,38.0,63.0,60.0,78.0,79.0,16000000.0,27,187
+L. Ajorque,Ludovic Ajorque,ST,RC Strasbourg Alsace,78,60.0,78.0,60.0,70.0,26.0,81.0,16500000.0,27,197
+B. Santamaria,Baptiste Santamaría,"CDM, CM",Stade Rennais FC,78,60.0,62.0,71.0,74.0,76.0,74.0,15500000.0,26,183
+M. Vecino,Matías Vecino Falero,"CM, CDM",Inter,78,65.0,71.0,75.0,77.0,76.0,73.0,13500000.0,29,187
+R. Borré,Rafael Santos Borré Maury,ST,Eintracht Frankfurt,78,81.0,77.0,72.0,78.0,44.0,76.0,19000000.0,25,174
+O. Watkins,Ollie Watkins,ST,Aston Villa,78,85.0,75.0,68.0,75.0,46.0,71.0,21000000.0,25,180
+L. Olaza,Lucas René Olaza Catrofe,"LB, LWB, CB",Real Valladolid CF,78,77.0,71.0,74.0,74.0,74.0,72.0,15000000.0,26,175
+M. Friedrich,Marvin Friedrich,CB,1. FC Union Berlin,78,64.0,41.0,57.0,53.0,81.0,76.0,15500000.0,25,192
+R. Karsdorp,Rick Karsdorp,"RM, RB",Roma,78,87.0,64.0,74.0,77.0,76.0,78.0,16500000.0,26,184
+Jony,Jonathan Rodríguez Menéndez,LM,Lazio,78,82.0,69.0,77.0,78.0,52.0,65.0,14000000.0,29,179
+Á. Mena,Ángel Israel Mena Delgado,"RM, RW",Club León,78,81.0,74.0,72.0,82.0,45.0,49.0,9000000.0,33,168
+Guilson Paiva,G. Pierre Paiva Souza,"RM, RW",Flamengo,78,83.0,69.0,75.0,78.0,42.0,68.0,15500000.0,25,173
+Puado,Javier Puado Díaz,"LM, ST, CAM",RCD Espanyol de Barcelona,78,83.0,76.0,68.0,80.0,45.0,73.0,28000000.0,23,177
+Fredditinho,Fred Claudinei Tófoli Vilela,ST,Palmeiras,78,73.0,80.0,63.0,74.0,39.0,76.0,9000000.0,33,188
+Y. Fofana,Youssouf Fofana,"CM, CDM",AS Monaco,78,71.0,67.0,74.0,77.0,74.0,78.0,21500000.0,22,176
+A. Gouiri,Amine Gouiri,"ST, LM",OGC Nice,78,79.0,80.0,75.0,79.0,44.0,70.0,29000000.0,21,180
+Junior Firpo,Héctor Junior Firpo Adamés,"LB, LM",Leeds United,78,81.0,64.0,71.0,72.0,75.0,76.0,18500000.0,24,184
+C. Baumgartner,Christoph Baumgartner,"CAM, LM, CM",TSG Hoffenheim,78,80.0,72.0,73.0,80.0,44.0,56.0,22500000.0,21,180
+Luis Milla,Luis Milla Manzanares,"CDM, CM, CAM",Granada CF,78,72.0,70.0,76.0,74.0,74.0,75.0,17500000.0,26,175
+Júnior Moraes,Aluísio Chaves Ribeiro Moraes Júnior,ST,Shakhtar Donetsk,78,79.0,79.0,60.0,77.0,27.0,68.0,7000000.0,34,176
+De Frutos,Jorge de Frutos Sebastián,"RM, LM",Levante Unión Deportiva,78,83.0,70.0,74.0,81.0,37.0,59.0,22000000.0,24,176
+J. David,Jonathan Christian David,ST,LOSC Lille,78,85.0,76.0,71.0,78.0,25.0,70.0,32000000.0,21,177
+Jovane Cabral,Jovane Eduardo Borges Cabral,"LW, RW",Sporting CP,78,86.0,76.0,73.0,80.0,38.0,69.0,31000000.0,23,176
+U. Račić,Uroš Račić,"CM, CDM",Valencia CF,78,66.0,75.0,75.0,74.0,78.0,81.0,28000000.0,23,193
+R. Gravenberch,Ryan Jiro Gravenberch,"CM, CDM",Ajax,78,77.0,74.0,77.0,82.0,68.0,71.0,33000000.0,19,190
+Matheus Bardeira,Matheus Jadson Bardeira Cunha,ST,Fortaleza,78,73.0,82.0,62.0,70.0,31.0,75.0,17000000.0,21,187
+M. Greenwood,Mason Greenwood,"RM, ST",Manchester United,78,84.0,78.0,73.0,79.0,39.0,68.0,30500000.0,19,181
+D. Vlahović,Dušan Vlahović,ST,Fiorentina,78,75.0,78.0,58.0,73.0,28.0,76.0,29000000.0,21,190
+M. Caqueret,Maxence Caqueret,"CM, CDM",Olympique Lyonnais,78,73.0,58.0,72.0,81.0,72.0,69.0,31500000.0,21,174
+Carlos Neva,Carlos Neva Tey,LB,Granada CF,78,78.0,52.0,63.0,74.0,75.0,68.0,19000000.0,25,174
+E. Camavinga,Eduardo Camavinga,"CM, CDM",Real Madrid CF,78,72.0,65.0,76.0,80.0,75.0,77.0,29500000.0,18,182
+W. Fofana,Wesley Fofana,CB,Leicester City,78,74.0,37.0,55.0,64.0,80.0,78.0,29000000.0,20,190
+Nuno Mendes,Nuno Alexandre Tavares Mendes,"LWB, LB, LM",Paris Saint-Germain,78,85.0,57.0,68.0,74.0,74.0,72.0,29000000.0,19,176
+F. Wirtz,Florian Richard Wirtz,"CAM, CM",Bayer 04 Leverkusen,78,72.0,68.0,76.0,83.0,51.0,59.0,29500000.0,18,176
+A. Miranchuk,Aleksey Miranchuk,"CAM, ST",Atalanta,78,75.0,70.0,76.0,80.0,31.0,62.0,17500000.0,25,182
+N. De la Cruz,Diego Nicolás De La Cruz Arcosa,"CM, CAM, LW",River Plate,78,84.0,75.0,77.0,81.0,69.0,67.0,22000000.0,24,167
+B. Soumaré,Boubakary Soumaré,"CDM, CM",Leicester City,78,70.0,56.0,74.0,77.0,72.0,80.0,27000000.0,22,188
+M. Pessina,Matteo Pessina,"CAM, CM, CF",Atalanta,78,70.0,70.0,74.0,78.0,67.0,72.0,28000000.0,24,183
+N. Lang,Noa Noëll Lang,"LW, RW, CAM",Club Brugge KV,78,82.0,74.0,72.0,82.0,51.0,67.0,28500000.0,22,179
+Prazeracinho,Jonathan Prazeres Conradi,LW,Flamengo,78,78.0,69.0,77.0,79.0,45.0,54.0,16500000.0,21,172
+G. Montiel,Gonzalo Ariel Montiel,"RB, RWB",Sevilla FC,78,86.0,53.0,70.0,74.0,73.0,81.0,21000000.0,24,175
+T. Abraham,Tammy Bakumo-Abraham,ST,Roma,78,70.0,78.0,62.0,72.0,31.0,70.0,31500000.0,23,196
+Brahim,Brahim Abdelkader Díaz,"CAM, LW, LM",AC Milan,78,78.0,69.0,76.0,82.0,30.0,50.0,31500000.0,21,171
+Y. Yazıcı,Yusuf Yazıcı,"CF, ST, CAM",LOSC Lille,78,67.0,76.0,79.0,80.0,47.0,72.0,20500000.0,24,185
+J. Harrison,Jack Harrison,"LM, RM",Leeds United,78,83.0,71.0,72.0,79.0,42.0,68.0,22000000.0,24,175
+W. Endo,遠藤 航,"CDM, CM",VfB Stuttgart,78,66.0,61.0,70.0,75.0,78.0,73.0,13500000.0,28,178
+R. Le Normand,Robin Le Normand,CB,Real Sociedad,78,66.0,25.0,52.0,56.0,80.0,74.0,19000000.0,24,187
+Y. Herrera,Yangel Clemente Herrera Ravelo,"CM, CDM, CAM",RCD Espanyol de Barcelona,78,63.0,70.0,73.0,75.0,77.0,74.0,22000000.0,23,184
+Domingos Duarte,Domingos Sousa Coutinho Meneses Duarte,CB,Granada CF,78,56.0,35.0,58.0,54.0,80.0,78.0,17500000.0,26,190
+I. Sarr,Ismaïla Sarr,"RW, RM, ST",Watford,78,94.0,76.0,67.0,80.0,22.0,67.0,31000000.0,23,185
+Reinildo,Reinildo Isnard Mandava,LB,LOSC Lille,78,77.0,54.0,65.0,73.0,76.0,78.0,15000000.0,27,180
+Luiz Felipe,Luiz Felipe Ramos Marchi,CB,Lazio,78,73.0,29.0,61.0,68.0,80.0,72.0,26000000.0,24,187
+A. Barák,Antonín Barák,"CF, CM",Hellas Verona,78,66.0,76.0,77.0,78.0,62.0,72.0,18500000.0,26,190
+I. Konaté,Ibrahima Konaté,CB,Liverpool,78,71.0,34.0,57.0,67.0,80.0,76.0,29500000.0,22,194
+N. Zaniolo,Nicolò Zaniolo,"CAM, RM",Roma,78,83.0,74.0,71.0,80.0,61.0,82.0,31500000.0,21,190
+A. Haidara,Amadou Haïdara,"CM, RM, LM",RB Leipzig,78,70.0,72.0,76.0,80.0,68.0,70.0,21000000.0,23,175
+D. Zagadou,Dan-Axel Zagadou,CB,Borussia Dortmund,78,59.0,34.0,61.0,52.0,80.0,80.0,20500000.0,22,196
+Pedro Neto,Pedro Lomba Neto,"LW, RW",Wolverhampton Wanderers,78,87.0,74.0,69.0,81.0,31.0,59.0,28500000.0,21,172
+B. Bourigeaud,Benjamin Bourigeaud,"CM, LM",Stade Rennais FC,78,70.0,74.0,79.0,77.0,66.0,73.0,16000000.0,27,178
+A. Young,Ashley Young,"LWB, LB",Aston Villa,78,72.0,66.0,74.0,77.0,73.0,68.0,4300000.0,35,175
+F. Fabra,Frank Yusty Fabra Palacios,LB,Boca Juniors,78,86.0,61.0,71.0,78.0,70.0,78.0,12000000.0,30,174
+J. Baumgartlinger,Julian Baumgartlinger,"CDM, CM",Bayer 04 Leverkusen,78,55.0,49.0,70.0,69.0,77.0,79.0,7000000.0,33,181
+G. Kakuta,Gaël Kakuta,CAM,Racing Club de Lens,78,73.0,72.0,76.0,83.0,42.0,66.0,13500000.0,30,173
+C. Kouyaté,Cheikhou Kouyaté,"CB, CDM",Crystal Palace,78,64.0,64.0,62.0,69.0,78.0,85.0,9500000.0,31,189
+A. Dzyuba,Artem Dzyuba,ST,,78,65.0,78.0,69.0,71.0,29.0,86.0,,32,196
+S. Nzonzi,Steven N'Kemboanza Mike Christopher Nzonzi,"CDM, CM",Roma,78,40.0,56.0,70.0,67.0,77.0,85.0,9500000.0,32,196
+A. Budimir,Ante Budimir,ST,CA Osasuna,78,65.0,78.0,48.0,73.0,35.0,77.0,14000000.0,29,190
+F. Caputo,Francesco Caputo,ST,U.C. Sampdoria,78,82.0,79.0,62.0,78.0,30.0,67.0,9000000.0,33,181
+G. Bonaventura,Giacomo Bonaventura,"CM, CAM",Fiorentina,78,69.0,75.0,80.0,80.0,70.0,65.0,11500000.0,31,181
+A. Westwood,Ashley Westwood,"CDM, CM",Burnley,78,58.0,62.0,80.0,74.0,74.0,75.0,10000000.0,31,175
+Pedro,Pedro Eliezer Rodríguez Ledesma,"CF, RW",Lazio,78,74.0,73.0,77.0,84.0,40.0,52.0,9000000.0,33,169
+C. Smalling,Chris Smalling,CB,Roma,78,64.0,47.0,58.0,60.0,79.0,79.0,9500000.0,31,194
+D. Boyata,Anga Dedryck Boyata,CB,Hertha BSC,78,70.0,29.0,52.0,58.0,79.0,83.0,11500000.0,30,188
+J. Pastore,Javier Matías Pastore,"CAM, CM",Elche CF,78,64.0,73.0,80.0,78.0,52.0,50.0,11000000.0,32,187
+L. Rodríguez,Luis Alfonso Rodríguez Alanís,RB,Tigres U.A.N.L.,78,84.0,64.0,73.0,76.0,70.0,79.0,12000000.0,30,177
+Kike García,Enrique García Martínez,ST,CA Osasuna,78,61.0,81.0,64.0,74.0,44.0,74.0,12000000.0,31,186
+Escudero,Sergio Escudero Palomo,"LB, LM",Granada CF,78,69.0,63.0,74.0,71.0,78.0,71.0,10000000.0,31,176
+Jaume Costa,Jaume Vicent Costa Jordá,"LB, RB",RCD Mallorca,78,73.0,61.0,71.0,73.0,77.0,68.0,7500000.0,33,171
+R. Soriano,Roberto Soriano,"CAM, CM",Bologna,78,69.0,75.0,78.0,79.0,67.0,71.0,13500000.0,30,182
+H. Seferović,Haris Seferović,ST,SL Benfica,78,72.0,78.0,67.0,72.0,48.0,84.0,14000000.0,29,189
+Víctor Ruiz,Víctor Ruíz Torre,CB,Real Betis Balompié,78,50.0,42.0,65.0,60.0,79.0,78.0,9000000.0,32,185
+Laguardia,Víctor Laguardia Cisneros,CB,Deportivo Alavés,78,50.0,46.0,55.0,52.0,80.0,78.0,9500000.0,31,185
+A. Kolarov,Aleksandar Kolarov,"LB, CB",Inter,78,63.0,74.0,79.0,74.0,79.0,74.0,4300000.0,35,187
+M. Darmian,Matteo Darmian,"RWB, LWB, RB",Inter,78,70.0,58.0,69.0,74.0,78.0,68.0,10000000.0,31,182
+M. Sissoko,Moussa Sissoko,"CDM, CM",Watford,78,74.0,61.0,73.0,75.0,75.0,87.0,10000000.0,31,187
+Marcelo,Marcelo Antônio Guedes Filho,CB,Olympique Lyonnais,78,42.0,46.0,60.0,56.0,78.0,85.0,4600000.0,34,191
+Adama Traoré,Adama Traoré Diarra,"RW, RWB",Wolverhampton Wanderers,78,96.0,66.0,67.0,86.0,38.0,81.0,18500000.0,25,178
+Negredo,Álvaro Negredo Sánchez,ST,Cádiz CF,78,59.0,81.0,64.0,72.0,36.0,77.0,6000000.0,35,186
+F. Quagliarella,Fabio Quagliarella,ST,U.C. Sampdoria,78,61.0,83.0,74.0,79.0,30.0,63.0,4800000.0,38,180
+L. Koscielny,Laurent Koscielny,CB,FC Girondins de Bordeaux,78,54.0,43.0,63.0,65.0,79.0,75.0,3700000.0,35,186
+Falcao,Radamel Falcao García Zárate,ST,Rayo Vallecano,78,56.0,79.0,67.0,76.0,41.0,69.0,6000000.0,35,177
+E. Lamela,Erik Lamela,"RM, CAM",Sevilla FC,78,70.0,77.0,79.0,81.0,53.0,68.0,14000000.0,29,184
+A. Guardado,José Andrés Guardado Hernández,"CDM, CM, LM",Real Betis Balompié,78,64.0,68.0,80.0,79.0,73.0,69.0,4800000.0,34,169
+V. Moses,Victor Moses,"RM, RWB",Spartak Moskva,78,76.0,69.0,74.0,80.0,70.0,70.0,13500000.0,30,177
+C. Ansaldi,Cristian Daniel Ansaldi,"LWB, LB, LM",Torino F.C.,78,77.0,64.0,76.0,77.0,72.0,70.0,5000000.0,34,181
+K. Boateng,Kevin-Prince Boateng,"CAM, CM, CF",Hertha BSC,78,69.0,78.0,77.0,80.0,66.0,74.0,6500000.0,34,185
+F. Caicedo,Felipe Salvador Caicedo Corozo,"CF, ST",Genoa,78,74.0,78.0,70.0,75.0,44.0,80.0,11500000.0,32,183
+Pedro León,Pedro León Sánchez Gil,"RM, LM",CF Fuenlabrada,78,55.0,77.0,86.0,77.0,45.0,58.0,6500000.0,34,183
+Ángel,Ángel Luís Rodríguez Díaz,ST,RCD Mallorca,78,71.0,81.0,61.0,78.0,34.0,66.0,7000000.0,34,172
+Miguel Veloso,Miguel Luís Pinto Veloso,"CM, CDM",Hellas Verona,78,46.0,70.0,83.0,76.0,66.0,71.0,5500000.0,35,180
+Juan Mata,Juan Manuel Mata García,"CAM, RM",Manchester United,78,55.0,71.0,81.0,81.0,36.0,42.0,9000000.0,33,170
+E. Capoue,Etienne Capoue,"CM, CDM",Villarreal CF,78,48.0,72.0,75.0,71.0,77.0,76.0,11000000.0,32,190
+P. Diop,Papa Kouly Diop,"CDM, CM",UD Ibiza,78,39.0,66.0,68.0,68.0,78.0,87.0,4000000.0,35,179
+R. Vormer,Ruud Willem Vormer,CM,Club Brugge KV,78,58.0,75.0,79.0,70.0,75.0,79.0,8500000.0,33,178
+S. Coleman,Séamus Coleman,RB,Everton,78,66.0,65.0,73.0,76.0,78.0,70.0,9500000.0,32,177
+Fransérgio,Fransérgio Rodrigues Barbosa,"CM, CAM",FC Girondins de Bordeaux,78,59.0,75.0,75.0,75.0,73.0,80.0,13500000.0,30,187
+J. Hernández,Javier Hernández Balcázar,ST,LA Galaxy,78,68.0,76.0,63.0,75.0,31.0,66.0,9000000.0,33,175
+J. Svensson,Jonas Svensson,RB,Adana Demirspor,78,79.0,60.0,72.0,75.0,73.0,82.0,12500000.0,28,170
+Emerson,Emerson Palmieri dos Santos,"LB, LWB",Olympique Lyonnais,78,80.0,63.0,70.0,78.0,75.0,63.0,15000000.0,26,176
+R. Saïss,Romain Saïss,"CB, CM",Wolverhampton Wanderers,78,58.0,56.0,69.0,70.0,79.0,77.0,9500000.0,31,188
+J. Hector,Jonas Hector,"CDM, LB",1. FC Köln,78,59.0,60.0,75.0,75.0,76.0,75.0,10000000.0,31,185
+Clinton Mata,Clinton Mukoni Mata Pedro Lourenço,"RB, CB",Club Brugge KV,78,82.0,61.0,68.0,75.0,76.0,80.0,12500000.0,28,180
+N. Aké,Nathan Aké,CB,Manchester City,78,76.0,53.0,70.0,71.0,80.0,75.0,16500000.0,26,180
+F. Mollet,Florent Mollet,"CAM, CM",Montpellier Hérault SC,78,74.0,75.0,78.0,80.0,51.0,63.0,14000000.0,29,170
+J. Nsame,Jean-Pierre Nsame,ST,BSC Young Boys,78,79.0,77.0,55.0,73.0,27.0,80.0,14500000.0,28,188
+R. Ghezzal,Rachid Ghezzal,RM,Beşiktaş JK,78,71.0,69.0,81.0,80.0,28.0,55.0,14000000.0,29,182
+R. Steffen,Renato Steffen,"LM, RM",VfL Wolfsburg,78,79.0,75.0,74.0,80.0,48.0,65.0,14000000.0,29,170
+M. Halstenberg,Marcel Halstenberg,"CB, LB",RB Leipzig,78,63.0,66.0,73.0,71.0,76.0,80.0,12000000.0,29,188
+J. McGinn,John McGinn,"CDM, CM",Aston Villa,78,70.0,73.0,75.0,78.0,71.0,80.0,16500000.0,26,178
+William Carvalho,William Silva de Carvalho,"CDM, CM",Real Betis Balompié,78,40.0,60.0,75.0,68.0,74.0,84.0,12000000.0,29,187
+M. Dembélé,Moussa Dembélé,ST,Olympique Lyonnais,78,78.0,77.0,63.0,73.0,30.0,82.0,20500000.0,24,183
+N. Stanciu,Nicolae Claudiu Stanciu,"CAM, CM",SK Slavia Praha,78,72.0,75.0,80.0,80.0,59.0,68.0,14000000.0,28,170
+Ricardo Esgaio,Ricardo Sousa Esgaio,"RWB, RB, RM",Sporting CP,78,74.0,67.0,75.0,78.0,70.0,69.0,12500000.0,28,173
+T. Mings,Tyrone Mings,CB,Aston Villa,78,72.0,44.0,67.0,66.0,78.0,81.0,14000000.0,28,196
+R. Zobnin,Roman Zobnin,"CDM, CM, RM",Spartak Moskva,78,76.0,64.0,74.0,77.0,76.0,72.0,15000000.0,27,182
+J. Tah,Jonathan Tah,CB,Bayer 04 Leverkusen,78,67.0,27.0,55.0,57.0,79.0,81.0,17500000.0,25,195
+Puertas,Antonio José Rodríguez Díaz,"RM, LM",Granada CF,78,78.0,76.0,72.0,77.0,44.0,75.0,14000000.0,29,183
+F. Midtsjø,Fredrik Midtsjø,"CM, CDM",AZ Alkmaar,78,76.0,63.0,77.0,77.0,71.0,79.0,15000000.0,27,176
+Thiago Mendes,Thiago Henrique Mendes Ribeiro,"CDM, CM",Olympique Lyonnais,78,72.0,67.0,76.0,77.0,74.0,75.0,12000000.0,29,177
+B. Cristante,Bryan Cristante,"CDM, CB, CM",Roma,78,55.0,71.0,76.0,75.0,75.0,78.0,17500000.0,26,186
+Carles Gil,Carles Gil de Pareja Vicent,"CAM, RM",New England Revolution,78,66.0,70.0,80.0,79.0,39.0,64.0,14000000.0,28,170
+Roberto Torres,Roberto Torres Morales,"RM, LM, CM",CA Osasuna,78,67.0,78.0,79.0,76.0,65.0,72.0,11000000.0,32,178
+Felipe Anderson,Felipe Anderson Pereira Gomes,"LM, CAM",Lazio,78,85.0,74.0,76.0,82.0,55.0,59.0,14000000.0,28,175
+D. Vida,Domagoj Vida,CB,Beşiktaş JK,78,73.0,40.0,58.0,60.0,80.0,81.0,9000000.0,32,184
+Moi Gómez,Moisés Gómez Bordonado,"LM, RM, CM",Villarreal CF,78,68.0,74.0,77.0,78.0,55.0,61.0,15000000.0,27,176
+R. Barkley,Ross Barkley,"CAM, CM",Chelsea,78,69.0,73.0,77.0,78.0,57.0,72.0,16000000.0,27,189
+Oriol Romeu,Oriol Romeu Vidal,"CDM, CM",Southampton,78,41.0,44.0,62.0,65.0,80.0,81.0,12000000.0,29,183
+D. Praet,Dennis Praet,"CM, RM",Torino F.C.,78,67.0,72.0,78.0,79.0,63.0,66.0,15000000.0,27,181
+Vitolo,Víctor Machín Pérez,"LM, RM",Getafe CF,78,76.0,76.0,76.0,77.0,41.0,72.0,11500000.0,31,185
+H. Vanaken,Hans Vanaken,"CM, CAM",Club Brugge KV,78,47.0,78.0,79.0,75.0,59.0,73.0,14000000.0,28,195
+D. Sidibé,Djibril Sidibé,"RB, CB",AS Monaco,78,74.0,62.0,74.0,74.0,74.0,79.0,12500000.0,28,182
+M. Doherty,Matthew James Doherty,"RB, RWB",Tottenham Hotspur,78,68.0,64.0,73.0,75.0,75.0,76.0,12500000.0,29,182
+L. Dunk,Lewis Dunk,CB,Brighton & Hove Albion,78,46.0,51.0,62.0,64.0,79.0,78.0,13000000.0,29,192
+J. Vestergaard,Jannik Vestergaard,CB,Leicester City,78,32.0,48.0,62.0,49.0,79.0,82.0,13500000.0,28,199
+P. Kadeřábek,Pavel Kadeřábek,"RWB, RB, RM",TSG Hoffenheim,78,74.0,43.0,73.0,73.0,72.0,79.0,12500000.0,29,182
+Héctor Bellerín,Héctor Bellerín Moruno,"RB, RWB",Real Betis Balompié,78,83.0,51.0,69.0,77.0,73.0,65.0,17000000.0,26,178
+D. Suárez,Damián Nicolás Suárez Suárez,RB,Getafe CF,78,73.0,69.0,73.0,74.0,76.0,77.0,7500000.0,33,173
+J. Brooks,John Anthony Brooks,CB,VfL Wolfsburg,78,59.0,39.0,59.0,64.0,80.0,76.0,13500000.0,28,193
+Mário Rui,Mário Rui Silva Duarte,LB,Napoli,78,80.0,49.0,73.0,79.0,71.0,64.0,12000000.0,30,170
+Denis Suárez,Denis Suárez Fernández,"CM, LM, LW",RC Celta de Vigo,78,74.0,71.0,81.0,80.0,61.0,56.0,16000000.0,27,178
+P. Bamford,Patrick Bamford,ST,Leeds United,78,73.0,78.0,67.0,73.0,42.0,77.0,15000000.0,27,185
+A. Younes,Amin Younes,"CAM, CF, LM",Eintracht Frankfurt,78,74.0,68.0,74.0,86.0,38.0,59.0,15000000.0,27,168
+Vieirundinho,Danilo Manuel Vieira Espíndola,CB,Santos,77,59.0,39.0,53.0,57.0,80.0,81.0,5000000.0,33,189
+A. Lookman,Ademola Lookman,"LM, CAM, ST",Leicester City,77,85.0,73.0,68.0,82.0,29.0,62.0,16500000.0,23,174
+T. Kadewere,Philana Tinotenda Kadewere,"RW, ST",Olympique Lyonnais,77,83.0,76.0,69.0,78.0,38.0,71.0,14000000.0,25,183
+Sidney Pessinho,Sidney Adrián Pessoa Vidigal,"CDM, CM",Internacional,77,69.0,62.0,74.0,69.0,76.0,80.0,9000000.0,29,187
+Muo Cadete,Murilo Kauê Cadete Teixeira,LM,Palmeiras,77,81.0,63.0,72.0,75.0,37.0,69.0,12500000.0,21,178
+Nuno Padrenda,Nuno Ailton Padrenda Mendes,"ST, CAM",Clube Atlético Mineiro,77,82.0,73.0,77.0,82.0,52.0,70.0,12000000.0,25,180
+Jadsinho Mei,Jadson José Meireles Correia,"CDM, CM",Flamengo,77,58.0,61.0,65.0,58.0,72.0,79.0,10500000.0,25,176
+Victildinho,Victor Martin Maia Padilha,"RB, RM",Palmeiras,77,79.0,54.0,71.0,73.0,75.0,63.0,10500000.0,25,178
+Rodrigo Vuarte,Rodrigo Éder Vuarte Ruiz,CDM,Clube Atlético Mineiro,77,65.0,65.0,70.0,63.0,76.0,77.0,9000000.0,29,179
+Wagner Laranjo,Wagner Mauro Laranjo Coelho,"CDM, CM",Palmeiras,77,67.0,72.0,75.0,73.0,74.0,76.0,2100000.0,37,177
+Andeson Trigo,Andeson Jaime Trigo Gonçalves,"LB, LM, CAM",Fluminense,77,82.0,63.0,75.0,77.0,71.0,64.0,5500000.0,33,175
+Claudio Coíntra,Claudio Nuno Coíntra Calegari,"CAM, CF",Palmeiras,77,79.0,73.0,76.0,78.0,27.0,60.0,11500000.0,25,174
+M. Almirón,Miguel Ángel Almirón Rejala,"CAM, CM, RM",Newcastle United,77,86.0,72.0,74.0,79.0,53.0,63.0,12000000.0,27,174
+N. Nández,Nahitan Michel Nández Acosta,"CM, CDM, RM",Cagliari,77,77.0,67.0,72.0,77.0,76.0,83.0,15500000.0,25,172
+Caio Henrique,Caio Henrique Oliveira Silva,"LB, LM",AS Monaco,77,72.0,54.0,74.0,75.0,73.0,59.0,14000000.0,23,179
+L. Blas,Ludovic Blas,"CAM, RM",FC Nantes,77,74.0,72.0,75.0,81.0,58.0,65.0,16500000.0,23,180
+R. Perraud,Romain Perraud,LB,Southampton,77,74.0,72.0,75.0,74.0,72.0,73.0,15500000.0,23,173
+E. Palacios,Exequiel Alejandro Palacios,"CM, CDM, CAM",Bayer 04 Leverkusen,77,55.0,73.0,74.0,77.0,72.0,71.0,17000000.0,22,177
+J. Justin,James Justin,"LWB, LB",Leicester City,77,82.0,50.0,69.0,73.0,73.0,70.0,15500000.0,23,183
+Rafa Mir,Rafael Mir Vicente,ST,Sevilla FC,77,72.0,79.0,64.0,71.0,45.0,76.0,21500000.0,24,191
+I. Diop,Issa Diop,CB,West Ham United,77,65.0,36.0,52.0,56.0,78.0,79.0,15000000.0,24,194
+D. James,Daniel James,"RM, LM",Leeds United,77,95.0,72.0,70.0,76.0,46.0,63.0,16000000.0,23,171
+F. Uduokhai,Ohis Felix Uduokhai,CB,FC Augsburg,77,67.0,39.0,54.0,60.0,80.0,72.0,14500000.0,23,193
+S. Nakajima,中島 翔哉,LM,Portimonense SC,77,86.0,71.0,71.0,83.0,37.0,46.0,11500000.0,26,165
+J. Ito,伊东 纯也,"RW, CF",KRC Genk,77,89.0,71.0,73.0,77.0,58.0,70.0,10500000.0,28,176
+T. Adams,Tyler Shaan Adams,"CDM, RWB",RB Leipzig,77,81.0,48.0,70.0,73.0,74.0,75.0,15500000.0,22,175
+Y. Soteldo,Yeferson Julio Soteldo Martínez,"LM, RM, CAM",Toronto FC,77,83.0,71.0,74.0,82.0,35.0,57.0,16500000.0,24,158
+Alexo Baia,Alessandro Baia Marques,"RB, RM",Clube Atlético Mineiro,77,76.0,48.0,69.0,75.0,74.0,70.0,5500000.0,33,175
+Luiz Araújo,Luiz de Araujo Guimarães Neto,"RM, LM",Atlanta United,77,88.0,69.0,71.0,82.0,39.0,53.0,14000000.0,25,175
+Enzo Chissano,Enzo Leandro Chissano Baia,"LB, RB, CB",Palmeiras,77,79.0,62.0,71.0,70.0,74.0,69.0,9500000.0,29,165
+O. Pineda,Orbelín Pineda Alvarado,"RM, RW, CM",Cruz Azul,77,86.0,73.0,72.0,79.0,62.0,66.0,14000000.0,25,169
+F. Maouassa,Christ-Emmanuel Faitout Maouassa,LB,Club Brugge KV,77,84.0,64.0,71.0,75.0,72.0,76.0,13500000.0,22,170
+F. Centonze,Fabien Centonze,"RWB, RB",FC Metz,77,81.0,51.0,70.0,72.0,70.0,79.0,13000000.0,25,182
+E. Reynoso,Emanuel Reynoso,"CAM, LM",Minnesota United FC,77,66.0,65.0,78.0,79.0,57.0,67.0,14500000.0,25,176
+Dani Ceballos,Daniel Ceballos Fernández,"CM, CDM",Real Madrid CF,77,60.0,68.0,77.0,82.0,66.0,67.0,14500000.0,24,179
+Z. Ferhat,Zinedine Ferhat,"LM, RM",Nîmes Olympique,77,81.0,64.0,76.0,76.0,31.0,70.0,10500000.0,28,183
+Petros,Petros Matheus dos Santos Araújo,"CM, CDM",Al Nassr,77,68.0,68.0,72.0,75.0,73.0,83.0,8500000.0,32,181

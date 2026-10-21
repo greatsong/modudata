@@ -1,0 +1,69 @@
+# 서울 121곳 실시간 혼잡도 — 수집은 매시간, 커밋은 하루 한 번 (일반 오픈API는 호출 횟수 제한 없음)
+# 매시간: 임시 파일(pending/)에 쌓아 Actions 캐시에 보관 → 한국시간 23시 실행에서 data/seoul_congestion_log.csv에 합쳐 커밋
+# 수동 실행(workflow_dispatch)은 그 자리에서 합쳐 커밋한다(테스트·복구용)
+# 시크릿 필요: SEOUL_KEY (서울열린데이터광장 data.seoul.go.kr 발급 — 지하철 갱신과 같은 키)
+name: collect-congestion
+
+on:
+  schedule:
+    - cron: '5 * * * *'         # 매시간 5분 (정각 직후 혼잡도 스냅샷)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-congestion     # 앞 실행이 끝난 뒤에 다음 실행 (임시 파일이 꼬이지 않게)
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    env:
+      PENDING: pending/seoul_congestion_pending.csv
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install requests pandas
+
+      - name: 지금까지 모은 임시 기록 불러오기
+        uses: actions/cache/restore@v4
+        with:
+          path: pending
+          key: congestion-pending-${{ github.run_id }}
+          restore-keys: congestion-pending-
+
+      - name: 혼잡도 수집(임시 파일에 쌓기)
+        env:
+          SEOUL_KEY: ${{ secrets.SEOUL_KEY }}
+          CONGESTION_OUT: ${{ env.PENDING }}
+        run: python scripts/collect_seoul.py
+
+      - name: 하루 한 번 본 파일에 합쳐 커밋
+        run: |
+          H=$(TZ=Asia/Seoul date +%H)
+          if [ "$H" != "23" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            echo "합치기는 23시에 합니다(지금 ${H}시)"; exit 0
+          fi
+          python scripts/flush_congestion.py "$PENDING"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seoul_congestion_log.csv
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "🤖 서울 혼잡도 수집 $(TZ=Asia/Seoul date +%Y-%m-%d) 하루치"
+          for i in 1 2 3; do
+            if git push; then python scripts/flush_congestion.py "$PENDING" --clear; exit 0; fi
+            sleep $i; git pull --rebase origin main
+          done
+          echo "푸시 실패: 임시 기록을 비우지 않고 다음 23시에 다시 합칩니다"
+
+      - name: 임시 기록 보관
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: pending
+          key: congestion-pending-${{ github.run_id }}

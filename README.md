@@ -1,0 +1,233 @@
+# modudata — 『모두의 데이터 분석 with AI』 공개 예제 데이터
+
+교재 실습에 쓰는 **모든 데이터를 한곳에** 모았습니다. 전부 공개 개방 데이터이고, raw URL로 바로 읽어 쓸 수 있어요.
+
+```
+https://raw.githubusercontent.com/greatsong/modudata/main/data/<파일명>
+```
+
+---
+
+## ⚡ 바로 쓰기 — 인코딩은 "유연하게"
+
+관공서 데이터는 파일마다 인코딩이 **cp949**일 때도, **utf-8**일 때도 있고, **언제든 바뀔 수 있습니다.** 그래서 하나로 못 박지 말고 아래처럼 **유연하게** 읽으세요. (AI에게 시킬 땐 "인코딩은 utf-8이 안 되면 cp949로, 유연하게 읽어줘"라고 부탁하면 됩니다.)
+
+```python
+import pandas as pd
+
+BASE = "https://raw.githubusercontent.com/greatsong/modudata/main/data"
+
+def read_csv_flex(url, **kw):
+    """utf-8로 먼저, 안 되면 cp949로 — 인코딩이 바뀌어도 안 깨짐"""
+    for enc in ("utf-8-sig", "cp949"):
+        try:
+            return pd.read_csv(url, encoding=enc, **kw)
+        except UnicodeDecodeError:
+            continue
+    return pd.read_csv(url, encoding="utf-8", encoding_errors="replace", **kw)
+
+temp = read_csv_flex(f"{BASE}/seoul.csv")                              # 기온
+pop  = read_csv_flex(f"{BASE}/population_latest.csv", thousands=",")   # 인구(천단위 쉼표, 매월 자동 갱신)
+```
+
+> 💡 급하면 `pd.read_csv(url)` → 에러 나면 `encoding="cp949"` 한 줄만 붙여도 됩니다.
+
+---
+
+## 📂 한눈에 보기
+
+| 파일 | 쓰는 곳 | 인코딩(현재) | 크기 | 무엇 |
+|---|---|---|---|---|
+| `seoul.csv` | 3장과 같은 자료(본문은 직접 받은 `seoultemp.csv`) | utf-8 (원본 cp949) | 1.2 MB | 서울 100년치 일별 기온 · **매일 자동 갱신** |
+| `seoul_daily.csv` | 9장 | utf-8 | 1.1 MB | 위 `seoul.csv`의 정리본(`날짜, 평균기온, 최저기온, 최고기온`) · `seoul.csv` 갱신 때 자동 재생성 |
+| `population_2026_05.csv` | 9장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 (2026년 5월 스냅샷 — 9장 결과 재현용) |
+| `population_latest.csv` | 4장 | **cp949** | 6.2 MB | 연령별 주민등록 인구 · **매월 1일 자동 갱신** (강의용, 항상 최신 월) |
+| `population_yearly.csv.gz` | 책 밖 자료 | utf-8 (gzip) | 14 MB | **연도별(매년6월) 읍·면·동 인구 시계열** · 1세 단위 × 계/남/여 · **매년 자동 갱신** |
+| `subway_pay.csv` | 5장 | utf-8 (원본 cp949) | 5.5 MB | 지하철 유·무임 승하차(월별) |
+| `subway_time.csv` | 5장 | utf-8 (원본 cp949) | 29 MB | 지하철 시간대별 승하차(월별) |
+| `hangjeongdong.geojson` | 책 밖 자료(`boundaries/`의 원본) | utf-8 | 33 MB | 전국 행정동 경계 |
+| `boundaries/*.geojson` | 4장 | utf-8 | 0.3~2 MB | **지도용 경량 경계** — 시도(17)·시군구(255)·서울동(427)·경기동(602) |
+| `dong_centroids.csv` | 책 밖 자료 | utf-8 | 230 KB | 행정동 중심점 좌표 |
+| `seoul_area_all.csv` | 8장 | utf-8 (BOM) | 7 KB | 서울 실시간 도시데이터 조회 장소 121곳(코드·지역명·분류·위도·경도) |
+| `seoul_area_xy.csv` | 책 밖 자료 | utf-8 | 1.6 KB | 서울 주요 명소 23곳 좌표 |
+| `boxoffice_monthly/*.csv` | 9장 | utf-8 (BOM) | 0.8 MB | 월별 박스오피스 상위 100편 28개(2024-01~2026-04) · 원본 그대로, 갱신하지 않는 고정본 |
+| `seoul_congestion_log.csv` | 8장 | utf-8 | 3.8 MB | 서울 실시간 혼잡도 로그 · **매시간 수집, 하루 한 번 반영** |
+| `danggok_meals_184.csv` | 수업용 | utf-8 | 25 KB | 당곡고 중식 184일 저장본 (2025-09-01~2026-09-30) · 갱신하지 않는 고정본 |
+
+보조·검증용: `seoul_monthly/yearly.csv`(기온 집계본) · `mnist_small.npz`(손글씨) · `stars_검증데이터.csv` · `seoul_yearly_real_검증데이터.csv`
+
+> 인코딩 표기는 "현재 저장소 복사본" 기준입니다. **원본을 직접 받으면 cp949인 경우가 많고, 갱신·재저장 과정에서 바뀔 수 있습니다.** 그래서 위 `read_csv_flex`처럼 읽는 걸 권장합니다.
+
+---
+
+## 🧩 예제 코드 (`codes/`)
+
+| 폴더 | 장 | 내용 | 비밀 정보(Secrets) |
+|---|---|---|---|
+| `codes/ch06` | 6장 | 유튜브 채널 분석 앱 | `YOUTUBE_API_KEY` |
+| `codes/ch07` | 7장 | 박스오피스 앱: `main.py`(일별) · `pages/00_주간박스오피스.py` · `pages/01_역주행영화.py` | `KOBIS_KEY` |
+| `codes/ch08` | 8장 | 서울 실시간 혼잡도 앱: `main.py`(121곳 지도·청년 비율) · `pages/00_서울시각별.py`(혼잡도 기록으로 시각별) | `SEOUL_KEY` |
+| `codes/ch09` | 9장 | 머신러닝 앱: `main.py`(서울 기온 예측) · `pages/00_첫달관객예측.py`(월별 박스오피스 회귀·군집) · `pages/01_닮은동네.py`(동네 군집) | 없음 |
+| `codes/ch10` | 10장 | 점심 투표 앱 '모두의 점심': `app_basic.py` · `app_sheet.py` · `app.py`(수파베이스 최종판), `votes_sheet.gs` · `votes_setup.sql` | `SHEET_URL` 또는 `SUPABASE_URL`·`SUPABASE_PUBLISHABLE_KEY` |
+| `codes/extra/auto_collect` | 책 밖 자료 | 서울 혼잡도 자동 수집 예제 | `SEOUL_KEY`(깃허브 시크릿) |
+
+---
+
+## 📜 원 출처 (반드시 확인)
+
+이 저장소의 데이터는 아래 **공식 원 출처**에서 받아 실습용으로 정리·재배포한 것입니다. 파생 파일(직접 만든 것)은 어떤 원천에서 나왔는지도 함께 밝힙니다.
+
+| 데이터 | 원 출처 (제공 기관) | 원천 포털 / 링크 |
+|---|---|---|
+| `seoul.csv` (+ 집계본 `seoul_daily/monthly/yearly`) | **기상청** — 종관기상관측(ASOS) 일자료 | 기상자료개방포털 [data.kma.go.kr](https://data.kma.go.kr) |
+| `population_2026_05.csv`, `population_latest.csv`, `population_yearly.csv.gz` | **행정안전부** — 주민등록 인구통계(연령별 인구현황) | [jumin.mois.go.kr](https://jumin.mois.go.kr) |
+| `subway_pay.csv`, `subway_time.csv` | **서울교통공사** 제공, **서울특별시** 배포 | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
+| `hangjeongdong.geojson` | **vuski/admdongkor** (행정동 경계, **통계청** 통계지리정보 기반) | [github.com/vuski/admdongkor](https://github.com/vuski/admdongkor) |
+| `dong_centroids.csv` | *파생* — 위 `hangjeongdong.geojson`(vuski/admdongkor)에서 각 동 중심점 계산 | (파생물) |
+| `boundaries/*.geojson` (시도·시군구·서울동·경기동) | *파생* — `hangjeongdong.geojson`(**vuski/admdongkor**, **CC BY 4.0**)을 dissolve·필터 | [github.com/vuski/admdongkor](https://github.com/vuski/admdongkor) |
+| `seoul_area_all.csv`, `seoul_area_xy.csv` | *파생* — **서울특별시** 실시간 도시데이터(citydata) 장소 목록·좌표 | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
+| `boxoffice_monthly/*.csv` | **영화진흥위원회(KOFIC)** — 영화관입장권 통합전산망, **한국문화정보원** 문화빅데이터플랫폼 제공 "KOBIS 박스오피스 영화정보" | [bigdata-culture.kr](https://www.bigdata-culture.kr) |
+| `seoul_congestion_log.csv` | **서울특별시** — 실시간 도시데이터(citydata_ppltn) | 서울 열린데이터광장 [data.seoul.go.kr](https://data.seoul.go.kr) |
+| `danggok_meals_184.csv` | **교육부·서울특별시교육청** — 나이스 급식식단정보(mealServiceDietInfo), 당곡고등학교 중식 | 나이스 교육정보 개방 포털 [open.neis.go.kr](https://open.neis.go.kr) |
+
+**API로 받는 데이터의 원 출처**: 야후 파이낸스(yfinance)·**Google**(YouTube Data API, Gemini)·**영화진흥위원회**(KOBIS)·**서울특별시**(실시간 도시데이터)·**행정안전부**(공공데이터포털 data.go.kr, 제공기관은 데이터별 상이)·**카카오**(로컬 API)·**GBIF**·**NASA**·**USGS**. 발급·엔드포인트는 아래 [API 데이터](#-api-데이터--키-획득-방법) 표 참고.
+
+> 대부분 **공공누리(출처표시)** 계열의 공개 데이터입니다. 정확한 이용조건·라이선스는 각 포털의 표기를 확인하세요. `seoul_monthly/yearly`·`mnist_small.npz`·`stars_검증데이터.csv` 등은 교재 본문에 쓰이지 않는 **보조·실험용**입니다.
+
+---
+
+## 📄 파일 데이터 — 출처 · 수집 경로 · 주의사항
+
+교재는 실습 편의를 위해 **원본을 짧은 파일명으로 바꿔** 이 저장소에 올려 두었습니다. "직접 받는 법"과 "교재에서 쓰는 이름"을 함께 적었어요.
+
+### `seoul.csv` — 서울 100년치 일별 기온
+- **출처**: 기상청 **기상자료개방포털** ([data.kma.go.kr](https://data.kma.go.kr)) · 지상 → 종관기상관측(ASOS) 일자료 · 지점 **서울(108)**
+- **직접 받으면**: 조회조건 기반의 긴 한글 파일명 · **원본 인코딩은 보통 cp949(EUC-KR)** · 교재는 `seoul.csv`로 정리(현재 저장소 복사본은 utf-8) → *그래서 유연 읽기 권장*
+- **열**: `날짜, 지점, 평균기온, 최저기온, 최고기온` (약 42,937행, 1907.10~)
+- **주의**: 평균기온 결측 약 756개(특히 1950~53 전쟁기) · `날짜`는 `pd.to_datetime`으로 변환
+
+### `population_2026_05.csv` — 연령별 주민등록 인구
+- **출처**: 행정안전부 **주민등록 인구통계** ([jumin.mois.go.kr](https://jumin.mois.go.kr)) · [연령별 인구현황] → 지역 **전국** · 시점 **2026년 5월** · **읍면동** · **1세 단위** → CSV
+- **직접 받으면**: 보통 한글 데이터셋 이름(예: `연령별인구현황…csv`, 조회조건·날짜 포함) · **cp949 인코딩** · 교재는 `population_2026_05.csv`로
+- **주의(전처리 포인트)**:
+  - **천 단위 쉼표**(`9,295,082`) → `thousands=","`
+  - **합계 행 혼입**(`서울특별시`, `서울특별시 종로구` 등 시·도/시·군·구 행) → 읍·면·동만 남기기
+  - 인구 0인 행정용 행 제거
+  - **긴 열 이름**(`2026년05월_계_0세` → `0세`) 정리
+  - 다른 표와 합칠 땐 **이름 아닌 행정구역 코드**(괄호 속 숫자, 예 `1168060000`)로
+  - 원본 (3,918행, 310열) → 정리 후 읍·면·동 약 3,558곳
+
+### `population_yearly.csv.gz` — 연도별 읍·면·동 인구 시계열 (🔄 매년 자동 갱신)
+- **출처**: 행정안전부 **주민등록 인구통계** ([jumin.mois.go.kr](https://jumin.mois.go.kr)) · [연령별 인구현황]을 **매년 6월** 기준으로 수집(2015~) · 키 불필요한 **공개 CSV 다운로드**를 재현(공식 API 아님 — 사이트 개편 시 깨질 수 있음)
+- **열**: `연도, 시도, 시군구, 동, 코드` + **`계_0세`…`계_100세 이상` · `남_0세`… · `여_0세`…** (계/남/여 × 1세, 총 308열) · 약 42,000행(연도당 ~3,500 읍·면·동)
+- **바로 쓰기**: gzip이라 `pd.read_csv(url)`이 알아서 해제 — `df = pd.read_csv(f"{BASE}/population_yearly.csv.gz")`
+- **할 수 있는 것**: 남녀 인구 피라미드의 연도별 변화 · 지역 성비(예: 산업단지 남초, 대학가 여초) · 고령화 추세 · 9장 '닮은 동네끼리 묶어보기'를 연도별로
+- **주의**: `계 = 남 + 여` · 총인구는 연령 열 합(`df[[c for c in df.columns if c.startswith("계_")]].sum(axis=1)`) · 행정동은 신설·통폐합되므로 `코드` 기준, 연속성 없는 동은 시계열이 끊길 수 있음(정상)
+
+### `subway_pay.csv` / `subway_time.csv` — 지하철 승하차
+- **출처**: 서울 **열린데이터광장** ([data.seoul.go.kr](https://data.seoul.go.kr)) · 검색 '지하철' → **유·무임 승하차** / **시간대별 승하차** → CSV
+- **직접 받으면**: 데이터셋 한글명 CSV · **원본 cp949**(저장소 복사본은 utf-8) · 교재는 `subway_pay.csv` / `subway_time.csv`로
+- **주의**: 월별(2015.1~2026.5) · **서울 1~9호선만** 필터(그 외 노선은 집계 방식이 달라 섞으면 안 됨) · '같은 이름 다른 호선'(시청·종로3가) · `subway_time`은 시간대가 열로 넓게 → `melt`로 긴 형태 변환
+
+### `hangjeongdong.geojson` — 전국 행정동 경계
+- **출처**: 예제 저장소 제공 · 원본은 GitHub **`vuski/admdongkor`**(전국 행정동 경계)
+- **주의**: 단계구분도용 · 인구표와 짝지을 땐 `properties`의 **행정구역 코드**로 매칭(이름 X)
+
+### `boundaries/` — 지도용 경량 경계 (choropleth 지도)
+위 `hangjeongdong.geojson`(33MB)에서 파생한 **가벼운 벡터 경계**입니다. Plotly `px.choropleth`(타일 없는 벡터, 마우스 호버로 지역·값 표시)에 바로 쓰고, `.svg`로도 뽑을 수 있어요. 모두 **행안부 코드**라 인구 데이터와 무손실 결합됩니다.
+
+| 파일 | 단위 | 개수 | 결합 키(`featureidkey`) |
+|---|---|---|---|
+| `boundaries/sido_kr.geojson` (0.6MB) | 시도 | 17 | `properties.코드`(2자리) ↔ 인구 `코드` 앞2자리 |
+| `boundaries/sigungu_kr.geojson` (2.0MB) | 시군구 | 255 | `properties.코드`(5자리) ↔ 인구 `코드` 앞5자리(=행정동의 `sgg`) |
+| `boundaries/seoul_dong.geojson` (0.3MB) | 서울 행정동 | 427 | `properties.코드`(10자리) ↔ 인구 `코드` |
+| `boundaries/gyeonggi_dong.geojson` (1.1MB) | 경기 행정동 | 602 | `properties.코드`(10자리) ↔ 인구 `코드` |
+
+- 시도·시군구는 행정동을 코드로 **dissolve**(shapely)해 내부 경계를 지운 것. 서울·경기 동은 예시 서브셋.
+- **다른 지역 읍·면·동**은 `hangjeongdong.geojson`을 `properties.sidonm`(시도)·`sggnm`(시군구)으로 필터하면 어디든 만들 수 있습니다.
+- **바로 쓰기**: `px.choropleth(df, geojson=geo, locations="코드", featureidkey="properties.코드", color="고령비율").update_geos(fitbounds="locations", visible=False)`
+
+### `dong_centroids.csv` — 행정동 중심점 좌표
+- **출처**: *파생물* · 원 출처는 `hangjeongdong.geojson`(**vuski/admdongkor**, 통계청 기반) — 각 동 경계의 중심점을 계산
+- **열**: `코드, lat, lon` (3,558행) · **주의**: 인구표의 행정구역 코드와 **`코드`로 병합**(이름으로 하면 절반만 매칭)
+
+### `seoul_area_all.csv` — 서울 실시간 도시데이터 조회 장소 121곳 (8장)
+- **출처**: *파생물* · 원 출처는 **서울특별시** 실시간 도시데이터(서울 열린데이터광장)의 장소 목록
+- **열**: `코드(POI…), 지역명, 분류, 위도, 경도` (121행) · 분류는 관광특구 7·고궁·문화유산 5·인구밀집지역 48·발달상권 28·공원 33곳
+- **주의**: 8장 앱은 `지역명`으로 API를 요청한다 · 자동 수집(`scripts/collect_seoul.py`)도 이 목록을 사용한다
+
+### `seoul_area_xy.csv` — 서울 주요 명소 23곳 좌표 (책 밖 자료)
+- **출처**: *파생물* · 원 출처는 **서울특별시** 실시간 도시데이터(citydata, 서울 열린데이터광장)의 주요 명소 좌표를 정리
+- **열**: `코드(POI…), 지역명, 위도, 경도` (+ 예시 스냅샷 열) · 서울 혼잡도 API 응답과 지역명/코드로 merge
+
+### `boxoffice_monthly/` — 월별 박스오피스 상위 100편 (9장)
+- **출처**: 영화진흥위원회 영화관입장권 통합전산망(KOBIS) · 문화빅데이터플랫폼([bigdata-culture.kr](https://www.bigdata-culture.kr)) "KOBIS 박스오피스 영화정보" 월별 CSV · 영화진흥위원회 답변(2026-10-02): 플랫폼 CSV 활용 제한 없음
+- **파일**: `KC_KOBIS_BOX_OFFIC_MOVIE_INFO_YYYYMM.csv` 28개(202401~202604) · 내려받은 **원본 그대로**(이름·내용 수정 없음) · 주소 `https://raw.githubusercontent.com/greatsong/modudata/main/data/boxoffice_monthly/KC_KOBIS_BOX_OFFIC_MOVIE_INFO_202401.csv`에서 끝 여섯 자리만 바꾼다
+- **열**: 영문 약어 18개(`MOVIE_NM`, `OPN_DE`, `VIEWNG_NMPR_CO`, `SEOUL_VIEWNG_NMPR_CO` 등) · 값은 누적이 아니라 **그달 관객 수**
+- **주의**: 관객 수·매출액 표기가 파일마다 다름(소수점·쉼표 혼재) → 쉼표·공백 제거 후 숫자 변환 · 2024-01~03은 내용 없는 행 80행씩 포함(200행) · **2025-11 파일은 한국 영화만 들어 있음**(관객 합계가 이웃 달의 10분의 1) — 9장에서 이 문제를 찾아 처리한다 · 박스오피스는 계속 갱신되는 자료라 지금 조회한 값과 다를 수 있다
+
+### `seoul_congestion_log.csv` — 서울 실시간 혼잡도 로그 (8장 · 🔄 매시간 수집, 하루 한 번 반영)
+- **출처**: 서울 실시간 도시데이터 API를 GitHub Actions가 매시간 수집해 두었다가 한국시간 23시에 하루치를 합쳐 반영(아래 '자동 갱신')
+- **수집 범위**: 2026-06-30 23시~2026-09-03은 23곳, 2026-09-04부터 121곳
+- **열**: `시각, 코드, 지역명, 혼잡도, 인구min, 인구max, 위도, 경도` · **주의**: 빈 시각 생길 수 있음(직전 값으로 채우기) · 앱에서 읽을 때 `ttl=0`
+
+---
+
+## 🔑 API 데이터 — 키 획득 방법
+
+파일이 아니라 **실시간으로 받아오는** 데이터입니다. 키가 필요한 건 아래 방법으로 무료 발급(결제정보 불필요), **키는 코드에 쓰지 말고 `secrets`에**.
+
+| API | 챕터 | 키 | 발급 방법 (secrets 변수명) |
+|---|---|---|---|
+| yfinance (주가) | 2장 | 불필요 | 라이브러리(`pip install yfinance`) · `005930.KS`(한국)·`AAPL`(미국) |
+| catfact.ninja / randomuser.me | 책 밖 자료 | 불필요 | 연습용 · `https://catfact.ninja/fact`, `https://randomuser.me/api/` |
+| **YouTube Data API v3** | 6장 | 필요 | [console.cloud.google.com](https://console.cloud.google.com) → 새 프로젝트 → 라이브러리에서 'YouTube Data API v3' 사용 설정 → 사용자 인증정보 → API 키. **`YOUTUBE_API_KEY`** |
+| **KOBIS 일별·주간 박스오피스** | 7장 | 필요 | [kobis.or.kr/kobisopenapi](https://www.kobis.or.kr/kobisopenapi) → [키 발급/관리]. **`KOBIS_KEY`** · 엔드포인트 `…/rest/boxoffice/searchDailyBoxOfficeList.json?key=&targetDt=YYYYMMDD`, `…/searchWeeklyBoxOfficeList.json?key=&targetDt=YYYYMMDD&weekGb=0` · **응답은 저장·재배포 금지(실시간 호출만)** |
+| **서울 실시간 도시데이터** | 8장 | 필요 | [data.seoul.go.kr](https://data.seoul.go.kr) → [Open API] → [인증키 신청]. **`SEOUL_KEY`** · 8장 앱은 `http://openapi.seoul.go.kr:8088/{KEY}/json/citydata/1/5/{장소 이름}` · 자동 수집은 `…/citydata_ppltn/1/5/{지역코드}` |
+| **Gemini** | 책 밖 자료 | 필요 | [aistudio.google.com](https://aistudio.google.com) → Get API key(2단계). **`GEMINI_API_KEY`** · 모델 `gemini-2.5-flash` |
+| **공공데이터포털** | 부록 | 필요 | [data.go.kr](https://www.data.go.kr) 가입 → 활용신청 → 마이페이지에서 serviceKey. 인코딩/디코딩 키 2종·`_type=json`·호출한도 주의 |
+| **카카오 로컬(지오코딩)** | 부록 | 필요 | [developers.kakao.com](https://developers.kakao.com) → 앱 → **REST API 키**. **`KAKAO_KEY`** · 헤더 `Authorization: KakaoAK {키}` |
+| GBIF / NASA NeoWs / USGS | 부록 | GBIF·USGS 불필요 / NASA 권장 | NASA: [api.nasa.gov](https://api.nasa.gov)에서 무료 키(→ `st.secrets`) |
+
+---
+
+## 🔄 자동 갱신 (GitHub Actions)
+
+아래 데이터는 매번 직접 안 모아도 되게 **자동으로 최신화**됩니다. (워크플로 파일은 `.github/workflows/`에 포함 — 각 시크릿을 등록해야 동작합니다.)
+
+- **`seoul_congestion_log.csv`** — 매시간 서울 혼잡도 수집, 한국시간 23시에 하루치 반영 · 시크릿 `SEOUL_KEY` · 스크립트 `scripts/collect_seoul.py`·`scripts/flush_congestion.py`
+- **`seoul.csv`** — 매일 아침(KST 07시) 빠진 날짜를 어제까지 백필 · 시크릿 `DATA_GO_KR_KEY`(공공데이터포털 ASOS 일자료 — apihub는 해외 IP 차단이라 GitHub에서 못 씀) · 스크립트 `scripts/update_seoul_temp.py`
+- **`population_latest.csv`** — 매월 1일 자정(KST) 지난달 데이터로 교체, 실패 시 2일 재시도 · 시크릿 불필요 · 스크립트 `scripts/update_population.py` (월별 스냅샷은 `data/archive/`)
+- **`population_yearly.csv.gz`** — 매년 7월 그해 6월 데이터를 append(연도별 시계열) · **시크릿 불필요**(공개 다운로드) · 스크립트 `scripts/update_population_yearly.py`
+- **`subway_pay.csv` / `subway_time.csv`** — 매월 5일(재시도 9일) 새벽 공개된 달을 append · 시크릿 `SEOUL_KEY` · 스크립트 `scripts/update_subway.py`
+- `seoul.csv` 갱신 시 파생 파일(`seoul_daily.csv`·`seoul_yearly.csv`)도 자동 재생성됩니다.
+
+시크릿 추가: 저장소 **Settings → Secrets and variables → Actions → New repository secret**.
+
+---
+
+*원본은 모두 공개 개방 데이터입니다(기상청·행정안전부·서울 열린데이터광장·영화진흥위원회 등). 실습·학습용으로 정리해 재배포합니다.*
+
+## stroke.csv — 뇌졸중 예측 데이터 (교육 목적 전용)
+
+- 출처: Kaggle "Stroke Prediction Dataset" (fedesoriano). 캐글 표기: Data files © Original Authors, "(Confidential Source) - Use only for educational purposes". 원출처는 비공개이며 재배포 허가가 명시되어 있지 않다. 고등학교 『데이터 과학』 수업(당곡고 2026)에서 교육 목적으로만 사용한다.
+- 5,110행 · 12열(id, gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status, stroke). 뇌졸중(stroke=1) 249건(4.87%).
+- 원본과 다른 점 하나: bmi 열의 문자열 "N/A" 201건을 빈 칸으로 바꿨다. 그 밖의 값은 원본과 같다(원본 SHA-256 644d473b… 316,971바이트, 2026-09-15 확인).
+- 실제 환자를 식별할 수 있는 정보는 없다.
+
+
+## eafc25_players.csv — EA SPORTS FC 25 선수 능력치 (필드플레이어 상위 800명)
+
+- 연도: EA SPORTS FC 25, **2024-25 시즌** 데이터. 손흥민이 토트넘, 음바페가 레알 마드리드, 홀란드가 맨체스터 시티, 김민재가 바이에른 뮌헨으로 적혀 있어 시즌이 확인된다(마르무시가 맨체스터 시티, 크바라츠헬리아가 파리 생제르맹이라 겨울 이적까지 반영된 갱신본이다).
+- 출처: GitHub `mzafram2001/ea-fc`의 `data/dataset_ea_fc_25.csv`(MIT 라이선스, 로그인 없이 raw URL로 내려받을 수 있다). 그 저장소는 공개 소스에서 모은 정리본이며, 원본 각 행의 `player_url` 열이 sofifa.com을 가리킨다. **게임사가 공식 배포한 데이터가 아니다.** 같은 성격의 캐글 데이터셋(mexwell "⚽️ EA FC25 Player Database" 등)도 있으나 라이선스 문구를 로그인 없이 확인할 수 없어 사용하지 않았다.
+- 정리 방식: 원본 18,507명에서 ① 포지션에 GK가 들어간 골키퍼를 빼고 ② 종합 능력치 내림차순(동점은 이름 오름차순)으로 상위 800명을 골랐다. 열 이름은 기존 `eafc_players.csv`와 같게 맞췄다(`alias`→`name`, `club_name`→`club`, `physical`→`physic`). 값 자체는 고치지 않았다.
+- 800행 · 14열(name, long_name, positions, club, overall, pace, shooting, passing, dribbling, defending, physic, value_eur, age, height_cm). 인코딩 utf-8. 종합 능력치 91~77.
+- 주의: `positions`는 "RM,RW"처럼 쉼표로 이어 붙였다. `value_eur`는 유로 단위이고 0인 선수가 9명(계약이 없는 선수), `club`이 빈 칸인 선수가 8명 있다. 모두 종합 능력치 상위 120명 밖이다.
+- 쓰는 곳: 고등학교 『데이터 과학』 9차시 군집(당곡고 2026).
+
+## eafc25_top100.csv — 위와 같은 데이터의 상위 100명 · 선수 이름 한글 표기 추가
+
+- `eafc25_players.csv`에서 종합 능력치 상위 100명(동점은 이름 오름차순)만 뽑고, 맨 앞에 `name_ko` 열을 더한 파일이다. 값은 원본 그대로이며 골키퍼는 원본 단계에서 이미 빠져 있다.
+- 한글 표기는 국내 언론에서 쓰는 이름을 손으로 맞춘 것이다(살라·홀란드·손흥민 …). 구단 이름(`club`)은 영문 그대로 둔다.
+- 100행 · 14열(name_ko, name, positions, club, overall, pace, shooting, passing, dribbling, defending, physic, value_eur, age, height_cm). 인코딩 utf-8. 종합 능력치 91~84.
+- 쓰는 곳: 고등학교 『데이터 과학』 9차시 실험실(당곡고 2026) — 학생이 만드는 군집 앱이 화면에 한글 이름을 보여 주기 위한 파일.

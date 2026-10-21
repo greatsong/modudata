@@ -1,0 +1,801 @@
+name,long_name,positions,club,overall,pace,shooting,passing,dribbling,defending,physic,value_eur,age,height_cm
+M. Salah,Mohamed Salah,"RM,RW",Liverpool FC,91,89,89,86,90,45,76,104000000,32,175
+Rodri,Rodrigo Hernández Cascante,"CDM,CM",Manchester City,91,66,80,86,84,87,85,115500000,28,190
+E. Haaland,Erling Haaland,ST,Manchester City,90,88,92,70,81,45,88,157000000,23,195
+H. Kane,Harry Kane,ST,Bayern München,90,65,93,83,82,49,82,117500000,30,188
+J. Bellingham,Jude Bellingham,"CAM,CM",Real Madrid,90,80,86,83,88,78,85,174500000,21,186
+K. Mbappé,Kylian Mbappé,"ST,LW",Real Madrid,90,97,89,81,92,36,77,160000000,25,182
+V. van Dijk,Virgil van Dijk,CB,Liverpool FC,90,78,60,72,72,90,87,77500000,32,193
+Vini Jr.,Vinícius José de Oliveira Júnior,"LW,ST",Real Madrid,90,95,85,81,91,29,69,171500000,23,176
+F. Wirtz,Florian Wirtz,"CAM,ST",Bayer 04 Leverkusen,89,80,82,89,90,51,67,143500000,21,177
+K. De Bruyne,Kevin De Bruyne,"CM,CAM",Manchester City,89,67,87,93,85,65,74,63500000,33,181
+R. Lewandowski,Robert Lewandowski,ST,FC Barcelona,89,75,89,79,86,44,84,44000000,35,185
+A. Rüdiger,Antonio Rüdiger,CB,Real Madrid,88,82,55,73,70,86,86,62500000,31,190
+B. Saka,Bukayo Saka,"RW,RM",Arsenal FC,88,86,83,84,88,60,73,121000000,22,178
+F. Valverde,Federico Valverde,"CM,CDM,RB",Real Madrid,88,88,83,84,84,80,84,120000000,25,182
+J. Kimmich,Joshua Kimmich,"CDM,RB",Bayern München,88,66,74,89,84,82,77,78000000,29,177
+J. Musiala,Jamal Musiala,"CAM,LM,CM",Bayern München,88,83,82,79,90,65,65,133500000,21,184
+L. Martínez,Lautaro Martínez,ST,Inter Milan,88,81,88,75,84,51,85,101500000,26,174
+Raphinha,Raphael Dias Belloli,"LM,RW",FC Barcelona,88,91,84,83,87,53,74,97500000,27,176
+A. Bastoni,Alessandro Bastoni,CB,Inter Milan,87,74,46,75,76,87,83,88500000,25,190
+A. Griezmann,Antoine Griezmann,"ST,LM",Atlético Madrid,87,78,86,86,88,59,76,51000000,33,176
+C. Palmer,Cole Palmer,"CAM,RM",Chelsea FC,87,77,85,87,87,50,67,111000000,22,185
+D. Rice,Declan Rice,"CDM,CM",Arsenal FC,87,73,73,84,79,84,85,85000000,25,185
+Gabriel,Gabriel dos S. Magalhães,CB,Arsenal FC,87,69,41,63,63,88,83,82500000,26,190
+J. Tah,Jonathan Tah,CB,Bayer 04 Leverkusen,87,71,38,60,63,87,85,68500000,28,195
+L. Messi,Lionel Messi,"RW,ST,CAM",Inter Miami,87,79,85,85,89,33,64,26000000,37,169
+M. Ødegaard,Martin Ødegaard,CM,Arsenal FC,87,70,81,89,88,67,66,99500000,25,178
+Marquinhos,Marcos Aoás Corrêa,CB,Paris Saint-Germain,87,79,56,75,74,89,81,65500000,30,183
+N. Barella,Nicolò Barella,"CM,CDM",Inter Milan,87,80,78,84,87,80,82,84500000,27,175
+O. Dembélé,Ousmane Dembélé,"RW,ST",Paris Saint-Germain,87,92,82,82,88,43,61,85000000,27,178
+Pedri,Pedro González López,"CM,CDM",FC Barcelona,87,77,69,83,89,73,75,110000000,21,174
+V. Osimhen,Victor Osimhen,ST,Galatasaray SK,87,91,85,65,81,42,82,101500000,25,186
+W. Saliba,William Saliba,CB,Arsenal FC,87,82,39,70,74,87,83,92000000,23,193
+A. Hakimi,Achraf Hakimi,RB,Paris Saint-Germain,86,92,76,80,81,77,79,78500000,25,181
+A. Isak,Alexander Isak,ST,Newcastle United,86,86,85,73,86,39,75,89500000,24,192
+A. Mac Allister,Alexis Mac Allister,"CM,CDM",Liverpool FC,86,69,82,85,85,77,77,84500000,25,176
+Bremer,Gleison Bremer Silva Nascimento,CB,Juventus FC,86,82,50,58,66,86,85,72500000,27,187
+Bruno Fernandes,Bruno Miguel Borges Fernandes,"CAM,CM,LW",Manchester United,86,70,84,88,83,65,75,66500000,29,179
+Carvajal,Daniel Carvajal Ramos,RB,Real Madrid,86,81,58,79,81,81,79,47000000,32,173
+F. de Jong,Frenkie de Jong,"CM,CDM",FC Barcelona,86,82,69,85,87,77,77,72000000,27,181
+G. Xhaka,Granit Xhaka,"CDM,CM",Bayer 04 Leverkusen,86,50,75,85,74,79,82,47500000,31,186
+H. Son,Heung Min Son,"LW,ST",Tottenham Hotspur,86,85,84,81,85,42,73,56500000,31,183
+H. Çalhanoğlu,Hakan Çalhanoğlu,"CDM,CM",Inter Milan,86,71,81,87,82,80,77,57000000,30,178
+J. Alvarez,Julián Alvarez,"ST,CAM",Atlético Madrid,86,85,86,81,87,57,79,94000000,24,170
+J. Koundé,Jules Koundé,"RB,CB",FC Barcelona,86,84,47,73,76,86,81,83000000,25,180
+K. Benzema,Karim Benzema,ST,Al Ittihad,86,77,85,81,84,38,77,23000000,36,185
+Lamine Yamal,Lamine Yamal Nasraoui Ebana,"RM,RW",FC Barcelona,86,84,79,82,89,23,53,140500000,16,180
+P. Dybala,Paulo Dybala,"CAM,ST",AS Roma,86,80,85,84,88,41,65,65500000,30,177
+P. Foden,Phil Foden,"RW,CM,LW",Manchester City,86,84,83,83,89,57,63,88000000,24,171
+Rodrygo,Rodrygo Silva de Goes,"RW,ST,RM",Real Madrid,86,89,81,80,88,31,64,102500000,23,174
+Rúben Dias,Rúben Santos Gato Alves Dias,CB,Manchester City,86,60,39,70,69,86,86,68500000,27,187
+S. Guirassy,Serhou Guirassy,ST,Borussia Dortmund,86,71,86,75,83,40,81,69500000,28,187
+T. Alexander-Arnold,Trent Alexander-Arnold,RB,Liverpool FC,86,76,72,90,80,80,74,74000000,25,180
+T. Hernández,Theo Hernández,LB,AC Milan,86,93,76,78,83,79,86,73000000,26,184
+V. Gyökeres,Viktor Gyökeres,"ST,LW",Sporting CP,86,90,85,72,81,36,91,90000000,26,189
+Bernardo Silva,Bernardo Mota Carvalho e Silva,"CM,RM",Manchester City,85,67,78,84,89,71,68,52500000,29,173
+Bruno Guimarães,Bruno Guimarães Moura,"CDM,CM",Newcastle United,85,68,75,83,84,79,83,56500000,26,182
+Cristiano Ronaldo,C. Ronaldo dos Santos Aveiro,ST,Al Nassr,85,75,87,76,80,34,77,18500000,39,187
+D. Upamecano,Dayot Upamecano,CB,Bayern München,85,79,45,64,73,84,85,63500000,25,186
+Dani Olmo,Daniel Olmo Carvajal,"CAM,CM",FC Barcelona,85,74,79,83,87,50,57,63500000,26,179
+F. Dimarco,Federico Dimarco,"LB,LM",Inter Milan,85,80,78,84,83,79,81,58000000,26,175
+Grimaldo,Alejandro Grimaldo García,"LM,LB",Bayer 04 Leverkusen,85,74,73,87,85,76,71,54500000,28,171
+I. Konaté,Ibrahima Konaté,CB,Liverpool FC,85,77,34,63,68,85,85,60000000,25,194
+João Cancelo,João Pedro Cavaco Cancelo,"RB,LB,RM",Al Hilal,85,82,73,85,85,79,72,46500000,30,182
+K. Kvaratskhelia,Khvicha Kvaratskhelia,"LW,LM",Paris Saint-Germain,85,86,79,81,87,41,74,77500000,23,183
+L. Díaz,Luis Díaz,"LM,LW,ST",Liverpool FC,85,90,82,75,87,45,75,57500000,27,180
+L. Modrić,Luka Modrić,"CM,CAM,CDM",Real Madrid,85,72,75,88,87,71,62,17000000,38,172
+M. Caicedo,Moisés Caicedo,CDM,Chelsea FC,85,75,63,77,80,84,82,68000000,22,178
+M. Olise,Michael Olise,"RM,RW",Bayern München,85,78,79,83,86,53,62,75000000,22,184
+N. Kanté,N'Golo Kanté,"CDM,CM",Al Ittihad,85,76,65,73,80,85,77,26500000,33,168
+N. Schlotterbeck,Nico Schlotterbeck,CB,Borussia Dortmund,85,77,59,73,73,85,82,66000000,24,191
+Nico Williams,Nicholas Williams Arthuer,"LM,RM",Athletic Club,85,93,74,78,86,36,65,78500000,21,181
+R. Araujo,Ronald Araujo,"CB,RB",FC Barcelona,85,82,53,64,62,85,84,71500000,25,188
+R. Mahrez,Riyad Mahrez,"RM,RW",Al Ahli SFC,85,79,81,81,88,39,62,33500000,33,179
+Rafael Leão,Rafael da Conceição Leão,"LW,LM",AC Milan,85,93,79,80,86,28,77,71500000,25,188
+S. Milinković-Savić,Sergej Milinković-Savić,"CM,CDM",Al Hilal,85,64,80,81,82,78,88,52500000,29,192
+S. Tonali,Sandro Tonali,"CDM,CM",Newcastle United,85,84,75,81,81,82,83,63000000,24,181
+Vitinha,Vítor Machado Ferreira,"CM,CDM",Paris Saint-Germain,85,72,78,84,87,73,68,77000000,24,172
+Éder Militão,Éder Gabriel Militão,CB,Real Madrid,85,85,50,69,71,85,82,62500000,26,186
+A. Davies,Alphonso Davies,"LB,LM",Bayern München,84,95,66,78,85,73,78,53500000,23,185
+A. Lookman,Ademola Lookman,"ST,CAM",Atalanta BC,84,86,83,72,88,32,69,50500000,26,174
+A. Tchouaméni,Aurélien Tchouaméni,"CDM,CM,CB",Real Madrid,84,73,69,79,78,81,82,52000000,24,187
+B. Pavard,Benjamin Pavard,"CB,RB",Inter Milan,84,75,67,76,76,86,82,36500000,28,186
+B. White,Benjamin White,RB,Arsenal FC,84,73,35,77,78,83,80,42000000,26,185
+C. Gakpo,Cody Gakpo,"LM,LW,ST",Liverpool FC,84,83,83,80,83,48,75,50500000,25,189
+C. Pulisic,Christian Pulisic,"RW,RM,CAM",AC Milan,84,88,82,78,86,38,63,50500000,25,178
+D. Alaba,David Alaba,"CB,LB",Real Madrid,84,77,71,83,80,85,76,27500000,32,180
+D. Kulusevski,Dejan Kulusevski,"CAM,CM,RW",Tottenham Hotspur,84,75,79,83,85,62,83,57500000,24,186
+E. Palacios,Exequiel Palacios,"CM,CDM",Bayer 04 Leverkusen,84,69,76,79,82,82,73,55500000,25,178
+F. Acerbi,Francesco Acerbi,CB,Inter Milan,84,60,50,65,65,87,80,7500000,36,192
+Iago Aspas,Iago Aspas Juncal,"ST,RW,CAM",RC Celta,84,81,86,81,85,35,65,14500000,36,176
+Iñigo Martínez,Iñigo Martínez Berridi,CB,FC Barcelona,84,71,57,69,67,85,80,20000000,33,182
+J. Frimpong,Jeremie Frimpong,"RM,RB",Bayer 04 Leverkusen,84,93,62,74,85,75,68,54500000,23,172
+J. Gvardiol,Joško Gvardiol,"LB,CB",Manchester City,84,79,71,75,78,84,83,54500000,22,185
+J. Maddison,James Maddison,"CM,CAM",Tottenham Hotspur,84,71,81,86,86,56,63,44500000,27,175
+João Neves,João Pedro Gonçalves Neves,"CM,CDM",Paris Saint-Germain,84,77,69,79,84,79,80,63500000,19,174
+K. Coman,Kingsley Coman,"LM,RM",Bayern München,84,87,75,78,87,30,61,42500000,28,181
+L. Openda,Loïs Openda,ST,RB Leipzig,84,95,83,69,81,31,79,58500000,24,175
+L. Sané,Leroy Sané,"RM,LM,RW",Bayern München,84,88,81,79,86,37,69,42500000,28,183
+M. Thuram,Marcus Thuram,ST,Inter Milan,84,86,82,76,82,50,82,50500000,26,192
+Mikel Merino,Mikel Merino Zazón,"CM,ST",Arsenal FC,84,70,79,81,81,81,81,42000000,28,189
+O. Marmoush,Omar Marmoush,"ST,LW,CAM",Manchester City,84,89,84,76,86,34,71,51000000,25,183
+O. Watkins,Ollie Watkins,ST,Aston Villa,84,84,82,73,80,50,83,43000000,28,180
+P. Schick,Patrik Schick,ST,Bayer 04 Leverkusen,84,74,83,71,81,38,77,43000000,28,191
+R. De Paul,Rodrigo De Paul,"CM,CDM",Atlético Madrid,84,76,78,83,82,76,84,40500000,30,180
+R. Gravenberch,Ryan Gravenberch,"CDM,CM",Liverpool FC,84,76,76,80,85,80,80,53500000,22,190
+Rúben Neves,Rúben Diogo da Silva Neves,"CDM,CM",Al Hilal,84,58,75,87,77,77,75,43000000,27,180
+S. Mané,Sadio Mané,"LM,RM,ST",Al Nassr,84,83,81,79,86,44,75,33500000,32,174
+T. Reijnders,Tijjani Reijnders,"CM,CDM,CAM",AC Milan,84,80,77,81,85,76,80,55500000,25,185
+X. Simons,Xavi Simons,"CAM,LW,LM",RB Leipzig,84,81,77,80,86,61,71,65000000,21,179
+İ. Gündoğan,İlkay Gündoğan,"CM,CDM",Manchester City,84,56,80,83,85,74,68,26000000,33,180
+A. Dovbyk,Artem Dovbyk,ST,AS Roma,83,83,84,69,79,34,81,42500000,27,189
+A. Gordon,Anthony Gordon,"LW,RW",Newcastle United,83,91,79,78,83,50,71,49500000,23,183
+A. Laporte,Aymeric Laporte,CB,Al Nassr,83,55,50,75,70,85,77,30000000,30,189
+A. Rabiot,Adrien Rabiot,"CM,CAM",Olympique de Marseille,83,81,78,80,79,80,86,35500000,29,191
+A. Romagnoli,Alessio Romagnoli,CB,SS Lazio,83,64,40,56,69,84,79,30500000,29,185
+Aleix García,Aleix García Serrano,"CM,CDM",Bayer 04 Leverkusen,83,67,75,85,84,75,68,41500000,27,173
+B. Barcola,Bradley Barcola,"LW,RW",Paris Saint-Germain,83,90,77,76,83,39,64,56000000,21,186
+B. Kamara,Boubacar Kamara,"CDM,CM",Aston Villa,83,66,55,74,75,84,80,42500000,24,184
+Balde,Alejandro Balde Martínez,LB,FC Barcelona,83,91,50,75,79,78,67,47500000,20,175
+C. Romero,Cristian Romero,CB,Tottenham Hotspur,83,68,46,62,66,85,81,39500000,26,185
+D. Dumfries,Denzel Dumfries,"RB,RM",Inter Milan,83,84,70,74,77,79,87,33000000,28,188
+D. Vlahović,Dušan Vlahović,ST,Juventus FC,83,78,84,69,77,29,84,50000000,24,190
+E. Camavinga,Eduardo Camavinga,"CM,CDM,LB",Real Madrid,83,80,68,81,84,78,80,73500000,21,185
+E. Fernández,Enzo Fernández,"CM,CDM,CAM",Chelsea FC,83,68,75,84,81,75,78,52000000,23,178
+Fabián Ruiz,Fabián Ruiz Peña,"CM,CDM",Paris Saint-Germain,83,58,76,80,80,75,71,36500000,28,189
+G. Di Lorenzo,Giovanni Di Lorenzo,"RB,CB",SSC Napoli,83,84,70,73,77,79,80,31500000,30,183
+G. Mancini,Gianluca Mancini,CB,AS Roma,83,71,49,56,64,84,83,31500000,28,190
+Gavi,Pablo Martín Páez Gavira,"CM,CAM",FC Barcelona,83,76,66,78,85,68,70,55000000,19,173
+Gerard Moreno,Gerard Moreno Balagueró,"ST,RW,CAM",Villarreal CF,83,77,84,77,81,46,72,29500000,32,180
+H. Mkhitaryan,Henrikh Mkhitaryan,"CM,CAM",Inter Milan,83,79,78,82,83,72,78,14500000,35,177
+Isco,Francisco Román Alarcón Suárez,"CAM,LM,CM",Real Betis Balompié,83,66,76,84,85,59,60,29000000,32,176
+Iñaki Williams,Iñaki Williams Arthuer,"RM,ST",Athletic Club,83,94,81,74,80,45,84,35000000,30,186
+J. Giménez,José María Giménez,CB,Atlético Madrid,83,74,46,60,62,85,82,30500000,29,185
+J. Stones,John Stones,"CB,RB",Manchester City,83,69,58,74,77,84,75,30000000,30,188
+K. Laimer,Konrad Laimer,"RB,CDM,CM",Bayern München,83,80,69,76,76,82,78,35000000,27,180
+Kim Min Jae,Min Jae Kim,CB,Bayern München,83,73,33,57,63,84,83,36500000,27,190
+L. Goretzka,Leon Goretzka,"CM,CDM",Bayern München,83,68,80,79,80,80,84,35500000,29,189
+L. Martínez,Lisandro Martínez,CB,Manchester United,83,71,59,79,79,84,81,37500000,26,178
+L. Torreira,Lucas Torreira,"CDM,CM",Galatasaray SK,83,76,71,78,81,81,81,32000000,28,166
+L. Trossard,Leandro Trossard,"LW,ST",Arsenal FC,83,82,82,80,85,30,61,35500000,29,171
+M. Akanji,Manuel Akanji,CB,Manchester City,83,78,48,70,75,84,82,31500000,28,187
+M. Diaby,Moussa Diaby,"RM,ST",Al Ittihad,83,95,75,74,86,43,53,45000000,24,170
+M. Icardi,Mauro Icardi,ST,Galatasaray SK,83,68,83,71,76,40,75,30500000,31,181
+M. Kovačić,Mateo Kovačić,"CM,CDM",Manchester City,83,70,70,82,87,72,72,34500000,30,178
+M. Locatelli,Manuel Locatelli,"CDM,CM",Juventus FC,83,63,68,80,76,80,80,43000000,26,185
+M. Zaccagni,Mattia Zaccagni,"LM,LW",SS Lazio,83,87,78,76,88,57,66,35500000,29,177
+M. de Ligt,Matthijs de Ligt,CB,Manchester United,83,62,61,63,67,83,83,42000000,24,189
+M. van de Ven,Micky van de Ven,CB,Tottenham Hotspur,83,90,47,64,72,83,83,47000000,23,193
+Marc Cucurella,Marc Cucurella Saseta,LB,Chelsea FC,83,77,64,80,81,81,78,39500000,25,174
+Marcos Llorente,Marcos Llorente Moreno,"RB,CM,RM",Atlético Madrid,83,89,79,78,80,78,81,32000000,29,184
+Morata,Álvaro Borja Morata Martín,"ST,CAM",Galatasaray SK,83,82,81,74,80,31,79,30500000,31,190
+N. Aké,Nathan Aké,"CB,LB",Manchester City,83,76,53,72,75,84,77,30500000,29,180
+Nuno Mendes,Nuno Alexandre Tavares Mendes,LB,Paris Saint-Germain,83,92,58,76,82,78,76,49500000,22,180
+P. Hincapié,Piero Hincapié,"CB,LB",Bayer 04 Leverkusen,83,83,40,65,73,83,80,47500000,22,184
+Palhinha,João Maria Palhinha Gonçalves,"CDM,CM",Bayern München,83,52,68,70,72,84,86,32000000,28,190
+Pedro Gonçalves,Pedro António Pereira Gonçalves,"LW,CAM,CM",Sporting CP,83,77,82,83,84,63,68,43000000,26,173
+R. Andrich,Robert Andrich,"CDM,CM,CB",Bayer 04 Leverkusen,83,54,77,76,73,83,83,31000000,29,186
+R. Le Normand,Robin Le Normand,CB,Atlético Madrid,83,68,28,59,63,84,80,38500000,27,187
+R. Lukaku,Romelu Lukaku,ST,SSC Napoli,83,79,82,73,75,41,82,30500000,31,191
+Rafa,Rafael A. Ferreira Silva,"CAM,ST",Beşiktaş JK,83,93,76,77,86,48,54,30000000,31,172
+Ronaldo Cabrais,Ronaldo Jailson Cabrais Petri,"CAM,RM",Botafogo,83,88,77,83,84,35,72,36500000,28,177
+S. Lobotka,Stanislav Lobotka,"CM,CDM",SSC Napoli,83,72,69,80,82,75,75,35500000,29,170
+S. de Vrij,Stefan de Vrij,CB,Inter Milan,83,62,41,66,69,85,76,23500000,32,189
+Sancet,Oihan Sancet Tirapu,"CAM,CM,ST",Athletic Club,83,76,81,79,84,68,82,55000000,24,188
+T. Partey,Thomas Partey,"CDM,CM,RB",Arsenal FC,83,62,71,80,77,80,82,25500000,31,185
+Vivian,Daniel Vivian Moreno,CB,Athletic Club,83,80,50,62,70,84,83,47000000,24,183
+W. Orban,Willi Orban,CB,RB Leipzig,83,58,36,56,56,85,78,25000000,31,186
+W. Pacho,Willian Pacho,CB,Paris Saint-Germain,83,80,33,60,61,83,84,50500000,22,188
+Y. En-Nesyri,Youssef En-Nesyri,ST,Fenerbahçe SK,83,80,82,65,75,36,80,39500000,27,188
+Y. Tielemans,Youri Tielemans,"CM,CDM,CAM",Aston Villa,83,54,80,84,80,72,76,38500000,27,176
+Á. Di María,Ángel Di María,"RW,RM",SL Benfica,83,74,80,85,87,48,65,12000000,36,180
+A. Christensen,Andreas Christensen,"CB,CDM",FC Barcelona,82,66,32,68,71,84,75,29000000,28,187
+A. Mitrović,Aleksandar Mitrović,ST,Al Hilal,82,58,82,62,71,28,86,30500000,29,189
+A. Robertson,Andrew Robertson,LB,Liverpool FC,82,77,61,80,78,79,76,26500000,30,178
+A. Robinson,Antonee Robinson,LB,Fulham FC,82,88,46,75,78,78,80,33000000,26,183
+A. Sørloth,Alexander Sørloth,ST,Atlético Madrid,82,77,82,70,75,36,85,31000000,28,195
+Anderson Talisca,Anderson Souza Conceição,"CAM,ST,RW",Fenerbahçe SK,82,78,86,80,82,45,74,29500000,30,191
+B. Mbeumo,Bryan Mbeumo,"RW,RM,ST",Brentford,82,88,82,77,83,49,76,39500000,24,171
+Brahim,Brahim Díaz,"CAM,RW,LW",Real Madrid,82,85,74,78,85,31,59,43500000,24,170
+C. Immobile,Ciro Immobile,ST,Beşiktaş JK,82,82,81,67,78,39,73,15000000,34,185
+C. Nkunku,Christopher Nkunku,"CAM,LM,ST",Chelsea FC,82,78,81,80,84,45,63,33500000,26,177
+D. Berardi,Domenico Berardi,"RW,RM",Sassuolo,82,78,80,78,84,36,70,30000000,29,183
+D. Frattesi,Davide Frattesi,"CM,CAM",Inter Milan,82,83,77,78,83,73,75,43500000,24,178
+D. Hancko,Dávid Hancko,"CB,LB",Feyenoord,82,76,66,73,74,82,81,33500000,26,188
+D. Szoboszlai,Dominik Szoboszlai,"CAM,CM",Liverpool FC,82,82,81,83,82,66,74,43500000,23,186
+D. Sánchez,Davinson Sánchez,CB,Galatasaray SK,82,80,48,64,74,82,85,26500000,28,187
+D. Tadić,Dušan Tadić,"CAM,LW,RW",Fenerbahçe SK,82,67,79,86,82,43,78,12500000,35,181
+D. Zapata,Duván Zapata,ST,Torino FC,82,73,81,64,77,35,88,19500000,33,188
+Douglas Luiz,Douglas Luiz Soares de Paulo,"CM,CDM",Juventus FC,82,68,76,85,80,75,76,35500000,26,175
+E. Can,Emre Can,"CB,CDM",Borussia Dortmund,82,75,76,72,74,81,85,25000000,30,186
+E. Džeko,Edin Džeko,ST,Fenerbahçe SK,82,57,82,74,77,40,76,10500000,38,193
+E. Konsa,Ezri Konsa,"CB,RB",Aston Villa,82,78,51,73,76,83,78,31500000,26,183
+E. Tapsoba,Edmond Tapsoba,CB,Bayer 04 Leverkusen,82,75,54,67,70,84,79,34000000,25,192
+F. Chiesa,Federico Chiesa,"RM,LM,ST",Liverpool FC,82,88,80,76,84,52,71,33500000,26,175
+F. Mendy,Ferland Mendy,LB,Real Madrid,82,88,64,75,76,78,84,27000000,29,180
+F. Schär,Fabian Schär,CB,Newcastle United,82,51,69,77,74,84,80,20000000,32,188
+F. Tomori,Fikayo Tomori,CB,AC Milan,82,81,40,60,68,82,80,35500000,26,185
+Gabriel Martinelli,Gabriel Teodoro Martinelli Silva,"LW,LM",Arsenal FC,82,91,77,75,84,46,72,41500000,23,178
+Gayà,José Luís Gayà Peña,LB,Valencia CF,82,81,61,77,79,78,74,27000000,29,172
+J. Bowen,Jarrod Bowen,"RM,ST",West Ham United,82,77,81,76,81,46,70,32500000,27,175
+J. Brandt,Julian Brandt,"CAM,LM,CM",Borussia Dortmund,82,73,78,83,84,48,70,30500000,28,185
+J. David,Jonathan David,ST,Lille OSC,82,82,82,71,80,34,77,42000000,24,178
+J. Timber,Jurriën Timber,"RB,LB,CB",Arsenal FC,82,78,48,73,78,81,80,40500000,23,179
+Joelinton,Joelinton Apolinário de Lira,"CM,LW",Newcastle United,82,76,73,77,81,82,90,32000000,27,186
+K. Havertz,Kai Havertz,"ST,CM",Arsenal FC,82,77,79,79,82,48,74,38500000,25,193
+K. Koulibaly,Kalidou Koulibaly,CB,Al Hilal,82,76,48,62,66,82,84,14500000,33,186
+K. Mitoma,Kaoru Mitoma,LM,Brighton & Hove Albion,82,88,73,76,86,57,64,32500000,27,178
+K. Walker,Kyle Walker,RB,AC Milan,82,86,64,76,77,78,80,11000000,34,183
+Koke,Jorge Resurrección,"CM,CDM",Atlético Madrid,82,64,72,83,79,76,78,24000000,32,176
+L. Hernández,Lucas Hernández,"CB,LB",Paris Saint-Germain,82,74,54,72,71,83,78,26500000,28,184
+M. Brozović,Marcelo Brozović,"CDM,CM",Al Nassr,82,66,74,79,80,80,80,21500000,31,181
+M. Depay,Memphis Depay,"ST,LW",,82,79,83,80,83,31,79,0,30,178
+M. Greenwood,Mason Greenwood,"CAM,RM,ST",Olympique de Marseille,82,83,82,77,83,37,61,44500000,22,181
+M. Guendouzi,Mattéo Guendouzi,"CDM,CM",SS Lazio,82,72,71,79,80,77,81,36500000,25,185
+M. Hjulmand,Morten Hjulmand,"CDM,CM",Sporting CP,82,70,76,78,77,79,84,38500000,25,185
+M. Sabitzer,Marcel Sabitzer,"CDM,CAM,CM",Borussia Dortmund,82,72,81,81,80,75,78,25500000,30,178
+Malcom,Malcom Filipe Silva de Oliveira,"CAM,RM",Al Hilal,82,88,79,80,84,43,73,32500000,27,172
+Nacho Fernández,José Ignacio Fernández Iglesias,"CB,LB,RB",Al Qadsiah FC,82,73,37,68,71,82,79,10000000,34,180
+Otávio,Otávio Edmilson da Silva Monteiro,"CAM,CM,RM",Al Nassr,82,78,71,82,85,70,75,30000000,29,171
+Oyarzabal,Mikel Oyarzabal Ugarte,"ST,LM",Real Sociedad,82,77,83,81,82,42,65,33000000,27,181
+P. Aubameyang,Pierre-Emerick Aubameyang,ST,Al Qadsiah FC,82,84,83,72,78,35,63,13000000,35,187
+P. Zieliński,Piotr Zieliński,"CM,CDM",Inter Milan,82,78,76,81,83,70,63,29000000,30,180
+Parejo,Daniel Parejo Muñoz,"CM,CDM",Villarreal CF,82,52,80,87,78,74,68,12000000,35,182
+Pedro Porro,Pedro Antonio Porro Sauceda,RB,Tottenham Hotspur,82,82,73,81,81,77,77,38500000,24,173
+R. James,Reece James,RB,Chelsea FC,82,78,72,83,82,82,82,36500000,24,180
+S. Botman,Sven Botman,CB,Newcastle United,82,59,37,62,65,83,82,37000000,24,193
+S. Gnabry,Serge Gnabry,"RM,LM,ST",Bayern München,82,80,83,78,84,43,66,30500000,28,176
+Savinho,Sávio Moreira de Oliveira,"RW,LW",Manchester City,82,88,71,78,85,30,53,45000000,20,176
+T. Koopmeiners,Teun Koopmeiners,"CM,CAM",Juventus FC,82,68,77,83,77,75,78,35500000,26,183
+T. Kubo,Takefusa Kubo,"RM,RW",Real Sociedad,82,86,77,78,85,40,64,43500000,23,173
+V. Boniface,Victor Boniface,ST,Bayer 04 Leverkusen,82,73,83,66,80,38,82,46500000,23,190
+W. Anton,Waldemar Anton,CB,Borussia Dortmund,82,68,47,66,66,84,83,28000000,27,189
+Y. Carrasco,Yannick Carrasco,"LW,LM",Al Shabab,82,87,81,79,85,59,67,29500000,30,181
+Zubimendi,Martín Zubimendi Ibáñez,"CDM,CM",Real Sociedad,82,67,67,78,79,80,73,38500000,25,180
+Álex Baena,Alejandro Baena Rodríguez,"LM,ST,LW",Villarreal CF,82,79,75,82,80,65,68,47000000,22,175
+Álex Berenguer,Alejandro Berenguer Remiro,"LM,RM,CAM",Athletic Club,82,85,77,79,84,65,69,30500000,28,175
+A. Budimir,Ante Budimir,ST,CA Osasuna,81,62,81,58,76,35,80,21000000,32,190
+A. Buongiorno,Alessandro Buongiorno,CB,SSC Napoli,81,69,45,67,65,84,77,34000000,25,190
+A. Kramarić,Andrej Kramarić,"CAM,CM",TSG 1899 Hoffenheim,81,69,82,78,84,33,73,16000000,33,177
+A. Stiller,Angelo Stiller,"CDM,CM",VfB Stuttgart,81,58,58,81,81,75,70,32000000,23,183
+A. Zambo Anguissa,André-Franck Zambo Anguissa,"CM,CDM",SSC Napoli,81,75,73,74,79,78,88,25500000,28,184
+Ayoze,Ayoze Pérez Gutiérrez,"LM,ST,CAM",Villarreal CF,81,78,79,78,83,58,67,25000000,30,178
+B. Henrichs,Benjamin Henrichs,"RB,RM,LB",RB Leipzig,81,74,54,77,78,79,74,25000000,27,185
+Brais Méndez,Brais Méndez Portela,"CM,RM,CAM",Real Sociedad,81,71,80,82,81,65,73,27500000,27,187
+C. De Ketelaere,Charles De Ketelaere,"CAM,ST",Atalanta BC,81,70,78,80,83,55,71,37000000,23,192
+C. Gallagher,Conor Gallagher,"CM,LM",Atlético Madrid,81,75,76,79,79,79,84,38500000,24,182
+C. Smalling,Chris Smalling,CB,Al Fayha,81,52,47,57,60,84,77,8500000,34,194
+C. Wood,Chris Wood,ST,Nottingham Forest,81,53,82,67,71,40,81,21000000,32,191
+Casemiro,Carlos Henrique Venancio Casimiro,"CDM,CM",Manchester United,81,38,74,76,69,79,79,17000000,32,185
+D. Doué,Désiré Doué,"LW,RW,CM",Paris Saint-Germain,81,83,75,77,86,55,69,55500000,19,181
+D. Lukébakio,Dodi Lukébakio,"RM,RW,ST",Sevilla FC,81,87,81,74,83,31,64,28000000,26,187
+D. Raum,David Raum,"LB,LM",RB Leipzig,81,85,61,81,78,73,78,27500000,26,181
+D. Udogie,Destiny Udogie,LB,Tottenham Hotspur,81,88,64,74,80,77,80,35000000,21,186
+D. Zakaria,Denis Zakaria,"CDM,CM",AS Monaco,81,80,67,74,77,79,85,26500000,27,190
+David Neres,David Neres Campos,"LW,LM,RM",SSC Napoli,81,86,76,75,86,46,64,27500000,27,175
+E. Eze,Eberechi Eze,"CAM,LW",Crystal Palace,81,78,79,77,84,49,69,32000000,26,178
+F. Kessié,Franck Yannick Kessié,"CDM,CM",Al Ahli SFC,81,79,77,73,78,80,87,26500000,27,183
+F. Kostić,Filip Kostić,"LM,LB",Fenerbahçe SK,81,83,75,81,80,70,79,21500000,31,184
+F. Nmecha,Felix Nmecha,"CDM,CM",Borussia Dortmund,81,80,72,73,81,80,84,35500000,23,194
+Fabinho,Fábio Henrique Tavares,"CDM,CM",Al Ittihad,81,57,69,77,76,79,80,21500000,30,188
+Ferran Torres,Ferran Torres García,"LW,RW,ST",FC Barcelona,81,83,79,77,82,35,68,35000000,24,184
+Fred,Frederico de Paula Santos,"CM,CDM",Fenerbahçe SK,81,78,71,79,82,76,78,21000000,31,169
+G. Lo Celso,Giovani Lo Celso,"CAM,RM",Real Betis Balompié,81,69,79,82,83,68,71,26000000,28,177
+H. Vanaken,Hans Vanaken,"CAM,CM",Club Brugge KV,81,45,79,85,77,60,76,21500000,31,195
+I. Bennacer,Ismaël Bennacer,"CDM,CM",Olympique de Marseille,81,77,72,81,83,77,75,28500000,26,175
+Ibañez,Roger Ibañez Da Silva,CB,Al Ahli SFC,81,85,32,45,60,82,83,28500000,25,185
+Isi,Isaac Palazón Camacho,"CAM,RM,ST",Rayo Vallecano,81,86,77,80,82,39,66,25500000,29,169
+J. Grealish,Jack Grealish,"LW,LM",Manchester City,81,76,76,81,86,53,72,26000000,28,180
+J. McGinn,John McGinn,"LM,RM,CAM",Aston Villa,81,70,77,78,81,77,85,25500000,29,178
+J. Sancho,Jadon Sancho,"LM,RM",Chelsea FC,81,80,73,77,88,35,57,33500000,24,180
+Jorginho,Luiz Frello Filho Jorge,"CDM,CM",Arsenal FC,81,46,67,82,79,73,67,17000000,32,178
+K. Trippier,Kieran Trippier,RB,Newcastle United,81,67,65,84,77,80,72,13500000,33,173
+L. Pellegrini,Lorenzo Pellegrini,"CAM,CM",AS Roma,81,75,77,81,81,74,76,26000000,28,186
+L. Suárez,Luis Suárez,ST,Inter Miami,81,59,82,77,75,41,75,9000000,37,182
+M. Darmian,Matteo Darmian,"RB,CB,RM",Inter Milan,81,72,62,74,76,82,76,9500000,34,182
+M. Gibbs-White,Morgan Gibbs-White,CAM,Nottingham Forest,81,76,76,81,83,60,72,33500000,24,179
+M. Ginter,Matthias Ginter,CB,SC Freiburg,81,54,59,71,66,84,75,21000000,30,190
+M. Guéhi,Marc Guéhi,CB,Crystal Palace,81,74,39,69,73,82,79,31500000,23,182
+M. Götze,Mario Götze,"CM,CAM,RM",Eintracht Frankfurt,81,55,74,83,83,55,70,20000000,32,176
+M. Kean,Moise Kean,ST,Fiorentina,81,85,80,58,80,40,76,37500000,24,183
+M. Kerkez,Milos Kerkez,LB,AFC Bournemouth,81,87,59,73,77,76,79,33500000,20,180
+M. Reus,Marco Reus,"CAM,ST",LA Galaxy,81,58,83,83,83,53,63,10500000,35,180
+M. Rogers,Morgan Rogers,"CAM,LM,RM",Aston Villa,81,77,76,78,83,63,79,37500000,21,188
+M. Škriniar,Milan Škriniar,CB,Fenerbahçe SK,81,57,48,60,65,83,81,21500000,29,188
+Matheus Cunha,Matheus Santos Carneiro Da Cunha,"CAM,LW,ST",Wolverhampton Wanderers,81,84,82,78,84,44,75,32500000,25,183
+Miguel Gutiérrez,Miguel Gutiérrez Ortega,"LB,LM",Girona FC,81,82,71,79,81,76,74,35000000,22,180
+Murillo,Murillo Costa dos Santos,CB,Nottingham Forest,81,80,48,66,70,81,83,36000000,21,180
+N. Aguerd,Nayef Aguerd,CB,Real Sociedad,81,73,50,67,65,82,77,24500000,28,190
+N. Jackson,Nicolas Jackson,ST,Chelsea FC,81,85,78,70,82,40,78,37500000,23,187
+N. Mazraoui,Noussair Mazraoui,"RB,CB,RM",Manchester United,81,78,66,77,83,78,71,27500000,26,183
+N. Milenković,Nikola Milenković,CB,Nottingham Forest,81,58,45,62,62,82,84,28000000,26,195
+N. Molina,Nahuel Molina,RB,Atlético Madrid,81,85,67,74,78,77,72,27500000,26,175
+N. Otamendi,Nicolás Otamendi,CB,SL Benfica,81,60,57,64,59,83,86,4600000,36,183
+N. Süle,Niklas Süle,"CB,RB",Borussia Dortmund,81,68,51,66,66,82,79,22000000,28,195
+Nailton Suzuki,Nailton Suzuki Ito,"CAM,ST",Atlético Mineiro,81,82,73,77,82,52,71,26000000,28,180
+O. Giroud,Olivier Giroud,ST,Los Angeles FC,81,48,82,71,74,41,79,9000000,37,193
+O. Kökçü,Orkun Kökçü,"CM,CAM",SL Benfica,81,72,77,83,80,68,76,36500000,23,175
+Oswaldinato,Marvin Oswaldo Rangel Azevedo,ST,Flamengo,81,76,81,67,77,20,79,26500000,28,184
+P. Højbjerg,Pierre-Emile Højbjerg,"CDM,CM",Olympique de Marseille,81,50,73,76,74,77,80,22500000,28,187
+Pau Cubarsí,Pau Cubarsí Paredes,CB,FC Barcelona,81,71,42,65,74,83,75,49500000,17,182
+Pau Torres,Pau Francisco Torres,CB,Aston Villa,81,70,41,77,70,83,77,24000000,27,191
+R. Bentancur,Rodrigo Bentancur,"CDM,CM",Tottenham Hotspur,81,67,68,79,82,78,72,26500000,27,187
+R. Doan,Ritsu Doan,RM,SC Freiburg,81,79,71,77,84,41,61,28000000,26,172
+R. Freuler,Remo Freuler,"CDM,CM",Bologna FC,81,60,72,76,77,77,74,17000000,32,180
+R. Guerreiro,Raphaël Guerreiro,"LB,CM,RB",Bayern München,81,64,78,85,88,75,56,22000000,30,170
+R. Koch,Robin Koch,CB,Eintracht Frankfurt,81,65,44,62,66,82,78,24000000,27,192
+R. Kolo Muani,Randal Kolo Muani,ST,Juventus FC,81,90,79,71,80,38,67,34500000,25,187
+R. Orsolini,Riccardo Orsolini,"RM,RW",Bologna FC,81,79,80,78,83,49,67,27500000,27,183
+Ricardo Horta,Ricardo Jorge da Luz Horta,"CAM,LM,RM",Sporting Clube de Braga,81,80,79,80,81,43,70,25500000,29,173
+Rosival Dourado,Rosival Jailson Dourado Santos,"CDM,CM,CAM",Corinthians,81,77,57,74,77,82,69,26500000,24,175
+S. Al Dawsari,Salem Al Dawsari,"LM,LW",Al Hilal,81,86,75,75,84,57,80,20500000,32,173
+S. Banza,Simon Banza,ST,Trabzonspor,81,76,80,62,77,36,79,28000000,27,189
+S. McTominay,Scott McTominay,"CM,CDM",SSC Napoli,81,59,80,75,77,79,84,27500000,27,193
+Sergi Darder,Sergi Darder Moll,"LM,CM,CDM",RCD Mallorca,81,79,76,81,81,73,77,25000000,30,180
+Sergio Busquets,Sergio Busquets Burgos,"CDM,CM,CB",Inter Miami,81,37,61,77,78,78,73,7500000,35,189
+T. Kleindienst,Tim Kleindienst,ST,Borussia Mönchengladbach,81,67,82,62,70,45,88,26500000,28,194
+T. Müller,Thomas Müller,"CAM,ST,RM",Bayern München,81,57,81,82,78,55,68,12000000,34,185
+Trincão,Francisco Trincão,"CAM,RW,RM",Sporting CP,81,78,79,78,83,39,68,33500000,24,184
+V. Tsygankov,Viktor Tsygankov,"RM,RW,CAM",Girona FC,81,83,76,79,80,46,62,28000000,26,178
+Welington Dano,Welington Kauê Dano Nascimento,"LB,LM",Atlético Mineiro,81,79,54,76,79,75,74,27000000,24,178
+X. Schlager,Xaver Schlager,"CDM,CM",RB Leipzig,81,72,70,74,78,75,79,28500000,26,174
+Y. Fofana,Youssouf Fofana,"CDM,CM",AC Milan,81,69,68,74,77,78,80,32500000,25,181
+Y. Herrera,Yangel Herrera,"CM,CDM,CAM",Girona FC,81,66,76,77,80,80,81,30000000,26,184
+Á. Correa,Ángel Correa,ST,Atlético Madrid,81,84,82,76,85,50,75,25500000,29,171
+Éderson,Éderson José dos Santos,"CM,CAM",Atalanta BC,81,76,70,76,80,78,80,36500000,24,182
+A. Elanga,Anthony Elanga,"RM,LM",Nottingham Forest,80,92,71,74,81,39,70,31000000,22,178
+A. Golovin,Alexandr Golovin,"LM,CAM",AS Monaco,80,75,77,80,83,61,67,21000000,28,178
+A. Guðmundsson,Albert Guðmundsson,"ST,CAM",Fiorentina,80,87,79,70,83,37,72,23000000,27,178
+A. Iwobi,Alex Iwobi,"LM,RM",Fulham FC,80,76,72,77,81,56,76,21000000,28,180
+A. Lacazette,Alexandre Lacazette,ST,Olympique Lyonnais,80,69,82,75,81,44,74,13500000,33,175
+A. Milik,Arkadiusz Milik,ST,Juventus FC,80,56,82,72,77,40,71,20500000,30,186
+A. Rrahmani,Amir Rrahmani,CB,SSC Napoli,80,69,51,58,61,82,78,17500000,30,192
+A. Saint-Maximin,Allan Saint-Maximin,"LW,LM",Fenerbahçe SK,80,90,72,72,88,29,68,22500000,27,173
+A. Wan-Bissaka,Aaron Wan-Bissaka,"RB,RM",West Ham United,80,82,51,69,77,78,73,22500000,26,183
+B. André,Benjamin André,"CDM,CM",Lille OSC,80,61,64,73,76,79,83,10500000,33,180
+B. Cristante,Bryan Cristante,"CM,CDM,CB",AS Roma,80,55,74,78,74,77,84,20500000,29,186
+B. Dia,Boulaye Dia,"ST,CAM",SS Lazio,80,84,81,67,78,43,77,23000000,27,180
+B. Šeško,Benjamin Šeško,ST,RB Leipzig,80,85,79,65,78,46,78,47500000,21,195
+C. Jones,Curtis Jones,"CAM,CM,CDM",Liverpool FC,80,71,74,76,82,71,76,29000000,23,185
+C. Lukeba,Castello Lukeba,CB,RB Leipzig,80,70,43,68,73,81,75,40000000,21,183
+C. Tolisso,Corentin Tolisso,"CM,CDM,CAM",Olympique Lyonnais,80,70,78,77,75,77,79,20500000,29,181
+Carlos Augusto,Carlos Augusto Zopolato Neves,"LM,LB,CB",Inter Milan,80,78,72,77,80,78,80,25000000,25,184
+D. Malen,Donyell Malen,"RM,RW,LM",Aston Villa,80,87,79,72,84,35,71,25000000,25,176
+D. Muñoz,Daniel Muñoz,"RB,RM",Crystal Palace,80,84,68,72,76,76,82,19000000,28,181
+D. Núñez,Darwin Núñez,ST,Liverpool FC,80,90,80,72,77,49,85,28500000,25,187
+D. Solanke,Dominic Solanke,ST,Tottenham Hotspur,80,75,79,66,77,42,83,25000000,26,187
+D. Undav,Deniz Undav,"ST,CAM",VfB Stuttgart,80,67,82,75,80,33,78,23000000,27,179
+D. Zappacosta,Davide Zappacosta,"LB,LM,RM",Atalanta BC,80,77,70,75,77,76,70,14500000,32,182
+Dani Ceballos,Daniel Ceballos Fernández,"CM,CDM",Real Madrid,80,63,70,80,82,71,67,22500000,27,179
+Danilo Pereira,Danilo Luís Hélio Pereira,"CB,CDM",Al Ittihad,80,50,63,70,70,80,84,13500000,32,188
+Diogo Dalot,José Diogo Dalot Teixeira,"RB,LB,RM",Manchester United,80,85,63,75,78,77,80,24500000,25,183
+E. Ndicka,Evan Ndicka,CB,AS Roma,80,74,53,69,69,81,79,24500000,24,192
+E. Skhiri,Ellyes Skhiri,"CDM,CM",Eintracht Frankfurt,80,60,73,74,75,80,76,18000000,29,185
+E. Zhegrova,Edon Zhegrova,"RM,RW",Lille OSC,80,85,71,76,85,25,62,25000000,25,180
+Evanilson,F. Evanilson de Lima Barbosa,ST,AFC Bournemouth,80,76,78,65,78,37,80,29000000,24,183
+F. Aursnes,Fredrik Aursnes,"CM,RB,LB",SL Benfica,80,74,71,78,80,76,82,21000000,28,179
+F. Kadıoğlu,Ferdi Kadıoğlu,"LB,RB",Brighton & Hove Albion,80,88,68,74,83,75,70,26500000,24,174
+Florentino,Florentino Morris Luís,"CDM,CM",SL Benfica,80,55,47,65,73,81,80,26000000,24,184
+G. Sudakov,Georgiy Sudakov,"CAM,CM,CDM",Shakhtar Donetsk,80,81,76,78,81,60,71,43000000,21,177
+Gabriel Jesus,Gabriel Fernando de Jesus,ST,Arsenal FC,80,83,79,74,86,39,74,23000000,27,175
+Galeno,Wenderson Nascimento Galeno,"LM,LB",Al Ahli SFC,80,93,75,71,82,45,69,23000000,26,179
+Gonçalo Inácio,Gonçalo Bernardo Inácio,CB,Sporting CP,80,77,37,70,71,82,79,40000000,22,185
+Gonçalo Ramos,Gonçalo Matias Ramos,ST,Paris Saint-Germain,80,73,79,64,77,47,79,32000000,23,185
+H. Barnes,Harvey Barnes,"LW,LM",Newcastle United,80,85,78,75,81,43,68,23000000,26,185
+H. Maguire,Harry Maguire,CB,Manchester United,80,37,57,70,65,80,82,14500000,31,193
+H. Morita,Hidemasa Morita,"CM,CDM",Sporting CP,80,70,72,77,79,74,78,20500000,29,177
+H. Traoré,Hamari Traoré,RB,Real Sociedad,80,82,57,72,76,75,78,14500000,32,175
+Heberto Gaúcho,Juan Heberto Mestres de Mesquita,"CB,CDM",Atlético Mineiro,80,71,61,57,63,82,80,18000000,28,181
+J. Burkardt,Jonathan Burkardt,ST,1. FSV Mainz 05,80,75,80,67,79,44,77,32000000,23,181
+J. Clauss,Jonathan Clauss,"RB,RM",OGC Nice,80,88,69,76,78,73,69,15500000,31,178
+J. Doku,Jérémy Doku,"LW,RW",Manchester City,80,93,71,72,87,32,68,32500000,22,173
+J. Gomez,Joe Gomez,"CB,RB,LB",Liverpool FC,80,82,29,71,72,80,78,21000000,27,188
+J. Mateta,Jean-Philippe Mateta,ST,Crystal Palace,80,77,81,66,74,39,82,24500000,27,192
+J. Schouten,Jerdy Schouten,"CDM,CB,CM",PSV,80,62,59,72,76,80,72,21500000,27,185
+J. Tarkowski,James Tarkowski,CB,Everton FC,80,45,45,64,60,81,82,14500000,31,188
+Javi Galán,Javier Galán Gil,LB,Atlético Madrid,80,78,56,75,79,77,73,18500000,29,172
+Jordi Alba,Jordi Alba Ramos,LB,Inter Miami,80,82,70,80,81,72,69,6500000,35,170
+João Félix,João Félix Sequeira,"CAM,LM,ST",AC Milan,80,80,78,77,84,45,70,30000000,24,181
+K. Adeyemi,Karim Adeyemi,"RM,LW,ST",Borussia Dortmund,80,96,75,70,82,36,70,34000000,22,180
+K. Danso,Kevin Danso,CB,Tottenham Hotspur,80,75,32,57,62,80,85,25000000,25,190
+K. Fortounis,Konstantinos Fortounis,"CAM,LW,RW",Al Khaleej,80,73,76,81,80,43,65,17500000,31,183
+K. Thuram,Khéphren Thuram,"CM,CDM",Juventus FC,80,77,70,77,80,79,82,30000000,23,192
+L. Acosta,Luciano Acosta,"CAM,ST",FC Dallas,80,79,73,75,85,46,56,20500000,30,161
+L. Bailey,Leon Bailey,RM,Aston Villa,80,90,75,74,85,38,61,23000000,26,178
+L. Balerdi,Leonardo Balerdi,CB,Olympique de Marseille,80,78,45,65,68,81,77,26500000,25,187
+L. Digne,Lucas Digne,LB,Aston Villa,80,72,68,79,76,77,74,18000000,30,178
+L. Shaw,Luke Shaw,"LB,CB",Manchester United,80,75,57,80,77,79,77,19000000,28,181
+L. de Jong,Luuk de Jong,ST,PSV,80,47,80,72,72,57,80,13500000,33,189
+Laure Santeiro,Laureano Thomas Santeiro Marre,"CAM,LM,LW",Fluminense,80,80,72,77,82,26,45,24500000,24,171
+M. Amoura,Mohamed Amoura,"ST,LW,RW",VfL Wolfsburg,80,92,81,71,85,47,58,30500000,24,170
+M. Arnold,Maximilian Arnold,"CDM,CM",VfL Wolfsburg,80,63,79,79,77,76,76,17500000,30,184
+M. Gusto,Malo Gusto,RB,Chelsea FC,80,88,50,75,79,75,75,28500000,21,178
+M. Kudus,Mohammed Kudus,"LM,RM,ST",West Ham United,80,90,76,72,86,60,74,30000000,23,177
+M. Mittelstädt,Maximilian Mittelstädt,"LB,LM",VfB Stuttgart,80,74,62,75,78,77,73,20500000,27,180
+M. Pašalić,Mario Pašalić,"CM,CAM",Atalanta BC,80,69,78,77,81,67,77,20500000,29,186
+M. Politano,Matteo Politano,"RW,RM",SSC Napoli,80,80,78,78,83,59,55,20500000,30,171
+M. Rashford,Marcus Rashford,"LM,LW,ST",Aston Villa,80,89,82,76,80,33,64,23000000,26,186
+M. Retegui,Mateo Retegui,ST,Atalanta BC,80,72,81,65,72,36,77,27000000,25,186
+M. Simakan,Mohamed Simakan,"CB,RB",Al Nassr,80,75,43,65,69,82,81,29000000,24,187
+M. Ugarte,Manuel Ugarte,"CDM,CM",Manchester United,80,69,65,72,77,79,78,27500000,23,182
+M. de Roon,Marten de Roon,"CM,CDM,CB",Atalanta BC,80,64,72,76,75,82,83,13000000,33,186
+Maikel Catarino,Maikel Renan Catarino Fagundes,"RB,RM",Corinthians,80,76,51,70,77,77,72,19000000,28,177
+Marco Asensio,Marco Asensio Willemsen,"RW,CAM",Aston Villa,80,75,79,81,83,43,61,21000000,28,182
+Mario Hermoso,Mario Hermoso Canseco,CB,Bayer 04 Leverkusen,80,75,49,73,71,80,79,19500000,29,184
+O. Aina,Ola Aina,"RB,LB",Nottingham Forest,80,89,60,70,75,78,75,20500000,27,184
+O. Kossounou,Odilon Kossounou,"CB,RB",Atalanta BC,80,80,32,64,67,81,80,29000000,23,191
+P. Sarr,Pape Matar Sarr,"CDM,CM",Tottenham Hotspur,80,70,65,75,78,76,76,29500000,21,184
+Pepê,Eduardo Gabriel Aquino Cossa,"CAM,RM,LM",FC Porto,80,86,73,73,85,60,60,22500000,27,173
+Q. Timber,Quinten Timber,"CM,CAM,CDM",Feyenoord,80,78,77,76,80,74,83,31500000,23,179
+R. Loftus-Cheek,Ruben Loftus-Cheek,"CM,CAM",AC Milan,80,81,76,79,80,76,83,21000000,28,191
+Reinildo,Reinildo Isnard Mandava,"LB,CB",Atlético Madrid,80,83,55,68,75,77,78,18000000,30,180
+Riqui Puig,Ricard Puig Martí,"CM,CAM",LA Galaxy,80,73,71,79,82,50,52,30000000,24,169
+Ruiz de Galarreta,Iñigo Ruiz de Galarreta,"CDM,CM",Athletic Club,80,72,65,77,80,76,76,17500000,30,175
+S. Chukwueze,Samuel Chukwueze,"RW,RM",AC Milan,80,88,74,74,83,36,61,25000000,25,172
+S. Coates,Sebastián Coates,CB,Club Nacional de Football,80,62,49,55,62,82,85,10000000,33,196
+S. Kolašinac,Sead Kolašinac,"CB,LB",Atalanta BC,80,64,63,67,68,80,82,14500000,31,183
+S. Savić,Stefan Savić,CB,Trabzonspor,80,61,35,57,57,82,79,10000000,33,187
+Tony Abranjes,Tony Josimar Abranjes Meneses,CB,Internacional,80,67,39,55,58,81,85,13500000,32,179
+V. Castellanos,Valentin Castellanos,ST,SS Lazio,80,77,80,69,80,45,78,28500000,25,178
+V. Grifo,Vincenzo Grifo,"LM,CAM",SC Freiburg,80,69,77,82,81,43,64,17500000,31,180
+V. Pavlidis,Vangelis Pavlidis,ST,SL Benfica,80,77,82,69,78,44,84,27000000,25,186
+W. Singo,Wilfried Singo,"CB,RB",AS Monaco,80,80,59,70,73,79,83,29000000,23,190
+W. Zaïre-Emery,Warren Zaïre-Emery,"CM,CDM",Paris Saint-Germain,80,79,68,76,79,75,79,44500000,18,178
+William Carvalho,William Silva de Carvalho,"CDM,CAM",Real Betis Balompié,80,54,68,78,76,75,84,14000000,32,187
+Y. Wissa,Yoane Wissa,ST,Brentford,80,85,80,70,80,30,71,23000000,27,176
+Álvaro García,Álvaro García Rivera,LM,Rayo Vallecano,80,88,70,77,81,51,44,17500000,31,167
+A. Al Musrati,Ali Al Musrati,"CDM,CM",AS Monaco,79,51,66,72,68,77,83,15500000,28,189
+A. Bah,Alexander Bah,RB,SL Benfica,79,91,65,72,75,74,81,19000000,26,183
+A. Bardakcı,Abdülkerim Bardakcı,"CB,LB",Galatasaray SK,79,59,45,70,69,80,84,14500000,29,185
+A. Cambiaso,Andrea Cambiaso,"LB,RB",Juventus FC,79,79,70,77,79,75,72,24500000,24,182
+A. Colpani,Andrea Colpani,"RM,CAM",Fiorentina,79,76,76,78,78,65,70,21000000,25,184
+A. El Kaabi,Ayoub El Kaabi,ST,Olympiacos FC,79,82,81,62,74,46,73,15000000,31,182
+A. Güler,Arda Güler,"CAM,RM",Real Madrid,79,72,74,81,82,52,50,38000000,19,175
+A. Laurienté,Armand Laurienté,"LW,LM",Sassuolo,79,82,76,74,81,36,61,21000000,25,171
+A. Marušić,Adam Marušić,"RB,LB",SS Lazio,79,87,66,67,74,76,80,12500000,31,185
+A. Miranchuk,Aleksey Miranchuk,"CAM,CM,LW",Atlanta United,79,71,73,78,82,31,60,17500000,28,182
+A. Onana,Amadou Onana,"CDM,CM",Aston Villa,79,74,62,72,73,78,81,23500000,22,192
+A. Semenyo,Antoine Semenyo,"RM,LM",AFC Bournemouth,79,85,76,73,79,35,78,24000000,24,185
+A. Stach,Anton Stach,"CDM,CB,CM",TSG 1899 Hoffenheim,79,71,68,75,72,78,80,21000000,25,194
+A. Theate,Arthur Theate,"CB,LB",Eintracht Frankfurt,79,70,40,70,69,79,80,22500000,24,185
+A. Varela,Alan Varela,"CDM,CM",FC Porto,79,70,65,74,73,75,78,26000000,22,177
+A. Wharton,Adam Wharton,"CDM,CM",Crystal Palace,79,62,61,80,77,75,69,32500000,20,182
+A. Witsel,Axel Witsel,CB,Atlético Madrid,79,34,63,77,76,81,74,4600000,35,186
+Adnan Vidual,Adnan Claudiano Vidual Machado,RB,Internacional,79,83,52,70,71,76,72,16000000,28,175
+Amad,Amad Diallo,"CAM,RW,RM",Manchester United,79,85,74,75,83,44,51,28000000,21,173
+Arnau Martínez,Arnau Martínez López,"RB,RM,CB",Girona FC,79,81,54,75,75,74,72,25000000,21,182
+Azpilicueta,César Azpilicueta Tanco,"CB,RB",Atlético Madrid,79,59,55,76,71,81,75,5500000,34,178
+B. Djimsiti,Berat Djimsiti,CB,Atalanta BC,79,65,39,59,48,81,79,12000000,31,190
+B. Johnson,Brennan Johnson,RW,Tottenham Hotspur,79,86,75,72,78,43,59,25000000,23,186
+B. Yılmaz,Barış Alper Yılmaz,"RM,LM,LB",Galatasaray SK,79,92,77,72,77,68,87,24000000,24,186
+Bruma,Armindo Tué Na Bangna,"LM,LW,CAM",SL Benfica,79,88,78,72,83,32,61,17000000,29,173
+Bryan Gil,Bryan Gil Salvatierra,"LM,LW,RM",Girona FC,79,84,71,76,82,31,47,25000000,23,175
+C. Baleba,Carlos Baleba,"CDM,CM",Brighton & Hove Albion,79,77,67,73,80,76,79,32500000,20,183
+C. McGregor,Callum McGregor,"CDM,CM",Celtic FC,79,77,76,78,80,72,78,12500000,31,178
+C. Wilson,Callum Wilson,ST,Newcastle United,79,77,80,67,77,42,73,14000000,32,180
+Carles Gil,Carles Gil Pareja,"CAM,RM",New England Revolution,79,70,71,80,79,38,62,14500000,31,170
+Catena,Alejandro Catena Marugán,CB,CA Osasuna,79,65,39,63,53,79,78,14500000,29,194
+Cucho,Juan Camilo Hernández Suárez,ST,Real Betis Balompié,79,83,78,74,79,42,78,23500000,25,176
+D. Blind,Daley Blind,"CB,LB",Girona FC,79,39,62,85,77,82,70,5500000,34,180
+D. Bouanga,Denis Bouanga,"LW,ST",Los Angeles FC,79,85,81,71,79,38,79,17000000,29,180
+D. Burn,Dan Burn,CB,Newcastle United,79,42,36,68,64,79,85,11500000,32,198
+D. Calabria,Davide Calabria,RB,Bologna FC,79,77,57,70,75,77,70,17000000,27,177
+Dante,Dante Bonfim Costa Santos,CB,OGC Nice,79,32,52,69,65,81,79,0,40,188
+David López,David López Silva,"CB,CDM",Girona FC,79,45,60,72,65,81,75,5500000,34,185
+Diego Carlos,Diego Carlos Santos Silva,CB,Fenerbahçe SK,79,63,47,63,67,79,76,12000000,31,186
+Diego Essler,Ronaldo Diego Essler Domingues,"LB,LM",Atlético Mineiro,79,89,58,70,77,74,59,18500000,24,168
+Diego Llorente,Diego Javier Llorente Ríos,CB,Real Betis Balompié,79,64,41,63,68,81,76,14500000,30,186
+E. Anderson,Elliot Anderson,"CDM,CM,LM",Nottingham Forest,79,74,67,78,81,75,78,24500000,21,179
+E. Demirović,Ermedin Demirović,ST,VfB Stuttgart,79,69,81,72,77,41,79,21000000,26,185
+E. Dier,Eric Dier,CB,Bayern München,79,57,62,67,62,80,80,14500000,30,191
+E. Forsberg,Emil Forsberg,"CAM,LM",New York Red Bulls,79,63,73,81,80,35,61,14000000,32,177
+E. Višća,Edin Višća,"RM,LM",Trabzonspor,79,82,78,76,81,47,65,8000000,34,172
+F. Gatti,Federico Gatti,CB,Juventus FC,79,76,42,53,65,80,78,21500000,26,190
+F. Honorat,Franck Honorat,"RM,RW",Borussia Mönchengladbach,79,80,77,77,78,53,63,18500000,27,180
+F. Medina,Facundo Medina,CB,RC Lens,79,73,36,69,72,79,79,22000000,25,184
+Fran García,Francisco José García Torres,LB,Real Madrid,79,89,50,70,78,72,71,24500000,24,169
+Francisco Conceição,Francisco F. da Conceição,"RM,RW",Juventus FC,79,87,68,73,85,36,50,35500000,21,168
+G. Kondogbia,Geoffrey Kondogbia,"CDM,CB",Olympique de Marseille,79,67,71,74,74,78,83,12500000,31,188
+G. Montiel,Gonzalo Montiel,RB,River Plate,79,81,63,72,77,74,78,17000000,27,175
+G. Scamacca,Gianluca Scamacca,ST,Atalanta BC,79,65,81,67,74,36,74,23500000,25,196
+Gabriel Sara,Gabriel Davi Gomes Sara,"CM,CAM,RM",Galatasaray SK,79,74,74,82,78,67,80,25500000,25,177
+Gedson Fernandes,Gedson Carvalho Fernandes,"CM,CDM,CAM",Beşiktaş JK,79,87,75,76,82,75,82,23000000,25,183
+Guruzeta,Gorka Guruzeta Rodríguez,ST,Athletic Club,79,74,78,71,78,51,80,19000000,27,188
+H. Ekitiké,Hugo Ekitiké,ST,Eintracht Frankfurt,79,86,78,65,81,32,69,28500000,22,189
+H. Mukhtar,Hany Mukhtar,"CAM,ST",Nashville SC,79,82,73,77,80,44,63,17000000,29,173
+H. Ziyech,Hakim Ziyech,"RM,CAM",,79,72,76,81,80,49,63,0,31,181
+I. Maatsen,Ian Maatsen,LB,Aston Villa,79,87,65,75,81,73,63,25000000,22,178
+I. Ndiaye,Iliman Ndiaye,"LM,ST",Everton FC,79,84,76,70,84,40,63,24000000,24,180
+I. Toney,Ivan Toney,ST,Al Ahli SFC,79,77,81,70,75,51,81,18000000,28,187
+J. Andersen,Joachim Andersen,CB,Fulham FC,79,44,57,72,66,79,83,15000000,28,192
+J. Branthwaite,Jarrad Branthwaite,CB,Everton FC,79,71,37,53,59,79,77,33000000,22,195
+J. Clasie,Jordy Clasie,"CDM,CM",AZ Alkmaar,79,55,64,80,75,72,68,8500000,33,170
+J. Durán,Jhon Durán,ST,Al Nassr,79,80,81,63,75,32,80,35000000,20,187
+J. Henderson,Jordan Henderson,"CDM,CM",Ajax,79,66,72,81,75,75,76,6000000,34,182
+J. Hofmann,Jonas Hofmann,"CAM,ST",Bayer 04 Leverkusen,79,73,77,78,80,64,71,14500000,31,176
+J. Kluivert,Justin Kluivert,"CAM,LM",AFC Bournemouth,79,89,78,76,81,38,66,22000000,25,172
+J. Murphy,Jacob Murphy,RW,Newcastle United,79,82,74,76,79,61,69,17000000,29,179
+J. Mæhle,Joakim Mæhle,"LB,RB",VfL Wolfsburg,79,75,57,71,75,74,78,17000000,27,185
+J. Quiñones,Julian Quiñones,"ST,LW",Al Qadsiah FC,79,88,78,70,78,36,83,19000000,27,180
+J. Ryerson,Julian Ryerson,"RB,LB",Borussia Dortmund,79,74,63,71,76,76,82,19000000,26,183
+J. Todibo,Jean-Clair Todibo,CB,West Ham United,79,81,47,64,69,79,74,21500000,24,190
+J. Veerman,Joey Veerman,"CM,CDM,CAM",PSV,79,56,72,85,75,66,70,22000000,25,185
+J. Šutalo,Josip Šutalo,CB,Ajax,79,76,32,61,71,79,79,24000000,24,185
+Johnny Cardoso,João Lucas de Souza Cardoso,"CDM,CM",Real Betis Balompié,79,73,67,75,76,78,77,26000000,22,185
+Jorge Andrão,Everton Jorge Andrade Zanon,"CDM,CM",Fluminense,79,67,62,74,75,78,76,15500000,28,177
+João Mário,João Mário N. Costa Eduardo,"LM,RM,CM",Beşiktaş JK,79,68,74,78,81,64,68,14500000,31,179
+João Pedro,João Pedro Junqueira de Jesus,"ST,CAM",Brighton & Hove Albion,79,83,78,72,81,37,70,27500000,22,188
+K. Aktürkoğlu,Kerem Aktürkoğlu,"LW,LM",SL Benfica,79,86,74,73,80,35,56,21000000,25,173
+Kaku,Alejandro Romero Gamarra,"CAM,CM,RM",Al Ain,79,81,73,81,80,52,64,17000000,29,171
+L. Colwill,Levi Colwill,CB,Chelsea FC,79,70,40,72,70,80,80,24500000,21,187
+L. Cook,Lewis Cook,CDM,AFC Bournemouth,79,69,63,76,78,75,72,18000000,27,175
+L. Ferguson,Lewis Ferguson,"CM,CAM,CDM",Bologna FC,79,73,78,75,79,73,80,25000000,24,181
+L. Geertruida,Lutsharel Geertruida,"CB,RB,LB",RB Leipzig,79,75,59,70,76,79,78,22500000,23,185
+L. Hall,Lewis Hall,LB,Newcastle United,79,77,62,79,79,74,63,25000000,19,179
+L. Klostermann,Lukas Klostermann,"CB,RB",RB Leipzig,79,81,50,65,70,81,76,16500000,28,189
+L. Krejčí,Ladislav Krejčí,"CB,CDM",Girona FC,79,75,68,69,70,77,86,22000000,25,191
+L. Zelarayán,Lucas Zelarayán,"CAM,ST",Belgrano de Córdoba,79,74,76,77,81,46,67,14000000,32,172
+Lee Kang In,Kang In Lee,"RW,CM",Paris Saint-Germain,79,73,75,80,82,50,66,26500000,23,173
+Lucas Paquetá,Lucas Tolentino Coelho de Lima,"CM,LM,CAM",West Ham United,79,72,77,78,84,69,78,19000000,26,180
+Lucas Vázquez,Lucas Vázquez Iglesias,RB,Real Madrid,79,80,74,80,81,71,68,9000000,33,173
+Luimo Boas Santos,Luan Vágner Boas Macedo,ST,Bahia,79,83,79,65,81,28,64,20500000,24,176
+Luis Milla,Luis Milla Manzanares,"CM,CDM",Getafe CF,79,70,72,80,76,75,73,17000000,29,175
+M. Acuña,Marcos Acuña,"LB,LM",River Plate,79,77,68,77,81,74,80,12000000,32,172
+M. Arnautović,Marko Arnautović,ST,Inter Milan,79,67,79,78,79,43,78,7500000,35,192
+M. Beier,Maximilian Beier,"ST,RM,RW",Borussia Dortmund,79,87,79,67,80,41,62,27500000,21,185
+M. Cash,Matty Cash,RB,Aston Villa,79,78,66,71,75,75,76,17500000,26,185
+M. Damsgaard,Mikkel Damsgaard,"CM,CAM",Brentford,79,73,70,80,80,66,67,24000000,23,180
+M. Lacroix,Maxence Lacroix,CB,Crystal Palace,79,88,41,57,67,78,81,24000000,24,190
+M. Lazzari,Manuel Lazzari,RB,SS Lazio,79,93,62,75,81,70,66,15000000,30,174
+M. Lemina,Mario Lemina,"CDM,CM",Galatasaray SK,79,80,67,75,76,77,83,14500000,30,184
+M. O'Riley,Matt O'Riley,"CM,CAM,CDM",Brighton & Hove Albion,79,69,77,80,77,67,78,27500000,23,188
+M. Taremi,Mehdi Taremi,ST,Inter Milan,79,76,78,74,78,38,73,15000000,31,187
+M. Terrier,Martin Terrier,"ST,LM",Bayer 04 Leverkusen,79,82,79,75,79,36,72,19000000,27,184
+M. Thiaw,Malick Thiaw,CB,AC Milan,79,73,47,69,73,79,78,25500000,22,194
+M. Tillman,Malik Tillman,"CAM,LW,CM",PSV,79,81,72,76,82,65,75,35500000,22,187
+Mingueza,Óscar Mingueza García,"RB,RM,LM",RC Celta,79,80,66,77,77,76,76,21500000,25,184
+Moleiro,Alberto Moleiro González,"LM,CAM,LW",UD Las Palmas,79,85,70,75,82,51,65,35000000,20,171
+Muniain,Iker Muniain Goñi,"CAM,LM",San Lorenzo de Almagro,79,75,73,78,83,51,58,14500000,31,170
+N. Amiri,Nadiem Amiri,"CM,CAM",1. FSV Mainz 05,79,67,75,80,82,63,71,18500000,27,180
+N. Füllkrug,Niclas Füllkrug,ST,West Ham United,79,58,82,71,74,43,79,15000000,31,188
+N. Gonzalez,Nico Gonzalez,"RW,RM,LW",Juventus FC,79,83,75,73,82,45,62,19000000,26,180
+N. Lang,Noa Lang,LW,PSV,79,83,77,72,84,50,70,23000000,25,179
+N. Madueke,Noni Madueke,RM,Chelsea FC,79,90,75,73,83,40,71,27000000,22,182
+N. Matić,Nemanja Matić,"CDM,CM",Olympique Lyonnais,79,35,66,75,74,77,78,4900000,35,194
+N. Mukiele,Nordi Mukiele,"RB,CB,RM",Bayer 04 Leverkusen,79,77,49,67,71,80,80,19000000,26,187
+N. Pépé,Nicolas Pépé,"RM,ST,RW",Villarreal CF,79,87,77,75,81,36,68,17000000,29,183
+N. Rovella,Nicolò Rovella,"CM,CDM",SS Lazio,79,78,63,78,79,77,76,35500000,22,179
+N. Vlašić,Nikola Vlašić,"CAM,CM",Torino FC,79,75,76,76,82,57,72,20500000,26,179
+Nico González,Nicolás González Iglesias,"CDM,CM",Manchester City,79,70,70,77,77,74,82,26000000,22,188
+Nuno Santos,Nuno Miguel Gomes dos Santos,"LM,LB,LW",Sporting CP,79,79,81,76,79,69,74,17000000,29,177
+O. Boscagli,Olivier Boscagli,CB,PSV,79,64,50,77,77,78,75,19000000,26,181
+O. Diomande,Ousmane Diomande,CB,Sporting CP,79,80,26,53,72,78,83,32000000,20,190
+P. Estupiñán,Pervis Estupiñán,LB,Brighton & Hove Albion,79,78,57,76,79,75,75,19000000,26,175
+P. Groß,Pascal Groß,"CDM,CM,RB",Borussia Dortmund,79,45,75,84,78,71,74,8500000,33,181
+P. Kalulu,Pierre Kalulu,"CB,RB",Juventus FC,79,79,53,68,70,80,75,25000000,24,182
+P. Lees-Melou,Pierre Lees-Melou,"CDM,CM",Stade Brestois 29,79,62,72,78,77,73,76,12500000,31,186
+P. Lienhart,Philipp Lienhart,CB,SC Freiburg,79,69,28,59,64,81,75,17500000,27,189
+Pablo Barrios,Pablo Barrios Rivas,"CM,CDM",Atlético Madrid,79,80,70,73,80,71,70,28000000,21,181
+Pablo Maffeo,Pablo Maffeo Becerra,"RB,LB",RCD Mallorca,79,82,52,70,79,76,70,19000000,26,172
+Pedro Neto,Pedro Lomba Neto,"RM,LM,ST",Chelsea FC,79,91,75,73,83,40,67,24000000,24,174
+Pepelu,Jose Luís García Vayá,"CM,CDM",Valencia CF,79,68,70,79,76,74,78,23000000,25,186
+R. Aït-Nouri,Rayan Aït-Nouri,"LB,LM",Wolverhampton Wanderers,79,84,53,75,84,73,70,26000000,23,180
+R. Bensebaini,Ramy Bensebaini,"LB,CB",Borussia Dortmund,79,73,70,70,77,79,78,15500000,29,187
+R. Cherki,Rayan Cherki,"RM,CAM,RW",Olympique Lyonnais,79,75,71,79,86,21,65,38500000,20,177
+R. Gosens,Robin Gosens,"LB,LM",Fiorentina,79,72,74,73,75,76,80,15500000,29,183
+R. Saïss,Romain Saïss,CB,,79,58,58,71,67,79,81,0,34,190
+Raíllo,Antonio José Raíllo Arenas,CB,RCD Mallorca,79,41,36,56,57,80,84,11500000,32,187
+Richarlison,Richarlison de Andrade,"ST,LM",Tottenham Hotspur,79,77,78,73,80,53,77,19000000,27,184
+Roberto Firmino,Roberto Firmino Barbosa de Oliveira,"CAM,ST",Al Ahli SFC,79,65,74,78,84,56,74,14000000,32,181
+S. Amrabat,Sofyan Amrabat,"CDM,CM,CB",Fenerbahçe SK,79,61,70,74,74,75,82,16500000,27,183
+S. Berge,Sander Berge,"CDM,CM",Fulham FC,79,56,65,74,72,75,85,18500000,26,195
+S. Bergwijn,Steven Bergwijn,"LM,LW",Al Ittihad,79,80,76,74,82,41,70,19000000,26,171
+S. El Shaarawy,Stephan El Shaarawy,"LM,LW,CAM",AS Roma,79,80,75,76,83,49,61,14500000,31,178
+S. Giménez,Santiago Giménez,ST,AC Milan,79,79,80,70,77,46,75,27000000,23,183
+S. Posch,Stefan Posch,"RB,CB",Atalanta BC,79,75,55,68,65,80,75,17000000,27,190
+S. Rahimi,Soufiane Rahimi,"LM,LW,ST",Al Ain,79,85,77,73,78,38,66,17500000,28,181
+S. Szymański,Sebastian Szymański,"CAM,CM",Fenerbahçe SK,79,79,76,79,77,60,68,23000000,25,174
+Samuel Lino,Samuel Dias Lino,LM,Atlético Madrid,79,82,71,73,81,52,68,24000000,24,170
+Sergi Cardona,Sergi Cardona Bermúdez,LB,Villarreal CF,79,82,56,71,75,75,76,24500000,24,185
+Sergi Roberto,Sergio Roberto Carnicer,"RB,CM,CDM",Como,79,74,63,79,77,75,73,12000000,32,178
+Suso,Jesús Joaquín Fernández Sáez,"RM,CAM,CM",Sevilla FC,79,72,76,80,81,32,51,17000000,30,177
+T. Almada,Thiago Almada,CAM,Olympique Lyonnais,79,79,74,78,84,51,58,27500000,23,171
+T. Kehrer,Thilo Kehrer,CB,AS Monaco,79,71,44,66,66,80,77,18500000,27,186
+T. Souček,Tomáš Souček,"CDM,CM",West Ham United,79,50,72,71,68,81,83,15000000,29,192
+V. Muriqi,Vedat Muriqi,ST,RCD Mallorca,79,53,81,63,72,29,82,17000000,30,194
+V. Rongier,Valentin Rongier,"CDM,CM",Olympique de Marseille,79,66,66,75,78,74,78,15000000,29,172
+W. Endo,Wataru Endo,"CDM,CM",Liverpool FC,79,59,68,71,77,79,75,12500000,31,178
+W. Fofana,Wesley Fofana,CB,Chelsea FC,79,77,40,60,71,81,77,24000000,23,185
+Y. Bissouma,Yves Bissouma,"CDM,CM",Tottenham Hotspur,79,71,67,75,79,76,75,18000000,27,182
+Yeremy Pino,Yeremy Jesús Pino Santos,"LM,RM,LW",Villarreal CF,79,77,72,76,80,38,54,39500000,21,172
+Yuri Berchiche,Yuri Berchiche Izeta,LB,Athletic Club,79,79,68,74,75,77,83,6500000,34,181
+Zubeldia,Igor Zubeldia Elorza,CB,Real Sociedad,79,78,63,74,73,79,82,18500000,27,181
+İ. Kahveci,İrfan Can Kahveci,"RW,CAM,CM",Fenerbahçe SK,79,74,78,81,80,58,66,17500000,28,176
+A. Adli,Amine Adli,"ST,LM,CAM",Bayer 04 Leverkusen,78,83,76,70,82,42,73,20500000,24,174
+A. Afif,Akram Afif,"LM,LW",,78,87,75,72,79,32,55,0,27,176
+A. Danjuma,Arnaut Danjuma,"LM,ST",Girona FC,78,87,74,74,79,44,69,15000000,27,178
+A. Djiku,Alexander Djiku,"CB,CDM",Fenerbahçe SK,78,74,44,67,69,78,81,12000000,29,182
+A. El Mahdioui,Aschraf El Mahdioui,"CDM,CM",Al Taawoun FC,78,65,55,74,73,70,75,12500000,28,182
+A. Gouiri,Amine Gouiri,ST,Olympique de Marseille,78,77,81,76,80,45,70,21500000,24,181
+A. Haidara,Amadou Haidara,"CM,CDM",RB Leipzig,78,66,70,77,80,73,70,16500000,26,178
+A. Hamdallah,Abderrazak Hamdallah,"ST,CAM",Al Shabab,78,61,79,70,75,31,79,9000000,33,179
+A. Johnston,Alistair Johnston,RB,Celtic FC,78,80,59,73,72,73,80,17000000,25,180
+A. Pavlović,Aleksandar Pavlović,CDM,Bayern München,78,69,63,79,76,75,66,29000000,20,188
+A. Plea,Alassane Plea,"CAM,ST,LM",Borussia Mönchengladbach,78,66,78,79,79,39,71,11500000,31,181
+A. Saelemaekers,Alexis Saelemaekers,"RM,LM",AS Roma,78,80,67,75,81,66,65,17500000,25,180
+A. Sánchez,Alexis Sánchez,ST,Udinese Calcio,78,70,79,79,83,48,66,6000000,35,169
+A. Vega,Alexis Vega,"LW,ST,LM",,78,80,78,75,80,32,73,0,26,173
+A. Živković,Andrija Živković,"RM,RW,LW",PAOK,78,82,74,74,81,57,66,15000000,27,169
+Albertinho Dutra,Alberto Marcelo Dutra Cirino,"LW,LM",São Paulo,78,81,72,81,80,23,50,14000000,28,175
+Alexsandro,Alexsandro de Souza Ribeiro,CB,Lille OSC,78,67,33,52,54,78,80,18000000,24,191
+Ander Herrera,Ander Herrera Agüera,"CDM,CM",Boca Juniors,78,59,71,76,77,77,74,4800000,34,182
+Andrey Santos,Andrey N. dos Santos,"CM,CDM",RC Strasbourg Alsace,78,75,68,72,77,76,79,30500000,20,180
+Angeliño,José Ángel Esmoris Tasende,"LB,LM",AS Roma,78,63,70,81,82,74,70,13500000,27,171
+Antony,Antony Matheus dos Santos,"RM,RW",Real Betis Balompié,78,84,74,73,83,43,69,19000000,24,172
+António Silva,António João Tavares Silva,CB,SL Benfica,78,80,37,64,69,78,80,29000000,20,187
+Aritz Elustondo,Aritz Elustondo,"CB,RB",Real Sociedad,78,64,39,63,61,78,77,11500000,30,180
+Arturo Inálcio,Arturo Adolfo Inálcio Dutra,"CM,CAM",Flamengo,78,83,72,75,78,52,48,16000000,24,170
+B. Brobbey,Brian Brobbey,ST,Ajax,78,84,74,56,73,30,80,23000000,22,180
+B. Chardonnet,Brendan Chardonnet,CB,Stade Brestois 29,78,48,46,54,61,80,76,12000000,29,181
+B. Chilwell,Ben Chilwell,LB,Crystal Palace,78,75,60,77,76,75,70,13500000,27,180
+B. Diakité,Bafodé Diakité,"CB,RB",Lille OSC,78,73,46,64,70,78,79,19000000,23,184
+B. Heynen,Bryan Heynen,"CDM,CM",KRC Genk,78,62,73,75,76,73,77,13000000,27,183
+Beñat Prados,Beñat Prados Díaz,"CDM,CM,CB",Athletic Club,78,70,61,72,75,76,77,20500000,23,180
+Borja Mayoral,Borja Mayoral Moya,ST,Getafe CF,78,69,80,71,76,39,67,15000000,27,182
+C. Arango,Cristian Arango,"ST,CAM",San Jose Earthquakes,78,75,79,71,77,36,74,14000000,29,178
+C. Bassey,Calvin Bassey,CB,Fulham FC,78,82,44,62,68,77,87,17000000,24,185
+C. Baumgartner,Christoph Baumgartner,"CAM,ST,CM",RB Leipzig,78,77,73,73,80,47,60,19000000,24,180
+C. Biraghi,Cristiano Biraghi,LB,Torino FC,78,72,69,78,76,76,72,10000000,31,185
+C. Carter-Vickers,Cameron Carter-Vickers,CB,Celtic FC,78,78,33,59,70,77,84,16500000,26,183
+C. Doucouré,Cheick Doucouré,"CDM,CM",Crystal Palace,78,62,57,70,75,75,75,17500000,24,180
+C. Ejuke,Chidera Ejuke,"LM,RM,LW",Sevilla FC,78,92,69,71,82,37,64,15500000,26,176
+C. Führich,Chris Führich,"LM,LW,CAM",VfB Stuttgart,78,83,69,71,84,51,58,15500000,26,181
+C. Günter,Christian Günter,"LB,LM",SC Freiburg,78,80,60,70,71,74,82,10000000,31,184
+C. Hudson-Odoi,Callum Hudson-Odoi,LM,Nottingham Forest,78,82,73,74,81,50,63,20000000,23,182
+C. Lenglet,Clément Lenglet,CB,Atlético Madrid,78,56,45,69,64,80,74,12000000,29,186
+C. Nørgaard,Christian Nørgaard,"CDM,CM",Brentford,78,52,63,72,70,78,78,12000000,30,187
+Chiquinho,Francisco L. Lima Silva Machado,"CM,CAM,RM",Olympiacos FC,78,74,75,78,78,66,70,14000000,28,175
+D. Doekhi,Danilho Doekhi,CB,1. FC Union Berlin,78,58,42,59,65,78,80,15500000,26,190
+D. Huijsen,Dean Huijsen,CB,AFC Bournemouth,78,72,49,65,68,79,75,28500000,19,197
+D. Maeda,Daizen Maeda,"LW,ST,RW",Celtic FC,78,93,78,69,76,65,79,15500000,26,173
+D. McNeil,Dwight McNeil,"LM,CAM",Everton FC,78,68,74,78,78,55,68,19000000,24,183
+D. Spence,Djed Spence,"RB,LB",Tottenham Hotspur,78,88,44,71,79,74,72,18500000,23,184
+Daniel Bragança,Daniel Santos Bragança,"CM,CDM,CAM",Sporting CP,78,80,72,77,80,67,62,18500000,25,178
+De Frutos,Jorge de Frutos Sebastián,"RM,LM",Rayo Vallecano,78,84,74,74,78,41,64,15000000,27,173
+Diego López,Diego López Noguerol,"RM,LM,ST",Valencia CF,78,83,75,72,77,37,62,31500000,22,172
+Diego Rico,Diego Rico Salguero,LB,Getafe CF,78,73,57,78,73,77,77,10000000,31,183
+E. Guessand,Evann Guessand,"RW,ST",OGC Nice,78,83,76,69,77,28,75,21000000,23,188
+E. Lamela,Erik Lamela,"RW,CAM",AEK Athens,78,76,76,78,80,54,73,11000000,32,184
+E. Millot,Enzo Millot,"CAM,CM",VfB Stuttgart,78,75,70,75,83,61,58,22500000,21,174
+E. Álvarez,Edson Álvarez,"CDM,CM",West Ham United,78,66,58,69,72,78,81,15000000,26,187
+Emerson,Emerson Palmieri dos Santos,"LB,LM",West Ham United,78,79,63,75,78,73,65,12500000,29,176
+Eric García,Eric García Martret,"CB,RB,CDM",FC Barcelona,78,66,48,70,70,80,73,19000000,23,182
+Evander,Evander da Silva Ferreira,"CAM,CM",FC Cincinnati,78,72,77,77,81,66,69,16500000,26,178
+F. Boyomo,Flavien-Enzo Boyomo,"CB,RB",CA Osasuna,78,76,38,51,50,79,81,26500000,22,181
+F. Lejeune,Florian Lejeune,CB,Rayo Vallecano,78,54,61,67,65,78,78,6500000,33,189
+Fermín,Fermín López Marín,"CAM,CM,LW",FC Barcelona,78,74,73,74,80,62,54,31500000,21,174
+Fran Beltrán,Francisco José Beltrán Peinado,"CDM,CM",RC Celta,78,58,60,76,76,76,68,17000000,25,165
+Fredditinho,Fred Claudinei Tófoli Vilela,ST,Palmeiras,78,73,80,63,74,39,77,11500000,32,188
+Fábio Silva,Fábio Daniel Soares Silva,"ST,LW",UD Las Palmas,78,82,76,63,78,32,80,29000000,21,185
+G. Bonaventura,Giacomo Bonaventura,"CAM,CM",Al Shabab,78,64,77,79,80,70,64,6500000,34,180
+G. Laborde,Gaëtan Laborde,"ST,RW",OGC Nice,78,70,78,76,78,40,78,14000000,30,181
+G. Raspadori,Giacomo Raspadori,"CAM,ST,LW",SSC Napoli,78,79,76,69,83,28,56,21000000,24,172
+G. Rodríguez,Guido Rodríguez,"CDM,CM",West Ham United,78,49,58,70,69,77,78,12000000,30,185
+G. Rutter,Georginio Rutter,"CAM,ST",Brighton & Hove Albion,78,81,75,75,80,58,77,22500000,22,182
+G. Scalvini,Giorgio Scalvini,CB,Atalanta BC,78,55,35,57,61,80,73,29000000,20,194
+G. Simeone,Giuliano Simeone,"RM,ST,LM",Atlético Madrid,78,92,72,68,79,41,80,22500000,21,173
+Gabriel Paulista,Gabriel Armando de Abreu,CB,Beşiktaş JK,78,68,49,66,63,79,76,6500000,33,185
+Gelson Martins,Gelson Dany Batalha Martins,"RM,LM,RW",Olympiacos FC,78,87,70,71,83,51,55,14000000,29,170
+Gerson Armão,Gérson Adriano Gutierres Serra,"LB,LM",Internacional,78,79,67,71,71,74,79,15000000,24,186
+Guilson Paiva,G. Pierre Paiva Souza,"RM,RW",Flamengo,78,83,69,75,78,42,69,14000000,28,173
+H. Elliott,Harvey Elliott,"CAM,CM,RW",Liverpool FC,78,74,71,77,81,53,50,31500000,21,168
+H. Ito,Hiroki Ito,"CB,LB",Bayern München,78,74,57,71,72,80,73,17500000,25,188
+H. Lozano,Hirving Lozano,"RW,LW",,78,88,75,71,80,41,58,0,28,176
+I. Hien,Isak Hien,CB,Atalanta BC,78,70,37,49,56,79,77,18500000,25,191
+I. Perišić,Ivan Perišić,"LW,RW",PSV,78,75,77,80,78,70,73,6000000,35,186
+I. Saibari,Ismael Saibari,"CAM,CM",PSV,78,75,74,73,81,50,76,21500000,22,185
+I. Zabarnyi,Illia Zabarnyi,CB,AFC Bournemouth,78,77,37,62,61,79,78,19500000,21,189
+Igor Paixão,Igor Guilherme Barbosa da Paixão,"LW,CAM",Feyenoord,78,85,76,73,80,32,66,22000000,24,168
+Iván Martín,Iván Martín Núñez,"CM,CDM,CAM",Girona FC,78,75,71,79,79,69,63,18500000,25,178
+J. Bakayoko,Johan Bakayoko,"RW,RM",PSV,78,86,73,70,81,33,64,31500000,21,179
+J. Cuadrado,Juan Cuadrado,"RM,RB,RW",Atalanta BC,78,82,73,77,82,73,66,4600000,36,179
+J. Foyth,Juan Foyth,"RB,CB",Villarreal CF,78,69,46,71,71,79,76,15000000,26,187
+J. Gittens,Jamie Gittens,"LM,LW",Borussia Dortmund,78,93,73,66,84,27,58,27500000,19,179
+J. Ito,Junya Ito,"RM,RW",Stade de Reims,78,87,69,74,79,58,68,11500000,31,176
+J. Larsen,Jørgen Strand Larsen,ST,Wolverhampton Wanderers,78,77,76,62,71,32,83,21500000,24,194
+J. Ramsey,Jacob Ramsey,LM,Aston Villa,78,79,75,73,80,68,74,20000000,23,180
+J. Stanišić,Josip Stanišić,"RB,CB",Bayern München,78,71,44,65,69,79,74,18500000,24,187
+J. Veltman,Joël Veltman,RB,Brighton & Hove Albion,78,63,49,68,71,81,77,9500000,32,184
+J. Veretout,Jordan Veretout,"CM,CDM",Olympique Lyonnais,78,73,75,77,76,74,79,11500000,31,177
+J. Ward-Prowse,James Ward-Prowse,"CM,CDM,CAM",West Ham United,78,44,74,85,74,66,70,13500000,29,173
+J. Weigl,Julian Weigl,"CDM,CM",Borussia Mönchengladbach,78,54,64,75,73,73,73,12500000,28,186
+J. Wind,Jonas Wind,"ST,CAM",VfL Wolfsburg,78,48,79,72,77,37,78,19000000,25,190
+J. van Hecke,Jan Paul van Hecke,CB,Brighton & Hove Albion,78,69,45,69,68,78,77,18000000,24,189
+Jason Bardeira,Jason Bardeira Cunha,ST,Corinthians,78,73,82,62,70,31,75,16500000,24,187
+Jonatão Praz,Jonathan Prazeres Conradi,LW,Flamengo,78,78,69,77,79,45,54,16000000,24,172
+João Gomes,João Victor Gomes da Silva,"CDM,CM",Wolverhampton Wanderers,78,70,68,72,74,76,75,19500000,23,176
+K. Kampl,Kevin Kampl,"CM,CDM",RB Leipzig,78,52,66,80,81,64,59,8500000,33,178
+K. Koné,Kouadio Manu Koné,"CM,CDM",AS Roma,78,74,73,74,82,73,81,22000000,23,185
+K. Taylor,Kenneth Taylor,"CM,CAM",Ajax,78,75,77,78,78,67,73,22500000,22,182
+K. Tete,Kenny Tete,RB,Fulham FC,78,77,47,67,70,77,79,12500000,28,180
+K. Tierney,Kieran Tierney,LB,Arsenal FC,78,80,60,75,77,75,74,13500000,27,180
+K. Tsimikas,Konstantinos Tsimikas,LB,Liverpool FC,78,80,57,76,75,73,78,12500000,28,179
+L. Badé,Loïc Badé,CB,Sevilla FC,78,63,45,56,65,78,78,20000000,24,191
+L. Chávez,Luis Chávez,"CM,CDM",,78,83,72,78,78,71,69,0,28,178
+L. Haraslín,Lukáš Haraslín,"LW,RW,ST",Sparta Praha,78,80,74,73,81,40,59,14000000,28,182
+L. Jović,Luka Jović,ST,AC Milan,78,75,78,68,78,30,72,17000000,26,181
+L. Majer,Lovro Majer,"CM,CAM",VfL Wolfsburg,78,62,73,80,83,60,71,16500000,26,178
+L. Paredes,Leandro Paredes,"CM,CDM",AS Roma,78,62,65,83,78,71,77,13500000,30,180
+L. Provod,Lukáš Provod,"CAM,CM,LM",SK Slavia Praha,78,76,75,78,78,64,82,15000000,27,191
+L. Spinazzola,Leonardo Spinazzola,"LM,LB",SSC Napoli,78,86,65,74,79,76,69,11500000,31,186
+L. Yoro,Leny Yoro,CB,Manchester United,78,73,41,60,63,79,73,27500000,18,190
+M. Akliouche,Maghnes Akliouche,"RM,CAM",AS Monaco,78,74,69,76,82,48,62,31500000,22,183
+M. Arambarri,Mauro Arambarri,"CDM,CM",Getafe CF,78,62,71,72,74,77,79,12500000,28,175
+M. Bard,Melvin Bard,"LB,LM,CB",OGC Nice,78,78,52,69,74,75,76,18500000,23,173
+M. Baturina,Martin Baturina,"CAM,CM",GNK Dinamo Zagreb,78,77,71,78,83,59,66,21500000,21,172
+M. Camara,Mahdi Camara,"CM,CAM",Stade Brestois 29,78,74,68,74,77,77,76,17500000,26,178
+M. Gabbia,Matteo Gabbia,CB,AC Milan,78,51,35,52,60,81,76,20000000,24,185
+M. Livaja,Marko Livaja,"ST,CAM",Hajduk Split,78,63,79,75,78,42,81,14000000,30,182
+M. Moreno,Marcelino Moreno,"CAM,LM,ST",Lanús,78,86,73,75,81,53,61,14000000,29,168
+M. Pessina,Matteo Pessina,"CM,CDM,CAM",Monza,78,68,70,76,77,72,71,15000000,27,187
+M. Senesi,Marcos Senesi,CB,AFC Bournemouth,78,57,42,70,72,79,77,14000000,27,185
+M. Shaparenko,Mykola Shaparenko,"CM,CAM,CDM",Dynamo Kyiv,78,79,71,79,79,68,71,16500000,25,178
+M. Svanberg,Mattias Svanberg,"CM,CDM",VfL Wolfsburg,78,81,70,76,78,66,73,18500000,25,185
+M. Uribe,Mateus Uribe,"CM,CDM",Atlético Nacional,78,72,76,75,78,77,75,8500000,33,182
+M. Vecino,Matías Vecino,"CM,CDM",SS Lazio,78,58,73,75,76,79,79,11000000,32,187
+M. Wieffer,Mats Wieffer,"CDM,CM",Brighton & Hove Albion,78,70,66,74,74,76,80,18500000,24,188
+Marc Bartra,Marc Bartra Aregall,CB,Real Betis Balompié,78,68,61,71,72,79,75,6500000,33,184
+Marc Roca,Marc Roca Junqué,"CDM,CM",Real Betis Balompié,78,61,66,75,74,75,75,14500000,27,184
+Marcos Alonso,Marcos Alonso Mendoza,"CB,LB",RC Celta,78,61,74,80,75,77,76,6500000,33,188
+Marcos Leonardo,Marcos Leonardo Santos Almeida,"ST,CAM",Al Hilal,78,75,78,63,75,27,67,32000000,21,175
+Mario Gila,Mario Gila Fuentes,CB,SS Lazio,78,85,53,67,75,79,75,26000000,23,185
+Matheus Nunes,Matheus Luiz Nunes,"RB,CM",Manchester City,78,83,70,76,80,73,76,16000000,25,184
+Moi Gómez,Moisés Gómez Bordonado,"CM,LM,RM",CA Osasuna,78,66,75,80,78,61,61,13500000,30,176
+Moncayola,Jon Moncayola Tollar,"CM,CDM,RB",CA Osasuna,78,64,67,75,78,73,70,16500000,26,182
+N. Collins,Nathan Collins,CB,Brentford,78,62,31,58,63,79,79,18000000,23,193
+N. Domínguez,Nicolás Domínguez,"CDM,CM",Nottingham Forest,78,69,65,72,76,74,77,15000000,26,179
+N. Gudelj,Nemanja Gudelj,"CB,CDM",Sevilla FC,78,54,73,79,69,77,85,9000000,32,187
+N. Kühn,Nicolas Kühn,"RW,RM",Celtic FC,78,90,74,71,81,46,71,19000000,24,176
+N. Tagliafico,Nicolás Tagliafico,LB,Olympique Lyonnais,78,71,56,70,76,77,76,10000000,31,172
+N. Tella,Nathan Tella,"RM,ST,LM",Bayer 04 Leverkusen,78,86,75,71,80,46,60,19000000,24,173
+N. Williams,Neco Williams,"LB,RB",Nottingham Forest,78,74,49,71,74,76,70,18000000,23,183
+O. Alderete,Omar Alderete,CB,Getafe CF,78,63,61,62,69,79,79,14000000,27,188
+O. Dorley,Oscar Dorley,"CDM,CM",SK Slavia Praha,78,78,57,76,79,75,72,17000000,25,174
+O. Zinchenko,Oleksandr Zinchenko,LB,Arsenal FC,78,66,66,81,80,76,69,13500000,27,175
+O. Zubkov,Oleksandr Zubkov,"RM,CAM,LM",Trabzonspor,78,83,74,74,78,28,64,15000000,27,182
+P. Kimpembe,Presnel Kimpembe,CB,Paris Saint-Germain,78,67,43,65,67,78,77,13500000,28,189
+P. Schuurs,Perr Schuurs,CB,Torino FC,78,69,64,73,68,81,73,19000000,24,191
+Pedrão Tofico,Pedro Tofico Dourado Hermes,CB,Flamengo,78,58,29,63,58,77,85,12000000,28,190
+R. Alvarado,Roberto Alvarado,"RM,LM,RW",,78,81,71,78,76,53,69,0,25,176
+R. Baku,Ridle Baku,"RM,RB",RB Leipzig,78,82,72,73,81,71,76,15500000,26,176
+R. Calafiori,Riccardo Calafiori,"LB,CB",Arsenal FC,78,75,66,71,75,77,77,21000000,22,188
+R. Christie,Ryan Christie,CDM,AFC Bournemouth,78,76,70,76,77,72,78,12000000,29,178
+R. Gauld,Ryan Gauld,"LW,ST,RW",Vancouver Whitecaps FC,78,83,68,77,82,51,54,14000000,28,169
+R. Kristensen,Rasmus Kristensen,"RB,CB,RM",Eintracht Frankfurt,78,70,65,69,71,77,79,14000000,26,187
+R. Lavia,Romeo Lavia,"CDM,CM",Chelsea FC,78,72,52,72,77,76,75,26000000,20,181
+R. Lewis,Rico Lewis,"RB,LB,CM",Manchester City,78,78,54,75,80,73,58,26000000,19,170
+R. Sterling,Raheem Sterling,"LW,LM,RM",Arsenal FC,78,84,74,74,82,42,62,14000000,29,172
+R. Tapia,Renato Tapia,"CDM,CM,CB",CD Leganés,78,68,66,72,69,78,83,12500000,28,185
+R. Zalazar,Rodrigo Zalazar,"CM,CAM,CDM",Sporting Clube de Braga,78,78,79,76,78,66,73,20000000,24,178
+Rafael Tolói,Rafael Tolói,CB,Atalanta BC,78,61,51,58,63,80,77,6500000,33,185
+Renan Lodi,Renan Augusto Lodi dos Santos,LB,Al Hilal,78,74,69,76,77,73,71,15000000,26,173
+Riquelme,Rodrigo Riquelme Reche,"LM,RM,LB",Atlético Madrid,78,86,74,74,79,50,59,19000000,24,174
+Rodinei,Rodinei Marcelo de Almeida,"RB,RM",Olympiacos FC,78,81,65,71,78,71,77,9500000,32,177
+Rubén García,Rubén García Santos,"RM,RW,ST",CA Osasuna,78,76,76,79,78,45,53,13500000,30,172
+S. Ascacíbar,Santiago Ascacíbar,"CDM,CM",Estudiantes de La Plata,78,77,73,73,74,74,71,13000000,27,169
+S. Berghuis,Steven Berghuis,"RW,CAM",Ajax,78,71,79,82,78,39,66,11000000,32,182
+S. Beukema,Sam Beukema,CB,Bologna FC,78,51,55,61,62,79,76,16500000,25,188
+S. Boey,Sacha Boey,RB,Bayern München,78,79,55,66,76,76,78,18000000,23,178
+S. Dest,Sergiño Dest,"LB,RB",PSV,78,90,60,75,82,72,68,20000000,23,173
+S. Fofana,Seko Fofana,"CM,CDM",Stade Rennais,78,71,76,74,76,72,84,13500000,29,185
+S. Haller,Sébastien Haller,ST,FC Utrecht,78,56,78,63,75,51,73,14000000,30,191
+S. Lukić,Saša Lukić,"CDM,CM",Fulham FC,78,60,69,76,75,76,78,13000000,27,183
+S. Ricci,Samuele Ricci,"CM,CDM",Torino FC,78,73,60,75,79,74,72,28500000,22,181
+Samu,Samuel Omorodion Aghehowa,ST,FC Porto,78,79,78,58,68,22,74,31000000,20,193
+Sergio Gómez,Sergio Gómez Martín,"LM,CM,LB",Real Sociedad,78,74,73,80,79,71,65,20000000,23,173
+T. Adams,Tyler Adams,CDM,AFC Bournemouth,78,79,50,68,72,77,75,16000000,25,175
+T. Adarabioyo,Tosin Adarabioyo,CB,Chelsea FC,78,70,45,63,63,78,78,15500000,26,197
+T. Chalobah,Trevoh Chalobah,"CB,RB",Chelsea FC,78,73,53,67,67,78,78,18000000,24,192
+T. Lemar,Thomas Lemar,"CM,LM",Atlético Madrid,78,77,76,80,82,67,62,14000000,28,171
+T. Livramento,Tino Livramento,RB,Newcastle United,78,83,50,71,79,74,73,27000000,21,181
+T. Minamino,Takumi Minamino,"LM,CAM",AS Monaco,78,77,74,75,81,40,64,14000000,29,172
+T. Mings,Tyrone Mings,CB,Aston Villa,78,62,44,67,64,78,79,9500000,31,196
+T. Mitchell,Tyrick Mitchell,"LB,LM",Crystal Palace,78,76,41,68,73,76,70,17000000,24,175
+T. Tomiyasu,Takehiro Tomiyasu,"RB,LB",Arsenal FC,78,69,33,68,72,79,79,15500000,25,188
+Thierry Correia,Thierry Rendall Correia,"RB,LB",Valencia CF,78,92,50,70,77,72,71,17000000,25,176
+Tomás Araújo,Tomás Lemos Araújo,"CB,RB",SL Benfica,78,82,30,69,72,77,78,29500000,22,187
+Tuta,Lucas Silva Melo,"CB,CDM",Eintracht Frankfurt,78,72,49,66,73,78,76,16000000,24,185
+Vieirundinho,Danilo Manuel Vieira Espíndola,CB,Botafogo,78,59,39,53,57,80,82,9000000,32,189
+W. McKennie,Weston McKennie,"CM,CDM,CAM",Juventus FC,78,77,71,77,77,79,81,17500000,25,180
+W. Weghorst,Wout Weghorst,ST,Ajax,78,57,77,61,68,58,86,12000000,31,197
+W. Zaha,Wilfried Zaha,"LW,LM,ST",Charlotte FC,78,83,75,73,80,37,72,11500000,31,180
+Wellington Sabrão,Wellingt. Edson Sabrão Rolim,"RB,LB",Flamengo,78,92,56,68,73,72,70,9500000,32,169
+Yan Couto,Yan Bueno Couto,"RB,RM",Borussia Dortmund,78,81,61,77,83,69,63,21000000,22,168
+Zervandro,A. Zervandro Chiamuloira Paes,"CB,LB",Internacional,78,68,48,60,54,79,74,14000000,24,182
+Álvaro Carreras,Álvaro Fernández Carreras,LB,SL Benfica,78,85,63,74,77,71,79,30000000,21,186
+Óscar Valentín,Óscar Valentín Martín Luengo,"CDM,CM",Rayo Vallecano,78,65,50,67,68,76,77,12000000,29,177
+A. Barák,Antonín Barák,"CM,CAM",Kasımpaşa SK,77,69,77,78,78,65,73,10500000,29,190
+A. Belotti,Andrea Belotti,ST,SL Benfica,77,69,76,58,75,38,80,10500000,30,181
+A. Caci,Anthony Caci,"RB,RM,LM",1. FSV Mainz 05,77,69,56,72,72,75,74,10000000,27,185
+A. Disasi,Axel Disasi,"CB,RB",Aston Villa,77,56,48,60,58,77,81,11000000,26,190

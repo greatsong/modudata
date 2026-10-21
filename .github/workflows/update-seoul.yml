@@ -1,0 +1,49 @@
+# seoul.csv 매일 자동 갱신 — 마지막 날짜 다음 날부터 '어제'까지 백필
+# 시크릿 필요: DATA_GO_KR_KEY (공공데이터포털 data.go.kr ASOS 일자료 활용신청)
+# (KMA_KEY는 apihub 키 — 해외 IP 차단으로 GitHub 러너에서는 안 되고 로컬 실행용)
+name: update-seoul
+
+on:
+  schedule:
+    - cron: '0 22 * * *'        # UTC 22:00 = 한국시간 아침 07:00
+    - cron: '0 3 * * *'         # UTC 03:00 = 한국시간 낮 12:00 (아침 실패 시 자동 재시도)
+    - cron: '0 10 * * *'        # UTC 10:00 = 한국시간 저녁 19:00 (2차 재시도)
+  workflow_dispatch:             # 수동 실행 버튼 (테스트·복구용)
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install requests
+
+      - name: 기온 데이터 수집·append (타임아웃 시 5분 간격 3회 재시도)
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}   # 공공데이터포털 (GitHub용 — apihub는 해외 IP 차단)
+          KMA_KEY: ${{ secrets.KMA_KEY }}                  # 기상청 API허브 (로컬 실행용)
+        run: |
+          for i in 1 2 3; do
+            python scripts/update_seoul_temp.py && exit 0
+            echo "시도 $i 실패 — 300초 뒤 재시도"
+            sleep 300
+          done
+          echo "3회 모두 실패 — 다음 스케줄(12시·19시)이 자동 백필"
+          exit 1
+
+      - name: 변경분 있으면 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seoul.csv data/seoul_daily.csv data/seoul_yearly.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "🤖 seoul.csv 기온 자동 갱신"
+            for i in 1 2 3; do git push && break; sleep $i; git pull --rebase origin main; done
+          fi
