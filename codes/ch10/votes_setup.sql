@@ -1,8 +1,10 @@
 -- 모두의 점심 - 수파베이스 준비용 SQL
--- 비어 있는 새 프로젝트의 [SQL Editor]에 붙여 넣고 [Run]을 한 번만 실행합니다.
+-- [SQL Editor]에 붙여 넣고 [Run]을 누릅니다.
+-- 앞의 프롬프트로 votes 테이블을 이미 만들었어도 다시 실행할 수 있습니다.
+-- (이미 있는 테이블과 인덱스는 건너뛰고, 접근 정책은 지웠다가 다시 만듭니다.)
 -- 테이블의 열과 저장 규칙을 한꺼번에 만듭니다.
 
-create table public.votes (
+create table if not exists public.votes (
   id         bigint generated always as identity primary key,  -- 데이터베이스가 붙이는 고유 번호
   name       text        not null,                             -- 투표한 닉네임. 식사 기록은 '전체'
   menu       text        not null,                             -- 앞에서 정한 여섯 메뉴 중 하나
@@ -30,7 +32,7 @@ create table public.votes (
 --       접속의 시간대 설정에 따라 달라지고, 그런 식은 인덱스에 쓸 수 없기 때문입니다.
 --       아래처럼 at time zone 'Asia/Seoul'로 한국 시간을 먼저 정한 뒤 날짜를 뽑으면
 --       값이 접속 설정과 무관하게 고정되어 인덱스에 쓸 수 있습니다.
-create unique index votes_meal_once_per_day
+create unique index if not exists votes_meal_once_per_day
   on public.votes (((created_at at time zone 'Asia/Seoul')::date), menu)
   where kind = '식사완료';
 
@@ -38,9 +40,11 @@ create unique index votes_meal_once_per_day
 -- 수정과 삭제는 정책을 만들지 않았으므로 자동으로 막힌다.
 alter table public.votes enable row level security;
 
+drop policy if exists votes_select_anon on public.votes;
 create policy votes_select_anon on public.votes
   for select to anon using (true);
 
+drop policy if exists votes_insert_anon on public.votes;
 create policy votes_insert_anon on public.votes
   for insert to anon with check (true);
 
